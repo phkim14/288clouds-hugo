@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>blueprint - Tag - 288clouds</title>
+        <link>/tags/blueprint.html</link>
+        <description>blueprint - Tag - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Mar 2020 06:00:00 -0500</lastBuildDate><atom:link href="/tags/blueprint.html" rel="self" type="application/rss+xml" /><item>
+    <title>Customize Machine and On-demand Network Names</title>
+    <link>/2020-03-17-customize-machine-on-demand-network-names.html</link>
+    <pubDate>Tue, 17 Mar 2020 06:00:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>/2020-03-17-customize-machine-on-demand-network-names.html</guid>
+    <description><![CDATA[Credit: Huge thanks to my colleague, Michael Patton, for working with me on this demo.
+vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint.
+Prerequisites vRA 8:
+ NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T (if you want to use on-demand network name):]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>NSX - Category - 288clouds</title>
+        <link>/categories/nsx.html</link>
+        <description>NSX - Category - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 23 Mar 2020 04:02:00 -0500</lastBuildDate><atom:link href="/categories/nsx.html" rel="self" type="application/rss+xml" /><item>
+    <title>Considerations When Using Layer 2 Bridges for NSX-V to NSX-T Migration</title>
+    <link>/2020-04-17-using-l2-bridges-v2t-migration.html</link>
+    <pubDate>Mon, 23 Mar 2020 04:02:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>/2020-04-17-using-l2-bridges-v2t-migration.html</guid>
+    <description><![CDATA[I recently had a customer who asked for some general feedback on their high-level plan to migrate from NSX-V to NSX-T using layer 2 bridges. Although every environment is different and the details of migration procedures should be tailored to each environment, I thought I&rsquo;d share the general guidance I gave to this customer in case there are some points here that may be transferrable to other similar NSX-V to NSX-T migration plans.]]></description>
+</item></channel>
+</rss>
