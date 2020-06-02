@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://288clouds.com/2020-05-26-tips-for-remote-vcdx-defense.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/2020-05-26-tips-for-remote-vcdx-defense.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/2020-04-17-using-l2-bridges-v2t-migration.html</loc><lastmod>2020-03-23T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html</loc><lastmod>2020-03-23T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</loc><lastmod>2020-03-20T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -16,11 +16,11 @@
             <loc>https://288clouds.com/</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/categories.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/posts.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/remote-defense.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/remote-defense.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/tags.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vcdx.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/categories/vcdx.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vcdx-tips.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vcdx.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/categories/vcdx.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/vcdx-tips.html</loc><lastmod>2020-05-26T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/tags/automation.html</loc><lastmod>2020-03-23T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/design-considerations.html</loc><lastmod>2020-03-23T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/layer-2-bridges.html</loc><lastmod>2020-03-23T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
