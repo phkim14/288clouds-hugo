@@ -44,7 +44,7 @@ optional steps:
 12. For the NSX network, change the `networkType` under `properties` accordingly depending on whether you are using existing or on-demand network. In this demo, I'll be using an existing network.
 
 ### Configure Blueprint Security Group
-13. Drag a Security Group onto the canvas. 
+13. Drag a Security Group onto the canvas. <br>
 ![Step13](step13.png)
 14. For the security group, below `securityGroupType`, add the line `constraints:` then another line `- tag:` and type the tag of the existing security group you want to use.
 ![Step14](step14.png)
