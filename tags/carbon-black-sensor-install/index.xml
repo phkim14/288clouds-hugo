@@ -3,7 +3,15 @@
         <title>Carbon Black sensor install - Tag - 288clouds</title>
         <link>https://288clouds.com/tags/carbon-black-sensor-install.html</link>
         <description>Carbon Black sensor install - Tag - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 Jun 2020 17:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/carbon-black-sensor-install.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Jun 2020 11:42:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/carbon-black-sensor-install.html" rel="self" type="application/rss+xml" /><item>
+    <title>CBC Endpoint Detection Demo with Logkeys</title>
+    <link>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</link>
+    <pubDate>Wed, 17 Jun 2020 11:42:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</guid>
+    <description><![CDATA[Carbon Black Cloud (CBC) can detect if an application on the company blacklist is running then send an alert and deny/terminate the process. Let&rsquo;s setup a demo using Logkeys, a linux application that stores keystrokes with or without the knowledge of user, to see how CBC reacts.
+Prerequisites  Carbon Black Cloud access (Note: the environment I&rsquo;m using is Carbon Black Cloud Enterprise) A linux machine (Note: I&rsquo;m using CentOS 7) - should have administrator/root access CBC sensor installed and active on the linux machine  Process Overview  Install logkeys on the linux machine.]]></description>
+</item><item>
     <title>Carbon Black Cloud Sensor Install on a Linux Machine</title>
     <link>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</link>
     <pubDate>Thu, 04 Jun 2020 17:53:00 -0500</pubDate>

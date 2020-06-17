@@ -3,9 +3,17 @@
         <title>288clouds</title>
         <link>https://288clouds.com/</link>
         <description>288clouds is a personal blog focused on virtualization and cloud technologies.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 04 Jun 2020 17:53:00 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Jun 2020 11:42:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>CBC Endpoint Detection Demo with Logkeys</title>
+    <link>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</link>
+    <pubDate>Wed, 17 Jun 2020 11:42:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</guid>
+    <description><![CDATA[Carbon Black Cloud (CBC) can detect if an application on the company blacklist is running then send an alert and deny/terminate the process. Let&rsquo;s setup a demo using Logkeys, a linux application that stores keystrokes with or without the knowledge of user, to see how CBC reacts.
+Prerequisites  Carbon Black Cloud access (Note: the environment I&rsquo;m using is Carbon Black Cloud Enterprise) A linux machine (Note: I&rsquo;m using CentOS 7) - should have administrator/root access CBC sensor installed and active on the linux machine  Process Overview  Install logkeys on the linux machine.]]></description>
+</item><item>
     <title>Carbon Black Cloud Sensor Install on a Linux Machine</title>
     <link>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</link>
     <pubDate>Thu, 04 Jun 2020 17:53:00 -0500</pubDate>
@@ -73,8 +81,7 @@ Note that with this method, however, any and all security groups that you select
     <pubDate>Tue, 17 Mar 2020 06:00:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2020-03-17-customize-machine-on-demand-network-names.html</guid>
-    <description><![CDATA[Credit: Huge thanks to my colleague, Michael Patton, for working with me on this demo.
-vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint.
+    <description><![CDATA[vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint.
 Prerequisites vRA 8:
  NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T (if you want to use on-demand network name):]]></description>
 </item><item>
@@ -83,17 +90,8 @@ Prerequisites vRA 8:
     <pubDate>Mon, 16 Mar 2020 07:48:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</guid>
-    <description><![CDATA[Credit: Huge thanks to my colleague, Michael Patton, for working with me on this demo.
-You can create a vRA 8 blueprint to create an on-demand routed NSX-T network and deploy machines connected to these newly created network. When you tell the blueprint to create an on-demand routed NSX-T network, vRA 8 actually creates a tier-1 gateway that connects to the pre-existing tier-0 gateway. It then creates an on-demand network and attaches it to the tier-1 gateway that it has created.]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks</title>
-    <link>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</link>
-    <pubDate>Fri, 13 Mar 2020 07:48:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</guid>
-    <description><![CDATA[You can create a vRA 8 blueprint to deploy machines on existing NSX-T networks.
+    <description><![CDATA[You can create a vRA 8 blueprint to create an on-demand routed NSX-T network and deploy machines connected to these newly created network. When you tell the blueprint to create an on-demand routed NSX-T network, vRA 8 actually creates a tier-1 gateway that connects to the pre-existing tier-0 gateway. It then creates an on-demand network and attaches it to the tier-1 gateway that it has created.
 Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- logical router (tier-0 or tier-1) configured logical segment(s) attached to a logical router  Process Overview  Set up the existing networks with IP ranges you want to use for the machines. Create a network profile. Add existing networks you want to use in the network profile.]]></description>
+ NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:]]></description>
 </item></channel>
 </rss>
