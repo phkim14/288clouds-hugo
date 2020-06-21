@@ -28,11 +28,11 @@ optional steps:
 1. Go to "Infrastructure" > "Security" (under Resources).
 2. Select the security group you want to add a tag to.
 3. Click "TAGS".
-![Step3](step3.png)
+{{<image src="step3.png" linked="true">}}
 4. Enter name of a new tag in "Add tags" section then press "Enter" and save.
-![Step4](step4.png)
+{{<image src="step4.png" linked="true">}}
 5. Check that the tag has been created properly.
-![Step5](step5.png)
+{{<image src="step5.png" linked="true">}}
 
 ### Create and Configure Blueprint
 6. Go to "Blueprints" and Click "+ NEW" to create a new blueprint. (or you can choose to use an existing blueprint and skip this section).
@@ -44,13 +44,13 @@ optional steps:
 12. For the NSX network, change the `networkType` under `properties` accordingly depending on whether you are using existing or on-demand network. In this demo, I'll be using an existing network.
 
 ### Configure Blueprint Security Group
-13. Drag a Security Group onto the canvas. <br>
-![Step13](step13.png)
+13. Drag a Security Group onto the canvas.
+{{<image src="step13.png" linked="true">}}
 14. For the security group, below `securityGroupType`, add the line `constraints:` then another line `- tag:` and type the tag of the existing security group you want to use.
-![Step14](step14.png)
+{{<image src="step14.png" linked="true">}}
 15. For the machine, under `networks`, add a line under `assignment` called `securityGroups:`.
 16. Add the line `- '${resource.<insert security group object name>.id}'` below to connect the security group to the machine. 
-![Step16](step16.png)
+{{<image src="step16.png" linked="true">}}
 17. Click "TEST".
 18. Click "DEPLOY" to create a new deployment.
 19. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".

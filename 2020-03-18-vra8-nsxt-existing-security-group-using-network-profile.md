@@ -32,9 +32,9 @@ optional steps:
 2. Choose an account/region and give the profile a name.
 3. Configure existing networks or on-demand networks. 
 4. Go to "Security Groups" tab and select "+ ADD SECURITY GROUP". 
-![Step4](step4.png)
+{{<image src="step4.png" linked="true">}}
 5. Select security group(s) that you'd like to apply. 
-![Step5](step5.png)
+{{<image src="step5.png" linked="true">}}
 6. Save the network profile. 
 
 ### Create and Configure Blueprint
@@ -45,16 +45,16 @@ optional steps:
 11. On the right side in the YAML file, choose an image and size for the machine. 
 12. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine from the IP range we've created.
 13. For the NSX network, change the `networkType` under `properties` accordingly depending on whether you have configured existing or on-demand networks in the network profile. In this demo, I'll be using an on-demand network. 
-![Step13](step13.png)
+{{<image src="step13.png" linked="true">}}
 14. Click "TEST".
 15. Click "DEPLOY" to create a new deployment.
 16. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
 
 ### Verify Deployment
 17. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.
-![Step17](step17.png)
+{{<image src="step17.png" linked="true">}}
 18. Now log into NSX-T UI and go to "Inventory" > "Groups".
-![Step18](step18.png)
+{{<image src="step18.png" linked="true">}}
 19. Click "View Members" of the security group you have selected in the network profile.
 20. Click "IP Addresses" and you'll see the IP address of the deployment. 
-![Step20](step20.png)
+{{<image src="step20.png" linked="true">}}

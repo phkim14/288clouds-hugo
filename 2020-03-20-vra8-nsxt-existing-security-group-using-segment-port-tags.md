@@ -28,13 +28,13 @@ optional steps:
 ### Configure Security Group Membership Criteria
 1. Log into NSX-T and go to "Inventory" > "Groups".
 2. Edit the security group you want to configure. 
-![Step2](step2.png)
+{{<image src="step2.png" linked="true">}}
 3. Click "Set Members".
-![Step3](step3.png)
+{{<image src="step3.png" linked="true">}}
 4. Click "+ ADD CRITERIA".
 5. Select "Segment Port" in the first column under "Criteria".
 6. Enter the name of the tag and the scope. You need both for vRA blueprint.
-![Step6](step6.png)
+{{<image src="step6.png" linked="true">}}
 
 ### Create and Configure Blueprint
 7. Go to "Blueprints" and Click "+ NEW" to create a new blueprint. (or you can choose to use an existing blueprint and skip this section).
@@ -50,28 +50,28 @@ optional steps:
 15. Add the line `- key: <insert scope name>`.
 16. Add the line `value: <insert tag name>` below. Make sure they are aligned.
 Note that anything following a hashtag is a comment in YAML.
-![Step16](step16.png)
+{{<image src="step16.png" linked="true">}}
 17. Click "TEST".
 18. Click "DEPLOY" to create a new deployment.
 19. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
 
 ### Verify Deployment
 20. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.
-![Step20](step20.png)
+{{<image src="step20.png" linked="true">}}
 21. Now log into NSX-T UI and go to "Inventory" > "Groups".
 22. Click "View Members" of the security group you have selected in the network profile.
 23. Click "IP Addresses" and you'll see the IP address of the deployment. 
-![Step23](step23.png)
+{{<image src="step23.png" linked="true">}}
 
 If you want to see the segment port tag that has been applied...
 24. Log into NSX-T and go to "Advanced Networking & Security" > "Switching".
 25. Select the overlay network that the machine has been placed on.
 26. Find the logical port that belongs to the machine. You can see the VM name if you look at the "Attachment" column. If you don't know the VM name that has been created, go to vRA 8 UI > "Deployments" and check the deployment.
-![Step26](step26.png)
+{{<image src="step26.png" linked="true">}}
 27. Select the logical port and click "Actions" > "Manage Tags".
-![Step27](step27.png)
+{{<image src="step27.png" linked="true">}}
 28. You should see the tag that you've specified in the blueprint.
-![Step28](step28.png)
+{{<image src="step28.png" linked="true">}}
 
 ### Demo / Example Blueprint YAML File
 ```

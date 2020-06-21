@@ -37,34 +37,34 @@ sudo make install
 ### Use Logkeys
 5. As a root user, start logkeys: `sudo logkeys -s -u`.
 6. Type a bunch of random commands to test if logkeys is working (i.e. `pwd`, `ls`, `ss`, `ifconfig`).
-![Step6](step6.PNG)
+{{<image src="step6.png" linked="true">}}
 7. View logkeys output file to see if the commands were recorded: `nano /var/log/logkeys.log`. Note that logkeys basically recorded gibberish from my typing because I did not configure keymap on the linux machine. 
-![Step7](step7.PNG)
+{{<image src="step7.png" linked="true">}}
 8. To terminate logkeys process: `logkeys -k`.
 
 ### Investigate Logkeys in CBC
 10. Interestingly, Carbon Black (out of the box) detects logkeys as a potential malware when you run it.
-![Step10](step10.PNG)
+{{<image src="step10.png" linked="true">}}
 11. You can also search for "logkeys" in "Investigate" and see the alert. 
-![Step11](step11.PNG)
+{{<image src="step11.png" linked="true">}}
 12. You can view more details of the alert by viewing the alert triage.
-![Step12](step12.PNG)
+{{<image src="step12.png" linked="true">}}
 13. From this view, you can zoom in and click on a process to see more details. You can also take actions like adding the process to whitelist or blacklist. 
-![Step13](step13.PNG)
+{{<image src="step13.png" linked="true">}}
 
 ### Configure CBC to Terminate Logkeys
 14. For this demo, I add logkeys to the company blacklist. You can view the company blacklist by going to Enforce > Reputation.
-![Step14](step14.PNG)
+{{<image src="step14.png" linked="true">}}
 15. I also verify that the policy the linux machine is using terminates applications on the company blacklist when it tries to run.
-![Step15](step15.PNG)
+{{<image src="step15.png" linked="true">}}
 
 ### Verify that CBC Blocks Logkeys
-16. Now let's test the policy and make sure that CBC blocks logkeys. Go back to the linux machine and try running logkeys. You'll see now that logkeys will not run and see that the operation is not permitted.<br>
-![Step16](step16.PNG)
+16. Now let's test the policy and make sure that CBC blocks logkeys. Go back to the linux machine and try running logkeys. You'll see now that logkeys will not run and see that the operation is not permitted.
+{{<image src="step16.png" linked="true">}}
 17. If you go to the CBC UI, you will also see some new alerts that show that logkeys has been blocked by the policy and the process has been terminated.
-![Step17](step17.PNG)
+{{<image src="step17.png" linked="true">}}
 18. You can also see that the policy deny action has been taken and an alert has been creatd when you look at recent events.
-![Step18](step18.PNG)
+{{<image src="step18.png" linked="true">}}
 
 <br>
 <i>Credit: Thanks to my colleague, <a href="https://www.linkedin.com/in/nikolay-nikolov-06617218/" target="_blank" rel="noopener noreferrer">Nikolay Nikolov</a>, for working with me on this demo.</i> 

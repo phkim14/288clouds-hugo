@@ -18,11 +18,11 @@ Let's manually install a Carbon Black Cloud (CBC) sensor on a CentOS 7 machine!
 ### Download Carbon Black Cloud Sensor Kit
 1. Log into Carbon Black Cloud from the linux machine where you want to install the sensor.
 2. Go to "Endpoints" > "Sensor Options" and select "Download sensor kits". 
-![Step2](step2.PNG)
+{{<image src="step2.png" linked="true">}}
 3. Select "Download Kit" of the appropriate OS (in my case, RHEL/CentOS 6 & 7)
-![Step3](step3.PNG)
+{{<image src="step3.png" linked="true">}}
 4. Select "Company codes" under "Sensor Options" and make note of the company code. You'll need it during the install.
-![Step4](step4.PNG)
+{{<image src="step4.png" linked="true">}}
 
 ### Install Sensor
 5. Move the downloaded .tgz file to the Desktop (or wherever you want). 
@@ -30,10 +30,10 @@ Let's manually install a Carbon Black Cloud (CBC) sensor on a CentOS 7 machine!
 7. Open terminal and navigate to the Desktop (or wherever you did the previous 2 steps).
 8. Extract the .tgz file into the temporary directory you've created: `tar -C <temporary directory name> -zxf <.tgz file name>`
 9. Install and register the sensor, using the company code noted from step 4 in the following command: `sudo cb-psc-install/install.sh <company code>`. Once completed, it should say "Success: agent was successfully installed."
-![Step9](step9.PNG)
+{{<image src="step9.png" linked="true">}}
 
 ### Verify Installation
 10. Run the command `systemctl status cbagentd`	to check the status of the sensor. It should say "active (running)".
-![Step10](step10.PNG)
+{{<image src="step10.png" linked="true">}}
 11. Go to Carbon Black Cloud UI > "Endpoints", and your linux machine should now show up. 
-![Step11](step11.PNG)
+{{<image src="step11.png" linked="true">}}

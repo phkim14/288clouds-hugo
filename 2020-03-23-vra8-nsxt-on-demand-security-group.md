@@ -32,7 +32,7 @@ optional steps:
 2. Choose an account/region and give the profile a name.
 3. Configure existing networks. 
 4. Go to "Network Policies" tab and select "Create an on-demand security group" radio button. 
-![Step4](step4.png)
+{{<image src="step4.png" linked="true">}}
 6. Save the network profile. 
 
 ### Create and Configure Blueprint
@@ -44,17 +44,17 @@ optional steps:
 12. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine from the IP range we've created.
 13. For the network, below `networkType` add the line `constraints:` then another line `- tag:` to choose the existing network you want to use. Make sure this existing network is available in the network profile where you selected to create an on-demand security group.
 14. Choose `private` or `outbound` for `networkType` instead of `existing`.
-![Step14](step14.png)
+{{<image src="step14.png" linked="true">}}
 15. Click "TEST".
 16. Click "DEPLOY" to create a new deployment.
 17. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
 
 ### Verify Deployment
 17. Once deployed, log into NSX-T UI and go to "Advanced Networking & Security" > "Inventory" > Groups". You will see that a new security group has been created with the name starting with "isolation-securitygroup".
-![Step17](step17.png)
+{{<image src="step17.png" linked="true">}}
 18. Go to "Security" > "Distributed Firewall".
 19. You will see that a new firewall section has been created for the security group that has just been created. If you set the `networkType` in the blueprint as `private`, you will see that the rules reject all inbound and outbound traffic. If you set the `networkType` as `outbound`, the rules will allow outbound traffic and reject only the inbound traffic.
-![Step19](step19.png)
+{{<image src="step19.png" linked="true">}}
 
 ### Demo / Example Blueprint YAML File
 ```

@@ -25,27 +25,26 @@ NSX-T (if you want to use on-demand network name):
 1. Go to "Infrastructure" > "Projects" and click on the Project that you'd like to add the naming convention.
 2. Go to "Provisioning" tab.
 3. Under "Custom Naming" section, specify the machine name template: `${resource.name}-${##}`
-![Step3](step3.png)
+{{<image src="step3.png" linked="true">}}
 
 ### Create Blueprint Custom Inputs
 4. Create a new blueprint and drag Cloud Agnostic Machine and NSX Network objects onto the canvas.
 5. Configure the blueprint like the screenshot (i.e. machine image, machine flavor, machine networks assignment, network type, etc.).
-![Step5](step5.png)
-6. Create a variable called `vm-name` under `inputs` to customize the machine name.
+{{<image src="step5.png" linked="true">}}6. Create a variable called `vm-name` under `inputs` to customize the machine name.
 7. Give it a type `string`.
 8. Give the variable a `title`, which is what the blueprint will use to ask the user for the input value when he/she deploys this blueprint.
 9. Give a default value for this variable with `default:`.
 10. Do the same for a variable `network-name` under `inputs` to customize the network name.
-![Step10](step10.png)
+{{<image src="step10.png" linked="true">}}
 Note: You can also create custom inputs by clicking the tab "Inputs" and using the GUI. 
 11. Add `name:` properties for the machine and the network to use the input values. 
 `name: '${input.<insert input variable name>}'`
-![Step11](step11.png)
+{{<image src="step11.png" linked="true">}}
 
 ### Verify Deployment
 Now if you deploy this blueprint, you should see the machine and the network created with customized names. 
-![Step12](step12.png)
-![Step12-1](step12-1.png)
+{{<image src="step12.png" linked="true">}}
+{{<image src="step12-1.png" linked="true">}}
 
 ### Demo / Example Blueprint YAML File
 ```

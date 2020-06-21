@@ -37,7 +37,7 @@ optional steps:
 8. Under "Network Resources" section, select a tier-0 logical router.
 9. Under "Network Resources" section, select an edge cluster. 
 10. Click "CREATE" to save the profile. 
-![Step10](step10.png)
+{{<image src="step10.png" linked="true">}}
 
 ### Create and Configure Blueprint
 11. Go to "Blueprints" and Click "+ NEW" to create a new blueprint.
@@ -47,7 +47,7 @@ optional steps:
 15. On the right side in the YAML file, choose an image and size for the machine. 
 16. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine.
 17. For the NSX network, change the `networkType` under `properties` to `routed`.
-![Step17](step17.png)
+{{<image src="step17.png" linked="true">}}
 18. Click "TEST".
 19. Click "DEPLOY" to create a new deployment.
 20. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
@@ -58,9 +58,9 @@ Once the deployment is completed, you should be able to see the deployment under
 You can also see this in the NSX-T Advanced UI. (Note that you cannot see this in the NSX-T Simplified UI).
 21. Log into NSX-T UI and go to the "Advanced Networking & Security" tab.
 22. Under "Networking" > "Switching", you can see the on-demand segment that has been created from the blueprint.
-![Step22](step22.png)
+{{<image src="step22.png" linked="true">}}
 23. If you go to "Networking" > "Routers", you will see the tier-1 router that has been created and connected to the tier-0 router that you selected in the network profile.
-![Step23](step23.png)
+{{<image src="step23.png" linked="true">}}
 
 ### Demo / Example Blueprint YAML File
 ```
