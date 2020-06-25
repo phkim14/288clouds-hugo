@@ -62,9 +62,7 @@ Note that anything following a hashtag is a comment in YAML.
 22. Click "View Members" of the security group you have selected in the network profile.
 23. Click "IP Addresses" and you'll see the IP address of the deployment. 
 {{<image src="step23.png" linked="true">}}
-
-If you want to see the segment port tag that has been applied...
-24. Log into NSX-T and go to "Advanced Networking & Security" > "Switching".
+24. If you want to see the segment port tag that has been applied, log into NSX-T and go to "Advanced Networking & Security" > "Switching".
 25. Select the overlay network that the machine has been placed on.
 26. Find the logical port that belongs to the machine. You can see the VM name if you look at the "Attachment" column. If you don't know the VM name that has been created, go to vRA 8 UI > "Deployments" and check the deployment.
 {{<image src="step26.png" linked="true">}}

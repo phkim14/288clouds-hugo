@@ -53,14 +53,13 @@ optional steps:
 20. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
 
 ### Verify Deployment
-Once the deployment is completed, you should be able to see the deployment under "Deployments" in vRA UI as well as the new machine and the new NSX-T segment created in the vSphere UI.
-
-You can also see this in the NSX-T Advanced UI. (Note that you cannot see this in the NSX-T Simplified UI).
-21. Log into NSX-T UI and go to the "Advanced Networking & Security" tab.
+21. Log into NSX-T UI and go to the "Advanced Networking & Security" tab (Note that you cannot see this in the NSX-T Simplified UI).
 22. Under "Networking" > "Switching", you can see the on-demand segment that has been created from the blueprint.
 {{<image src="step22.png" linked="true">}}
 23. If you go to "Networking" > "Routers", you will see the tier-1 router that has been created and connected to the tier-0 router that you selected in the network profile.
 {{<image src="step23.png" linked="true">}}
+
+You should also be able to see the deployment under "Deployments" in vRA UI as well as the new machine and the new NSX-T segment created in the vSphere UI.
 
 ### Demo / Example Blueprint YAML File
 ```
