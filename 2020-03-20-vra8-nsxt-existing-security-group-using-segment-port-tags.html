@@ -250,11 +250,9 @@ Note that anything following a hashtag is a comment in YAML.
             data-sizes="auto"
             alt="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png" />
     </a></li>
-</ol>
-<p>If you want to see the segment port tag that has been applied&hellip;
-24. Log into NSX-T and go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Switching&rdquo;.
-25. Select the overlay network that the machine has been placed on.
-26. Find the logical port that belongs to the machine. You can see the VM name if you look at the &ldquo;Attachment&rdquo; column. If you don&rsquo;t know the VM name that has been created, go to vRA 8 UI &gt; &ldquo;Deployments&rdquo; and check the deployment.
+<li>If you want to see the segment port tag that has been applied, log into NSX-T and go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Switching&rdquo;.</li>
+<li>Select the overlay network that the machine has been placed on.</li>
+<li>Find the logical port that belongs to the machine. You can see the VM name if you look at the &ldquo;Attachment&rdquo; column. If you don&rsquo;t know the VM name that has been created, go to vRA 8 UI &gt; &ldquo;Deployments&rdquo; and check the deployment.
 <br><a class="lightgallery" href="./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png" target="_blank" rel="noopener noreferrer" title="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png" data-thumbnail="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png">
         <img
             class="lazyload"
@@ -263,8 +261,8 @@ Note that anything following a hashtag is a comment in YAML.
             data-srcset="./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png, ./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png 1.5x, ./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png 2x"
             data-sizes="auto"
             alt="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png" />
-    </a>
-27. Select the logical port and click &ldquo;Actions&rdquo; &gt; &ldquo;Manage Tags&rdquo;.
+    </a></li>
+<li>Select the logical port and click &ldquo;Actions&rdquo; &gt; &ldquo;Manage Tags&rdquo;.
 <br><a class="lightgallery" href="./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png" target="_blank" rel="noopener noreferrer" title="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png" data-thumbnail="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png">
         <img
             class="lazyload"
@@ -273,8 +271,8 @@ Note that anything following a hashtag is a comment in YAML.
             data-srcset="./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png, ./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png 1.5x, ./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png 2x"
             data-sizes="auto"
             alt="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png" />
-    </a>
-28. You should see the tag that you&rsquo;ve specified in the blueprint.
+    </a></li>
+<li>You should see the tag that you&rsquo;ve specified in the blueprint.
 <br><a class="lightgallery" href="./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png" target="_blank" rel="noopener noreferrer" title="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png" data-thumbnail="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png">
         <img
             class="lazyload"
@@ -283,7 +281,8 @@ Note that anything following a hashtag is a comment in YAML.
             data-srcset="./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png, ./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png 1.5x, ./2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png 2x"
             data-sizes="auto"
             alt="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png" />
-    </a></p>
+	</a></li>
+</ol>
 <h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
