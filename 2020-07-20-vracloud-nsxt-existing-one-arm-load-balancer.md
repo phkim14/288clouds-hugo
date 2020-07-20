@@ -1,12 +1,15 @@
 # Create a vRA Cloud Blueprint with Existing NSX-T One-Arm Load Balancer
 
 
-You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.  
-
-Note that vRA Cloud / vRA 8.1 does not support NSX-T policy API yet. Support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I'm not a product manager).
+You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.
 
 Below is a simplified diagram of a NSX-T one-arm load balancer.
 {{<image src="diagram.png" linked="true">}}
+
+Note that vRA Cloud / vRA 8.1 does not support NSX-T policy API yet. Support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I'm not a product manager).
+If you try to create a blueprint using policy tier-1 router and load balancer, the blueprint deployment will fail and display the following error message: `[289] [Principal 'admin' with role '[enterprise_admin]' attempts to delete or modify an object of type LoadBalancerService it doesn't own. (createUser=nsx_policy, allowOverwrite=null)]`
+{{<image src="error.png" linked="true">}}
+
 
 ## Demo Product Versions  
 * VCF 3.9.1.0-15345960 (vSphere 6.7, NSX-V 6.4.6)
@@ -31,6 +34,7 @@ NSX-T:
 
 optional steps:
 * Create inputs in the blueprint to customize the machine name.
+* Create multiple load balancers and apply a constraint tag to deploy load balancing services on a specific load balancer. 
 
 
 ## Demo / Example
@@ -124,4 +128,50 @@ resources:
       constraints:
         - tag: 'subnet-cidr:192.168.92.0/24'
 
+```
+
+### (Optional) Multiple Load Balancers in Network Profile
+If you have multiple load balancers in a network profile, you can put tags on each load balancer then specify the tag in a blueprint to deploy the load balancing services to a specific load balancer.
+* Go to the network profile and add tags to each load balancer. 
+{{<image src="optional-1.png" linked="true">}}
+* Add a constraint tag in the blueprint to indicate which load balancer you want to use.
+{{<image src="optional-2.png" linked="true">}}
+* Once you deploy this blueprint, you will see in the request details / provisioning diagram that the constraint tag is applied.
+{{<image src="optional-3.png" linked="true">}}
+* After the deployment is complete, go to the NSX-T UI and you'll see that the load balancing services have been deployed to the desired load balancer.
+{{<image src="optional-4.png" linked="true">}}
+
+### Using Constraint Tag to Indicate Load Balancer Example Blueprint YAML File
+```
+formatVersion: 1
+inputs: {}
+resources:
+  Cloud_LoadBalancer_1:
+    type: Cloud.LoadBalancer
+    properties:
+      routes:
+        - protocol: HTTPS
+          port: 443
+          instancePort: 443
+          instanceProtocol: HTTPS
+      network: '${resource.Cloud_Network_1.id}'
+      instances: '${resource.Cloud_Machine_1[*].id}'
+      internetFacing: false
+      constraints: 
+        - tag: 'nonpolicy-LB-02'
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: im-CentOS7
+      flavor: fl-small
+      networks:
+        - network: '${resource.Cloud_Network_1.id}'
+          assignment: static
+      count: 2
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: 'subnet-cidr:192.168.92.0/24'
 ```
