@@ -3,9 +3,17 @@
         <title>288clouds</title>
         <link>https://288clouds.com/</link>
         <description>288clouds is a personal blog focused on virtualization and cloud technologies.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Jun 2020 11:42:00 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Jul 2020 07:53:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Create a vRA Cloud Blueprint with Existing NSX-T One-Arm Load Balancer</title>
+    <link>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
+    <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
+    <description><![CDATA[You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.
+Note that vRA Cloud / vRA 8.]]></description>
+</item><item>
     <title>CBC Endpoint Detection Demo with Logkeys</title>
     <link>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</link>
     <pubDate>Wed, 17 Jun 2020 11:42:00 -0500</pubDate>
@@ -44,9 +52,8 @@ I got my VCDX in January 2020 through a remote defense, and I thought it may be 
     <guid>https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html</guid>
     <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in an on-demand NSX-T security group.
 Note that with this method, you must place the machines on existing networks (private or outbound). This network profile cannot be combined with creating on-demand NSX-T networks.
-Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- logical network(s) configured  Process Overview  Create or edit a network profile.]]></description>
+Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
+ NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:]]></description>
 </item><item>
     <title>vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)</title>
     <link>https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</link>
@@ -54,9 +61,9 @@ Prerequisites vRA 8:
     <author>Author</author>
     <guid>https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</guid>
     <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) by putting tags on the machine segment port(s).
-Prerequisites vRA 8:
+Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
  NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- Security group(s) configured  Process Overview  Configure Membership Criteria of the existing security group(s). Create a blueprint with Cloud Agnostic Machine and NSX Network objects.]]></description>
+ Security group(s) configured  Process Overview  Configure Membership Criteria of the existing security group(s).]]></description>
 </item><item>
     <title>vRA 8 &#43; NSX-T Blog Series Part 4: vRA 8 Blueprint with Existing Security Group (vRA tag)</title>
     <link>https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</link>
@@ -64,9 +71,9 @@ Prerequisites vRA 8:
     <author>Author</author>
     <guid>https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</guid>
     <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) using vRA tags.
-Prerequisites vRA 8:
+Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
  NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- security group(s) configured  Process Overview  Create a tag on the existing security group(s). Create a blueprint with Cloud Agnostic Machine, NSX Network, and Security Group objects. Specify which security group will be used by adding a constraint on the Security Group object.]]></description>
+ security group(s) configured  Process Overview  Create a tag on the existing security group(s).]]></description>
 </item><item>
     <title>vRA 8 &#43; NSX-T Blog Series Part 3: vRA 8 Blueprint with Existing Security Group (network profile)</title>
     <link>https://288clouds.com/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</link>
@@ -82,16 +89,6 @@ Note that with this method, however, any and all security groups that you select
     <author>Author</author>
     <guid>https://288clouds.com/2020-03-17-customize-machine-on-demand-network-names.html</guid>
     <description><![CDATA[vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint.
-Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T (if you want to use on-demand network name):]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 2: vRA 8 Blueprint with On-demand Routed NSX-T Networks</title>
-    <link>https://288clouds.com/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</link>
-    <pubDate>Mon, 16 Mar 2020 07:48:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</guid>
-    <description><![CDATA[You can create a vRA 8 blueprint to create an on-demand routed NSX-T network and deploy machines connected to these newly created network. When you tell the blueprint to create an on-demand routed NSX-T network, vRA 8 actually creates a tier-1 gateway that connects to the pre-existing tier-0 gateway. It then creates an on-demand network and attaches it to the tier-1 gateway that it has created.
-Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:]]></description>
+Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:]]></description>
 </item></channel>
 </rss>

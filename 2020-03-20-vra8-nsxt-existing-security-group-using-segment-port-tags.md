@@ -4,6 +4,11 @@
 
 You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) by putting tags on the machine segment port(s).
 
+## Demo Product Versions  
+* vSphere 6.5 U3
+* vRA 8.0.1 (including vRSLCM and vIDM)
+* NSX-T 2.5.1
+* vSAN 6.6.1
 
 ## Prerequisites
 vRA 8:

@@ -7,6 +7,12 @@ You can create a vRA 8 blueprint to deploy machines and place them in an on-dema
 Note that with this method, you must place the machines on existing networks (private or outbound). This network profile cannot be combined with creating on-demand NSX-T networks. 
 
 
+## Demo Product Versions  
+* vSphere 6.5 U3
+* vRA 8.0.1 (including vRSLCM and vIDM)
+* NSX-T 2.5.1
+* vSAN 6.6.1
+
 ## Prerequisites
 vRA 8:
 * NSX-T account connected

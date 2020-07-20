@@ -6,6 +6,11 @@ You can create a vRA 8 blueprint to deploy machines and place them in existing N
 
 Note that with this method, however, any and all security groups that you select in the network profile will be applied to the machines. If you have multiple machines in a blueprint and want to specify which security group each machine should use then use vRA tag or segment port tag (refer to series part 4 & 5 for those methods).
 
+## Demo Product Versions  
+* vSphere 6.5 U3
+* vRA 8.0.1 (including vRSLCM and vIDM)
+* NSX-T 2.5.1
+* vSAN 6.6.1
 
 ## Prerequisites
 vRA 8:

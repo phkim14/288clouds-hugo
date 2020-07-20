@@ -3,6 +3,11 @@
 
 vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint. 
 
+## Demo Product Versions  
+* vSphere 6.5 U3
+* vRA 8.0.1 (including vRSLCM and vIDM)
+* NSX-T 2.5.1
+* vSAN 6.6.1
 
 ## Prerequisites
 vRA 8:
