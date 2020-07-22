@@ -3,7 +3,15 @@
         <title>All Posts - 288clouds</title>
         <link>https://288clouds.com/posts.html</link>
         <description>All Posts | 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Jul 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 22 Jul 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>Create a vRA Cloud Blueprint with On-demand NSX-T One-Arm Load Balancer</title>
+    <link>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</link>
+    <pubDate>Wed, 22 Jul 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</guid>
+    <description><![CDATA[You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.
+Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
+</item><item>
     <title>Create a vRA Cloud Blueprint with Existing NSX-T One-Arm Load Balancer</title>
     <link>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
     <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
@@ -80,13 +88,5 @@ Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-
     <guid>https://288clouds.com/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</guid>
     <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) using a network profile.
 Note that with this method, however, any and all security groups that you select in the network profile will be applied to the machines. If you have multiple machines in a blueprint and want to specify which security group each machine should use then use vRA tag or segment port tag (refer to series part 4 &amp; 5 for those methods).]]></description>
-</item><item>
-    <title>Customize Machine and On-demand Network Names</title>
-    <link>https://288clouds.com/2020-03-17-customize-machine-on-demand-network-names.html</link>
-    <pubDate>Tue, 17 Mar 2020 06:00:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-17-customize-machine-on-demand-network-names.html</guid>
-    <description><![CDATA[vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint.
-Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:]]></description>
 </item></channel>
 </rss>

@@ -6,7 +6,7 @@ You can create a vRA Cloud blueprint to deploy machines and place them behind an
 Below is a simplified diagram of a NSX-T one-arm load balancer.
 {{<image src="diagram.png" linked="true">}}
 
-Note that vRA Cloud / vRA 8.1 does not support NSX-T policy API yet. Support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I'm not a product manager).
+Note that vRA Cloud / vRA 8.1 does not fully support NSX-T policy API yet. Full Support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I'm not a product manager).
 If you try to create a blueprint using policy tier-1 router and load balancer, the blueprint deployment will fail and display the following error message: `[289] [Principal 'admin' with role '[enterprise_admin]' attempts to delete or modify an object of type LoadBalancerService it doesn't own. (createUser=nsx_policy, allowOverwrite=null)]`
 {{<image src="error.png" linked="true">}}
 
@@ -70,7 +70,7 @@ optional steps:
 {{<image src="step18.png" linked="true">}}
 19. Click "TEST".
 20. Click "DEPLOY" to create a new deployment.
-21. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+21. Give it a deployment name, choose "Current Draft", the click "DEPLOY".
 
 ### Verify Deployment
 22. Go to "Deployments" tab in Cloud Assembly and check that the deployment is completed successfully.
