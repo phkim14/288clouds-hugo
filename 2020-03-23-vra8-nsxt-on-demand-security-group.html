@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html" />
 <meta property="og:image" content="https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png"/>
 <meta property="article:published_time" content="2020-03-23T04:02:00-05:00" />
-<meta property="article:modified_time" content="2020-06-21T04:02:00-05:00" />
+<meta property="article:modified_time" content="2020-08-18T04:02:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png"/>
 <meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group"/>
@@ -33,8 +33,8 @@
                             "url": "https:\/\/288clouds.com\/2020-03-23-vra8-nsxt-on-demand-security-group\/featured-image.png",
                             "width":  1800 ,
                             "height":  869 
-                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, security group, on-demand, automation","wordcount":  588 ,
-        "url": "https:\/\/288clouds.com\/2020-03-23-vra8-nsxt-on-demand-security-group.html","datePublished": "2020-03-23T04:02:00-05:00","dateModified": "2020-06-21T04:02:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, security group, on-demand, automation","wordcount":  520 ,
+        "url": "https:\/\/288clouds.com\/2020-03-23-vra8-nsxt-on-demand-security-group.html","datePublished": "2020-03-23T04:02:00-05:00","dateModified": "2020-08-18T04:02:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -110,7 +110,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="./about" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-23">2020-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;588 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-23">2020-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;520 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -140,7 +140,6 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>You can create a vRA 8 blueprint to deploy machines and place them in an on-demand NSX-T security group.</p>
-<p>Note that with this method, you must place the machines on existing networks (private or outbound). This network profile cannot be combined with creating on-demand NSX-T networks.</p>
 <h2 id="demo-product-versions">Demo Product Versions</h2>
 <ul>
 <li>vSphere 6.5 U3</li>
@@ -194,8 +193,8 @@
 <li>Connect the Cloud Agnostic Machine to the NSX Network on the canvas.</li>
 <li>On the right side in the YAML file, choose an image and size for the machine.</li>
 <li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine from the IP range we&rsquo;ve created.</li>
-<li>For the network, below <code>networkType</code> add the line <code>constraints:</code> then another line <code>- tag:</code> to choose the existing network you want to use. Make sure this existing network is available in the network profile where you selected to create an on-demand security group.</li>
-<li>Choose <code>private</code> or <code>outbound</code> for <code>networkType</code> instead of <code>existing</code>.
+<li>For the network, choose <code>networkType</code>.</li>
+<li>Choose <code>private</code> or <code>outbound</code> for <code>networkType</code>.
 <br><a class="lightgallery" href="./2020-03-23-vra8-nsxt-on-demand-security-group/step14.png" target="_blank" rel="noopener noreferrer" title="/2020-03-23-vra8-nsxt-on-demand-security-group/step14.png" data-thumbnail="/2020-03-23-vra8-nsxt-on-demand-security-group/step14.png">
         <img
             class="lazyload"
@@ -296,7 +295,7 @@ resources:
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-06-21</span>
+                <span>Updated on 2020-08-18</span>
             </div>
             <div class="post-info-license"></div>
         </div>

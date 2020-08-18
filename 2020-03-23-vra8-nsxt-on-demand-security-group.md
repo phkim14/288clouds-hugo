@@ -4,9 +4,6 @@
 
 You can create a vRA 8 blueprint to deploy machines and place them in an on-demand NSX-T security group. 
 
-Note that with this method, you must place the machines on existing networks (private or outbound). This network profile cannot be combined with creating on-demand NSX-T networks. 
-
-
 ## Demo Product Versions  
 * vSphere 6.5 U3
 * vRA 8.0.1 (including vRSLCM and vIDM)
@@ -48,8 +45,8 @@ optional steps:
 10. Connect the Cloud Agnostic Machine to the NSX Network on the canvas. 
 11. On the right side in the YAML file, choose an image and size for the machine. 
 12. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine from the IP range we've created.
-13. For the network, below `networkType` add the line `constraints:` then another line `- tag:` to choose the existing network you want to use. Make sure this existing network is available in the network profile where you selected to create an on-demand security group.
-14. Choose `private` or `outbound` for `networkType` instead of `existing`.
+13. For the network, choose `networkType`.
+14. Choose `private` or `outbound` for `networkType`. 
 {{<image src="step14.png" linked="true">}}
 15. Click "TEST".
 16. Click "DEPLOY" to create a new deployment.
