@@ -3,7 +3,15 @@
         <title>All Posts - 288clouds</title>
         <link>https://288clouds.com/posts.html</link>
         <description>All Posts | 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 22 Jul 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Sep 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>Common Questions around VCDX-NV</title>
+    <link>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</link>
+    <pubDate>Wed, 23 Sep 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</guid>
+    <description><![CDATA[When I was starting my journey to achieve the VCDX-NV certification, I had a lot of questions. Now as a panelist in training and an occasional helper for VCDX workshops, I&rsquo;ve noticed that many candidates have the same questions as the ones I&rsquo;ve had when I was a candidate.
+So I decided it might be useful if I help answer some of those questions in a blogpost. Here we go!]]></description>
+</item><item>
     <title>Create a vRA Cloud Blueprint with On-demand NSX-T One-Arm Load Balancer</title>
     <link>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</link>
     <pubDate>Wed, 22 Jul 2020 07:53:00 -0500</pubDate>
@@ -80,13 +88,5 @@ Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-
 Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
  NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
  security group(s) configured  Process Overview  Create a tag on the existing security group(s).]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 3: vRA 8 Blueprint with Existing Security Group (network profile)</title>
-    <link>https://288clouds.com/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</link>
-    <pubDate>Wed, 18 Mar 2020 06:13:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</guid>
-    <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) using a network profile.
-Note that with this method, however, any and all security groups that you select in the network profile will be applied to the machines. If you have multiple machines in a blueprint and want to specify which security group each machine should use then use vRA tag or segment port tag (refer to series part 4 &amp; 5 for those methods).]]></description>
 </item></channel>
 </rss>
