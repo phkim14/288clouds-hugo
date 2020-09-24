@@ -11,8 +11,8 @@
     <pubDate>Wed, 23 Sep 2020 07:53:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</guid>
-    <description><![CDATA[When I was starting my journey to achieve the VCDX-NV certification, I had a lot of questions. Now as a panelist in training and an occasional helper for VCDX workshops, I&rsquo;ve noticed that many candidates have the same questions as the ones I&rsquo;ve had when I was a candidate.
-So I decided it might be useful if I help answer some of those questions in a blogpost. Here we go!]]></description>
+    <description><![CDATA[When I was starting my journey to achieve the VCDX-NV certification, I had a lot of questions. Now after going through the certification process, I thought it might be useful if I help answer some of those questions in a blogpost. Here we go!
+Common FAQs Should I use NSX-V or NSX-T in my design? This is entirely up to you. Of course you have to be technical and extremely knowledgeable with the product (NSX-V or NSX-T), but remember that VCDX is an exam for architects.]]></description>
 </item><item>
     <title>Create a vRA Cloud Blueprint with On-demand NSX-T One-Arm Load Balancer</title>
     <link>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</link>
