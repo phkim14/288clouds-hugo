@@ -21,8 +21,6 @@ You should include as much information about vSphere as it relates to your NSX d
 
 
 ### How much information about storage do I need to include? 
-This one was a big questions for me as storage is my weakest knowledge area. 
-
 Similar to the question about vSphere, my answer is to include as much information about storage as it relates to your NSX design. Whether you're using NSX-V or NSX-T, both products consist of virtual machines, and (as we all know) virtual machines need storage. You should know what type of storage is being used, what kind of connections you have to storage, etc. and how certain aspects of storage design may affect your design in terms of design qualities (AMPRS). 
 
 
