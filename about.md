@@ -2,8 +2,7 @@
 
 
 <br>
-Phoebe Kim is a Customer Success Architect at VMware, specializing in data center virtualization and software-defined networking. She has experience in working with companies across different industries, including healthcare, finance, and public sector/non-profit. 
-
+As a Customer Success Architect at VMware, Phoebe Kim helps customers across various industries design and adopt solutions based on VMware technology to solve business challenges. Previously, Phoebe worked in technology consulting, where she was responsible for managing projects and leading teams of engineers. Phoebe has a VCDX certification in network virtualization in addition to various technical certifications from AWS and Cisco. 
 
 Certifications:
 * VMware Certified Design Expert - Network Virtualization (VCDX #288)
@@ -12,5 +11,6 @@ Certifications:
 * AWS Certified Developer - Associate
 * AWS Certified Solutions Architect - Associate
 * Cisco Certified Network Associate - Routing & Switching (CCNA R&S)
+* Project Management Professional (PMP)
 
 

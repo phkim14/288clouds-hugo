@@ -3,7 +3,14 @@
         <title>All Posts - 288clouds</title>
         <link>https://288clouds.com/posts.html</link>
         <description>All Posts | 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Sep 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 12 Nov 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>VMware Learning VCDX Spotlight</title>
+    <link>https://288clouds.com/2020-11-12-vcdx-spotlight.html</link>
+    <pubDate>Thu, 12 Nov 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-11-12-vcdx-spotlight.html</guid>
+    <description><![CDATA[I&rsquo;m honored to be featured by VMware Learning on the VCDX spotlight! Check out the blog here.]]></description>
+</item><item>
     <title>Common Questions around VCDX-NV</title>
     <link>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</link>
     <pubDate>Wed, 23 Sep 2020 07:53:00 -0500</pubDate>
@@ -78,15 +85,5 @@ Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-
 Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
  NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
  Security group(s) configured  Process Overview  Configure Membership Criteria of the existing security group(s).]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 4: vRA 8 Blueprint with Existing Security Group (vRA tag)</title>
-    <link>https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</link>
-    <pubDate>Thu, 19 Mar 2020 07:53:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</guid>
-    <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) using vRA tags.
-Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- security group(s) configured  Process Overview  Create a tag on the existing security group(s).]]></description>
 </item></channel>
 </rss>
