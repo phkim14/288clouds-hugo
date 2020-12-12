@@ -14,9 +14,9 @@ Here is a list of blogs that I am planning on creating for this series (as of Ma
 * Part 6: vRA 8 Blueprint with On-demand Security Groups
 * Part 7: vRA 8 Blueprint with Existing NSX-T One-Arm Load Balancer
 * Part 8: vRA 8 Blueprint with On-demand NSX-T One-Arm Load Balancer
-* Part 9: vRA 8 Blueprint with On-demand NAT NSX-T Networks
+* ~~Part 9: vRA 8 Blueprint with On-demand NAT NSX-T Networks~~
 
-Note: the list of blogs is subject to change. Last updated July 20, 2020.
+Note: the list of blogs is subject to change. Last updated December 12, 2020.
 
 <hr>
 
