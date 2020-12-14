@@ -3,8 +3,17 @@
         <title>vRA - Category - 288clouds</title>
         <link>https://288clouds.com/categories/vra.html</link>
         <description>vRA - Category - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Dec 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/categories/vra.html" rel="self" type="application/rss+xml" /><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 1</title>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 14 Dec 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/categories/vra.html" rel="self" type="application/rss+xml" /><item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)</title>
+    <link>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</link>
+    <pubDate>Mon, 14 Dec 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</guid>
+    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
+This study guide has been created to help myself study for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.
+Section 4 - Installing, Configuring, and Setup Objective 4.]]></description>
+</item><item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 1-3</title>
     <link>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</link>
     <pubDate>Sun, 13 Dec 2020 07:53:00 -0500</pubDate>
     <author>Author</author>
@@ -82,15 +91,5 @@ Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-
     <guid>https://288clouds.com/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</guid>
     <description><![CDATA[You can create a vRA 8 blueprint to create an on-demand routed NSX-T network and deploy machines connected to these newly created network. When you tell the blueprint to create an on-demand routed NSX-T network, vRA 8 actually creates a tier-1 gateway that connects to the pre-existing tier-0 gateway. It then creates an on-demand network and attaches it to the tier-1 gateway that it has created.
 Demo Product Versions  vSphere 6.]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks</title>
-    <link>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</link>
-    <pubDate>Fri, 13 Mar 2020 07:48:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</guid>
-    <description><![CDATA[You can create a vRA 8 blueprint to deploy machines on existing NSX-T networks.
-Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- logical router (tier-0 or tier-1) configured logical segment(s) attached to a logical router  Process Overview  Set up the existing networks with IP ranges you want to use for the machines.]]></description>
 </item></channel>
 </rss>

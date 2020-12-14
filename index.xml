@@ -3,10 +3,19 @@
         <title>288clouds</title>
         <link>https://288clouds.com/</link>
         <description>288clouds is a personal blog focused on virtualization and cloud technologies.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Dec 2020 07:53:00 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 14 Dec 2020 07:53:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 1</title>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)</title>
+    <link>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</link>
+    <pubDate>Mon, 14 Dec 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</guid>
+    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
+This study guide has been created to help myself study for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.
+Section 4 - Installing, Configuring, and Setup Objective 4.]]></description>
+</item><item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 1-3</title>
     <link>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</link>
     <pubDate>Sun, 13 Dec 2020 07:53:00 -0500</pubDate>
     <author>Author</author>
@@ -76,15 +85,5 @@ I got my VCDX in January 2020 through a remote defense, and I thought it may be 
     <author>Author</author>
     <guid>https://288clouds.com/2020-04-17-using-l2-bridges-v2t-migration.html</guid>
     <description><![CDATA[I recently had a customer who asked for some general feedback on their high-level plan to migrate from NSX-V to NSX-T using layer 2 bridges. Although every environment is different and the details of migration procedures should be tailored to each environment, I thought I&rsquo;d share the general guidance I gave to this customer in case there are some points here that may be transferrable to other similar NSX-V to NSX-T migration plans.]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group</title>
-    <link>https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html</link>
-    <pubDate>Mon, 23 Mar 2020 04:02:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html</guid>
-    <description><![CDATA[You can create a vRA 8 blueprint to deploy machines and place them in an on-demand NSX-T security group.
-Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
- NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
- logical network(s) configured  Process Overview  Create or edit a network profile. Select which existing security groups you&rsquo;d like to use.]]></description>
 </item></channel>
 </rss>
