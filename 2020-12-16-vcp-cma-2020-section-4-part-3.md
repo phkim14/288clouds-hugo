@@ -142,7 +142,7 @@ For more details on the Active Directory integration, please refer to the offici
 ### Objective 4.16 - Integrate vRA with vRealize Operations
 You can integrate vRealize Automation with vRealize Operations (vROPs) Manager for advanced workload placement, deployment monitoring, and pricing cards.
 
-This integration must be between on-prem instances of vRealize Automation and vRealize Operations.
+This integration must be between either both on-prem or both cloud instances of vRealize Automation and vRealize Operations. For example, you cannot integrate an on-prem vRA instance with a cloud vROPs instance. 
 
 For more details on integrating vRA with vRealize Operations, please refer to the official documentation [here][vRA8-vrops-integration-official-doc-link].
 
