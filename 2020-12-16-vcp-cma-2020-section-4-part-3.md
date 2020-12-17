@@ -172,7 +172,7 @@ A vROPs integration is required before you are able to create pricing cards in v
 To create pricing cards, you go to "Infrastructure" then "Pricing Cards" and click "+ NEW PRICING CARD". 
 {{<image src="vrops-integration-pricing-cards.png" linked="true">}}
 
-Unfortunately, I did not have access to a vROPs cloud integration at the time of writing this post so pleas refer to the official documentation [here][vRA8-vrops-integration-pricing-cards-official-doc-link] for more details on pricing cards.
+Unfortunately, I did not have access to a vROPs cloud integration at the time of writing this post so please refer to the official documentation [here][vRA8-vrops-integration-pricing-cards-official-doc-link] for more details on pricing cards.
 
 
 [vRA8-integrations-official-doc-link]: https://docs.vmware.com/en/vRealize-Automation/8.1/Using-and-Managing-Cloud-Assembly/GUID-8D943F7A-61BE-4094-84B6-4F3807B01C21.html
