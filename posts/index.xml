@@ -3,15 +3,22 @@
         <title>All Posts - 288clouds</title>
         <link>https://288clouds.com/posts.html</link>
         <description>All Posts | 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Dec 2020 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Dec 2020 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.17-4.21)</title>
+    <link>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</link>
+    <pubDate>Fri, 18 Dec 2020 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</guid>
+    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
+</item><item>
     <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.15-4.16)</title>
     <link>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</link>
     <pubDate>Wed, 16 Dec 2020 05:52:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.
-Note that the screenshots in this study guide are from a vRA cloud environment, not an on-prem vRA 8.]]></description>
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item><item>
     <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.8-4.14)</title>
     <link>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-2.html</link>
@@ -19,8 +26,7 @@ Note that the screenshots in this study guide are from a vRA cloud environment, 
     <author>Author</author>
     <guid>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-2.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.
-Note that the screenshots in this study guide are from a vRA cloud environment, not an on-prem vRA 8.]]></description>
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item><item>
     <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)</title>
     <link>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</link>
@@ -28,8 +34,7 @@ Note that the screenshots in this study guide are from a vRA cloud environment, 
     <author>Author</author>
     <guid>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.
-Section 4 - Installing, Configuring, and Setup Objective 4.]]></description>
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item><item>
     <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 1-3</title>
     <link>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</link>
@@ -37,8 +42,7 @@ Section 4 - Installing, Configuring, and Setup Objective 4.]]></description>
     <author>Author</author>
     <guid>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.
-Section 1 - Architectures and Technologies Objective 1.]]></description>
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item><item>
     <title>VMware Learning VCDX Spotlight</title>
     <link>https://288clouds.com/2020-11-12-vcdx-spotlight.html</link>
@@ -78,13 +82,5 @@ Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
     <guid>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</guid>
     <description><![CDATA[Carbon Black Cloud (CBC) can detect if an application on the company blacklist is running then send an alert and deny/terminate the process. Let&rsquo;s setup a demo using Logkeys, a linux application that stores keystrokes with or without the knowledge of user, to see how CBC reacts.
 Prerequisites  Carbon Black Cloud access (Note: the environment I&rsquo;m using is Carbon Black Cloud Enterprise) A linux machine (Note: I&rsquo;m using CentOS 7) - should have administrator/root access CBC sensor installed and active on the linux machine  Process Overview  Install logkeys on the linux machine.]]></description>
-</item><item>
-    <title>Carbon Black Cloud Sensor Install on a Linux Machine</title>
-    <link>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</link>
-    <pubDate>Thu, 04 Jun 2020 17:53:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</guid>
-    <description><![CDATA[Let&rsquo;s manually install a Carbon Black Cloud (CBC) sensor on a CentOS 7 machine!
-Prerequisites  Carbon Black Cloud access (Note: the environment I&rsquo;m using is Carbon Black Cloud Enterprise) CentOS 7 machine (can be Ubuntu as well)  Process Overview  Download the Carbon Black Cloud sensor kit on the linux machine. Install the sensor via terminal. Verify that the endpoint shows up in Carbon Black Cloud.  Demo / Example Download Carbon Black Cloud Sensor Kit  Log into Carbon Black Cloud from the linux machine where you want to install the sensor.]]></description>
 </item></channel>
 </rss>

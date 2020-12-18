@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>kubernetes - Tag - 288clouds</title>
+        <link>https://288clouds.com/tags/kubernetes.html</link>
+        <description>kubernetes - Tag - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Dec 2020 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/kubernetes.html" rel="self" type="application/rss+xml" /><item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.15-4.16)</title>
+    <link>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</link>
+    <pubDate>Wed, 16 Dec 2020 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</guid>
+    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
+</item></channel>
+</rss>
