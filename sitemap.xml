@@ -2,15 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-2.html</loc><lastmod>2020-12-17T20:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html</loc><lastmod>2020-12-17T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</loc><lastmod>2020-12-17T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/2020-11-12-vcdx-spotlight.html</loc><lastmod>2020-11-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</loc><lastmod>2020-09-24T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</loc><lastmod>2020-06-21T11:42:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</loc><lastmod>2020-06-21T17:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-05-26-tips-for-remote-vcdx-defense.html</loc><lastmod>2020-06-21T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -22,23 +23,30 @@
             <loc>https://288clouds.com/2020-03-17-customize-machine-on-demand-network-names.html</loc><lastmod>2020-06-21T06:00:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</loc><lastmod>2020-06-25T07:48:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</loc><lastmod>2020-06-21T07:48:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/2020-03-12-vra8-nsxt-blog-series-overview.html</loc><lastmod>2020-12-12T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/2020-03-12-vra8-nsxt-blog-series-overview.html</loc><lastmod>2020-12-12T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/2020-03-10-setting-up-static-website-github-pages-jekyll.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/abx.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/categories.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/exam-prep.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/posts.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vcp-cma.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/categories/vra.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra-capability-tag.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra-constraint-tag.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra-multi-tenancy.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra-onboarding.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra-tag-management.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vra8.html</loc><lastmod>2020-12-18T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/categories.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/exam-prep.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/kubectl.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/posts.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/troubleshooting.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vcp-cma.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/categories/vra.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra-logs.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra8.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vracli.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vrealize-orchestrator.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vro.html</loc><lastmod>2020-12-22T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/about.html</loc><lastmod>2020-12-22T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/abx.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra-capability-tag.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra-constraint-tag.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra-multi-tenancy.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra-onboarding.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/vra-tag-management.html</loc><lastmod>2020-12-20T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/active-directory.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/ansible.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/ansible-open-source.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -52,8 +60,6 @@
             <loc>https://288clouds.com/tags/vra-and-vrops-integration.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/vra-extensibility.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/vra-ootb-integrations.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vrealize-orchestrator.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vro.html</loc><lastmod>2020-12-17T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/network-profile.html</loc><lastmod>2020-12-17T20:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/vra-cloud-account.html</loc><lastmod>2020-12-17T20:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://288clouds.com/tags/vra-cloud-zone.html</loc><lastmod>2020-12-17T20:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -78,11 +84,11 @@
             <loc>https://288clouds.com/categories/vcdx.html</loc><lastmod>2020-11-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/vcdx-nv.html</loc><lastmod>2020-11-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/nsx.html</loc><lastmod>2020-09-24T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/tags/load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/nsx-t.html</loc><lastmod>2020-12-12T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/on-demand-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/existing-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/nsx-t.html</loc><lastmod>2020-12-12T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/on-demand-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/existing-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/tags/carbon-black-cloud.html</loc><lastmod>2020-06-21T17:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/carbon-black-sensor-install.html</loc><lastmod>2020-06-21T17:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/carbon-black.html</loc><lastmod>2020-06-21T17:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -92,7 +98,7 @@
             <loc>https://288clouds.com/tags/linux.html</loc><lastmod>2020-06-21T17:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/remote-defense.html</loc><lastmod>2020-06-21T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/vcdx-tips.html</loc><lastmod>2020-06-21T09:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/tags/automation.html</loc><lastmod>2020-12-12T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://288clouds.com/tags/automation.html</loc><lastmod>2020-12-12T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://288clouds.com/tags/design-considerations.html</loc><lastmod>2020-06-21T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/layer-2-bridges.html</loc><lastmod>2020-06-21T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/layer-2-bridging.html</loc><lastmod>2020-06-21T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -123,5 +129,4 @@
             <loc>https://288clouds.com/tags/static-pages.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/static-website.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/categories/web-development.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/tags/web-development.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://288clouds.com/about.html</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://288clouds.com/tags/web-development.html</loc><lastmod>2020-06-01T09:44:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
