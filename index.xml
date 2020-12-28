@@ -3,9 +3,17 @@
         <title>288clouds</title>
         <link>https://288clouds.com/</link>
         <description>288clouds is a personal blog focused on virtualization and cloud technologies.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Dec 2020 05:52:00 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Dec 2020 05:52:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.1-7.7)</title>
+    <link>https://288clouds.com/2020-12-28-vcp-cma-2020-section-7-part-1.html</link>
+    <pubDate>Mon, 28 Dec 2020 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-12-28-vcp-cma-2020-section-7-part-1.html</guid>
+    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
+</item><item>
     <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6</title>
     <link>https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html</link>
     <pubDate>Tue, 22 Dec 2020 05:52:00 -0500</pubDate>
@@ -75,14 +83,6 @@ Common FAQs Should I use NSX-V or NSX-T in my design? This is entirely up to you
     <author>Author</author>
     <guid>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</guid>
     <description><![CDATA[You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.
-Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
-</item><item>
-    <title>vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer</title>
-    <link>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
-    <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
-    <description><![CDATA[You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.
 Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
 </item></channel>
 </rss>

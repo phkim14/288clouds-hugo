@@ -17,6 +17,9 @@ Reach out via Twitter: @phoebesykim.
 * AWS Certified Developer - Associate
 * AWS Certified Solutions Architect - Associate
 
+##### Blockchain
+* Certified Blockchain Expert by Blockchain Council
+
 ##### Cisco
 * Cisco Certified Network Associate - Routing & Switching (CCNA R&S)
 

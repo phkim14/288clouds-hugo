@@ -108,7 +108,7 @@ Below is an example of a constraint tag used in a blueprint.
 To define constraint tags in a project, you go to "Infrastructure" and "Projects". From there, select a project you want to edit and go to the "Provisioning" tab to add constraint tags. 
 {{<image src="project-constraint-tags.png" linked="true">}}
 
-A project constraint tag can be a hard or a soft constraint by specifying `key:value:hard` or `key:value:soft` respectively. If a hard constraint is not met, the deployment will fail. The deployment will not fail if a soft constraint is not met since a soft constraint is a preference.
+A project constraint tag can be a hard or a soft constraint by specifying `key:value:hard` or `key:value:soft` respectively. By default, project constraint tags are hard constraints. If a hard constraint is not met, the deployment will fail. The deployment will not fail if a soft constraint is not met since a soft constraint is a preference.
 
 You can also avoid deploying to specific resources by creating a project constraint tag in a `!key:value` format. 
 
