@@ -19,6 +19,7 @@ Reach out via Twitter: @phoebesykim.
 
 ##### Blockchain
 * Certified Blockchain Expert by Blockchain Council
+* Certified Enterprise Blockchain Architect by 101 Blockchains
 
 ##### Cisco
 * Cisco Certified Network Associate - Routing & Switching (CCNA R&S)
