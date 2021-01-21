@@ -9,7 +9,7 @@ As a Customer Success Architect, I am focused on helping customers design and ad
 
 When I'm not keeping busy with work or learning new technologies, I enjoy creating models for 3D printing and playing violin and piano at various events around the Dallas/Fort Worth area. 
 
-Reach out via Twitter: @phoebesykim.
+Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim](https://twitter.com/phoebesykim).
 
 ***
 ## Certifications
@@ -32,6 +32,7 @@ Reach out via Twitter: @phoebesykim.
 * VMware Certified Design Expert - Data Center Virtualization (VCDX #288)
 * VMware Certified Implementation Expert - Data Center Virtualization (VCIX-DCV)
 * VMware Certified Implementation Expert - Network Virtualization (VCIX-NV)
+* VMware Certified Advanced Professional - Cloud Management and Automation Deploy (VCAP-CMA Deploy)
 * VMware Certified Professional - Cloud Management and Automation (VCP-CMA)
 * VMware Certified Professional - Data Center Virtualization (VCP-DCV)
 * VMware Certified Professional - Network Virtualization (VCP-NV)
