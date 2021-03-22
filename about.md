@@ -23,6 +23,7 @@ Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim]
 
 ##### Cisco
 * Cisco Certified Network Associate - Routing & Switching (CCNA R&S)
+* Cisco Certified Specialist - Enterprise Core
 
 ##### Project Management Institute (PMI)
 * Project Management Professional (PMP), #2792653
