@@ -70,7 +70,7 @@ resources:
 {{<image src="method2-step2.png" linked="true">}}
 3. In a vRA Cloud template in vRA Cloud Assembly, make sure that the machine(s) being deployed will use the network profile you've created. In this example, I have created a capability tag on the network profile and the machine is using that capability tag under `constraints`. <b>Note that you do not need a security group resource in the template. </b>
 {{<image src="method2-step3.png" linked="true">}}
-4. After you deploy the template and the deployment is finished, you can go to the VMC on AWS UI, click "View Members" for the security group and verify that the newly created machine is placed in the existing security group. I added two security groups to the network profile so the machine deployed has been placed in both security groups. <b>Note that with this method, all the machines deployed with the template will be placed in all the security groups in the network profile</b>
+4. After you deploy the template and the deployment is finished, you can go to the VMC on AWS UI, click "View Members" for the security group and verify that the newly created machine is placed in the existing security group. I added two security groups to the network profile so the machine deployed has been placed in both security groups. <b>Note that with this method, all the machines deployed with the template will be placed in all the security groups in the network profile.</b>
 {{<image src="method2-step4-1.png" linked="true">}}
 {{<image src="method2-step4-2.png" linked="true">}}
 
