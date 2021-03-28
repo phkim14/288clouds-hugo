@@ -302,7 +302,7 @@ Note that if you select &ldquo;On-demand security group&rdquo; AND you have exis
 <p>In a vRA Cloud template in vRA Cloud Assembly, make sure that the machine(s) being deployed will use the network profile you&rsquo;ve created. In this example, I have created a capability tag on the network profile and the machine is using that capability tag under <code>constraints</code>. <b>Note that you do not need a security group resource in the template. </b></p>
 </li>
 <li>
-<p>You <b>must</b> set <code>networkType</code> property for the cloud network as <code>private</code> or <code>outbound</code> in order for the isolation policy to take effect. For this example, I set the <code>networkType</code> as <code>private</code>. If you do not use <code>private</code> or <code>outbound</code> and use another <code>networkType</code> like <code>existing</code>, vRA will not create an on-demand security group for the depoyment.
+<p>You <b>must</b> set <code>networkType</code> property for the cloud network as <code>private</code> or <code>outbound</code> in order for the isolation policy to take effect. For this example, I set the <code>networkType</code> as <code>private</code>. If you do not use <code>private</code> or <code>outbound</code> and use another <code>networkType</code> like <code>existing</code>, vRA will not create an on-demand security group for the deployment.
 <br><a class="lightgallery" href="./2021-03-23-vrac-vmc-nsxt-on-demand-security-groups/method2-step4.png" target="_blank" rel="noopener noreferrer" title="/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups/method2-step4.png" data-thumbnail="/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups/method2-step4.png">
         <img
             class="lazyload"

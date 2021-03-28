@@ -69,7 +69,7 @@ Note that if you select "On-demand security group" AND you have existing group(s
 {{<image src="method2-step2-note-3.png" linked="true">}}
 
 3. In a vRA Cloud template in vRA Cloud Assembly, make sure that the machine(s) being deployed will use the network profile you've created. In this example, I have created a capability tag on the network profile and the machine is using that capability tag under `constraints`. <b>Note that you do not need a security group resource in the template. </b>
-4. You <b>must</b> set `networkType` property for the cloud network as `private` or `outbound` in order for the isolation policy to take effect. For this example, I set the `networkType` as `private`. If you do not use `private` or `outbound` and use another `networkType` like `existing`, vRA will not create an on-demand security group for the depoyment. 
+4. You <b>must</b> set `networkType` property for the cloud network as `private` or `outbound` in order for the isolation policy to take effect. For this example, I set the `networkType` as `private`. If you do not use `private` or `outbound` and use another `networkType` like `existing`, vRA will not create an on-demand security group for the deployment. 
 {{<image src="method2-step4.png" linked="true">}}
 5. After you deploy the template and the deployment is finished, go to "Deployments" in vRA Cloud Assembly and click on the deployment. On the right panel, expand "Network" and you'll see the name of the security group that has been created by vRA. 
 {{<image src="method2-step5.png" linked="true">}}

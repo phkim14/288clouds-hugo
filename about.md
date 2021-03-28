@@ -13,6 +13,9 @@ Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim]
 
 ***
 ## Certifications
+
+View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
+
 ##### Amazon Web Services (AWS)
 * AWS Certified Developer - Associate
 * AWS Certified Solutions Architect - Associate
@@ -42,7 +45,7 @@ Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim]
 ***
 ## Education
 ##### Northwestern University (Evanston, Illinois, USA)
-* Bachelor of Science (B.S.) in Industrial Engineering, Cum Laude
+* Bachelor of Science (B.S.) in Industrial Engineering
 * Bachelor of Music (B.M.) in Violin Studies
 
 ***

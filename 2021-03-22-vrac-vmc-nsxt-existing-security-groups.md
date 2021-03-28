@@ -35,6 +35,8 @@ vRA Cloud:
 6. After you deploy the template and the deployment is finished, you can go to the VMC on AWS UI, click "View Members" for the security group and verify that the newly created machine is placed in the existing security group. 
 {{<image src="method1-step6.png" linked="true">}}
 
+After the deployment is completed, you can reconfigure the security group in an existing deployment by changing it from a vRA cloud template and choosing "Update an existing deployment".
+
 #### Method 1 YAML
 ```
 formatVersion: 1
