@@ -3,9 +3,17 @@
         <title>288clouds</title>
         <link>https://288clouds.com/</link>
         <description>288clouds is a personal blog focused on virtualization and cloud technologies.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Mar 2021 05:52:00 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 30 Mar 2021 05:52:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere</title>
+    <link>https://288clouds.com/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</link>
+    <pubDate>Tue, 30 Mar 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</guid>
+    <description><![CDATA[You can create on-demand NSX-T networks using a vRA Cloud template in a VMC on AWS environment as well as in an on-prem vSphere environment. However, there are some differences between how on-demand NSX-T networks are created in these two environments due to limitations with vRA at the time of writing this post.
+On-demand Network Types vRA Cloud Assembly has several on-demand network types available depending on the resource you choose.]]></description>
+</item><item>
     <title>Creating On-demand Distributed Firewall Rules in VMC on AWS with vRA Cloud</title>
     <link>https://288clouds.com/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</link>
     <pubDate>Mon, 29 Mar 2021 05:52:00 -0500</pubDate>
@@ -81,14 +89,6 @@ This study guide has been created to help myself study for the exam, but I hope 
     <pubDate>Fri, 18 Dec 2020 05:52:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.15-4.16)</title>
-    <link>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</link>
-    <pubDate>Wed, 16 Dec 2020 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-12-16-vcp-cma-2020-section-4-part-3.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
 This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item></channel>
