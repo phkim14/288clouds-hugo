@@ -32,14 +32,26 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 * Project Management Professional (PMP), #2792653
 
 ##### VMware
-* VMware Certified Design Expert - Network Virtualization (VCDX #288)
+<b>Cloud Management and Automation</b>
+* VMware Certified Implementation Expert - Cloud Management and Automation Deploy (VCIX-CMA)
+* VMware Certified Advanced Professional - Cloud Management and Automation Deploy (VCAP-CMA Deploy)
+* VMware Certified Advanced Professional - Cloud Management and Automation Design (VCAP-CMA Design)
+* VMware Certified Professional - Cloud Management and Automation (VCP-CMA)
+
+<b>Data Center Virtualization</b>
 * VMware Certified Design Expert - Data Center Virtualization (VCDX #288)
 * VMware Certified Implementation Expert - Data Center Virtualization (VCIX-DCV)
-* VMware Certified Implementation Expert - Network Virtualization (VCIX-NV)
-* VMware Certified Advanced Professional - Cloud Management and Automation Deploy (VCAP-CMA Deploy)
-* VMware Certified Professional - Cloud Management and Automation (VCP-CMA)
+* VMware Certified Advanced Professional - Data Center Virtualization Deploy (VCAP-DCV Deploy)
+* VMware Certified Advanced Professional - Data Center Virtualization Design (VCAP-DCV Design)
 * VMware Certified Professional - Data Center Virtualization (VCP-DCV)
+
+<b>Network Virtualization</b>
+* VMware Certified Design Expert - Network Virtualization (VCDX #288)
+* VMware Certified Implementation Expert - Network Virtualization (VCIX-NV)
+* VMware Certified Advanced Professional - Network Virtualization Deployment (VCAP-NV)
 * VMware Certified Professional - Network Virtualization (VCP-NV)
+
+<b>VMware Cloud</b>
 * VMware Cloud on AWS - Software Defined Data Center 2020
 
 ***

@@ -3,9 +3,19 @@
         <title>288clouds</title>
         <link>https://288clouds.com/</link>
         <description>288clouds is a personal blog focused on virtualization and cloud technologies.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 30 Mar 2021 05:52:00 -0500</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Apr 2021 05:52:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>vRA Cloud &#43; GCP: Using Security Groups</title>
+    <link>https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html</link>
+    <pubDate>Fri, 09 Apr 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html</guid>
+    <description><![CDATA[Let&rsquo;s explore how you can apply existing Google Cloud Platform (GCP) network tags when deploying machines to a GCP environment with a vRA cloud template.
+Demo Product Versions  vRA Cloud GCP Environment  Prerequisites GCP:
+ Active GCP project Service account with appropriate roles for connectivity with vRA cloud  vRA Cloud:
+ Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
+</item><item>
     <title>On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere</title>
     <link>https://288clouds.com/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</link>
     <pubDate>Tue, 30 Mar 2021 05:52:00 -0500</pubDate>
@@ -81,14 +91,6 @@ This study guide has been created to help myself study for the exam, but I hope 
     <pubDate>Tue, 22 Dec 2020 05:52:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.17-4.21)</title>
-    <link>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</link>
-    <pubDate>Fri, 18 Dec 2020 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
 This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item></channel>
