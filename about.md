@@ -48,7 +48,7 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 <b>Network Virtualization</b>
 * VMware Certified Design Expert - Network Virtualization (VCDX #288)
 * VMware Certified Implementation Expert - Network Virtualization (VCIX-NV)
-* VMware Certified Advanced Professional - Network Virtualization Deployment (VCAP-NV)
+* VMware Certified Advanced Professional - Network Virtualization Deploy (VCAP-NV Deploy)
 * VMware Certified Professional - Network Virtualization (VCP-NV)
 
 <b>VMware Cloud</b>
