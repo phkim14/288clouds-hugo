@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - 288clouds</title>
-        <link>https://288clouds.com/posts.html</link>
-        <description>All Posts | 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Apr 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+        <title>vRA template - Tag - 288clouds</title>
+        <link>https://288clouds.com/tags/vra-template.html</link>
+        <description>vRA template - Tag - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Apr 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/vra-template.html" rel="self" type="application/rss+xml" /><item>
     <title>vRA Cloud &#43; GCP: Using Security Groups</title>
     <link>https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html</link>
     <pubDate>Fri, 09 Apr 2021 05:52:00 -0500</pubDate>
@@ -51,45 +51,5 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
 Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
  Active SDDC  vRA Cloud:
  Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  Under &ldquo;Compute Groups&rdquo; in the VMC on AWS UI, create a security group.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.17-7.21)</title>
-    <link>https://288clouds.com/2021-01-12-vcp-cma-2020-section-7-part-4.html</link>
-    <pubDate>Tue, 12 Jan 2021 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2021-01-12-vcp-cma-2020-section-7-part-4.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.15-7.16)</title>
-    <link>https://288clouds.com/2021-01-08-vcp-cma-2020-section-7-part-3.html</link>
-    <pubDate>Fri, 08 Jan 2021 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2021-01-08-vcp-cma-2020-section-7-part-3.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.8-7.14)</title>
-    <link>https://288clouds.com/2021-01-05-vcp-cma-2020-section-7-part-2.html</link>
-    <pubDate>Tue, 05 Jan 2021 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2021-01-05-vcp-cma-2020-section-7-part-2.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.1-7.7)</title>
-    <link>https://288clouds.com/2020-12-28-vcp-cma-2020-section-7-part-1.html</link>
-    <pubDate>Mon, 28 Dec 2020 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-12-28-vcp-cma-2020-section-7-part-1.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6</title>
-    <link>https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html</link>
-    <pubDate>Tue, 22 Dec 2020 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item></channel>
 </rss>
