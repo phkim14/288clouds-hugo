@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6 - 288clouds</title><meta name="Description" content="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the sixth section of the exam blueprint."><meta property="og:title" content="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6" />
+<meta property="og:description" content="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the sixth section of the exam blueprint." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html" />
+<meta property="og:image" content="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6/featured-image.png"/>
+<meta property="article:published_time" content="2020-12-22T05:52:00-05:00" />
+<meta property="article:modified_time" content="2020-12-22T05:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6/featured-image.png"/>
+<meta name="twitter:title" content="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6"/>
+<meta name="twitter:description" content="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the sixth section of the exam blueprint."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html" /><link rel="prev" href="https://288clouds.com/2020-12-18-vcp-cma-2020-section-4-part-4.html" /><link rel="next" href="https://288clouds.com/2020-12-28-vcp-cma-2020-section-7-part-1.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/2020-12-22-vcp-cma-2020-section-6.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/2020-12-22-vcp-cma-2020-section-6\/featured-image.png",
+                            "width":  2002 ,
+                            "height":  665 
+                        }],"genre": "posts","keywords": "vRA, vRA8, VCP-CMA, exam prep, troubleshooting, vracli, kubectl, vRealize Orchestrator, vRA logs, vRO","wordcount":  1102 ,
+        "url": "https:\/\/288clouds.com\/2020-12-22-vcp-cma-2020-section-6.html","datePublished": "2020-12-22T05:52:00-05:00","dateModified": "2020-12-22T05:53:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let's cover the sixth section of the exam blueprint."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./about.html"> About </a><a class="menu-item" href="./posts.html"> Posts </a><a class="menu-item" href="./tags.html"> Tags </a><a class="menu-item" href="./categories.html"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2020-12-22-vcp-cma-2020-section-6.html" selected>English</option><option value="/es/2020-12-22-vcp-cma-2020-section-6.html">Español</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./about.html" title="">About</a><a class="menu-item" href="./posts.html" title="">Posts</a><a class="menu-item" href="./tags.html" title="">Tags</a><a class="menu-item" href="./categories.html" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2020-12-22-vcp-cma-2020-section-6.html" selected>English</option><option value="/es/2020-12-22-vcp-cma-2020-section-6.html">Español</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="./about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-22">2020-12-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1102 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="./2020-12-22-vcp-cma-2020-section-6/featured-image.png"
+        data-srcset="./2020-12-22-vcp-cma-2020-section-6/featured-image.png, ./2020-12-22-vcp-cma-2020-section-6/featured-image.png 1.5x, ./2020-12-22-vcp-cma-2020-section-6/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2020-12-22-vcp-cma-2020-section-6/featured-image.png"
+        title="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the sixth section of the exam blueprint." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#section-5---performance-tuning-optimization-upgrades">Section 5 - Performance-tuning, Optimization, Upgrades</a></li>
+    <li><a href="#section-6---troubleshooting-and-repairing">Section 6 - Troubleshooting and Repairing</a>
+      <ul>
+        <li><a href="#objective-61---collect-log-bundles">Objective 6.1 - Collect Log Bundles</a></li>
+        <li><a href="#objective-62---describe-vracli-command-options">Objective 6.2 - Describe <code>vracli</code> Command Options</a></li>
+        <li><a href="#objective-63---describe-kubectl-command-options">Objective 6.3 - Describe <code>kubectl</code> Command Options</a></li>
+        <li><a href="#objective-64---troubleshoot-vra-configuration-errors">Objective 6.4 - Troubleshoot vRA Configuration Errors</a></li>
+        <li><a href="#objective-65---troubleshoot-provisioning-errors">Objective 6.5 - Troubleshoot Provisioning Errors</a></li>
+        <li><a href="#objective-66---monitor-deployments">Objective 6.6 - Monitor Deployments</a></li>
+        <li><a href="#objective-67---monitor-vro-workflow-execution">Objective 6.7 - Monitor vRO Workflow Execution</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.</p>
+<p>This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.</p>
+<p>Note that the screenshots in this study guide are from a vRA cloud environment, not an on-prem vRA 8.1 environment. There should not be a significant difference between the two at the time of taking these screenshots.</p>
+<h2 id="section-5---performance-tuning-optimization-upgrades">Section 5 - Performance-tuning, Optimization, Upgrades</h2>
+<p>There are no testable objectives for this section.</p>
+<h2 id="section-6---troubleshooting-and-repairing">Section 6 - Troubleshooting and Repairing</h2>
+<h3 id="objective-61---collect-log-bundles">Objective 6.1 - Collect Log Bundles</h3>
+<p>The log bundle is a zip file containing the environment file and both the service and core system logs.</p>
+<p>An environment file, included in the log bundle, shows configuration settings. This file has details about hardware, IP addresses and cluster infromation, and log information about top-level system functions (i.e. data collection).</p>
+<p>You can access logs captured per service based on the pod name by using the <code>kubectl logs -n prelude &lt;pod-name&gt;</code> command. You can use <code>kubectl -n prelude get pods</code> command to find the current container log.</p>
+<p>To create a log bundle, you go to the directory where you want to collect logs and use the <code>vracli log-bundle</code> command. All containers are named after the pod.</p>
+<p>For more information on logs and log bundles, please refer to the official documentation <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/Administering/GUID-EB314825-845A-4F31-8155-53F99F0B7B3C.html" target="_blank" rel="noopener noreffer">here</a>.</p>
+<h3 id="objective-62---describe-vracli-command-options">Objective 6.2 - Describe <code>vracli</code> Command Options</h3>
+<p><code>vracli</code> is a custom-built command set tool for implementing and modifying the vRealize Automation appliance infrastructure.</p>
+<p>Basic output of any <code>vracli</code> command:
+<code>vracli [command] [resource] [flags]</code></p>
+<p>You can use <code>vracli -h</code> for CLI help.</p>
+<p>Here is a list of some of the <code>vracli</code> commands:</p>
+<ul>
+<li><code>cluster</code> - cluster administration commands</li>
+<li><code>db</code> - database-related commands</li>
+<li><code>ldap</code> - LDAP administration commands</li>
+<li><code>license</code> - lists currently registered license keys</li>
+<li><code>load-balancer</code> - current load balancer address</li>
+<li><code>log-bundle</code> - create a log bundle</li>
+<li><code>reset</code> - reset commands based on Kubernetes configuration updates</li>
+<li><code>status</code> - shows cluster status</li>
+<li><code>upgrade</code> - upgrade commands tool for vRA upgrade</li>
+<li><code>vidm</code> - VMware Identity Manager (vIDM) administration commands</li>
+</ul>
+<h3 id="objective-63---describe-kubectl-command-options">Objective 6.3 - Describe <code>kubectl</code> Command Options</h3>
+<p><code>kubectl</code> is a set of Kubernetes commands to manage Kubernetes services, pods, and container-level functions in the environment.</p>
+<p>Basic output of any <code>kubectl</code> command:
+<code>kubectl [command] [TYPE] [NAME] [flags]</code></p>
+<p>You can use <code>kubectl -h</code> for CLI help.</p>
+<p>In order to access the prelude namespace where the vRA service resides, you must add <code>-n prelude</code> for many of the <code>kubectl</code> functions.
+Example: <code>kubectl -n prelude get pods</code>.</p>
+<p>Here are some of the <code>kubectl</code> commands:</p>
+<ul>
+<li><code>attach</code> - attach an arbitrary object to a running container</li>
+<li><code>auth</code> - inspect authorization</li>
+<li><code>autoscale</code> - Autoscale Deployment, ReplicaSet, or ReplicationController</li>
+<li><code>certificate</code> - manage certificates; note, do <b>not</b> use this command; use <code>vracli certificate</code> instead</li>
+<li><code>cluster-info</code> - display cluster information</li>
+<li><code>config</code> - modify the <code>config</code> files</li>
+<li><code>convert</code> - convert configuration files between different API versions; this command is not currently used in vRA</li>
+<li><code>cordon</code> - Mark the node as unschedulable; note, <b>avoid</b> using this command</li>
+<li><code>cp</code> - copy files and directories to and from containers</li>
+<li><code>create</code> - create a resource from a file or from stdin</li>
+<li><code>delete</code> - delete resources by filenames, stdin, resources and names, or by resources and label selector</li>
+<li><code>describe</code> - display details of a specific resource or group of resources</li>
+<li><code>drain</code> - drain the node to prepare for maintenance</li>
+<li><code>edit</code> - edit a resource</li>
+<li><code>exec</code> - run a command in a container</li>
+<li><code>explain</code> - documentation of resources</li>
+<li><code>expose</code> - take a replication controller, service, deployment, or pod and expose it as a new Kubernetes service</li>
+<li><code>get</code> - display resource(s)</li>
+<li><code>logs</code> - print logs for a container in a pod</li>
+<li><code>patch</code> - update fields of a resource by using a strategic merge patch; note, do <b>not</b> use this command in vRA</li>
+<li><code>rollout</code> - manage the rollout of a resource</li>
+<li><code>run</code> - run an image on the cluster</li>
+<li><code>scale</code> - set a new size for Deployment, ReplicaSet, ReplicationController, or Job Used to deploy additional resources and container sizes for individual services</li>
+<li><code>set</code> - set specific features on objects</li>
+<li><code>taint</code> - update the taints on one or more nodes; this command is not currently used in vRA</li>
+<li><code>top</code> - display resource usage (CPU, memory, storage)</li>
+<li><code>uncordon</code> - Mark the node as schedulable; note, <b>avoid</b> using this command</li>
+<li><code>version</code> - print the client and server version information</li>
+</ul>
+<p>For more details on <code>kubectl</code> CLI, please refer to the Kubernetes official documentation <a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank" rel="noopener noreffer">here</a>.</p>
+<h3 id="objective-64---troubleshoot-vra-configuration-errors">Objective 6.4 - Troubleshoot vRA Configuration Errors</h3>
+<p>You can start troubleshooting vRealize Automation errors by checking the status of vRA appliances and services.</p>
+<p>You can use the <code>vracli status</code> base command to see hardware and software versioning, such as Kubernetes build version, Linux distribution information, and host names. This command also initiates specific health checks from the Postgres databases for the vRA appliance so a top metric ouput is available for networking, disk usage, memory limits, and the overall status of the appliance.</p>
+<p>To verify status of all services and top-level metrics, you can use the <code>kubectl -n prelude get pods</code> command. If you want to see information for a specific pod, you can use the <code>kubectl -n prelude describe &lt;pod-name&gt;</code> command.</p>
+<p>If all else fails, you can try resetting the vRA configuration by running the <code>/opt/scripts/deploy.sh</code> script. The script runs the helm integrations and will redeploy containers in prelude based on configuration files. The Postgres database and data are not destroyed, but service pods are reconfigured.</p>
+<h3 id="objective-65---troubleshoot-provisioning-errors">Objective 6.5 - Troubleshoot Provisioning Errors</h3>
+<p>If your deployment request fails, you can start by looking at the displayed error message on the failed deployment under the &ldquo;Deployments&rdquo; tab.
+<br><a class="lightgallery" href="./2020-12-22-vcp-cma-2020-section-6/deployment-fail.png" target="_blank" rel="noopener noreferrer" title="/2020-12-22-vcp-cma-2020-section-6/deployment-fail.png" data-thumbnail="/2020-12-22-vcp-cma-2020-section-6/deployment-fail.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="deployment-fail.png"
+            data-srcset="./2020-12-22-vcp-cma-2020-section-6/deployment-fail.png, ./2020-12-22-vcp-cma-2020-section-6/deployment-fail.png 1.5x, ./2020-12-22-vcp-cma-2020-section-6/deployment-fail.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-22-vcp-cma-2020-section-6/deployment-fail.png" />
+    </a></p>
+<p>For more details, click on the failed deployment and click &ldquo;History&rdquo; tab. The event tree shows all the events that have happened in a sequence, so you can see exactly where the deployment has failed.
+<br><a class="lightgallery" href="./2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png" target="_blank" rel="noopener noreferrer" title="/2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png" data-thumbnail="/2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="deployment-fail-history.png"
+            data-srcset="./2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png, ./2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png 1.5x, ./2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-22-vcp-cma-2020-section-6/deployment-fail-history.png" />
+    </a></p>
+<p>You can also click &ldquo;provisioning diagram&rdquo;, which will take you to Request Details and display the provisioning workflow. The failed components will be in red; you can see the error message there as well.
+<br><a class="lightgallery" href="./2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png" target="_blank" rel="noopener noreferrer" title="/2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png" data-thumbnail="/2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="deployment-fail-provisioning-workflow.png"
+            data-srcset="./2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png, ./2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png 1.5x, ./2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-22-vcp-cma-2020-section-6/deployment-fail-provisioning-workflow.png" />
+    </a></p>
+<h3 id="objective-66---monitor-deployments">Objective 6.6 - Monitor Deployments</h3>
+<p>You can monitor active deployments from under the &ldquo;Deployments&rdquo; tab.</p>
+<p>You can also see provisioning workflows by going to &ldquo;Infrastructure&rdquo; then &ldquo;Requests&rdquo; and clicking on the specific deployment you want to monitor.
+<br><a class="lightgallery" href="./2020-12-22-vcp-cma-2020-section-6/requests.png" target="_blank" rel="noopener noreferrer" title="/2020-12-22-vcp-cma-2020-section-6/requests.png" data-thumbnail="/2020-12-22-vcp-cma-2020-section-6/requests.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="requests.png"
+            data-srcset="./2020-12-22-vcp-cma-2020-section-6/requests.png, ./2020-12-22-vcp-cma-2020-section-6/requests.png 1.5x, ./2020-12-22-vcp-cma-2020-section-6/requests.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-22-vcp-cma-2020-section-6/requests.png" />
+    </a></p>
+<h3 id="objective-67---monitor-vro-workflow-execution">Objective 6.7 - Monitor vRO Workflow Execution</h3>
+<p>You can monitor vRO workflow runs by going to &ldquo;Extensibility&rdquo; then &ldquo;Workflow Runs&rdquo;.
+<br><a class="lightgallery" href="./2020-12-22-vcp-cma-2020-section-6/workflow-runs.png" target="_blank" rel="noopener noreferrer" title="/2020-12-22-vcp-cma-2020-section-6/workflow-runs.png" data-thumbnail="/2020-12-22-vcp-cma-2020-section-6/workflow-runs.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="workflow-runs.png"
+            data-srcset="./2020-12-22-vcp-cma-2020-section-6/workflow-runs.png, ./2020-12-22-vcp-cma-2020-section-6/workflow-runs.png 1.5x, ./2020-12-22-vcp-cma-2020-section-6/workflow-runs.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-22-vcp-cma-2020-section-6/workflow-runs.png" />
+    </a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-12-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html" data-title="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6" data-via="phoebesykim" data-hashtags="vRA,vRA8,VCP-CMA,exam prep,troubleshooting,vracli,kubectl,vRealize Orchestrator,vRA logs,vRO"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2020-12-22-vcp-cma-2020-section-6.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vcp-cma.html">VCP-CMA</a>,&nbsp;<a href="./tags/exam-prep.html">exam prep</a>,&nbsp;<a href="./tags/troubleshooting.html">troubleshooting</a>,&nbsp;<a href="./tags/vracli.html">vracli</a>,&nbsp;<a href="./tags/kubectl.html">kubectl</a>,&nbsp;<a href="./tags/vrealize-orchestrator.html">vRealize Orchestrator</a>,&nbsp;<a href="./tags/vra-logs.html">vRA logs</a>,&nbsp;<a href="./tags/vro.html">vRO</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./2020-12-18-vcp-cma-2020-section-4-part-4.html" class="prev" rel="prev" title="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.17-4.21)"><i class="fas fa-angle-left fa-fw"></i>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.17-4.21)</a>
+            <a href="./2020-12-28-vcp-cma-2020-section-7-part-1.html" class="next" rel="next" title="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.1-7.7)">VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.1-7.7)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/sharer/sharer.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>
