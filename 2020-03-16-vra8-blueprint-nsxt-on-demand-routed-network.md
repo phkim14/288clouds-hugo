@@ -22,11 +22,11 @@ NSX-T:
 ## Process Overview
 1. Create a network profile that creates on-demand networks. 
 2. Select a tier-0 gateway and edge node in the network profile.
-3. Specify the on-demand network details (i.e. CIDR, subnet size, etc.)
+3. Specify the on-demand network details (i.e., CIDR, subnet size, etc.)
 4. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.
 5. Set the network type as `routed`. 
 
-optional steps:
+optional step:
 * Create inputs in the blueprint to customize the machine name and the network name.
 
 
@@ -56,7 +56,7 @@ optional steps:
 {{<image src="step17.png" linked="true">}}
 18. Click "TEST".
 19. Click "DEPLOY" to create a new deployment.
-20. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+20. Give it a deployment name, choose "Current Draft", the click "DEPLOY".
 
 ### Verify Deployment
 21. Log into NSX-T UI and go to the "Advanced Networking & Security" tab (Note that you cannot see this in the NSX-T Simplified UI).

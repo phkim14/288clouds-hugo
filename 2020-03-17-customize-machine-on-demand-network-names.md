@@ -34,8 +34,9 @@ NSX-T (if you want to use on-demand network name):
 
 ### Create Blueprint Custom Inputs
 4. Create a new blueprint and drag Cloud Agnostic Machine and NSX Network objects onto the canvas.
-5. Configure the blueprint like the screenshot (i.e. machine image, machine flavor, machine networks assignment, network type, etc.).
-{{<image src="step5.png" linked="true">}}6. Create a variable called `vm-name` under `inputs` to customize the machine name.
+5. Configure the blueprint like the screenshot (i.e., machine image, machine flavor, machine networks assignment, network type, etc.).
+{{<image src="step5.png" linked="true">}}
+6. Create a variable called `vm-name` under `inputs` to customize the machine name.
 7. Give it a type `string`.
 8. Give the variable a `title`, which is what the blueprint will use to ask the user for the input value when he/she deploys this blueprint.
 9. Give a default value for this variable with `default:`.

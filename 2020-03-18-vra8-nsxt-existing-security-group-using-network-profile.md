@@ -4,7 +4,7 @@
 
 You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) using a network profile. 
 
-Note that with this method, however, any and all security groups that you select in the network profile will be applied to the machines. If you have multiple machines in a blueprint and want to specify which security group each machine should use then use vRA tag or segment port tag (refer to series part 4 & 5 for those methods).
+Note that with this method, however, any and all security groups that you select in the network profile will be applied to the machines. If you have multiple machines in a blueprint and want to specify which security group each machine should use, then use vRA tag or segment port tag (refer to series part 4 & 5 for those methods).
 
 ## Demo Product Versions  
 * vSphere 6.5 U3
@@ -18,7 +18,7 @@ vRA 8:
 * Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
 
 NSX-T:
-* security group(s) configured
+* Security group(s) configured
 
 
 ## Process Overview
@@ -26,14 +26,14 @@ NSX-T:
 2. Select which existing security groups you'd like to use.
 3. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.
 
-optional steps:
+optional step:
 * Create inputs in the blueprint to customize the machine name.
 
 
 ## Demo / Example
 
 ### Configure Network Profile
-1. Go to "Infrastructure" > "Network Profiles" (under Configure) and click "+ NEW NETWORK PROFILE". (or you can choose to edit an existing network profile).
+1. Go to "Infrastructure" > "Network Profiles" (under Configure) and click "+ NEW NETWORK PROFILE" (or you can choose to edit an existing network profile).
 2. Choose an account/region and give the profile a name.
 3. Configure existing networks or on-demand networks. 
 4. Go to "Security Groups" tab and select "+ ADD SECURITY GROUP". 
@@ -53,7 +53,7 @@ optional steps:
 {{<image src="step13.png" linked="true">}}
 14. Click "TEST".
 15. Click "DEPLOY" to create a new deployment.
-16. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+16. Give it a deployment name, choose "Current Draft", the click "DEPLOY".
 
 ### Verify Deployment
 17. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.

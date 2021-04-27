@@ -22,7 +22,7 @@ NSX-T:
 ## Process Overview
 1. Create a tag on the existing security group(s).
 2. Create a blueprint with Cloud Agnostic Machine, NSX Network, and Security Group objects.
-3. Specify which security group will be used by adding a constraint on the Security Group object.
+3. Specify which security group will be used by adding a constraint tag on the Security Group object.
 
 optional steps:
 * Create inputs in the blueprint to customize the machine name.
@@ -54,17 +54,17 @@ optional steps:
 {{<image src="step13.png" linked="true">}}
 14. For the security group, below `securityGroupType`, add the line `constraints:` then another line `- tag:` and type the tag of the existing security group you want to use.
 {{<image src="step14.png" linked="true">}}
-15. For the machine, under `networks`, add a line under `assignment` called `securityGroups:`.
+15. For the machine, under `networks`, add a line called `securityGroups:`.
 16. Add the line `- '${resource.<insert security group object name>.id}'` below to connect the security group to the machine. 
 {{<image src="step16.png" linked="true">}}
 17. Click "TEST".
 18. Click "DEPLOY" to create a new deployment.
-19. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+19. Give it a deployment name, choose "Current Draft", the click "DEPLOY".
 
 ### Verify Deployment
 20. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.
 21. Now log into NSX-T UI and go to "Inventory" > "Groups".
-22. Click "View Members" of the security group you have selected in the network profile.
+22. Click "View Members" of the security group you have used in the blueprint.
 23. Click "IP Addresses" and you'll see the IP address of the deployment.
 
 ### Demo / Example Blueprint YAML File

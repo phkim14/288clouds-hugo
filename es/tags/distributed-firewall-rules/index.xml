@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>distributed firewall rules - Etiqueta - 288clouds</title>
+        <link>https://288clouds.com/es/tags/distributed-firewall-rules.html</link>
+        <description>distributed firewall rules - Etiqueta - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 29 Mar 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/distributed-firewall-rules.html" rel="self" type="application/rss+xml" /><item>
+    <title>Creating On-demand Distributed Firewall Rules in VMC on AWS with vRA Cloud</title>
+    <link>https://288clouds.com/es/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</link>
+    <pubDate>Mon, 29 Mar 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can create on-demand distributed firewall rules in a VMC on AWS environment with a vRA Cloud template.
+Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
+ Active SDDC  vRA Cloud:
+ Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Process Overview  Create a template that adds a new security group to the deployment.]]></description>
+</item></channel>
+</rss>

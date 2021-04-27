@@ -75,7 +75,7 @@ optional steps:
 20. Click "TEST".
 {{<image src="step20.png" linked="true">}}
 21. Click "DEPLOY" to create a new deployment.
-22. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+22. Give it a deployment name, choose "Current Draft", the click "DEPLOY".
 {{<image src="step22.png" linked="true">}}
 
 ### Verify Deployment
