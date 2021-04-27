@@ -1,0 +1,89 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vRA Cloud - Tag - 288clouds</title>
+        <link>https://288clouds.com/tags/vra-cloud.html</link>
+        <description>vRA Cloud - Tag - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Apr 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/vra-cloud.html" rel="self" type="application/rss+xml" /><item>
+    <title>vRA Cloud &#43; GCP: Using Security Groups</title>
+    <link>https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html</link>
+    <pubDate>Fri, 09 Apr 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html</guid>
+    <description><![CDATA[Let&rsquo;s explore how you can apply existing Google Cloud Platform (GCP) network tags when deploying machines to a GCP environment with a vRA cloud template.
+Demo Product Versions  vRA Cloud GCP Environment  Prerequisites GCP:
+ Active GCP project Service account with appropriate roles for connectivity with vRA cloud  vRA Cloud:
+ Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
+</item><item>
+    <title>On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere</title>
+    <link>https://288clouds.com/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</link>
+    <pubDate>Tue, 30 Mar 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</guid>
+    <description><![CDATA[You can create on-demand NSX-T networks using a vRA Cloud template in a VMC on AWS environment as well as in an on-prem vSphere environment. However, there are some differences between how on-demand NSX-T networks are created in these two environments due to limitations with vRA at the time of writing this post.
+On-demand Network Types vRA Cloud Assembly has several on-demand network types available depending on the resource you choose.]]></description>
+</item><item>
+    <title>Creating On-demand Distributed Firewall Rules in VMC on AWS with vRA Cloud</title>
+    <link>https://288clouds.com/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</link>
+    <pubDate>Mon, 29 Mar 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</guid>
+    <description><![CDATA[Let&rsquo;s explore how you can create on-demand distributed firewall rules in a VMC on AWS environment with a vRA Cloud template.
+Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
+ Active SDDC  vRA Cloud:
+ Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Process Overview  Create a template that adds a new security group to the deployment.]]></description>
+</item><item>
+    <title>Using On-demand NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
+    <link>https://288clouds.com/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</link>
+    <pubDate>Tue, 23 Mar 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</guid>
+    <description><![CDATA[There are different ways you can create on-demand NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
+Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
+ Active SDDC  vRA Cloud:
+ Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
+</item><item>
+    <title>Using Existing NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
+    <link>https://288clouds.com/2021-03-22-vrac-vmc-nsxt-existing-security-groups.html</link>
+    <pubDate>Mon, 22 Mar 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-03-22-vrac-vmc-nsxt-existing-security-groups.html</guid>
+    <description><![CDATA[There are different ways you can consume existing NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
+Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
+ Active SDDC  vRA Cloud:
+ Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  Under &ldquo;Compute Groups&rdquo; in the VMC on AWS UI, create a security group.]]></description>
+</item><item>
+    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 1-3</title>
+    <link>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</link>
+    <pubDate>Sun, 13 Dec 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html</guid>
+    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
+This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
+</item><item>
+    <title>vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer</title>
+    <link>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</link>
+    <pubDate>Wed, 22 Jul 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</guid>
+    <description><![CDATA[You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.
+Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
+</item><item>
+    <title>vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer</title>
+    <link>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
+    <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
+    <description><![CDATA[You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.
+Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
+</item><item>
+    <title>vRA 8 &#43; NSX-T Blog Series Overview</title>
+    <link>https://288clouds.com/2020-03-12-vra8-nsxt-blog-series-overview.html</link>
+    <pubDate>Thu, 12 Mar 2020 09:44:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-03-12-vra8-nsxt-blog-series-overview.html</guid>
+    <description><![CDATA[With the recent release of vRA 8.0, I have been receiving many questions from customers about how vRA 8 can leverage NSX-T.
+This blog series will focus on demonstrating how you can create vRA 8 blueprints that utilize NSX-T constructs.
+Here is a list of blogs that I am planning on creating for this series (as of March 15, 2020):
+ Part 1: vRA 8 Blueprint with Existing NSX-T Networks Part 2: vRA 8 Blueprint with On-demand Routed NSX-T Networks Part 3: vRA 8 Blueprint with Existing Security Groups (network profile) Part 4: vRA 8 Blueprint with Existing Security Groups (vRA tag) Part 5: vRA 8 Blueprint with Existing Security Groups (segment port tag) Part 6: vRA 8 Blueprint with On-demand Security Groups Part 7: vRA 8 Blueprint with Existing NSX-T One-Arm Load Balancer Part 8: vRA 8 Blueprint with On-demand NSX-T One-Arm Load Balancer Part 9: vRA 8 Blueprint with On-demand NAT NSX-T Networks  Note: the list of blogs is subject to change.]]></description>
+</item></channel>
+</rss>

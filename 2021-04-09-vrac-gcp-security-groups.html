@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>vRA Cloud &#43; GCP: Using Security Groups - 288clouds</title><meta name="Description" content="Learn how to apply existing GCP network tags when deploying machines to a GCP environment with vRA Cloud Assembly."><meta property="og:title" content="vRA Cloud &#43; GCP: Using Security Groups" />
+<meta property="og:description" content="Learn how to apply existing GCP network tags when deploying machines to a GCP environment with vRA Cloud Assembly." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html" />
+<meta property="og:image" content="https://288clouds.com/2021-04-09-vrac-gcp-security-groups/featured-image.png"/>
+<meta property="article:published_time" content="2021-04-09T05:52:00-05:00" />
+<meta property="article:modified_time" content="2021-04-09T05:52:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/2021-04-09-vrac-gcp-security-groups/featured-image.png"/>
+<meta name="twitter:title" content="vRA Cloud &#43; GCP: Using Security Groups"/>
+<meta name="twitter:description" content="Learn how to apply existing GCP network tags when deploying machines to a GCP environment with vRA Cloud Assembly."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html" /><link rel="prev" href="https://288clouds.com/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "vRA Cloud + GCP: Using Security Groups",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/2021-04-09-vrac-gcp-security-groups.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/2021-04-09-vrac-gcp-security-groups\/featured-image.png",
+                            "width":  2000 ,
+                            "height":  972 
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, vRA template, Google Cloud Platform, GCP, security group, network tag","wordcount":  807 ,
+        "url": "https:\/\/288clouds.com\/2021-04-09-vrac-gcp-security-groups.html","datePublished": "2021-04-09T05:52:00-05:00","dateModified": "2021-04-09T05:52:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Learn how to apply existing GCP network tags when deploying machines to a GCP environment with vRA Cloud Assembly."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./about.html"> About </a><a class="menu-item" href="./posts.html"> Posts </a><a class="menu-item" href="./tags.html"> Tags </a><a class="menu-item" href="./categories.html"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2021-04-09-vrac-gcp-security-groups.html" selected>English</option><option value="/es/2021-04-09-vrac-gcp-security-groups.html">Español</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./about.html" title="">About</a><a class="menu-item" href="./posts.html" title="">Posts</a><a class="menu-item" href="./tags.html" title="">Tags</a><a class="menu-item" href="./categories.html" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2021-04-09-vrac-gcp-security-groups.html" selected>English</option><option value="/es/2021-04-09-vrac-gcp-security-groups.html">Español</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">vRA Cloud &#43; GCP: Using Security Groups</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="./about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-09">2021-04-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;807 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="./2021-04-09-vrac-gcp-security-groups/featured-image.png"
+        data-srcset="./2021-04-09-vrac-gcp-security-groups/featured-image.png, ./2021-04-09-vrac-gcp-security-groups/featured-image.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2021-04-09-vrac-gcp-security-groups/featured-image.png"
+        title="Learn how to apply existing GCP network tags when deploying machines to a GCP environment with vRA Cloud Assembly." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#methods">Methods</a></li>
+    <li><a href="#demos--examples">Demos / Examples</a>
+      <ul>
+        <li><a href="#method-1-using-vra-template">Method 1: Using vRA Template</a>
+          <ul>
+            <li><a href="#verify-deployment">Verify Deployment</a></li>
+            <li><a href="#method-1-yaml">Method 1 YAML</a></li>
+          </ul>
+        </li>
+        <li><a href="#method-2-using-vra-network-profile">Method 2: Using vRA Network Profile</a>
+          <ul>
+            <li><a href="#verify-deployment-1">Verify Deployment</a></li>
+            <li><a href="#method-2-yaml">Method 2 YAML</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Let&rsquo;s explore how you can apply existing Google Cloud Platform (GCP) network tags when deploying machines to a GCP environment with a vRA cloud template.</p>
+<h2 id="demo-product-versions">Demo Product Versions</h2>
+<ul>
+<li>vRA Cloud</li>
+<li>GCP Environment</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>GCP:</p>
+<ul>
+<li>Active GCP project</li>
+<li>Service account with appropriate roles for connectivity with vRA cloud</li>
+</ul>
+<p>vRA Cloud:</p>
+<ul>
+<li>Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)</li>
+</ul>
+<p>Note: If you need help setting up a GCP cloud account, you can use <a href="https://garyflynn.com/technology/vmware/vrealize-automation-8x-setup-gcp-cloud-account/" target="_blank" rel="noopener noreffer">Gary Flynn&rsquo;s blog</a> as a resource.</p>
+<h2 id="methods">Methods</h2>
+<ol>
+<li>Using vRA template</li>
+<li>Using vRA network profile</li>
+</ol>
+<h2 id="demos--examples">Demos / Examples</h2>
+<h3 id="method-1-using-vra-template">Method 1: Using vRA Template</h3>
+<ol>
+<li>Ensure that you have a network tag in the GCP environment that you&rsquo;d like to use in a vRA template. The network tag must be in use by at least one firewall rule for it to be discovered by vRA during data collection.
+Below is an example of a network tag applied to an existing instance in GCP.<br>
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step1.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step1.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step1.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step1.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step1.png, ./2021-04-09-vrac-gcp-security-groups/method1-step1.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step1.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step1.png" />
+    </a>
+Note that a GCP network tag is not a separate resource by itself. You can only create a GCP network tag when you&rsquo;re creating an instance or if you&rsquo;re adding a new network tag to an existing instance.
+For example, when you&rsquo;re creating an instance, find the &ldquo;Networking&rdquo; section and you can create tags under &ldquo;Network tags&rdquo;.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step1-1.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step1-1.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step1-1.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step1-1.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step1-1.png, ./2021-04-09-vrac-gcp-security-groups/method1-step1-1.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step1-1.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step1-1.png" />
+    </a></li>
+<li>In vRA Cloud Assembly, go to &ldquo;Resources&rdquo; &gt; &ldquo;Security&rdquo; and add a vRA tag to the GCP network tag you&rsquo;d like to use in a vRA template.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step2.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step2.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step2.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step2.png, ./2021-04-09-vrac-gcp-security-groups/method1-step2.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step2.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step2.png" />
+    </a>
+If you&rsquo;ve just made a new network tag in GCP, you might have to wait until another data collection has been done for that GCP environment. Data collection occurs every 10 minutes automatically. You can check when the last data collection has been done by viewing the cloud account details from &ldquo;Infrastructure&rdquo; &gt; &ldquo;Cloud Accounts&rdquo; in vRA Cloud Assembly.</li>
+<li>In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to apply the GCP network tag. I only use one security group in this example but you can have multiple security groups attached to one machine.</li>
+<li>Under <code>constraints:</code>, add the line <code>- tag: &lt;insert tag name&gt;</code>.</li>
+<li>Make sure the value for <code>securityGroupType</code> is <code>existing</code>.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step5.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step5.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step5.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step5.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step5.png, ./2021-04-09-vrac-gcp-security-groups/method1-step5.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step5.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step5.png" />
+    </a>
+Creating on-demand security groups (or GCP network tags) is not supported with GCP. If you try to set the value for <code>securityGroupType</code> as <code>new</code> and deploy the template, it will fail and give the error like below.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step5-error.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step5-error.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step5-error.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step5-error.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step5-error.png, ./2021-04-09-vrac-gcp-security-groups/method1-step5-error.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step5-error.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step5-error.png" />
+    </a></li>
+</ol>
+<h4 id="verify-deployment">Verify Deployment</h4>
+<ol start="6">
+<li>After you deploy the template and the deployment is finished, go to the GCP UI &gt; &ldquo;Compute Engine&rdquo; &gt; &ldquo;VM instances&rdquo; and click instance that has been created by the vRA deployment.<br>
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step6.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step6.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step6.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step6.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step6.png, ./2021-04-09-vrac-gcp-security-groups/method1-step6.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step6.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step6.png" />
+    </a></li>
+<li>Scroll down to &ldquo;Network interfaces&rdquo; section and click &ldquo;View details&rdquo;.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step7.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step7.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step7.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step7.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step7.png, ./2021-04-09-vrac-gcp-security-groups/method1-step7.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step7.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step7.png" />
+    </a></li>
+<li>Under &ldquo;VM instance details&rdquo; &gt; &ldquo;Network tags&rdquo;, you should see that the network tag has been applied by the vRA template on this instance.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method1-step8.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method1-step8.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method1-step8.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method1-step8.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method1-step8.png, ./2021-04-09-vrac-gcp-security-groups/method1-step8.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method1-step8.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method1-step8.png" />
+    </a></li>
+</ol>
+<h4 id="method-1-yaml">Method 1 YAML</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs: {}
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: PKMP-ubuntu
+      flavor: PKMP-small
+      networks:
+        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+          assignment: static
+          securityGroups:
+            - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: pk-test-subnet-10-15-152-0
+  Cloud_SecurityGroup_1:
+    type: Cloud.SecurityGroup
+    properties:
+      securityGroupType: existing
+      constraints:
+        - tag: instance1-test-network-tag
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="method-2-using-vra-network-profile">Method 2: Using vRA Network Profile</h3>
+<ol>
+<li>In vRA Cloud Assembly, go to &ldquo;Infrastructure&rdquo; then &ldquo;Network Profiles&rdquo;. Create a network profile or edit an existing one.</li>
+<li>Under &ldquo;Security Groups&rdquo;, add existing security group(s) that you want to use.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method2-step2.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method2-step2.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method2-step2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method2-step2.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method2-step2.png, ./2021-04-09-vrac-gcp-security-groups/method2-step2.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method2-step2.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method2-step2.png" />
+    </a></li>
+<li>In a vRA Cloud template in vRA Cloud Assembly, make sure that the machine(s) being deployed will use the network profile you&rsquo;ve created. In this example, I have created a capability tag on the network profile and the machine is using that capability tag under <code>constraints</code>. <b>Note that you do not need a security group resource in the template. </b>
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method2-step3.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method2-step3.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method2-step3.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method2-step3.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method2-step3.png, ./2021-04-09-vrac-gcp-security-groups/method2-step3.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method2-step3.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method2-step3.png" />
+    </a></li>
+</ol>
+<h4 id="verify-deployment-1">Verify Deployment</h4>
+<ol start="4">
+<li>After you deploy the template, go to &ldquo;Deployments&quot;in vRA Cloud Assembly and click on the deployment that you&rsquo;ve created. From there, under &ldquo;Network&rdquo; for the machine that has been deployed, you will see that the network tag has been applied.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method2-step4.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method2-step4.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method2-step4.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method2-step4.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method2-step4.png, ./2021-04-09-vrac-gcp-security-groups/method2-step4.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method2-step4.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method2-step4.png" />
+    </a></li>
+<li>You can also verify that the network tag has been added to the instance deployed by the vRA template in the GCP UI.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/method2-step5.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/method2-step5.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/method2-step5.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="method2-step5.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/method2-step5.png, ./2021-04-09-vrac-gcp-security-groups/method2-step5.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/method2-step5.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/method2-step5.png" />
+    </a></li>
+</ol>
+<p>At the time of this blogpost, vRA does not support reconfiguring or updating security group(s) of an existing deployment for public clouds. For example, if you change the security group in a vRA cloud template and try to update an existing deployment, it will fail with the error below.
+<br><a class="lightgallery" href="./2021-04-09-vrac-gcp-security-groups/update-sg-error.png" target="_blank" rel="noopener noreferrer" title="/2021-04-09-vrac-gcp-security-groups/update-sg-error.png" data-thumbnail="/2021-04-09-vrac-gcp-security-groups/update-sg-error.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="update-sg-error.png"
+            data-srcset="./2021-04-09-vrac-gcp-security-groups/update-sg-error.png, ./2021-04-09-vrac-gcp-security-groups/update-sg-error.png 1.5x, ./2021-04-09-vrac-gcp-security-groups/update-sg-error.png 2x"
+            data-sizes="auto"
+            alt="/2021-04-09-vrac-gcp-security-groups/update-sg-error.png" />
+    </a></p>
+<h4 id="method-2-yaml">Method 2 YAML</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs: {}
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: PKMP-ubuntu
+      flavor: PKMP-small
+      networks:
+        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+          assignment: static
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: pk-test-subnet-10-15-152-0
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-04-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html" data-title="vRA Cloud &#43; GCP: Using Security Groups" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,vRA template,Google Cloud Platform,GCP,security group,network tag"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="./tags/vra-template.html">vRA template</a>,&nbsp;<a href="./tags/google-cloud-platform.html">Google Cloud Platform</a>,&nbsp;<a href="./tags/gcp.html">GCP</a>,&nbsp;<a href="./tags/security-group.html">security group</a>,&nbsp;<a href="./tags/network-tag.html">network tag</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html" class="prev" rel="prev" title="On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere"><i class="fas fa-angle-left fa-fw"></i>On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/sharer/sharer.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>

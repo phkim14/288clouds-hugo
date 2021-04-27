@@ -1,0 +1,30 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>VCDX - Tag - 288clouds</title>
+        <link>https://288clouds.com/tags/vcdx.html</link>
+        <description>VCDX - Tag - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 12 Nov 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/vcdx.html" rel="self" type="application/rss+xml" /><item>
+    <title>VMware Learning VCDX Spotlight</title>
+    <link>https://288clouds.com/2020-11-12-vcdx-spotlight.html</link>
+    <pubDate>Thu, 12 Nov 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-11-12-vcdx-spotlight.html</guid>
+    <description><![CDATA[I&rsquo;m honored to be featured by VMware Learning on the VCDX spotlight! Check out the blog here.]]></description>
+</item><item>
+    <title>Common Questions around VCDX-NV</title>
+    <link>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</link>
+    <pubDate>Wed, 23 Sep 2020 07:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html</guid>
+    <description><![CDATA[When I was starting my journey to achieve the VCDX-NV certification, I had a lot of questions. Now after going through the certification process, I thought it might be useful if I help answer some of those questions in a blogpost. Here we go!
+Common FAQs Should I use NSX-V or NSX-T in my design? This is entirely up to you. Of course you have to be technical and extremely knowledgeable with the product (NSX-V or NSX-T), but remember that VCDX is an exam for architects.]]></description>
+</item><item>
+    <title>Remote VCDX Defense Tips</title>
+    <link>https://288clouds.com/2020-05-26-tips-for-remote-vcdx-defense.html</link>
+    <pubDate>Tue, 26 May 2020 09:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-05-26-tips-for-remote-vcdx-defense.html</guid>
+    <description><![CDATA[Remote VCDX defense option has normally been reserved for candidates attempting to achieve their second, third, or even fourth VCDX. But in the midst of the COVID-19 pandemic, having a remote VCDX defense seems to be a possibility for candidates trying to receive their first VCDX in some cases.
+I got my VCDX in January 2020 through a remote defense, and I thought it may be valuable to share what I&rsquo;ve used during my defense for candidates who may have remote defenses in the future.]]></description>
+</item></channel>
+</rss>

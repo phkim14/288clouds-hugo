@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>existing network - Tag - 288clouds</title>
+        <link>https://288clouds.com/tags/existing-network.html</link>
+        <description>existing network - Tag - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 13 Mar 2020 07:48:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/tags/existing-network.html" rel="self" type="application/rss+xml" /><item>
+    <title>vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks</title>
+    <link>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</link>
+    <pubDate>Fri, 13 Mar 2020 07:48:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-03-13-vra8-blueprint-nsxt-existing-network.html</guid>
+    <description><![CDATA[You can create a vRA 8 blueprint to deploy machines on existing NSX-T networks.
+Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerequisites vRA 8:
+ NSX-T account connected Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)  NSX-T:
+ logical router (tier-0 or tier-1) configured logical segment(s) attached to a logical router  Process Overview  Set up the existing networks with IP ranges you want to use for the machines.]]></description>
+</item></channel>
+</rss>
