@@ -22,9 +22,9 @@ NSX-T:
 ## Process Overview
 1. Configure Membership Criteria of the existing security group(s).
 2. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.
-3. Configure the tag on the machine network to place a tag on the machine segment port.
+3. Configure the tag on the machine network in the blueprint to place a tag on the machine segment port.
 
-optional steps:
+optional step:
 * Create inputs in the blueprint to customize the machine name.
 
 
@@ -42,7 +42,7 @@ optional steps:
 {{<image src="step6.png" linked="true">}}
 
 ### Create and Configure Blueprint
-7. Go to "Blueprints" and Click "+ NEW" to create a new blueprint. (or you can choose to use an existing blueprint and skip this section).
+7. Go to "Blueprints" and Click "+ NEW" to create a new blueprint (or you can choose to use an existing blueprint and skip this section).
 8. Give a name to the blueprint and choose a project.
 9. Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas. <b>Note that you do not need to add the Security Group object to the blueprint.</b>
 10. Connect the Cloud Agnostic Machine to the NSX Network on the canvas. 
@@ -64,7 +64,7 @@ Note that anything following a hashtag is a comment in YAML.
 20. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.
 {{<image src="step20.png" linked="true">}}
 21. Now log into NSX-T UI and go to "Inventory" > "Groups".
-22. Click "View Members" of the security group you have selected in the network profile.
+22. Click "View Members" of the security group you have used.
 23. Click "IP Addresses" and you'll see the IP address of the deployment. 
 {{<image src="step23.png" linked="true">}}
 24. If you want to see the segment port tag that has been applied, log into NSX-T and go to "Advanced Networking & Security" > "Switching".

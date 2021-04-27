@@ -1,4 +1,4 @@
-# About the Author
+# About Me
 
 
 {{<image src="headshot.jpg" width="200" display="inline-block">}}
@@ -62,6 +62,6 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 
 ***
 ## Languages
-* English (native)
+* English (fluent)
 * Korean (native)
 * Spanish (intermediate)

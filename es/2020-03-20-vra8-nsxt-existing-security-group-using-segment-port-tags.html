@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag) - 288clouds</title><meta name="Description" content="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using NSX-T segment port tags."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)" />
+<meta property="og:description" content="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using NSX-T segment port tags." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" />
+<meta property="og:image" content="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png"/>
+<meta property="article:published_time" content="2020-03-20T05:02:00-05:00" />
+<meta property="article:modified_time" content="2020-06-21T05:02:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png"/>
+<meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)"/>
+<meta name="twitter:description" content="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using NSX-T segment port tags."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" /><link rel="prev" href="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><link rel="next" href="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "vRA 8 + NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/es\/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/es\/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags\/featured-image.png",
+                            "width":  1974 ,
+                            "height":  823 
+                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, existing security group, segment port tag, segment port, vNIC, automation","wordcount":  654 ,
+        "url": "https:\/\/288clouds.com\/es\/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html","datePublished": "2020-03-20T05:02:00-05:00","dateModified": "2020-06-21T05:02:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using NSX-T segment port tags."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="../es/" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="../es/about.html"> Acerca de Mí </a><a class="menu-item" href="../es/posts.html"> Artículos </a><a class="menu-item" href="../es/tags.html"> Etiquetas </a><a class="menu-item" href="../es/categories.html"> Categorías </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Selecciona la idioma">Español<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html">English</option><option value="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" selected>Español</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="../es/" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="../es/about.html" title="">Acerca de Mí</a><a class="menu-item" href="../es/posts.html" title="">Artículos</a><a class="menu-item" href="../es/tags.html" title="">Etiquetas</a><a class="menu-item" href="../es/categories.html" title="">Categorías</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Selecciona la idioma">Español<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html">English</option><option value="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" selected>Español</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contenido</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-20">2020-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;654 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutos&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="../svg/loading.min.svg"
+        data-src="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png"
+        data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png"
+        title="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using NSX-T segment port tags." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contenido</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#process-overview">Process Overview</a></li>
+    <li><a href="#demo--example">Demo / Example</a>
+      <ul>
+        <li><a href="#configure-security-group-membership-criteria">Configure Security Group Membership Criteria</a></li>
+        <li><a href="#create-and-configure-blueprint">Create and Configure Blueprint</a></li>
+        <li><a href="#add-segment-port-tag-in-blueprint">Add Segment Port Tag in Blueprint</a></li>
+        <li><a href="#verify-deployment">Verify Deployment</a></li>
+        <li><a href="#demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="-este-post-será-traducido-al-español-próximamente-">~ Este post será traducido al español próximamente ~</h1>
+<p>You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) by putting tags on the machine segment port(s).</p>
+<h2 id="demo-product-versions">Demo Product Versions</h2>
+<ul>
+<li>vSphere 6.5 U3</li>
+<li>vRA 8.0.1 (including vRSLCM and vIDM)</li>
+<li>NSX-T 2.5.1</li>
+<li>vSAN 6.6.1</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>vRA 8:</p>
+<ul>
+<li>NSX-T account connected</li>
+<li>Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)</li>
+</ul>
+<p>NSX-T:</p>
+<ul>
+<li>Security group(s) configured</li>
+</ul>
+<h2 id="process-overview">Process Overview</h2>
+<ol>
+<li>Configure Membership Criteria of the existing security group(s).</li>
+<li>Create a blueprint with Cloud Agnostic Machine and NSX Network objects.</li>
+<li>Configure the tag on the machine network to place a tag on the machine segment port.</li>
+</ol>
+<p>optional steps:</p>
+<ul>
+<li>Create inputs in the blueprint to customize the machine name.</li>
+</ul>
+<h2 id="demo--example">Demo / Example</h2>
+<h3 id="configure-security-group-membership-criteria">Configure Security Group Membership Criteria</h3>
+<ol>
+<li>Log into NSX-T and go to &ldquo;Inventory&rdquo; &gt; &ldquo;Groups&rdquo;.</li>
+<li>Edit the security group you want to configure.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step2.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step2.png" />
+    </a></li>
+<li>Click &ldquo;Set Members&rdquo;.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step3.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step3.png" />
+    </a></li>
+<li>Click &ldquo;+ ADD CRITERIA&rdquo;.</li>
+<li>Select &ldquo;Segment Port&rdquo; in the first column under &ldquo;Criteria&rdquo;.</li>
+<li>Enter the name of the tag and the scope. You need both for vRA blueprint.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step6.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step6.png" />
+    </a></li>
+</ol>
+<h3 id="create-and-configure-blueprint">Create and Configure Blueprint</h3>
+<ol start="7">
+<li>Go to &ldquo;Blueprints&rdquo; and Click &ldquo;+ NEW&rdquo; to create a new blueprint. (or you can choose to use an existing blueprint and skip this section).</li>
+<li>Give a name to the blueprint and choose a project.</li>
+<li>Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas. <b>Note that you do not need to add the Security Group object to the blueprint.</b></li>
+<li>Connect the Cloud Agnostic Machine to the NSX Network on the canvas.</li>
+<li>On the right side in the YAML file, choose an image and size for the machine.</li>
+<li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine from the IP range we&rsquo;ve created.</li>
+<li>For the NSX network, change the <code>networkType</code> under <code>properties</code> accordingly depending on whether you have configured existing or on-demand networks in the network profile. In this demo, I&rsquo;ll be using an existing network.</li>
+</ol>
+<h3 id="add-segment-port-tag-in-blueprint">Add Segment Port Tag in Blueprint</h3>
+<ol start="14">
+<li>For the machine, under <code>networks</code>, add a line under <code>assignment</code> called <code>tags:</code>.</li>
+<li>Add the line <code>- key: &lt;insert scope name&gt;</code>.</li>
+<li>Add the line <code>value: &lt;insert tag name&gt;</code> below. Make sure they are aligned.
+Note that anything following a hashtag is a comment in YAML.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step16.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step16.png" />
+    </a></li>
+<li>Click &ldquo;TEST&rdquo;.</li>
+<li>Click &ldquo;DEPLOY&rdquo; to create a new deployment.</li>
+<li>Give it a deployment name, choose &ldquo;Current Draft&rdquo;, the cick &ldquo;DEPLOY&rdquo;.</li>
+</ol>
+<h3 id="verify-deployment">Verify Deployment</h3>
+<ol start="20">
+<li>Once deployed, go to &ldquo;Deployments&rdquo; tab in vRA and note the IP address of the deployment.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step20.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step20.png" />
+    </a></li>
+<li>Now log into NSX-T UI and go to &ldquo;Inventory&rdquo; &gt; &ldquo;Groups&rdquo;.</li>
+<li>Click &ldquo;View Members&rdquo; of the security group you have selected in the network profile.</li>
+<li>Click &ldquo;IP Addresses&rdquo; and you&rsquo;ll see the IP address of the deployment.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step23.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step23.png" />
+    </a></li>
+<li>If you want to see the segment port tag that has been applied, log into NSX-T and go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Switching&rdquo;.</li>
+<li>Select the overlay network that the machine has been placed on.</li>
+<li>Find the logical port that belongs to the machine. You can see the VM name if you look at the &ldquo;Attachment&rdquo; column. If you don&rsquo;t know the VM name that has been created, go to vRA 8 UI &gt; &ldquo;Deployments&rdquo; and check the deployment.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step26.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step26.png" />
+    </a></li>
+<li>Select the logical port and click &ldquo;Actions&rdquo; &gt; &ldquo;Manage Tags&rdquo;.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step27.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step27.png" />
+    </a></li>
+<li>You should see the tag that you&rsquo;ve specified in the blueprint.
+<br><a class="lightgallery" href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png" data-thumbnail="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png">
+        <img
+            class="lazyload"
+            src="../svg/loading.min.svg"
+            data-src="step28.png"
+            data-srcset="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png 1.5x, ../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png 2x"
+            data-sizes="auto"
+            alt="/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/step28.png" />
+    </a></li>
+</ol>
+<h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs:
+  vm-name:
+    type: string
+    title: name
+    default: existing-sg-vm-tag-vm
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: centos-temp
+      flavor: small
+      customizationSpec: linux
+      name: &#39;${input.vm-name}&#39;
+      networks:
+        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
+          assignment: static
+          # this is a tag on the segment port, NOT the VM
+          tags:
+            - key: Three-Tier-App # Scope (defined in NSX-T)
+              value: web # Tag (defined in NSX-T)
+  Cloud_NSX_Network_1:
+    type: Cloud.NSX.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: &#39;subnet-cidr:192.168.35.0/24&#39;
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Actualizado el 2020-06-21</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" data-title="vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)" data-via="phoebesykim" data-hashtags="vRA,vRA8,NSX-T,existing security group,segment port tag,segment port,vNIC,automation"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/existing-security-group.html">existing security group</a>,&nbsp;<a href="../es/tags/segment-port-tag.html">segment port tag</a>,&nbsp;<a href="../es/tags/segment-port.html">segment port</a>,&nbsp;<a href="../es/tags/vnic.html">vNIC</a>,&nbsp;<a href="../es/tags/automation.html">automation</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="../es/">Inicio</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="../es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" class="prev" rel="prev" title="Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)"><i class="fas fa-angle-left fa-fw"></i>Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)</a>
+            <a href="../es/2020-03-23-vra8-nsxt-on-demand-security-group.html" class="next" rel="next" title="vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group">vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="../lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="../lib/katex/katex.min.css"><link rel="stylesheet" href="../lib/katex/copy-tex.min.css"><script type="text/javascript" src="../lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="../lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="../lib/lunr/lunr.min.js"></script><script type="text/javascript" src="../lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="../lib/lunr/lunr.es.min.js"></script><script type="text/javascript" src="../lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="../lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="../lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="../lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="../lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="../lib/sharer/sharer.min.js"></script><script type="text/javascript" src="../lib/katex/katex.min.js"></script><script type="text/javascript" src="../lib/katex/auto-render.min.js"></script><script type="text/javascript" src="../lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="../lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/es/index.json","lunrLanguageCode":"es","maxResultLength":10,"noResultsFound":"No se encontraron resultados","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="../js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>
