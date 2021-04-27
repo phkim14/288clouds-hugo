@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer - 288clouds</title><meta name="Description" content="Learn how to create a vRA cloud blueprint to deploy machines with existing NSX-T one-arm load balancer."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer" />
+<meta property="og:description" content="Learn how to create a vRA cloud blueprint to deploy machines with existing NSX-T one-arm load balancer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" />
+<meta property="og:image" content="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png"/>
+<meta property="article:published_time" content="2020-07-20T07:53:00-05:00" />
+<meta property="article:modified_time" content="2020-12-12T07:53:00-05:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png"/>
+<meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer"/>
+<meta name="twitter:description" content="Learn how to create a vRA cloud blueprint to deploy machines with existing NSX-T one-arm load balancer."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" /><link rel="prev" href="https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html" /><link rel="next" href="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "vRA 8 + NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer\/featured-image.png",
+                            "width":  2000 ,
+                            "height":  907 
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud\u0022, NSX-T, existing load balancer, one-arm load balancer, load balancer","wordcount":  1219 ,
+        "url": "https:\/\/288clouds.com\/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html","datePublished": "2020-07-20T07:53:00-05:00","dateModified": "2020-12-12T07:53:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Learn how to create a vRA cloud blueprint to deploy machines with existing NSX-T one-arm load balancer."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./about.html"> About </a><a class="menu-item" href="./posts.html"> Posts </a><a class="menu-item" href="./tags.html"> Tags </a><a class="menu-item" href="./categories.html"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./about.html" title="">About</a><a class="menu-item" href="./posts.html" title="">Posts</a><a class="menu-item" href="./tags.html" title="">Tags</a><a class="menu-item" href="./categories.html" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="./about" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-20">2020-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1219 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png"
+        data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/featured-image.png"
+        title="Learn how to create a vRA cloud blueprint to deploy machines with existing NSX-T one-arm load balancer." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#process-overview">Process Overview</a></li>
+    <li><a href="#demo--example">Demo / Example</a>
+      <ul>
+        <li><a href="#create-nsx-t-one-arm-load-balancer">Create NSX-T One-Arm Load Balancer</a></li>
+        <li><a href="#create-network-profile">Create Network Profile</a></li>
+        <li><a href="#create-and-configure-blueprint">Create and Configure Blueprint</a></li>
+        <li><a href="#verify-deployment">Verify Deployment</a></li>
+        <li><a href="#demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</a></li>
+        <li><a href="#optional-multiple-load-balancers-in-network-profile">(Optional) Multiple Load Balancers in Network Profile</a></li>
+        <li><a href="#using-constraint-tag-to-indicate-load-balancer-example-blueprint-yaml-file">Using Constraint Tag to Indicate Load Balancer Example Blueprint YAML File</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.</p>
+<p>Below is a simplified diagram of a NSX-T one-arm load balancer.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="diagram.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/diagram.png" />
+    </a></p>
+<p>Note that vRA Cloud / vRA 8.1 does not fully support NSX-T policy API yet. Full Support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I&rsquo;m not a product manager).
+If you try to create a blueprint using policy tier-1 router and load balancer, the blueprint deployment will fail and display the following error message: <code>[289] [Principal 'admin' with role '[enterprise_admin]' attempts to delete or modify an object of type LoadBalancerService it doesn't own. (createUser=nsx_policy, allowOverwrite=null)]</code>
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="error.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/error.png" />
+    </a></p>
+<h2 id="demo-product-versions">Demo Product Versions</h2>
+<ul>
+<li>VCF 3.9.1.0-15345960 (vSphere 6.7, NSX-V 6.4.6)</li>
+<li>NSX-T 2.5.0</li>
+<li>vRA Cloud</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>vRA Cloud:</p>
+<ul>
+<li>NSX-T account connected</li>
+<li>Basic infrastructure configured in Cloud Assembly (Projects, Cloud Zones, Flavor Mappings, Image Mappings)</li>
+</ul>
+<p>NSX-T:</p>
+<ul>
+<li>tier-0 logical router configured</li>
+<li>(non-policy-API) tier-1 logical router configured</li>
+<li>edge cluster configured (edge nodes must be at least medium size)</li>
+</ul>
+<h2 id="process-overview">Process Overview</h2>
+<ol>
+<li>Create a NSX-T one-arm load balancer.</li>
+<li>Create a network profile to use an existing load-balancer.</li>
+<li>Create a blueprint with Cloud Agnostic Machine, Cloud Network, and Cloud Load Balancer.</li>
+</ol>
+<p>optional steps:</p>
+<ul>
+<li>Create inputs in the blueprint to customize the machine name.</li>
+<li>Create multiple load balancers and apply a constraint tag to deploy load balancing services on a specific load balancer.</li>
+</ul>
+<h2 id="demo--example">Demo / Example</h2>
+<h3 id="create-nsx-t-one-arm-load-balancer">Create NSX-T One-Arm Load Balancer</h3>
+<ol>
+<li>In the NSX-T UI, go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Load Balancers&rdquo;.</li>
+<li>Click &ldquo;+&rdquo; to create a new load balancer.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step2.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step2.png" />
+    </a></li>
+<li>Click on the load balancer you&rsquo;ve just created and click &ldquo;EDIT&rdquo; next to &ldquo;Attachment&rdquo;.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step3.png" />
+    </a></li>
+<li>Select a Tier-1 logical router to provide load balancing services. The tier-1 router cannot be a policy-API router. Create a non-policy-API tier-1 router under &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Routers&rdquo; if you do not have one.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step4.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step4.png" />
+    </a></li>
+<li>You don&rsquo;t need to configure virtual server or server pools at this time. They will be created by the blueprint.</li>
+</ol>
+<h3 id="create-network-profile">Create Network Profile</h3>
+<ol start="6">
+<li>In vRA Cloud (or vRA 8) Cloud Assmebly, go to &ldquo;Infrastructure&rdquo; &gt; &ldquo;Network Profiles&rdquo; (under Configure) and click &ldquo;+ NEW NETWORK PROFILE&rdquo;. (or you can choose to edit an existing network profile).</li>
+<li>Choose an account/region and give the profile a name.</li>
+<li>Go to &ldquo;Networks&rdquo; tab and configure existing networks or on-demand networks. In this demo, I&rsquo;ll be using an existing NSX-T network. Refer to previous vRA 8 + NSX-T blog series for more details on how to configure existing or on-demand networks.</li>
+<li>When using an existing NSX-T load balancer in a blueprint, you do not have to select tier-0 logical router or edge cluster under &ldquo;Network Policies&rdquo; tab.</li>
+<li>Go to &ldquo;Load Balancers&rdquo; tab, click &ldquo;+ ADD LOAD BALANCER&rdquo; and choose the load balancer created in previous steps.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step10.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step10.png" />
+    </a></li>
+</ol>
+<h3 id="create-and-configure-blueprint">Create and Configure Blueprint</h3>
+<ol start="11">
+<li>Go to &ldquo;Blueprints&rdquo; and Click &ldquo;+ NEW&rdquo; to create a new blueprint.</li>
+<li>Give a name to the blueprint and choose a project.</li>
+<li>Drag on a Cloud Agnostic Machine, Cloud Agnostic Network, and Cloud Agnostic Load Balancer onto the canvas. You can use environment-specific resources as well if you&rsquo;d like.</li>
+<li>Connect the Machine and the Load Balancer to the Network on the canvas. Also connect the Machine to the Load Balancer.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step14.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step14.png" />
+    </a></li>
+<li>On the right side in the YAML file, choose an image and size for the machine. Add <code>count</code> property to indicate how many machines you want to deploy.</li>
+<li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine.</li>
+<li>Since I&rsquo;ll be placing the machines on an existing NSX-T network, I want to make sure it says <code>networkType: existing</code> under <code>properties</code>. Below <code>networkType</code>, I also add the line <code>constraints:</code> then another line <code>- tag:</code> to choose the existing network I want to use.</li>
+<li>Configure the load balancer. <code>protocol</code> and <code>port</code> under <code>routes</code> property are required. <code>healthCheckConfiguration</code> is optional - if you provide details, custom monitor will be created. Otherwise, only the virtual server, server pool, and application profile will be created.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step18.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step18.png" />
+    </a></li>
+<li>Click &ldquo;TEST&rdquo;.</li>
+<li>Click &ldquo;DEPLOY&rdquo; to create a new deployment.</li>
+<li>Give it a deployment name, choose &ldquo;Current Draft&rdquo;, the click &ldquo;DEPLOY&rdquo;.</li>
+</ol>
+<h3 id="verify-deployment">Verify Deployment</h3>
+<ol start="22">
+<li>Go to &ldquo;Deployments&rdquo; tab in Cloud Assembly and check that the deployment is completed successfully.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step22.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step22.png" />
+    </a></li>
+<li>Now log into NSX-T UI and go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Load Balancers&rdquo; and you&rsquo;ll see that the existing load balancer now has a virtual server.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step23.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step23.png" />
+    </a></li>
+<li>If you click on the virtual server, you can see the port and protocol as you&rsquo;ve defined in the blueprint.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step24.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step24.png" />
+    </a></li>
+<li>If you click the server pool and look at the pool members, you will see the machines that have been created by the blueprint.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step25.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step25.png" />
+    </a></li>
+<li>If you click the profiles, you can see application profile that has been created.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step26.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step26.png" />
+    </a></li>
+<li>Since this example had <code>healthCheckConfiguration</code> property specified in the blueprint, you can see custom monitor that has been created.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step27.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/step27.png" />
+    </a></li>
+</ol>
+<p>Note that in my example, the virtual server pool operational state is down because I did not open the appropriate port on the machines to communicate. Assuming your servers are configured correctly, the load balancer should work as intended.</p>
+<h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs: {}
+resources:
+  Cloud_LoadBalancer_1:
+    type: Cloud.LoadBalancer
+    properties:
+      routes:
+        - protocol: HTTP
+          port: 80
+          instancePort: 80
+          instanceProtocol: HTTP
+          healthCheckConfiguration:
+            port: 80
+            protocol: HTTP
+            healthyThreshold: 2
+            intervalSeconds: 5
+            timeoutSeconds: 15
+            unhealthyThreshold: 5
+            urlPath: /
+      network: &#39;${resource.Cloud_Network_1.id}&#39;
+      instances: &#39;${resource.Cloud_Machine_1[*].id}&#39;
+      internetFacing: false
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: im-CentOS7
+      flavor: fl-small
+      networks:
+        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+          assignment: static
+      count: 2
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: &#39;subnet-cidr:192.168.92.0/24&#39;
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="optional-multiple-load-balancers-in-network-profile">(Optional) Multiple Load Balancers in Network Profile</h3>
+<p>If you have multiple load balancers in a network profile, you can put tags on each load balancer then specify the tag in a blueprint to deploy the load balancing services to a specific load balancer.</p>
+<ul>
+<li>Go to the network profile and add tags to each load balancer.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="optional-1.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-1.png" />
+    </a></li>
+<li>Add a constraint tag in the blueprint to indicate which load balancer you want to use.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="optional-2.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-2.png" />
+    </a></li>
+<li>Once you deploy this blueprint, you will see in the request details / provisioning diagram that the constraint tag is applied.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="optional-3.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-3.png" />
+    </a></li>
+<li>After the deployment is complete, go to the NSX-T UI and you&rsquo;ll see that the load balancing services have been deployed to the desired load balancer.
+<br><a class="lightgallery" href="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png" target="_blank" rel="noopener noreferrer" title="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png" data-thumbnail="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="optional-4.png"
+            data-srcset="./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png 1.5x, ./2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png 2x"
+            data-sizes="auto"
+            alt="/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer/optional-4.png" />
+    </a></li>
+</ul>
+<h3 id="using-constraint-tag-to-indicate-load-balancer-example-blueprint-yaml-file">Using Constraint Tag to Indicate Load Balancer Example Blueprint YAML File</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs: {}
+resources:
+  Cloud_LoadBalancer_1:
+    type: Cloud.LoadBalancer
+    properties:
+      routes:
+        - protocol: HTTPS
+          port: 443
+          instancePort: 443
+          instanceProtocol: HTTPS
+      network: &#39;${resource.Cloud_Network_1.id}&#39;
+      instances: &#39;${resource.Cloud_Machine_1[*].id}&#39;
+      internetFacing: false
+      constraints: 
+        - tag: &#39;nonpolicy-LB-02&#39;
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: im-CentOS7
+      flavor: fl-small
+      networks:
+        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+          assignment: static
+      count: 2
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: &#39;subnet-cidr:192.168.92.0/24&#39;
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-12-12</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" data-title="vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud&#34;,NSX-T,existing load balancer,one-arm load balancer,load balancer"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="./tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="./tags/existing-load-balancer.html">existing load balancer</a>,&nbsp;<a href="./tags/one-arm-load-balancer.html">one-arm load balancer</a>,&nbsp;<a href="./tags/load-balancer.html">load balancer</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./2020-06-17-cbc-centos-linux-logkeys-demo.html" class="prev" rel="prev" title="CBC Endpoint Detection Demo with Logkeys"><i class="fas fa-angle-left fa-fw"></i>CBC Endpoint Detection Demo with Logkeys</a>
+            <a href="./2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" class="next" rel="next" title="vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer">vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="./about" target="_blank">Phoebe Kim</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			<div class="footer-line">
+				<span class="disclaimer">Disclaimer: The views and opinions expressed on this blog are my own and do not reflect the views and opinions of my employer (VMware).</span>
+			</div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/sharer/sharer.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>

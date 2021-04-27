@@ -1,0 +1,26 @@
+yum install gcc make gcc-c++
+yum install git
+git clone httpsY//github.com/kernc/logkeys.git
+yum install automake
+
+./autogen.sh
+cd build
+../configure
+make
+sudo make install
+sudo locale-gen
+
+localectl status (to check system locale and keymap)
+if you want to change, use localedef in CentOS, locale-gen in Ubuntu
+
+logkeys --help
+
+su - 
+logkeys -s -u
+ls 
+ss
+ifconfig
+
+nano /var/log/logkeys.log
+
+logkeys -k

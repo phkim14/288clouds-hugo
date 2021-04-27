@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7) - 288clouds</title><meta name="Description" content="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the fourth section of the exam blueprint."><meta property="og:title" content="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)" />
+<meta property="og:description" content="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the fourth section of the exam blueprint." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html" />
+<meta property="og:image" content="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png"/>
+<meta property="article:published_time" content="2020-12-14T07:53:00-05:00" />
+<meta property="article:modified_time" content="2020-12-17T07:53:00-05:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png"/>
+<meta name="twitter:title" content="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)"/>
+<meta name="twitter:description" content="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the fourth section of the exam blueprint."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html" /><link rel="prev" href="https://288clouds.com/2020-12-13-vcp-cma-2020-section-1.html" /><link rel="next" href="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-2.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/2020-12-14-vcp-cma-2020-section-4-part-1.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/2020-12-14-vcp-cma-2020-section-4-part-1\/featured-image.png",
+                            "width":  2002 ,
+                            "height":  665 
+                        }],"genre": "posts","keywords": "vRA, vRA8, VCP-CMA, exam prep, vRA deployment types, vRA pre-requisites, vRealize Easy Installer, vRA Quickstart, vRealize Suite Lifecycle Manager, vRSLCM, VMware Identity Manager","wordcount":  1530 ,
+        "url": "https:\/\/288clouds.com\/2020-12-14-vcp-cma-2020-section-4-part-1.html","datePublished": "2020-12-14T07:53:00-05:00","dateModified": "2020-12-17T07:53:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let's cover the fourth section of the exam blueprint."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./about.html"> About </a><a class="menu-item" href="./posts.html"> Posts </a><a class="menu-item" href="./tags.html"> Tags </a><a class="menu-item" href="./categories.html"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./about.html" title="">About</a><a class="menu-item" href="./posts.html" title="">Posts</a><a class="menu-item" href="./tags.html" title="">Tags</a><a class="menu-item" href="./categories.html" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="./about" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-14">2020-12-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1530 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="./2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png"
+        data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2020-12-14-vcp-cma-2020-section-4-part-1/featured-image.png"
+        title="Study guide for VMware Certified Professional - Cloud Management and Automation (VCP-CMA 2020) vRA 8.1 (2V0-31.20). Let&#39;s cover the fourth section of the exam blueprint." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#section-4---installing-configuring-and-setup">Section 4 - Installing, Configuring, and Setup</a>
+      <ul>
+        <li><a href="#objective-41---describe-the-different-types-of-vrealize-automation-deployments">Objective 4.1 - Describe the Different Types of vRealize Automation deployments</a></li>
+        <li><a href="#objective-42---prepare-the-pre-requisites-for-an-installation-dns-ntp-service-accounts-etc">Objective 4.2 - Prepare the Pre-requisites for an Installation (DNS, NTP, Service Accounts, etc.)</a></li>
+        <li><a href="#objective-43---perform-a-standard-deployment-using-vrealize-easy-installer">Objective 4.3 - Perform a Standard Deployment using vRealize Easy Installer</a></li>
+        <li><a href="#objective-44---configure-vrealize-automation-using-quickstart">Objective 4.4 - Configure vRealize Automation using Quickstart</a></li>
+        <li><a href="#objective-45---perform-manual-installation-using-lifecycle-manager">Objective 4.5 - Perform Manual Installation using Lifecycle Manager</a></li>
+        <li><a href="#objective-46---configure-identity-sources">Objective 4.6 - Configure Identity Sources</a></li>
+        <li><a href="#objective-47---configure-identity-and-access-management">Objective 4.7 - Configure Identity and Access Management</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.</p>
+<p>This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.</p>
+<h2 id="section-4---installing-configuring-and-setup">Section 4 - Installing, Configuring, and Setup</h2>
+<h3 id="objective-41---describe-the-different-types-of-vrealize-automation-deployments">Objective 4.1 - Describe the Different Types of vRealize Automation deployments</h3>
+<p>There are 2 types of deployments: standard and clustered.</p>
+<p><b><u>Standard Deployment Architecture</b></u>
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="standard-deployment.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/standard-deployment.png" />
+    </a>
+Using the vRealize Easy Installer, the vRealize Suite Lifecycle Manager (vRSLCM) is deployed first and then vRSLCM is used to deploy VMware identity manager and vRealize Automation.</p>
+<p><b><u>Clustered Deployment Architecture</b></u>
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="clustered-deployment.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/clustered-deployment.png" />
+    </a>
+Same as the standard deployment, vRSLCM is deployed first then using vRSLCM, multiple VMware identity managers and vRealize Automation appliances can be deployed for a clustered deployment architecture. VMware NSX-T, F5 BIG IP, or Citrix NetScaler can be used as a load balancer for the vRealize Automation appliances.</p>
+<h3 id="objective-42---prepare-the-pre-requisites-for-an-installation-dns-ntp-service-accounts-etc">Objective 4.2 - Prepare the Pre-requisites for an Installation (DNS, NTP, Service Accounts, etc.)</h3>
+<p>Please refer to the official documentation for more details on the pre-requisites <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/installing-vrealize-automation-easy-installer.pdf" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><b><u>System Resources Requirements</b></u>
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="system-resource-requirements.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG, ./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements.PNG" />
+    </a>
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="system-resource-requirements-2.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG, ./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/system-resource-requirements-2.PNG" />
+    </a></p>
+<p><b><u>Network Requirements</b></u><br>
+vRealize Automation needs the following:</p>
+<ul>
+<li>Single, static IPv4 and network address</li>
+<li>Reachable DNS server</li>
+<li>Valid FQDN (should be set so that it can be resolved both forward and in reverse through the DNS server)</li>
+<li>Reachable NTP server</li>
+</ul>
+<p>Note that the IP address and the hostname cannot be changed after installation.</p>
+<h3 id="objective-43---perform-a-standard-deployment-using-vrealize-easy-installer">Objective 4.3 - Perform a Standard Deployment using vRealize Easy Installer</h3>
+<p>The vRealize Easy Installer helps you install vRealize Suite Lifecycle Manager (vRSLCM), VMware Identity Manager (vIDM), and vRealize Automation (vRA) from a single console. The Easy Installer also registers vRealize Automation with VMware Identity Manager.</p>
+<p><b><u>High-Level Deployment Procedure</b></u><br></p>
+<ol>
+<li>Download the vRealize Easy Installer ISO file.</li>
+<li>Run the installer file to start the Installation Wizard. Note that the location of this installer file depends on the OS of the local system (linux, macOS, or Windows) to which the ISO file has been mounted.</li>
+<li>Click &ldquo;Install&rdquo; to start the deployment.</li>
+<li>Follow instructions and provide necessary details as requested by the Installation Wizard:</li>
+</ol>
+<ul>
+<li>vCenter IP or FQDN with administrator credentials</li>
+<li>Inventory location, compute resource, datastore, and network configuration details for appliances to be deployed</li>
+<li>Common password for all the products (vRSLCM, vIDM, vRA)</li>
+<li>vRSLCM VM IP and hostname details</li>
+<li>vIDM VM IP and hostname details</li>
+<li>vRA VM IP and hostname details</li>
+</ul>
+<ol start="5">
+<li>Monitor the installation progress from the Installation Wizard while vRSLCM is deployed.</li>
+<li>Once vRSLCM is deployed, login to the vRSLCM and monitor the installation progress of vIDM and vRA from the vRSLCM UI.</li>
+</ol>
+<p>Please refer to the official documentation for more details on the step-by-step process <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/installing-vrealize-automation-easy-installer.pdf" target="_blank" rel="noopener noreffer">here</a>.</p>
+<h3 id="objective-44---configure-vrealize-automation-using-quickstart">Objective 4.4 - Configure vRealize Automation using Quickstart</h3>
+<p>After vRA is installed, you can use the Quickstart wizard to help you get started using Cloud Assembly and Service Broker right away.</p>
+<p>The vCenter Server Quickstart will walk you through the following tasks in Cloud Assembly and Service Broker:</p>
+<ul>
+<li>Add a vCenter Server cloud account</li>
+<li>Add a NSX (V or T) cloud account and associate it with the vCenter Server account</li>
+<li>Add a cloud account region - select the datacenter you&rsquo;d like to use</li>
+<li>Create a sample machine blueprint that you can use to deploy</li>
+<li>Create a project (Quickstart project is created for you)</li>
+<li>Create lease and machine naming policies (these will be associated with the Quickstart project)</li>
+<li>Add the templates to the catalog</li>
+<li>Deploy a machine from the catalog</li>
+</ul>
+<p>Note that you can only run the Quickstart once.</p>
+<p>Please refer to the official documentation to see a step-by-step procedure of the vCenter Server Quickstart <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/Getting-Started-Cloud-Assembly/GUID-91597976-E472-493B-8017-2D37DC8DC0E5.html" target="_blank" rel="noopener noreffer">here</a>.</p>
+<h3 id="objective-45---perform-manual-installation-using-lifecycle-manager">Objective 4.5 - Perform Manual Installation using Lifecycle Manager</h3>
+<p>You can install vRealize Automation without using the vRealize Easy Installer. Instead, you can manually deploy vRA through the vRSLCM UI.
+The procedure below assumes that you have deployed vRSLCM and vIDM through the vRealize Easy Installer already.</p>
+<p><b><u>Step-by-Step Procedure</b></u><br></p>
+<ol>
+<li>Login to vRSLCM UI and navigate to &ldquo;Lifecycle Operations&rdquo;.</li>
+<li>Click on &ldquo;Create Environment&rdquo;.</li>
+<li>Provide the necessary details in all the fields. For the password, if you don&rsquo;t have any passwords configured in vRSLCM, you can click the plus icon on the right to configure a password then select it.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment.png" />
+    </a></li>
+<li>Select vRealize Automation as the product to install.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment-2.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-2.png" />
+    </a></li>
+<li>Read the EULA and agree.</li>
+<li>Select a license key then click &ldquo;Validate Association&rdquo; to make sure the license is valid. Add the license first if needed.</li>
+<li>Select a certificate. Add the certificate first if needed.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment-3.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-3.png" />
+    </a></li>
+<li>Provide infrastructure details.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment-4.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-4.png" />
+    </a></li>
+<li>Provide network details for the vRA appliance.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment-5.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-5.png" />
+    </a></li>
+<li>Provide FQDN and IP address for the vRA appliance.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment-6.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-6.png" />
+    </a></li>
+<li>Run precheck.</li>
+<li>Review summary and click &ldquo;Submit&rdquo; to start the deployment.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="create-environment-7.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/create-environment-7.png" />
+    </a></li>
+</ol>
+<p>You can monitor the progress from the &ldquo;Request Details&rdquo; page.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="request-details.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/request-details.png" />
+    </a></p>
+<h3 id="objective-46---configure-identity-sources">Objective 4.6 - Configure Identity Sources</h3>
+<p>VMware Identity Manager is based on the OAuth 2.0 authorization framework and is used to manage user authentication, access policies, and user entitlements to resources. VMware Identity Manager UI can be accessed at https://&lt;VMware_Identity_Manager_FQDN&gt;/SAAS/admin.</p>
+<p>You can sync users and groups from your enterprise directory to the vIDM service. You can choose to sync nested group members when synchronizing Active Directory users to vIDM. You can set up a sync schedule to sync regularly or start a manual sync at any time.</p>
+<p>The following directory types are supported:</p>
+<ul>
+<li>Active Directory over LDAP: use this if you are going to connect to a single Active Directory domain environment</li>
+<li>Active Directory, Integrated Windows Authentication: use this if you are going to connect to a multidomain or multiforest Active Directory environment</li>
+<li>OpenLDAP: use this for OpenLDAP directory</li>
+</ul>
+<p>You can also create multiple local directories.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="directory-integration.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/directory-integration.png" />
+    </a></p>
+<p>If you want to modify or customize user attributes, you can configure them at the &ldquo;User Attributes&rdquo; tab under &ldquo;Identity &amp; Access Management&rdquo; before creating a directory.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="user-attributes.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/user-attributes.png" />
+    </a></p>
+<h3 id="objective-47---configure-identity-and-access-management">Objective 4.7 - Configure Identity and Access Management</h3>
+<p>Roles define a set of privileges that specifies which tasks that users associated with the roles can perform. A user can have multiple roles. In vRA, there are 2 types of roles:</p>
+<ul>
+<li>Organization roles: These are defined at the topmost vRA level. There are two organization roles - organization owner and organization member. An organization owner has access to Services, Identity &amp; Access Management, and Branding tabs. The main responsibility of an organization owner is to assign roles to the organization members. An organization member only has access to the Services tab.</li>
+<li>Service roles: These roles define user access to different services available with vRA, including Cloud Assembly, Code Stream, Orchestrator, and Service Broker. Each service has multiple roles available.</li>
+</ul>
+<p>Only one organization can exist in a vRealize Automation deployment. Every vRA user given a service role must first be associated with an organization role.</p>
+<p>As an organization owner, you can navigate to the &ldquo;Identity &amp; Access Management&rdquo; tab from the vRA Cloud Services Console and manage acive users and enterprise groups.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="identity-access-mgmt-vra.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/identity-access-mgmt-vra.png" />
+    </a></p>
+<p>You can assign and edit roles for a specific user from the &ldquo;Identity &amp; Access Management&rdquo; tab by selecting a user then clicking &ldquo;Edit Roles&rdquo;. You can assign multiple service roles to one user.
+<br><a class="lightgallery" href="./2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png" target="_blank" rel="noopener noreferrer" title="/2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png" data-thumbnail="/2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="vra-roles.png"
+            data-srcset="./2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png, ./2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png 1.5x, ./2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png 2x"
+            data-sizes="auto"
+            alt="/2020-12-14-vcp-cma-2020-section-4-part-1/vra-roles.png" />
+    </a></p>
+<p><b><u>Cloud Assembly Service Roles</b></u><br>
+There are 3 roles for the Cloud Assembly service:</p>
+<ol>
+<li>Cloud Assembly Administrator</li>
+</ol>
+<ul>
+<li>Create cloud accounts and cloud zones</li>
+<li>Create and manage projects</li>
+<li>Create and manage flavor and image mappings</li>
+<li>Configure and manage network and storage profiles</li>
+<li>Create and manage tags</li>
+</ul>
+<ol start="2">
+<li>Cloud Assembly User</li>
+</ol>
+<ul>
+<li>Create blueprints</li>
+<li>Deploy machines and services</li>
+<li>Manage deployments</li>
+</ul>
+<ol start="3">
+<li>Cloud Assembly Viewer</li>
+</ol>
+<ul>
+<li>Read only</li>
+</ul>
+<p>For more details on each Cloud Assembly service role, refer to the official documentation <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/Administering/GUID-F94CB09A-DD93-4571-9D39-7FC1E6FA68CF.html#GUID-F94CB09A-DD93-4571-9D39-7FC1E6FA68CF" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><b><u>Service Broker Service Roles</b></u><br>
+There are 3 roles for the Service Broker service:</p>
+<ol>
+<li>Service Broker Administrator</li>
+</ol>
+<ul>
+<li>Configure content sources</li>
+<li>Configure policy definitions</li>
+<li>Add cloud accounts and cloud zones</li>
+</ul>
+<ol start="2">
+<li>Service Broker User</li>
+</ol>
+<ul>
+<li>Access self-service catalog</li>
+<li>Deploy machines and services from the catalog</li>
+<li>Manage deployments</li>
+</ul>
+<ol start="3">
+<li>Service Broker Viewer</li>
+</ol>
+<ul>
+<li>Read only</li>
+</ul>
+<p>For more details on each Service Broker service role, refer to the official documentation <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/Administering/GUID-F94CB09A-DD93-4571-9D39-7FC1E6FA68CF.html#GUID-F94CB09A-DD93-4571-9D39-7FC1E6FA68CF" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><b><u>Code Stream Service Roles</b></u><br>
+There are 5 roles for the Code Stream service:</p>
+<ol>
+<li>Code Stream Administrator</li>
+</ol>
+<ul>
+<li>Execute any actions</li>
+<li>Run or resume pipelines that have a step for approval</li>
+</ul>
+<ol start="2">
+<li>Code Stream Developer</li>
+</ol>
+<ul>
+<li>Create and manage pipelines</li>
+<li>Create and manage endpoints</li>
+<li>Create and manage dashboards</li>
+</ul>
+<ol start="3">
+<li>Code Stream Executor</li>
+</ol>
+<ul>
+<li>Run pipelines and resume, pause, or cancel pipeline executions</li>
+</ul>
+<ol start="4">
+<li>Code Stream Viewer</li>
+</ol>
+<ul>
+<li>Read only at Code Stream service level</li>
+</ul>
+<ol start="5">
+<li>Code Stream User</li>
+</ol>
+<ul>
+<li>Read only at the project level</li>
+</ul>
+<p>For more details on each Code Stream service role, refer to the official documentation <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/Using-and-Managing-CodeStream/GUID-8EDC8310-232D-45FB-8C02-E4FB25687177.html" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><b><u>Orchestrator Service Roles</b></u><br>
+There are 2 roles for the vRealize Orchestrator service:</p>
+<ol>
+<li>Orchestrator Administrator</li>
+</ol>
+<ul>
+<li>Access all vRO features and content</li>
+<li>Add Git repositories</li>
+</ul>
+<ol start="2">
+<li>Orchestrator Workflow Designer</li>
+</ol>
+<ul>
+<li>Create, run, edit, and delete their own vRO content (including workflows, actions, and policies)</li>
+<li>Import packages, configurations, and resources</li>
+</ul>
+<p>For more details on each vRealize Orchestrator service role, refer to the official documentation <a href="https://docs.vmware.com/en/vRealize-Orchestrator/8.1/com.vmware.vrealize.orchestrator-using-client-guide.doc/GUID-D0FFDD2A-3D6C-485C-850B-FCD445391365.html" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p><b><u>vRA Migration Assessment Service Roles</b></u><br>
+There are 2 roles for the vRA Migration Assessment service:</p>
+<ol>
+<li>Migration Assessment Administrator</li>
+</ol>
+<ul>
+<li>Perform a migration assessment</li>
+</ul>
+<ol start="2">
+<li>Migration Assessment Viewer</li>
+</ol>
+<ul>
+<li>Read only</li>
+</ul>
+<p>For more details on the vRA Migration Assessment service, refer to the official documentation <a href="https://docs.vmware.com/en/vRealize-Automation/8.1/migration-assessment/GUID-765814E6-FE56-436C-8053-D97AE023712B.html" target="_blank" rel="noopener noreffer">here</a>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2020-12-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html" data-title="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.1-4.7)" data-via="phoebesykim" data-hashtags="vRA,vRA8,VCP-CMA,exam prep,vRA deployment types,vRA pre-requisites,vRealize Easy Installer,vRA Quickstart,vRealize Suite Lifecycle Manager,vRSLCM,VMware Identity Manager"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2020-12-14-vcp-cma-2020-section-4-part-1.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vcp-cma.html">VCP-CMA</a>,&nbsp;<a href="./tags/exam-prep.html">exam prep</a>,&nbsp;<a href="./tags/vra-deployment-types.html">vRA deployment types</a>,&nbsp;<a href="./tags/vra-pre-requisites.html">vRA pre-requisites</a>,&nbsp;<a href="./tags/vrealize-easy-installer.html">vRealize Easy Installer</a>,&nbsp;<a href="./tags/vra-quickstart.html">vRA Quickstart</a>,&nbsp;<a href="./tags/vrealize-suite-lifecycle-manager.html">vRealize Suite Lifecycle Manager</a>,&nbsp;<a href="./tags/vrslcm.html">vRSLCM</a>,&nbsp;<a href="./tags/vmware-identity-manager.html">VMware Identity Manager</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./2020-12-13-vcp-cma-2020-section-1.html" class="prev" rel="prev" title="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 1-3"><i class="fas fa-angle-left fa-fw"></i>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 1-3</a>
+            <a href="./2020-12-14-vcp-cma-2020-section-4-part-2.html" class="next" rel="next" title="VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.8-4.14)">VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 4 (Objectives 4.8-4.14)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="./about" target="_blank">Phoebe Kim</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			<div class="footer-line">
+				<span class="disclaimer">Disclaimer: The views and opinions expressed on this blog are my own and do not reflect the views and opinions of my employer (VMware).</span>
+			</div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/sharer/sharer.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>

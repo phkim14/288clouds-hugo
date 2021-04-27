@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CBC - Category - 288clouds</title>
+        <link>https://288clouds.com/categories/cbc.html</link>
+        <description>CBC - Category - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Jun 2020 11:42:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/categories/cbc.html" rel="self" type="application/rss+xml" /><item>
+    <title>CBC Endpoint Detection Demo with Logkeys</title>
+    <link>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</link>
+    <pubDate>Wed, 17 Jun 2020 11:42:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-06-17-cbc-centos-linux-logkeys-demo.html</guid>
+    <description><![CDATA[Carbon Black Cloud (CBC) can detect if an application on the company blacklist is running then send an alert and deny/terminate the process. Let&rsquo;s setup a demo using Logkeys, a linux application that stores keystrokes with or without the knowledge of user, to see how CBC reacts.
+Prerequisites  Carbon Black Cloud access (Note: the environment I&rsquo;m using is Carbon Black Cloud Enterprise) A linux machine (Note: I&rsquo;m using CentOS 7) - should have administrator/root access CBC sensor installed and active on the linux machine  Process Overview  Install logkeys on the linux machine.]]></description>
+</item><item>
+    <title>Carbon Black Cloud Sensor Install on a Linux Machine</title>
+    <link>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</link>
+    <pubDate>Thu, 04 Jun 2020 17:53:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2020-06-04-cbc-sensor-install-centos-linux.html</guid>
+    <description><![CDATA[Let&rsquo;s manually install a Carbon Black Cloud (CBC) sensor on a CentOS 7 machine!
+Prerequisites  Carbon Black Cloud access (Note: the environment I&rsquo;m using is Carbon Black Cloud Enterprise) CentOS 7 machine (can be Ubuntu as well)  Process Overview  Download the Carbon Black Cloud sensor kit on the linux machine. Install the sensor via terminal. Verify that the endpoint shows up in Carbon Black Cloud.  Demo / Example Download Carbon Black Cloud Sensor Kit  Log into Carbon Black Cloud from the linux machine where you want to install the sensor.]]></description>
+</item></channel>
+</rss>
