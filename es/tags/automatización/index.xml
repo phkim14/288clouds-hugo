@@ -13,6 +13,16 @@
 Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
  Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)  NSX-T:]]></description>
 </item><item>
+    <title>Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes</title>
+    <link>https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html</link>
+    <pubDate>Fri, 13 Mar 2020 07:48:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html</guid>
+    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes.
+Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
+ Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T:
+ enrutador lógico (tier-0 o tier-1) configurado red lógico conectado a un enrutador lógico  Información General de Proceso  Configure las redes existentes con rangos de IP va a hacer usado para las VMs (máquinas virtuales).]]></description>
+</item><item>
     <title>Introducción a la Serie: vRA 8 &#43; NSX-T</title>
     <link>https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html</link>
     <pubDate>Thu, 12 Mar 2020 09:44:00 -0500</pubDate>
@@ -21,6 +31,6 @@ Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyend
     <description><![CDATA[Con la reciente introducción de vRA 8.0, he estado recibido muchas preguntas de clientes acerca como usar NSX-T con vRA 8.
 Esta serie de blog posts se va a enfocar en mostrar cómo crear plantillas vRA 8 que utilizan objectos NSX-T.
 Esta es la lista de blogs que crearé para esta serie (a partir de 15 de marzo del 2020):
- Parte 1: Plantilla vRA 8 con Redes NSX-T Existentes Parte 2: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda Parte 3: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red) Parte 4: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA) Parte 5: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento) Parte 6: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda Parte 7: Plantilla vRA 8 con “One-Arm Load Balancer” NSX-T Existente Parte 8: Plantilla vRA 8 con “One-Arm Load Balancer” NSX-T Bajo Demanda Parte 9: Plantilla vRA 8 con Redes NSX-T Bajo Demanda  Nota: la lista de blogs puede cambiar sin previo aviso.]]></description>
+ Parte 1: Plantilla vRA 8 con Redes NSX-T Existentes Parte 2: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda Parte 3: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red) Parte 4: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA) Parte 5: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento) Parte 6: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda Parte 7: Plantilla vRA 8 con &ldquo;One-Arm Load Balancer&rdquo; (equilibrador de carga) NSX-T Existente Parte 8: Plantilla vRA 8 con &ldquo;One-Arm Load Balancer&rdquo; (equilibrador de carga) NSX-T Bajo Demanda Parte 9: Plantilla vRA 8 con Redes NSX-T Bajo Demanda  Nota: la lista de blogs puede cambiar sin previo aviso.]]></description>
 </item></channel>
 </rss>

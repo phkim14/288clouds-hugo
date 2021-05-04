@@ -2,7 +2,7 @@
     <channel>
         <title>288clouds</title>
         <link>https://288clouds.com/es/</link>
-        <description>288clouds es un blog personal de las tecnologías de virtualización y nube.</description>
+        <description>288clouds es un blog personal concentrado en tecnologías de virtualización y cloud.</description>
         <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 09 Apr 2021 05:52:00 -0500</lastBuildDate>
             <atom:link href="https://288clouds.com/es/index.xml" rel="self" type="application/rss+xml" />
         <item>

@@ -1,92 +1,89 @@
-# vRA 8 + NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks
+# Parte 1 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes
 
 
-# ~ Este post será traducido al español próximamente ~
+Puede crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes. 
 
-
-You can create a vRA 8 blueprint to deploy machines on existing NSX-T networks. 
-
-## Demo Product Versions  
+## Versiones de Productos (Demo)
 * vSphere 6.5 U3
-* vRA 8.0.1 (including vRSLCM and vIDM)
+* vRA 8.0.1 (incluyendo vRSLCM y vIDM)
 * NSX-T 2.5.1
 * vSAN 6.6.1
 
-## Prerequisites
+## Prerrequisitos
 vRA 8:
-* NSX-T account connected
-* Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
+* Cuenta conectada de NSX-T
+* Infraestructura básica configurada (proyectos, zonas de nube, "image mappings" o asignaciones de imagen, "flavor mappings" o asignaciones de tipo)
 
 NSX-T:
-* logical router (tier-0 or tier-1) configured
-* logical segment(s) attached to a logical router
+* enrutador lógico (tier-0 o tier-1) configurado 
+* red lógico conectado a un enrutador lógico
 
 
-## Process Overview
-1. Set up the existing networks with IP ranges you want to use for the machines.
-2. Create a network profile.
-3. Add existing networks you want to use in the network profile.
-4. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.  
-5. Specify which network you want to use by adding a constraint tag to the network object. 
+## Información General de Proceso 
+1. Configure las redes existentes con rangos de IP va a hacer usado para las VMs (máquinas virtuales).
+2. Cree un perfil de red.
+3. Agregue las redes existentes va a hacer usado en el perfil de red.
+4. Cree una plantilla con los objectos: "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX).
+5. Especifique cual red va a hacer usado agregando una etiqueta de restricción en el objeto "NSX Network" (red NSX). 
 
-optional steps:
-* Create tags on the existing networks with names of your choice.
-* Create an input in the blueprint to customize the machine name.
+Pasos opcionales:
+* Cree etiquetas para las redes existentes con los nombres del deseo.
+* Cree entrada en la plantilla para personalizar el nombre de la máquina.
 
 
-## Demo / Example
+## Ejemplo
 
-### Configure Existing Network IP Range
-1. Log into vRA Cloud Assembly.
-2. Go to "Infrastructure" > "Networks" (under Resources).
-3. Click on the existing network you want to use and make sure the information is filled out. 
+### Configure el Rango de IP para Red Existente
+1. Inicie sesión en el UI (interfaz de usario) de vRA Cloud Assembly.
+2. Vaya a “Infraestructura” > “Redes” (en el menú “Recursos”).
+3. De clic en la red existente que desea utilizar y asegúrese que toda la información está completa. 
 {{<image src="step3.png" linked="true">}}
-4. Click the checkbox next to the existing network you want to use and click "MANAGE IP RANGES".
+4. De clic en la "checkbox" (la casilla de verificación) al lado de la red existente que desea utilizar y de clic en el botón “ADMINISTRAR RANGOS DE IP”.
 {{<image src="step4.png" linked="true">}}
-5. Click "+ NEW IP RANGE".
-6. Create an IP range that you'd like to use to give IP addresses to the machines deployed from this blueprint.
+5. De clic en el botón “+ NUEVO RANGO DE IP”.
+6. Cree rango de IP que desea utilizar para dar las direcciones IP a las máquinas implementadas de la plantilla.
 {{<image src="step6.png" linked="true">}}
-7. Double-check the start and end IP addresses on the range created to make sure it's correct.
+7. Revise otra vez la primera y última direccion IP en el rango creado para asegurar que están correctas.
 {{<image src="step7.png" linked="true">}}
 
-### Configure Network Profile
-8. Go to "Infrastructure" > "Network Profiles" (under Configure) and click "+ NEW NETWORK PROFILE".
+### Configure el Perfil de Red 
+8. Vaya a “Infraestructura” > “Perfiles de Red” (en el menú “Configurar”) y de clic en el botón “+ NUEVO PERFIL DE RED”. 
 {{<image src="step8.png" linked="true">}}
-9. Choose an account/region and give the profile a name.
+9. Escoge la cuenta o región y nombre el perfil. 
 {{<image src="step9.png" linked="true">}}
-10. Go to "Networks" tab and click "+ ADD NETWORK".
+10. Seleccione “Redes” y de clic en el botón “+ AGREGAR RED”.
 {{<image src="step10.png" linked="true">}}
-11. Choose the existing network(s) you would like to use in the blueprint then save.
+11. Escoge la red existente que desea utilizar en la plantilla y agréguela. 
 
-### Create Blueprint
-12. Go to "Blueprints" and Click "+ NEW" to create a new blueprint.
-13. Give a name to the blueprint and choose a project.
+### Cree la Plantilla
+12. Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.
+13. Nombra la plantilla y escoge el proyecto. 
 {{<image src="step13.png" linked="true">}}
-14. Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas. 
+14. Arrastra "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) al lienzo en blanco.  
 {{<image src="step14.png" linked="true">}}
-15. Connect the Cloud Agnostic Machine to the NSX Network on the canvas. 
+15. Conecta "Cloud Agnostic Machine" a "NSX Network" en el lienzo en blanco. 
 {{<image src="step15.png" linked="true">}}
 
-### Configure Blueprint
-16. On the right side in the YAML file, choose an image and size for the machine. When you click between the quotes, a dropdown menu of available options should show up.
+### Configure la Plantilla
+16. A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. Un menú de las opciones disponibles aparecerá cuando de clic en el espacio entre las comillas.
 {{<image src="step16.png" linked="true">}}
-17. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine from the IP range we've created.
-18. For the NSX network, make sure it says `networkType: existing` under `properties`.
-19. Below `networkType` add the line `constraints:` then another line `- tag:` to choose the existing network you want to use.
+17. Debajo de `-network:`, agregue una línea `assignment: static` para dar una dirección IP estática a la máquina desde el rango de IP. 
+18. Para la "NSX network", asegúrese que dice `networkType: existing` debajo de `properties`. 
+19. Debajo de `networkType`, agregue una línea `constraints` y otra línea `-tag:` para escoger la red existente que desea utilizar. 
 {{<image src="step19.png" linked="true">}}
-20. Click "TEST".
+20. De clic en el botón “PROBAR”.
 {{<image src="step20.png" linked="true">}}
-21. Click "DEPLOY" to create a new deployment.
-22. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+21. De clic en el botón “IMPLEMENTAR” para crear una nueva implementación.
+22. Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.
 {{<image src="step22.png" linked="true">}}
 
-### Verify Deployment
-23. Monitor the progress. Once completed, you should be able to see the deployment under "Deployments" in vRA UI as well as the new machine created in the vSphere UI.
+### Verifique la Implementación 
+23. Supervise el progreso de la implementación. Cuando está completa, puede ver la implementación en la sección de vRA Cloud Assembly “Implementaciones” y la nueva máquina creada en el cliente web de vSphere. 
 {{<image src="step23.png" linked="true">}}
 {{<image src="step23-1.png" linked="true">}}
 {{<image src="step23-2.png" linked="true">}}
 
-### Demo / Example Blueprint YAML File
+### Código YAML de la Plantilla de Ejemplo 
 ```
 formatVersion: 1
 inputs: {}

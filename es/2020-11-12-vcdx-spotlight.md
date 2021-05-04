@@ -1,8 +1,7 @@
 # VMware Learning VCDX Spotlight
 
-# ~ Este post será traducido al español próximamente ~
 
-I'm honored to be featured by VMware Learning on the VCDX spotlight! 
-Check out the blog [here][vmware-learning-blog-link]. 
+Me siento muy honrada de ser presentada por VMware Learning en el VCDX spotlight! 
+[Aquí][vmware-learning-blog-link] puedes ver el blog. 
 
 [vmware-learning-blog-link]: https://blogs.vmware.com/education/2020/11/12/vcdx-spotlight-phoebe-kim/

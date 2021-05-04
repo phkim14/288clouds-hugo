@@ -7,7 +7,7 @@ I got my VCDX in January 2020 through a remote defense, and I thought it may be 
 
 
 ## Basics
-- You will have 3 panelists and 1 moderator, just like an in-person defense. Some may be on video, some may not.
+- You will have 3 panelists and 1 moderator, just like an in-person defense. They will be on video. 
 - You will have the same amount of time as you would at an in-person defense - 75 minutes for defense section, 45 minutes for design section.
 - You have to be on video so make sure you have a decent quality camera.
 - Make sure you have a good headset/mic so that the panelists can hear you clearly and vice versa.
