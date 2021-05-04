@@ -21,7 +21,7 @@ Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyend
     <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes.
 Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
  Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T:
- enrutador lógico (tier-0 o tier-1) configurado red lógico conectado a un enrutador lógico  Información General de Proceso  Configure las redes existentes con rangos de IP va a hacer usado para las VMs (máquinas virtuales).]]></description>
+ enrutador lógico (tier-0 o tier-1) configurado red lógico conectado a un enrutador lógico  Información General de Proceso  Configure las redes existentes con rangos de IP que desea utilizar para las VMs (máquinas virtuales).]]></description>
 </item><item>
     <title>Introducción a la Serie: vRA 8 &#43; NSX-T</title>
     <link>https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html</link>

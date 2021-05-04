@@ -20,11 +20,11 @@ NSX-T:
 
 
 ## Información General de Proceso 
-1. Configure las redes existentes con rangos de IP va a hacer usado para las VMs (máquinas virtuales).
+1. Configure las redes existentes con rangos de IP que desea utilizar para las VMs (máquinas virtuales).
 2. Cree un perfil de red.
-3. Agregue las redes existentes va a hacer usado en el perfil de red.
+3. Agregue las redes existentes que desea utilizar en el perfil de red.
 4. Cree una plantilla con los objectos: "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX).
-5. Especifique cual red va a hacer usado agregando una etiqueta de restricción en el objeto "NSX Network" (red NSX). 
+5. Especifique cual red que desea utilizar agregando una etiqueta de restricción en el objeto "NSX Network" (red NSX). 
 
 Pasos opcionales:
 * Cree etiquetas para las redes existentes con los nombres del deseo.
