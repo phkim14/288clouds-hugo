@@ -59,7 +59,7 @@ Pasos opcionales:
 12. Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.
 13. Nombra la plantilla y escoge el proyecto. 
 {{<image src="step13.png" linked="true">}}
-14. Ponga la "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) en el lienzo en blanco.  
+14. Pon la "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) en el lienzo en blanco.  
 {{<image src="step14.png" linked="true">}}
 15. Conecta "Cloud Agnostic Machine" a "NSX Network" en el lienzo en blanco. 
 {{<image src="step15.png" linked="true">}}
