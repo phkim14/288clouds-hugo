@@ -13,6 +13,14 @@
 Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
  Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)  NSX-T:]]></description>
 </item><item>
+    <title>Parte 2 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda</title>
+    <link>https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</link>
+    <pubDate>Mon, 16 Mar 2020 07:48:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</guid>
+    <description><![CDATA[Puede crear una plantilla vRA 8 que crear las redes NSX-T enrutables bajo demanda y desplegar máquinas conectadas a las nuevas redes creadas. Cuando está usando la plantilla para crear red NSX enrutable bajo demanda, en realidad, vRA 8 crea un enrutador lógico tier-1 y lo conecta a un enrutador lógico tier-0 existente. Después, vRA 8 crea una red NSX-T bajo demanda y la conecta al enrutador lógico tier-1.
+Versiones de Productos (Demo)  vSphere 6.]]></description>
+</item><item>
     <title>Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes</title>
     <link>https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html</link>
     <pubDate>Fri, 13 Mar 2020 07:48:00 -0500</pubDate>

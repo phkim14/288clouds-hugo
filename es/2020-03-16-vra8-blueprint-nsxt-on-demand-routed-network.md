@@ -1,74 +1,73 @@
-# vRA 8 + NSX-T Blog Series Part 2: vRA 8 Blueprint with On-demand Routed NSX-T Networks
-
-# ~ Este post será traducido al español próximamente ~
-
-You can create a vRA 8 blueprint to create an on-demand routed NSX-T network and deploy machines connected to these newly created network. When you tell the blueprint to create an on-demand routed NSX-T network, vRA 8 actually creates a tier-1 gateway that connects to the pre-existing tier-0 gateway. It then creates an on-demand network and attaches it to the tier-1 gateway that it has created.
+# Parte 2 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda
 
 
-## Demo Product Versions  
+Puede crear una plantilla vRA 8 que crear las redes NSX-T enrutables bajo demanda y desplegar máquinas conectadas a las nuevas redes creadas. Cuando está usando la plantilla para crear red NSX enrutable bajo demanda, en realidad, vRA 8 crea un enrutador lógico tier-1 y lo conecta a un enrutador lógico tier-0 existente. Después, vRA 8 crea una red NSX-T bajo demanda y la conecta al enrutador lógico tier-1.
+
+
+## Versiones de Productos (Demo)
 * vSphere 6.5 U3
-* vRA 8.0.1 (including vRSLCM and vIDM)
+* vRA 8.0.1 (incluyendo vRSLCM y vIDM)
 * NSX-T 2.5.1
 * vSAN 6.6.1
 
-## Prerequisites
+## Prerrequisitos
 vRA 8:
-* NSX-T account connected
-* Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
+* Cuenta conectada de NSX-T
+* Infraestructura básica configurada (proyectos, zonas de nube, "image mappings" o asignaciones de imagen, "flavor mappings" o asignaciones de tipo)
 
 NSX-T:
-* tier-0 logical router configured
+* enrutador lógico tier-0 configurado 
 
 
-## Process Overview
-1. Create a network profile that creates on-demand networks. 
-2. Select a tier-0 gateway and edge node in the network profile.
-3. Specify the on-demand network details (i.e. CIDR, subnet size, etc.)
-4. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.
-5. Set the network type as `routed`. 
+## Información General de Proceso 
+1. Cree un perfil de red que crea redes bajo demanda. 
+2. Escoge enrutador lógico tier-0 y el clúster de los nodos NSX Edge en perfil de red.
+3. Provea los detalles para la red a petición (por ejemplo, "CIDR", tamaño de subred, etc.)
+4. Cree una plantilla con los objectos: "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX).
+5. Escoge `routed` (rutable) para el tipo de red. 
 
-optional steps:
-* Create inputs in the blueprint to customize the machine name and the network name.
+Paso opcional:
+* Cree entrada en la plantilla para personalizar el nombre de la máquina y el nombre de la red.
 
 
-## Demo / Example
+## Ejemplo
 
-### Configure Network Profile
-1. Go to "Infrastructure" > "Network Profiles" (under Configure) and click "+ NEW NETWORK PROFILE".
-2. Choose an account/region and give the profile a name.
-3. Go to "Network Policies" tab and select "Create an on-demand network" radio button. 
-4. Select a transport zone. 
-5. Enter CIDR.
-6. Select a subnet size.
-7. Select the IP range assignment type. This demo uses static assignment as there is no DHCP in the environment. 
-8. Under "Network Resources" section, select a tier-0 logical router.
-9. Under "Network Resources" section, select an edge cluster. 
-10. Click "CREATE" to save the profile. 
+### Configure el Perfil de Red
+1. Vaya a “Infraestructura” > “Perfiles de Red” (en el menú “Configurar”) y de clic en el botón “+ NUEVO PERFIL DE RED”.
+2. Escoge la cuenta o región y nombre el perfil. 
+3. Vaya a “Directivas de red” y seleccione “Red a petición”
+4. Escoge la zona de transporte.  
+5. Entre "CIDR".
+6. Seleccione tamaño de subred. 
+7. Seleccione tipo de asignación de rangos de IP. Este ejemplo usa asignación estática porque no hay "DHCP" en el laboratorio. 
+8. En la sección “Recursos de red”, seleccione enrutador lógico tier-0. 
+9. En la sección “Recursos de red”, seleccione clúster de NSX Edge. 
+10. De clic en el botón “CREAR” para guardar el perfil.
 {{<image src="step10.png" linked="true">}}
 
-### Create and Configure Blueprint
-11. Go to "Blueprints" and Click "+ NEW" to create a new blueprint.
-12. Give a name to the blueprint and choose a project.
-13. Drag a Cloud Agnostic Machine and a NSX Network onto the canvas. 
-14. Connect the Cloud Agnostic Machine to the NSX Network on the canvas. 
-15. On the right side in the YAML file, choose an image and size for the machine. 
-16. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine.
-17. For the NSX network, change the `networkType` under `properties` to `routed`.
+### Cree y Configure la Plantilla
+11. Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.
+12. Nombra la plantilla y escoge el proyecto.
+13. Pon la "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) en el lienzo en blanco.
+14. Conecta "Cloud Agnostic Machine" a "NSX Network" en el lienzo en blanco.
+15. A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. 
+16. Debajo de `-network:`, agregue una línea `assignment: static` para dar una dirección IP estática a la máquina.
+17. Para la "NSX network", asegúrese que dice `networkType: routed` debajo de `properties`.
 {{<image src="step17.png" linked="true">}}
-18. Click "TEST".
-19. Click "DEPLOY" to create a new deployment.
-20. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+18. De clic en el botón “PROBAR”.
+19. De clic en el botón “IMPLEMENTAR” para crear una nueva implementación.
+20. Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.
 
-### Verify Deployment
-21. Log into NSX-T UI and go to the "Advanced Networking & Security" tab (Note that you cannot see this in the NSX-T Simplified UI).
-22. Under "Networking" > "Switching", you can see the on-demand segment that has been created from the blueprint.
+### Verifique la Implementación 
+21. Inicie sesión en el "NSX-T UI" (el cliente web de NSX-T) y vaya a “Advanced Networking & Security”. Nota que no puede verificar la implementación en el "NSX-T Simplified UI" (el cliente web simple de NSX-T).
+22. Vaya a “Networking” > “Switching”, puede ver segmento bajo demanda que ha creado de la plantilla.
 {{<image src="step22.png" linked="true">}}
-23. If you go to "Networking" > "Routers", you will see the tier-1 router that has been created and connected to the tier-0 router that you selected in the network profile.
+23. Vaya a “Networking” > “Routers”, puede ver enrutador lógico tier-1 que ha creado y conectado al enrutador lógico tier-0 que seleccionó en el perfil de red.
 {{<image src="step23.png" linked="true">}}
 
-You should also be able to see the deployment under "Deployments" in vRA UI as well as the new machine and the new NSX-T segment created in the vSphere UI.
+En el "UI" (el cliente web) de vRA Cloud Assembly, puede ver la implementación completa en “Implementaciones”. Puede ver también la nueva máquina creada y la nueva red NSX-T creada en el cliente web de vSphere.
 
-### Demo / Example Blueprint YAML File
+### Código YAML de la Plantilla de Ejemplo
 ```
 formatVersion: 1
 inputs:
@@ -98,4 +97,4 @@ resources:
       name: '${input.network-name}'
 ```
 <br>
-<i>Credit: Huge thanks to my colleague, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreferrer">Michael Patton</a>, for working with me on this demo.</i> 
+<i>Crédito: Muchas gracias a mi colega, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreferrer">Michael Patton</a>, Patton para crear este ejemplo conmigo.</i> 
