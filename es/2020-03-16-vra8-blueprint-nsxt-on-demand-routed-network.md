@@ -97,4 +97,4 @@ resources:
       name: '${input.network-name}'
 ```
 <br>
-<i>Crédito: Muchas gracias a mi colega, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreferrer">Michael Patton</a>, Patton para crear este ejemplo conmigo.</i> 
+<i>Crédito: Muchas gracias a mi colega, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreferrer">Michael Patton</a>, para crear este ejemplo conmigo.</i> 
