@@ -1,59 +1,58 @@
-# Customize Machine and On-demand Network Names
+# Personalice Nombres de Máquinas y Redes Bajo Demanda
 
 
-# ~ Este post será traducido al español próximamente ~
+La plantilla vRA 8 da nombres y números aleatorios a las máquinas y redes NSX-T bajo demanda en implementaciones si no especifica nomenclatura personalizada. Este blog va a demostrar cómo puede personalizar nombres de su máquinas y redes NSX-T cuando son creados de una plantilla vRA 8. 
 
-vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint. 
 
-## Demo Product Versions  
+## Versiones de Productos (Demo)
 * vSphere 6.5 U3
-* vRA 8.0.1 (including vRSLCM and vIDM)
+* vRA 8.0.1 (incluyendo vRSLCM y vIDM)
 * NSX-T 2.5.1
 * vSAN 6.6.1
 
-## Prerequisites
+## Prerrequisitos
 vRA 8:
-* NSX-T account connected
-* Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
+* Cuenta conectada de NSX-T
+* Infraestructura básica configurada (proyectos, zonas de nube, "image mappings" o asignaciones de imagen, "flavor mappings" o asignaciones de tipo)
 
-NSX-T (if you want to use on-demand network name):
-* tier-0 logical router configured
-
-
-## Process Overview
-1. In the project, create a naming convention.
-2. In the blueprint, create a custom input for each object you want to name.
-3. Use the input variable name to edit the `name` property of the machine / network.
+NSX-T (si quiere personalizar el nombre del red bajo demanda):
+* enrutador lógico (tier-0 o tier-1) configurado 
 
 
-## Demo / Example
+## Información General de Proceso 
+1. En el proyecto, cree nomenclatura personalizada. 
+2. En la plantilla, cree una entrada personalizada para cada objeto que quiere nombrar. 
+3. Use nombre de variable de entrada para editar propiedad `name` de máquina o red.
 
-### Create Project Naming Convention
-1. Go to "Infrastructure" > "Projects" and click on the Project that you'd like to add the naming convention.
-2. Go to "Provisioning" tab.
-3. Under "Custom Naming" section, specify the machine name template: `${resource.name}-${##}`
+## Ejemplo
+
+### Cree Nomenclatura Personalizada
+1. Vaya a “Infraestructura” > “Proyectos” (en el menú “Configurar”) y de clic en el proyecto que quiere agregar nomenclatura personalizada.
+2. Vaya a sección “Aprovisionamiento”.
+3. En la sección “Propiedades personalizadas”, especifique una plantilla de nomenclatura: `${resource.name}-${##}`
 {{<image src="step3.png" linked="true">}}
 
-### Create Blueprint Custom Inputs
-4. Create a new blueprint and drag Cloud Agnostic Machine and NSX Network objects onto the canvas.
-5. Configure the blueprint like the screenshot (i.e. machine image, machine flavor, machine networks assignment, network type, etc.).
-{{<image src="step5.png" linked="true">}}6. Create a variable called `vm-name` under `inputs` to customize the machine name.
-7. Give it a type `string`.
-8. Give the variable a `title`, which is what the blueprint will use to ask the user for the input value when he/she deploys this blueprint.
-9. Give a default value for this variable with `default:`.
-10. Do the same for a variable `network-name` under `inputs` to customize the network name.
+### Cree Entradas Personalizadas de Plantilla 
+4. Cree una nueva plantilla y pon la "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) en el lienzo en blanco.
+5. Configure la plantilla como la imagen (por ejemplo, imagen de máquina, tipo de máquina, asignación de redes de máquina, tipo de red, etc.).
+{{<image src="step5.png" linked="true">}}
+6. Cree un variable `vm-name` en la sección `inputs` para personalizar el nombre de máquina.
+7. Escoge el tipo `string`.
+8. Entra `title` de variable que la plantilla utilizará a preguntar el usuario por el valor de entrada cuando implementa la plantilla.
+9. Entra el valor de forma predeterminada para la propiedad `default:` de este variable.
+10. Haga lo mismo para un variable `network-name` en la sección `inputs` a personalizar nombre de red.
 {{<image src="step10.png" linked="true">}}
-Note: You can also create custom inputs by clicking the tab "Inputs" and using the GUI. 
-11. Add `name:` properties for the machine and the network to use the input values. 
+Nota: Puede creer entradas personalizadas en la sección “Entradas” usando en el "UI" (el cliente web) de vRA Cloud Assembly. 
+11. Agregue propiedades `name` para máquina y red a usar valores de entradas. 
 `name: '${input.<insert input variable name>}'`
 {{<image src="step11.png" linked="true">}}
 
-### Verify Deployment
-Now if you deploy this blueprint, you should see the machine and the network created with customized names. 
+### Verifique la Implementación 
+Ahora si implementa esta plantilla, máquina y red se crean con nombres personalizados. 
 {{<image src="step12.png" linked="true">}}
 {{<image src="step12-1.png" linked="true">}}
 
-### Demo / Example Blueprint YAML File
+### Código YAML de la Plantilla de Ejemplo 
 ```
 formatVersion: 1
 inputs:
@@ -83,4 +82,4 @@ resources:
       name: '${input.network-name}'
 ```
 <br>
-<i>Credit: Huge thanks to my colleague, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreferrer">Michael Patton</a>, for working with me on this demo.</i> 
+<i>Crédito: Muchas gracias a mi colega, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreferrer">Michael Patton</a>, para crear este ejemplo conmigo.</i> 

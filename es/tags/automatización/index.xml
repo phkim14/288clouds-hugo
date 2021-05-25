@@ -13,6 +13,15 @@
 Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
  Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)  NSX-T:]]></description>
 </item><item>
+    <title>Personalice Nombres de Máquinas y Redes Bajo Demanda</title>
+    <link>https://288clouds.com/es/2020-03-17-customize-machine-on-demand-network-names.html</link>
+    <pubDate>Tue, 17 Mar 2020 06:00:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2020-03-17-customize-machine-on-demand-network-names.html</guid>
+    <description><![CDATA[La plantilla vRA 8 da nombres y números aleatorios a las máquinas y redes NSX-T bajo demanda en implementaciones si no especifica nomenclatura personalizada. Este blog va a demostrar cómo puede personalizar nombres de su máquinas y redes NSX-T cuando son creados de una plantilla vRA 8.
+Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
+ Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T (si quiere personalizar el nombre del red bajo demanda):]]></description>
+</item><item>
     <title>Parte 2 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda</title>
     <link>https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</link>
     <pubDate>Mon, 16 Mar 2020 07:48:00 -0500</pubDate>

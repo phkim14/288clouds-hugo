@@ -3,9 +3,9 @@
 
 {{<image src="headshot.jpg" width="200" display="inline-block">}}
 
-## Hi, my name is Phoebe Kim, and I am a Customer Success Architect at VMware based in Dallas/Fort Worth metroplex.
+## Hi, my name is Phoebe Kim, and I am a Senior Cloud Solutions Architect at VMware based in Dallas/Fort Worth metroplex.
 
-As a Customer Success Architect, I am focused on helping customers design and adopt VMware-based solutions to solve business challenges. Previously, I worked in technology consulting, where I was responsible for managing projects and leading teams of engineers and developers. 
+As a Senior Cloud Solutions Architect in the Multi-Cloud Center of Excellence at VMware, Phoebe Kim helps customers achieve workload mobility across multiple clouds by providing multi-cloud reference architectures and migration guidance. Previously, Phoebe worked in technology consulting, where she was responsible for managing projects and leading teams of engineers. Phoebe has two VCDX certifications (network virtualization and data center virtualization) in addition to various technical certifications from AWS and Cisco. 
 
 When I'm not keeping busy with work or learning new technologies, I enjoy creating models for 3D printing and playing violin and piano at various events around the Dallas/Fort Worth area. 
 
