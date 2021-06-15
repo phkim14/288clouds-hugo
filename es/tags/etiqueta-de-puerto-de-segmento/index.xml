@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>vNIC - Etiqueta - 288clouds</title>
-        <link>https://288clouds.com/es/tags/vnic.html</link>
-        <description>vNIC - Etiqueta - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 20 Mar 2020 05:02:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vnic.html" rel="self" type="application/rss+xml" /><item>
+        <title>etiqueta de puerto de segmento - Etiqueta - 288clouds</title>
+        <link>https://288clouds.com/es/tags/etiqueta-de-puerto-de-segmento.html</link>
+        <description>etiqueta de puerto de segmento - Etiqueta - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 20 Mar 2020 05:02:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/etiqueta-de-puerto-de-segmento.html" rel="self" type="application/rss+xml" /><item>
     <title>Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)</title>
     <link>https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</link>
     <pubDate>Fri, 20 Mar 2020 05:02:00 -0500</pubDate>

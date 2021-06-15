@@ -1,83 +1,82 @@
-# vRA 8 + NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)
+# Parte 5 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)
 
 
-# ~ Este post será traducido al español próximamente ~
+Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas de puerto de segmento de NSX-T. 
 
-You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) by putting tags on the machine segment port(s).
-
-## Demo Product Versions  
+## Versiones de Productos Demostración (Demo)
 * vSphere 6.5 U3
-* vRA 8.0.1 (including vRSLCM and vIDM)
+* vRA 8.0.1 (incluyendo vRSLCM y vIDM)
 * NSX-T 2.5.1
 * vSAN 6.6.1
 
-## Prerequisites
+
+## Prerrequisitos
 vRA 8:
-* NSX-T account connected
-* Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
+* Cuenta conectada de NSX-T 
+* Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)
 
 NSX-T:
-* Security group(s) configured
+* Grupos de seguridad configurados 
 
 
-## Process Overview
-1. Configure Membership Criteria of the existing security group(s).
-2. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.
-3. Configure the tag on the machine network to place a tag on the machine segment port.
+## Información General de Proceso
+1. Configure los criterios de pertenencia para los grupos de seguridad existentes.
+2. Cree una plantilla con los objectos: "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX).
+3. Configure una etiqueta para la red de la máquina en la plantilla para poner una etiqueta en un puerto de segmento de la máquina. 
 
-optional steps:
-* Create inputs in the blueprint to customize the machine name.
+Paso opcional:
+* Cree entrada en la plantilla para personalizar el nombre de la máquina.
 
 
-## Demo / Example
+## Ejemplo
 
-### Configure Security Group Membership Criteria
-1. Log into NSX-T and go to "Inventory" > "Groups".
-2. Edit the security group you want to configure. 
+### Configure Criterios de Pertenencia Para Grupo de Seguridad 
+1. Inicie una sesión en el cliente web de NSX-T y vaya a “Inventario” > “Grupos”
+2. Revise el grupo de seguridad que quiere configurar. 
 {{<image src="step2.png" linked="true">}}
-3. Click "Set Members".
+3. De clic en el botón “Establecer miembros”
 {{<image src="step3.png" linked="true">}}
-4. Click "+ ADD CRITERIA".
-5. Select "Segment Port" in the first column under "Criteria".
-6. Enter the name of the tag and the scope. You need both for vRA blueprint.
+4. De clic en el botón “+ AGREGAR CRITERIOS”.
+5. Seleccione “Puerto de segmento” en la primera columna en la sección “Criterios 1”
+6. Entre el valor de la etiqueta y alcance. Tiene que completar los ambos para la plantilla vRA.
 {{<image src="step6.png" linked="true">}}
 
-### Create and Configure Blueprint
-7. Go to "Blueprints" and Click "+ NEW" to create a new blueprint. (or you can choose to use an existing blueprint and skip this section).
-8. Give a name to the blueprint and choose a project.
-9. Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas. <b>Note that you do not need to add the Security Group object to the blueprint.</b>
-10. Connect the Cloud Agnostic Machine to the NSX Network on the canvas. 
-11. On the right side in the YAML file, choose an image and size for the machine. 
-12. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine from the IP range we've created.
-13. For the NSX network, change the `networkType` under `properties` accordingly depending on whether you have configured existing or on-demand networks in the network profile. In this demo, I'll be using an existing network. 
+### Cree y Configure la Plantilla 
+7. Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.
+8. Nombre la plantilla y escoge el proyecto.
+9. Pon la "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) en el lienzo en blanco. <b>Nota que no necesita un objeto “Security Group" (grupo de seguridad) en la plantilla. </b>
+10. Conecta "Cloud Agnostic Machine" a "NSX Network" en el lienzo en blanco.
+11. A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. 
+12. Debajo de `-network:`, agregue una línea `assignment: static` para dar una dirección IP estática a la máquina.
+13. Para la “red NSX”, cambie `networkType` de `properties` dependiendo de si está usando una red existente o una red bajo demanda. En este ejemplo, estoy usando una red existente.  
 
-### Add Segment Port Tag in Blueprint
-14. For the machine, under `networks`, add a line under `assignment` called `tags:`.
-15. Add the line `- key: <insert scope name>`.
-16. Add the line `value: <insert tag name>` below. Make sure they are aligned.
-Note that anything following a hashtag is a comment in YAML.
+### Agregue Etiqueta de Puerto de Segmento en la Plantilla 
+14. Para la máquina, debajo de `-network:`, agregue una línea `assignment` que se llama `tags:`. 
+15. Agregue la línea `- key: <insert scope name>`.
+16. Agregue la línea `value: <insert tag name>` debajo.
+Nota que puede usar un “hashtag” para comentar en código YAML.
 {{<image src="step16.png" linked="true">}}
-17. Click "TEST".
-18. Click "DEPLOY" to create a new deployment.
-19. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
+17. De clic en el botón “PROBAR”.
+18. De clic en el botón “IMPLEMENTAR” a crear una nueva implementación.
+19. Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.
 
-### Verify Deployment
-20. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.
+### Verifique la Implementación 
+20. Cuando la implementación está completa, vaya a “Implementaciones” en vRA y nota la dirección IP de la nueva implementación.
 {{<image src="step20.png" linked="true">}}
-21. Now log into NSX-T UI and go to "Inventory" > "Groups".
-22. Click "View Members" of the security group you have selected in the network profile.
-23. Click "IP Addresses" and you'll see the IP address of the deployment. 
+21. Inicie una sesión en el "NSX-T UI" (el cliente web de NSX-T) y vaya a "Inventory" > "Groups".
+22. De clic en el botón “Ver miembros” del “grupo de seguridad” que usó.
+23. De clic en el botón “Direcciones IP” y puede ver la dirección IP de la implementación.
 {{<image src="step23.png" linked="true">}}
-24. If you want to see the segment port tag that has been applied, log into NSX-T and go to "Advanced Networking & Security" > "Switching".
-25. Select the overlay network that the machine has been placed on.
-26. Find the logical port that belongs to the machine. You can see the VM name if you look at the "Attachment" column. If you don't know the VM name that has been created, go to vRA 8 UI > "Deployments" and check the deployment.
+24.Si quiere ver la etiqueta de puerto de segmento que ha aplicado, inicie una sesión en el cliente web de NSX-T y vaya a “Advanced Networking & Security” > “Switching”.
+25. Seleccione el segmento que la máquina está usando.
+26. Encontre el puerto de segmento lógico lo que pertenece a la máquina. Puede ver el nombre de la máquina en la columna “Attachment”. Si no sabe el nombre de la máquina creada, vaya el cliente web de vRA y puede ver la implementación en “Implementaciones”.
 {{<image src="step26.png" linked="true">}}
-27. Select the logical port and click "Actions" > "Manage Tags".
+27. Seleccione el puerto de segmento lógico y de clic en el botón "Actions" > "Manage Tags".
 {{<image src="step27.png" linked="true">}}
-28. You should see the tag that you've specified in the blueprint.
+28. Puede ver la etiqueta lo que especificó en la plantilla.
 {{<image src="step28.png" linked="true">}}
 
-### Demo / Example Blueprint YAML File
+### Código YAML de la Plantilla de Ejemplo
 ```
 formatVersion: 1
 inputs:
