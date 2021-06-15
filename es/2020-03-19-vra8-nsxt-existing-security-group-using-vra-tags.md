@@ -1,7 +1,7 @@
 # Parte 4 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)
 
 
-Puedes crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA. 
+Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA. 
 
 ## Versiones de Productos Demostración (Demo)
 * vSphere 6.5 U3

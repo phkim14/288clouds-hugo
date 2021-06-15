@@ -88,7 +88,7 @@ Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyend
     <pubDate>Thu, 19 Mar 2020 07:53:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</guid>
-    <description><![CDATA[Puedes crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.
+    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.
 Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
  Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)  NSX-T:
  Grupos de seguridad configurados  Información General de Proceso  Cree una etiqueta en el grupo de seguridad existente.]]></description>

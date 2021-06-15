@@ -67,7 +67,7 @@ Nota que puede usar un “hashtag” para comentar en código YAML.
 22. De clic en el botón “Ver miembros” del “grupo de seguridad” que usó.
 23. De clic en el botón “Direcciones IP” y puede ver la dirección IP de la implementación.
 {{<image src="step23.png" linked="true">}}
-24.Si quiere ver la etiqueta de puerto de segmento que ha aplicado, inicie una sesión en el cliente web de NSX-T y vaya a “Advanced Networking & Security” > “Switching”.
+24. Si quiere ver la etiqueta de puerto de segmento que ha aplicado, inicie una sesión en el cliente web de NSX-T y vaya a “Advanced Networking & Security” > “Switching”.
 25. Seleccione el segmento que la máquina está usando.
 26. Encontre el puerto de segmento lógico lo que pertenece a la máquina. Puede ver el nombre de la máquina en la columna “Attachment”. Si no sabe el nombre de la máquina creada, vaya el cliente web de vRA y puede ver la implementación en “Implementaciones”.
 {{<image src="step26.png" linked="true">}}
