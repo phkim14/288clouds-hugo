@@ -1,7 +1,7 @@
 # Acerca de Mí
 
 
-{{<image src="headshot.jpg" width="200" display="inline-block">}}
+{{<image src="headshot.jpeg" width="200" display="inline-block">}}
 
 ## Hola, mi nombre es Phoebe Kim, y soy una "Senior Cloud Solutions Architect" para VMware en Dallas/Fort Worth, EE.UU.
 
@@ -31,6 +31,7 @@ Puedo ser contactada vía [correo electrónico](mailto:info.288clouds@gmail.com)
 
 ##### VMware
 <b>Cloud Management and Automation</b>
+* VMware Certified Design Expert - Cloud Management and Automation (VCDX #288)
 * VMware Certified Implementation Expert - Cloud Management and Automation Deploy (VCIX-CMA)
 * VMware Certified Advanced Professional - Cloud Management and Automation Deploy (VCAP-CMA Deploy)
 * VMware Certified Advanced Professional - Cloud Management and Automation Design (VCAP-CMA Design)

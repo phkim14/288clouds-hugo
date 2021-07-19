@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group - 288clouds</title><meta name="Description" content="Learn how to create a vRA 8 blueprint to deploy machines in an on-demand security group using a network profile."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group" />
-<meta property="og:description" content="Learn how to create a vRA 8 blueprint to deploy machines in an on-demand security group using a network profile." />
+        <title>Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda - 288clouds</title><meta name="Description" content="Aprende como crear una plantilla vRA 8 para desplegar máquinas con grupos de seguridad bajo demanda usando perfil de red."><meta property="og:title" content="Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda" />
+<meta property="og:description" content="Aprende como crear una plantilla vRA 8 para desplegar máquinas con grupos de seguridad bajo demanda usando perfil de red." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html" />
 <meta property="og:image" content="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png"/>
 <meta property="article:published_time" content="2020-03-23T04:02:00-05:00" />
-<meta property="article:modified_time" content="2020-08-18T04:02:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2021-07-19T04:02:00-05:00" /><meta property="og:site_name" content="288clouds" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png"/>
-<meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group"/>
-<meta name="twitter:description" content="Learn how to create a vRA 8 blueprint to deploy machines in an on-demand security group using a network profile."/>
+<meta name="twitter:title" content="Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda"/>
+<meta name="twitter:description" content="Aprende como crear una plantilla vRA 8 para desplegar máquinas con grupos de seguridad bajo demanda usando perfil de red."/>
 <meta name="application-name" content="288clouds">
 <meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -23,7 +23,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "vRA 8 + NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group",
+        "headline": "Parte 6 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda",
         "inLanguage": "es",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -33,13 +33,13 @@
                             "url": "https:\/\/288clouds.com\/es\/2020-03-23-vra8-nsxt-on-demand-security-group\/featured-image.png",
                             "width":  1800 ,
                             "height":  869 
-                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, security group, on-demand, automation","wordcount":  529 ,
-        "url": "https:\/\/288clouds.com\/es\/2020-03-23-vra8-nsxt-on-demand-security-group.html","datePublished": "2020-03-23T04:02:00-05:00","dateModified": "2020-08-18T04:02:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, grupo de seguridad, grupo de seguridad bajo demanda, automatización","wordcount":  555 ,
+        "url": "https:\/\/288clouds.com\/es\/2020-03-23-vra8-nsxt-on-demand-security-group.html","datePublished": "2020-03-23T04:02:00-05:00","dateModified": "2021-07-19T04:02:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Phoebe Kim"
-            },"description": "Learn how to create a vRA 8 blueprint to deploy machines in an on-demand security group using a network profile."
+            },"description": "Aprende como crear una plantilla vRA 8 para desplegar máquinas con grupos de seguridad bajo demanda usando perfil de red."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -112,9 +112,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contenido</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-23">2020-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;529 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-23">2020-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;555 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -123,62 +123,61 @@
         data-srcset="../es/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png, ../es/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png 1.5x, ../es/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png 2x"
         data-sizes="auto"
         alt="/es/2020-03-23-vra8-nsxt-on-demand-security-group/featured-image.png"
-        title="Learn how to create a vRA 8 blueprint to deploy machines in an on-demand security group using a network profile." /></div><div class="details toc" id="toc-static"  kept="">
+        title="Aprende como crear una plantilla vRA 8 para desplegar máquinas con grupos de seguridad bajo demanda usando perfil de red." /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contenido</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#process-overview">Process Overview</a></li>
-    <li><a href="#demo--example">Demo / Example</a>
+    <li><a href="#versiones-de-productos-demostración-demo">Versiones de Productos Demostración (Demo)</a></li>
+    <li><a href="#prerrequisitos">Prerrequisitos</a></li>
+    <li><a href="#información-general-de-proceso">Información General de Proceso</a></li>
+    <li><a href="#ejemplo">Ejemplo</a>
       <ul>
-        <li><a href="#configure-network-profile">Configure Network Profile</a></li>
-        <li><a href="#create-and-configure-blueprint">Create and Configure Blueprint</a></li>
-        <li><a href="#verify-deployment">Verify Deployment</a></li>
-        <li><a href="#demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</a></li>
+        <li><a href="#configure-el-perfil-de-red">Configure el Perfil de Red</a></li>
+        <li><a href="#cree-y-configure-la-plantilla">Cree y Configure la Plantilla</a></li>
+        <li><a href="#verifique-la-implementación">Verifique la Implementación</a></li>
+        <li><a href="#código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="-este-post-será-traducido-al-español-próximamente-">~ Este post será traducido al español próximamente ~</h1>
-<p>You can create a vRA 8 blueprint to deploy machines and place them in an on-demand NSX-T security group.</p>
-<h2 id="demo-product-versions">Demo Product Versions</h2>
+            </div><div class="content" id="content"><p>Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad bajo demanda.</p>
+<h2 id="versiones-de-productos-demostración-demo">Versiones de Productos Demostración (Demo)</h2>
 <ul>
 <li>vSphere 6.5 U3</li>
-<li>vRA 8.0.1 (including vRSLCM and vIDM)</li>
+<li>vRA 8.0.1 (incluyendo vRSLCM y vIDM)</li>
 <li>NSX-T 2.5.1</li>
 <li>vSAN 6.6.1</li>
 </ul>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerrequisitos">Prerrequisitos</h2>
 <p>vRA 8:</p>
 <ul>
-<li>NSX-T account connected</li>
-<li>Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)</li>
+<li>Cuenta conectada de NSX-T</li>
+<li>Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)</li>
 </ul>
 <p>NSX-T:</p>
 <ul>
-<li>logical network(s) configured</li>
+<li>red configurado</li>
 </ul>
-<h2 id="process-overview">Process Overview</h2>
+<h2 id="información-general-de-proceso">Información General de Proceso</h2>
 <ol>
-<li>Create or edit a network profile.</li>
-<li>Select which existing security groups you&rsquo;d like to use.</li>
-<li>Create a blueprint with Cloud Agnostic Machine and NSX Network objects.</li>
+<li>Cree o revise un perfil de red.</li>
+<li>Seleccione &ldquo;Create an on-demand security group&rdquo; en el perfil de red.</li>
+<li>Cree una plantilla con los objectos: &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube) y &ldquo;NSX Network&rdquo; (red NSX).</li>
 </ol>
-<p>optional steps:</p>
+<p>Paso opcional:</p>
 <ul>
-<li>Create inputs in the blueprint to customize the machine name.</li>
+<li>Cree entrada en la plantilla para personalizar el nombre de la máquina.</li>
 </ul>
-<h2 id="demo--example">Demo / Example</h2>
-<h3 id="configure-network-profile">Configure Network Profile</h3>
+<h2 id="ejemplo">Ejemplo</h2>
+<h3 id="configure-el-perfil-de-red">Configure el Perfil de Red</h3>
 <ol>
-<li>Go to &ldquo;Infrastructure&rdquo; &gt; &ldquo;Network Profiles&rdquo; (under Configure) and click &ldquo;+ NEW NETWORK PROFILE&rdquo;. (or you can choose to edit an existing network profile that has existing networks).</li>
-<li>Choose an account/region and give the profile a name.</li>
-<li>Configure existing networks.</li>
-<li>Go to &ldquo;Network Policies&rdquo; tab and select &ldquo;Create an on-demand security group&rdquo; radio button.
+<li>Vaya a “Infraestructura” &gt; “Perfiles de Red” (en el menú “Configurar”) y de clic en el botón “+ NUEVO PERFIL DE RED” (o puede revisar un perfil de red existente).</li>
+<li>Escoge la cuenta o región y nombre el perfil.</li>
+<li>Configure redes existentes.</li>
+<li>Vaya a “Directivas de red” y seleccione “Create an on-demand security group”.
 <br><a class="lightgallery" href="../es/2020-03-23-vra8-nsxt-on-demand-security-group/step4.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step4.png" data-thumbnail="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step4.png">
         <img
             class="lazyload"
@@ -188,18 +187,17 @@
             data-sizes="auto"
             alt="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step4.png" />
     </a></li>
-<li>Save the network profile.</li>
+<li>De clic en el botón “CREAR” para guardar el perfil.</li>
 </ol>
-<h3 id="create-and-configure-blueprint">Create and Configure Blueprint</h3>
-<ol start="7">
-<li>Go to &ldquo;Blueprints&rdquo; and Click &ldquo;+ NEW&rdquo; to create a new blueprint. (or you can choose to use an existing blueprint that uses existing networks).</li>
-<li>Give a name to the blueprint and choose a project.</li>
-<li>Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas. <b>Note that you do not need to add the Security Group object to the blueprint.</b></li>
-<li>Connect the Cloud Agnostic Machine to the NSX Network on the canvas.</li>
-<li>On the right side in the YAML file, choose an image and size for the machine.</li>
-<li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine from the IP range we&rsquo;ve created.</li>
-<li>For the network, choose <code>networkType</code>.</li>
-<li>Choose <code>private</code> or <code>outbound</code> for <code>networkType</code>.
+<h3 id="cree-y-configure-la-plantilla">Cree y Configure la Plantilla</h3>
+<ol start="6">
+<li>Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.</li>
+<li>Nombra la plantilla y escoge el proyecto.</li>
+<li>Pon la &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube) y &ldquo;NSX Network&rdquo; (red NSX) en el lienzo en blanco. <b>Nota que no tiene que poner el &ldquo;Security Group&rdquo; (grupo de seguridad) en el lienzo en blanco.</b></li>
+<li>Conecta &ldquo;Cloud Agnostic Machine&rdquo; a &ldquo;NSX Network&rdquo; en el lienzo en blanco.</li>
+<li>A la derecha en el código YAML, escoge una imagen y un tipo para la máquina.</li>
+<li>Debajo de <code>-network:</code>, agregue una línea <code>assignment: static</code> para dar una dirección IP estática a la máquina.</li>
+<li>Para la &ldquo;NSX network&rdquo;, escoje <code>private</code> o <code>outbound</code> para <code>networkType</code> debajo de <code>properties</code>
 <br><a class="lightgallery" href="../es/2020-03-23-vra8-nsxt-on-demand-security-group/step14.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step14.png" data-thumbnail="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step14.png">
         <img
             class="lazyload"
@@ -209,13 +207,13 @@
             data-sizes="auto"
             alt="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step14.png" />
     </a></li>
-<li>Click &ldquo;TEST&rdquo;.</li>
-<li>Click &ldquo;DEPLOY&rdquo; to create a new deployment.</li>
-<li>Give it a deployment name, choose &ldquo;Current Draft&rdquo;, the cick &ldquo;DEPLOY&rdquo;.</li>
+<li>De clic en el botón “PROBAR”.</li>
+<li>De clic en el botón “IMPLEMENTAR” para crear una nueva implementación.</li>
+<li>Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.</li>
 </ol>
-<h3 id="verify-deployment">Verify Deployment</h3>
-<ol start="17">
-<li>Once deployed, log into NSX-T UI and go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Inventory&rdquo; &gt; Groups&rdquo;. You will see that a new security group has been created with the name starting with &ldquo;isolation-securitygroup&rdquo;.
+<h3 id="verifique-la-implementación">Verifique la Implementación</h3>
+<ol start="16">
+<li>Inicie sesión en el &ldquo;NSX-T UI&rdquo; (el cliente web de NSX-T) y vaya a “Advanced Networking &amp; Security” &gt; &ldquo;Inventory&rdquo; &gt; Groups&rdquo;. Puede ver un nuevo grupo de seguridad con el nombre empezando con &ldquo;isolation-securitygroup&rdquo;.
 <br><a class="lightgallery" href="../es/2020-03-23-vra8-nsxt-on-demand-security-group/step17.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step17.png" data-thumbnail="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step17.png">
         <img
             class="lazyload"
@@ -225,8 +223,8 @@
             data-sizes="auto"
             alt="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step17.png" />
     </a></li>
-<li>Go to &ldquo;Security&rdquo; &gt; &ldquo;Distributed Firewall&rdquo;.</li>
-<li>You will see that a new firewall section has been created for the security group that has just been created. If you set the <code>networkType</code> in the blueprint as <code>private</code>, you will see that the rules reject all inbound and outbound traffic. If you set the <code>networkType</code> as <code>outbound</code>, the rules will allow outbound traffic and reject only the inbound traffic.
+<li>Vaya a &ldquo;Security&rdquo; &gt; &ldquo;Distributed Firewall&rdquo;.</li>
+<li>Puede ver una nueva sección de &ldquo;Distributed Firewall&rdquo; para el grupo de seguridad creado. Si ha elegido <code>networkType: private</code> en la plantilla, las reglas de &ldquo;Distributed Firewall&rdquo; bloquean todos los tráficos entrantes y salientes. Si ha elegido <code>networkType: outbound</code>, las reglas de &ldquo;Distributed Firewall&rdquo; solamente bloquean los tráficos entrantes.
 <br><a class="lightgallery" href="../es/2020-03-23-vra8-nsxt-on-demand-security-group/step19.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step19.png" data-thumbnail="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step19.png">
         <img
             class="lazyload"
@@ -237,7 +235,7 @@
             alt="/es/2020-03-23-vra8-nsxt-on-demand-security-group/step19.png" />
     </a></li>
 </ol>
-<h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
+<h3 id="código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -300,20 +298,20 @@ resources:
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Actualizado el 2020-08-18</span>
+                <span>Actualizado el 2021-07-19</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html" data-title="vRA 8 &#43; NSX-T Blog Series Part 6: vRA 8 Blueprint with On-demand Security Group" data-via="phoebesykim" data-hashtags="vRA,vRA8,NSX-T,security group,on-demand,automation"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html" data-title="Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda" data-via="phoebesykim" data-hashtags="vRA,vRA8,NSX-T,grupo de seguridad,grupo de seguridad bajo demanda,automatización"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/security-group.html">security group</a>,&nbsp;<a href="../es/tags/on-demand.html">on-demand</a>,&nbsp;<a href="../es/tags/automation.html">automation</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/grupo-de-seguridad.html">grupo de seguridad</a>,&nbsp;<a href="../es/tags/grupo-de-seguridad-bajo-demanda.html">grupo de seguridad bajo demanda</a>,&nbsp;<a href="../es/tags/automatizaci%C3%B3n.html">automatización</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="../es/">Inicio</a></span>
         </section>
