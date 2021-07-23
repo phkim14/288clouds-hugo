@@ -32,15 +32,15 @@ VMC on AWS:
 {{<image src="step3-3.png" linked="true">}}
 {{<image src="step3-4.png" linked="true">}}
 {{<image src="step3-5.png" linked="true">}}
-{{<image src="step3-6.png" linked="true">}}
 Note that since this is a VMC on AWS SDDC, you can only select the WorkloadDatastore.
+{{<image src="step3-6.png" linked="true">}}
 {{<image src="step3-7.png" linked="true">}}
-{{<image src="step3-8.png" linked="true">}}
 Go back to vRA Cloud Assembly to copy the One-Time Key (OTK). 
+{{<image src="step3-8.png" linked="true">}}
 {{<image src="step3-9.png" linked="true">}}
 {{<image src="step3-10.png" linked="true">}}
-{{<image src="step3-11.png" linked="true">}}
 I'm going to leave all the networking properties blank and let DHCP assign an IP address to this VM. 
+{{<image src="step3-11.png" linked="true">}}
 {{<image src="step3-12.png" linked="true">}}
 4. Once the vRA Cloud Proxy is deployed, power it on. The Cloud Proxy will receive an IP address on the network that you've chosen during the deployment. Note the IP address. 
 {{<image src="step4.png" linked="true">}}
