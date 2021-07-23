@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Using vRA with VMC on AWS: Getting Started - 288clouds</title><meta name="Description" content="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS."><meta property="og:title" content="Using vRA with VMC on AWS: Getting Started" />
+<meta property="og:description" content="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html" />
+<meta property="og:image" content="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc/featured-image.png"/>
+<meta property="article:published_time" content="2021-07-22T05:52:00-05:00" />
+<meta property="article:modified_time" content="2021-07-22T05:52:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc/featured-image.png"/>
+<meta name="twitter:title" content="Using vRA with VMC on AWS: Getting Started"/>
+<meta name="twitter:description" content="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html" /><link rel="prev" href="https://288clouds.com/2021-04-09-vrac-gcp-security-groups.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Using vRA with VMC on AWS: Getting Started",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/2021-07-23-vrac-proxy-in-vmc.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/2021-07-23-vrac-proxy-in-vmc\/featured-image.png",
+                            "width":  2000 ,
+                            "height":  1091 
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, vRA Cloud Proxy, VMware Cloud on AWS","wordcount":  695 ,
+        "url": "https:\/\/288clouds.com\/2021-07-23-vrac-proxy-in-vmc.html","datePublished": "2021-07-22T05:52:00-05:00","dateModified": "2021-07-22T05:52:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Let's learn how to get started with using vRealize Automation with VMware Cloud on AWS."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./about.html"> About </a><a class="menu-item" href="./posts.html"> Posts </a><a class="menu-item" href="./tags.html"> Tags </a><a class="menu-item" href="./categories.html"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2021-07-23-vrac-proxy-in-vmc.html" selected>English</option><option value="/es/2021-07-23-vrac-proxy-in-vmc.html">Español</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./about.html" title="">About</a><a class="menu-item" href="./posts.html" title="">Posts</a><a class="menu-item" href="./tags.html" title="">Tags</a><a class="menu-item" href="./categories.html" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2021-07-23-vrac-proxy-in-vmc.html" selected>English</option><option value="/es/2021-07-23-vrac-proxy-in-vmc.html">Español</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Using vRA with VMC on AWS: Getting Started</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="./about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-22">2021-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;695 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="./2021-07-23-vrac-proxy-in-vmc/featured-image.png"
+        data-srcset="./2021-07-23-vrac-proxy-in-vmc/featured-image.png, ./2021-07-23-vrac-proxy-in-vmc/featured-image.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2021-07-23-vrac-proxy-in-vmc/featured-image.png"
+        title="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#process-overview">Process Overview</a></li>
+    <li><a href="#demo--example">Demo / Example</a>
+      <ul>
+        <li><a href="#deploy-a-vra-cloud-proxy">Deploy a vRA Cloud Proxy</a></li>
+        <li><a href="#create-firewall-rules-for-vra-cloud-proxy">Create Firewall Rules for vRA Cloud Proxy</a></li>
+        <li><a href="#configure-vra-cloud-assembly-resources">Configure vRA Cloud Assembly Resources</a>
+          <ul>
+            <li><a href="#demo--example-template-yaml">Demo / Example Template YAML</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>vRealize Automation can be used to automate the deployment of workloads to a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Automation with VMware Cloud on AWS.</p>
+<h2 id="demo-product-versions">Demo Product Versions</h2>
+<ul>
+<li>vRA Cloud</li>
+<li>VMware Cloud on AWS (SDDC version 1.14v4)</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>VMC on AWS:</p>
+<ul>
+<li>SDDC deployed</li>
+<li>Access to the SDDC</li>
+</ul>
+<h2 id="process-overview">Process Overview</h2>
+<ol>
+<li>Deploy a vRA Cloud Proxy in the VMC on AWS SDDC.</li>
+<li>Add firewall rules for vRA Cloud Proxy.</li>
+<li>Configure vRA resources to consume VMC on AWS SDDC.</li>
+</ol>
+<h2 id="demo--example">Demo / Example</h2>
+<h3 id="deploy-a-vra-cloud-proxy">Deploy a vRA Cloud Proxy</h3>
+<ol>
+<li>In vRA Cloud Assembly, go to Infrastructure &gt; Cloud Proxies. Click &ldquo;NEW&rdquo;.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step1.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step1.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step1.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step1.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step1.png, ./2021-07-23-vrac-proxy-in-vmc/step1.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step1.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step1.png" />
+    </a></li>
+<li>Click &ldquo;DOWNLOAD OVA&rdquo;. You can use the OVA file link as well, but from my experiences, downloading it locally has been more successful instead of using the link.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step2.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step2.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step2.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step2.png, ./2021-07-23-vrac-proxy-in-vmc/step2.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step2.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step2.png" />
+    </a></li>
+<li>Go to the VMC on AWS SDDC vSphere Client and deploy OVF template.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-1.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-1.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-1.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-1.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-1.png, ./2021-07-23-vrac-proxy-in-vmc/step3-1.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-1.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-1.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-2.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-2.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-2.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-2.png, ./2021-07-23-vrac-proxy-in-vmc/step3-2.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-2.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-2.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-3.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-3.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-3.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-3.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-3.png, ./2021-07-23-vrac-proxy-in-vmc/step3-3.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-3.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-3.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-4.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-4.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-4.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-4.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-4.png, ./2021-07-23-vrac-proxy-in-vmc/step3-4.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-4.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-4.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-5.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-5.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-5.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-5.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-5.png, ./2021-07-23-vrac-proxy-in-vmc/step3-5.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-5.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-5.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-6.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-6.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-6.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-6.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-6.png, ./2021-07-23-vrac-proxy-in-vmc/step3-6.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-6.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-6.png" />
+    </a>
+Note that since this is a VMC on AWS SDDC, you can only select the WorkloadDatastore.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-7.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-7.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-7.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-7.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-7.png, ./2021-07-23-vrac-proxy-in-vmc/step3-7.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-7.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-7.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-8.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-8.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-8.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-8.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-8.png, ./2021-07-23-vrac-proxy-in-vmc/step3-8.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-8.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-8.png" />
+    </a>
+Go back to vRA Cloud Assembly to copy the One-Time Key (OTK).
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-9.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-9.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-9.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-9.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-9.png, ./2021-07-23-vrac-proxy-in-vmc/step3-9.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-9.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-9.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-10.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-10.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-10.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-10.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-10.png, ./2021-07-23-vrac-proxy-in-vmc/step3-10.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-10.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-10.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-11.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-11.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-11.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-11.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-11.png, ./2021-07-23-vrac-proxy-in-vmc/step3-11.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-11.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-11.png" />
+    </a>
+I&rsquo;m going to leave all the networking properties blank and let DHCP assign an IP address to this VM.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step3-12.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step3-12.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step3-12.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step3-12.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step3-12.png, ./2021-07-23-vrac-proxy-in-vmc/step3-12.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step3-12.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step3-12.png" />
+    </a></li>
+<li>Once the vRA Cloud Proxy is deployed, power it on. The Cloud Proxy will receive an IP address on the network that you&rsquo;ve chosen during the deployment. Note the IP address.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step4.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step4.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step4.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step4.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step4.png, ./2021-07-23-vrac-proxy-in-vmc/step4.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step4.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step4.png" />
+    </a></li>
+</ol>
+<h3 id="create-firewall-rules-for-vra-cloud-proxy">Create Firewall Rules for vRA Cloud Proxy</h3>
+<ol start="5">
+<li>Go to VMC on AWS UI &gt; Networking &amp; Security &gt; Groups &gt; Management Groups. Click &ldquo;ADD GROUP&rdquo; to create a new group for the vRA Cloud Proxy VM. Click &ldquo;Set Members&rdquo;.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step5.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step5.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step5.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step5.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step5.png, ./2021-07-23-vrac-proxy-in-vmc/step5.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step5.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step5.png" />
+    </a></li>
+<li>Type in the vRA Cloud Proxy VM IP address that you noted down from earlier.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step6.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step6.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step6.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step6.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step6.png, ./2021-07-23-vrac-proxy-in-vmc/step6.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step6.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step6.png" />
+    </a></li>
+<li>Go to Networking &amp; Security &gt; Gateway Firewall &gt; Management Gateway. Add three rules like shown in the screenshot below. These rules allow communications between the vRA Cloud Proxy and vCenter, ESXi, and NSX respectively. Remember to publish the rules.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step7.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step7.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step7.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step7.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step7.png, ./2021-07-23-vrac-proxy-in-vmc/step7.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step7.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step7.png" />
+    </a></li>
+<li>Go to VMC on AWS UI &gt; Networking &amp; Security &gt; Groups &gt; Compute Groups. Create a new group for the vRA Cloud Proxy VM like you did in the Management Groups section.</li>
+<li>Go to Networking &amp; Security &gt; Gateway Firewall &gt; Compute Gateway. Add a rule that allows vRA Cloud Proxy to send outbound traffic to the Internet, as shown in the screenshot below. Remember to publish the rule.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step9.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step9.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step9.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step9.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step9.png, ./2021-07-23-vrac-proxy-in-vmc/step9.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step9.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step9.png" />
+    </a></li>
+<li>Go to vRA Cloud Assembly &gt; Infrastructure &gt; Cloud Proxies. After some time, you will see the Cloud Proxy VM here. This can take several hours.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step10.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step10.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step10.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step10.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step10.png, ./2021-07-23-vrac-proxy-in-vmc/step10.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step10.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step10.png" />
+    </a></li>
+</ol>
+<h3 id="configure-vra-cloud-assembly-resources">Configure vRA Cloud Assembly Resources</h3>
+<ol start="11">
+<li>Create a VMC on AWS cloud account.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step11.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step11.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step11.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step11.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step11.png, ./2021-07-23-vrac-proxy-in-vmc/step11.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step11.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step11.png" />
+    </a></li>
+<li>For the VMC API token, you can generate by clicking on your name &gt; My Account &gt; API Tokens &gt; GENERATE TOKEN.
+Give access to VMware Cloud on AWS. Remember to save the token in a safe place if you&rsquo;d like to use it again in the future. You will not be able to see the token again after you see it generated the first time.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step12-1.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step12-1.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step12-1.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step12-1.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step12-1.png, ./2021-07-23-vrac-proxy-in-vmc/step12-1.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step12-1.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step12-1.png" />
+    </a>
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step12-2.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step12-2.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step12-2.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step12-2.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step12-2.png, ./2021-07-23-vrac-proxy-in-vmc/step12-2.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step12-2.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step12-2.png" />
+    </a></li>
+<li>Go to &ldquo;Compute&rdquo; and click &ldquo;Cluster-1 / Compute-ResourcePool&rdquo;. Give it a capability tag. This is the only place vRA is allowed to deploy workloads in a VMC on AWS SDDC.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step13.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step13.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step13.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step13.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step13.png, ./2021-07-23-vrac-proxy-in-vmc/step13.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step13.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step13.png" />
+    </a></li>
+<li>Create a cloud zone. Give it a capability tag; use the same one you&rsquo;ve used for the Compute-ResourcePool.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step14.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step14.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step14.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step14.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step14.png, ./2021-07-23-vrac-proxy-in-vmc/step14.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step14.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step14.png" />
+    </a></li>
+<li>Click &ldquo;Compute&rdquo; and manually select &ldquo;Cluster-1 / Compute-ResourcePool&rdquo;.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step15.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step15.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step15.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step15.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step15.png, ./2021-07-23-vrac-proxy-in-vmc/step15.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step15.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step15.png" />
+    </a></li>
+<li>Create a network profile and give it a capability tag; use the same on you&rsquo;ve been using. Configure the network profile appropriately depending on the use case.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step16.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step16.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step16.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step16.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step16.png, ./2021-07-23-vrac-proxy-in-vmc/step16.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step16.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step16.png" />
+    </a></li>
+<li>Create a storage profile and select &ldquo;WorkloadDatastore&rdquo;. Give a same capability tag here as well.
+<br><a class="lightgallery" href="./2021-07-23-vrac-proxy-in-vmc/step17.png" target="_blank" rel="noopener noreferrer" title="/2021-07-23-vrac-proxy-in-vmc/step17.png" data-thumbnail="/2021-07-23-vrac-proxy-in-vmc/step17.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="step17.png"
+            data-srcset="./2021-07-23-vrac-proxy-in-vmc/step17.png, ./2021-07-23-vrac-proxy-in-vmc/step17.png 1.5x, ./2021-07-23-vrac-proxy-in-vmc/step17.png 2x"
+            data-sizes="auto"
+            alt="/2021-07-23-vrac-proxy-in-vmc/step17.png" />
+    </a></li>
+<li>Remember to create an image mapping and a flavor mapping.</li>
+</ol>
+<p>vRA can now deploy to the VMC on AWS SDDC. Remember to use the capability tag that you&rsquo;ve created when creating the template that deploys to the VMC on AWS SDDC!</p>
+<h4 id="demo--example-template-yaml">Demo / Example Template YAML</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs: {}
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: &#39;Ubuntu-20.04&#39;
+      flavor: &#39;size-small&#39;
+      networks:
+        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints: 
+        - tag: vmconaws-sddc-02
+</code></pre></td></tr></table>
+</div>
+</div><br>
+<p>Credit: Thanks to my colleague, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreffer">Michael Patton</a>, for working with me on this.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-07-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html" data-title="Using vRA with VMC on AWS: Getting Started" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,vRA Cloud Proxy,VMware Cloud on AWS"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="./tags/vra-cloud-proxy.html">vRA Cloud Proxy</a>,&nbsp;<a href="./tags/vmware-cloud-on-aws.html">VMware Cloud on AWS</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./2021-04-09-vrac-gcp-security-groups.html" class="prev" rel="prev" title="vRA Cloud &#43; GCP: Using Security Groups"><i class="fas fa-angle-left fa-fw"></i>vRA Cloud &#43; GCP: Using Security Groups</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/sharer/sharer.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>

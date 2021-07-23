@@ -3,7 +3,16 @@
         <title>vRA - Categoría - 288clouds</title>
         <link>https://288clouds.com/es/categories/vra.html</link>
         <description>vRA - Categoría - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 09 Apr 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/categories/vra.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 22 Jul 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/categories/vra.html" rel="self" type="application/rss+xml" /><item>
+    <title>Using vRA with VMC on AWS: Getting Started</title>
+    <link>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</link>
+    <pubDate>Thu, 22 Jul 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation can be used to automate the deployment of workloads to a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Automation with VMware Cloud on AWS.
+Demo Product Versions  vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prerequisites VMC on AWS:
+ SDDC deployed Access to the SDDC  Process Overview  Deploy a vRA Cloud Proxy in the VMC on AWS SDDC.]]></description>
+</item><item>
     <title>vRA Cloud &#43; GCP: Using Security Groups</title>
     <link>https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html</link>
     <pubDate>Fri, 09 Apr 2021 05:52:00 -0500</pubDate>
@@ -81,14 +90,6 @@ This study guide has been created to help myself study for the exam, but I hope 
     <pubDate>Mon, 28 Dec 2020 05:52:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-12-28-vcp-cma-2020-section-7-part-1.html</guid>
-    <description><![CDATA[~ Este post será traducido al español próximamente ~ This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 5-6</title>
-    <link>https://288clouds.com/es/2020-12-22-vcp-cma-2020-section-6.html</link>
-    <pubDate>Tue, 22 Dec 2020 05:52:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-12-22-vcp-cma-2020-section-6.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
 This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam.]]></description>
 </item></channel>
