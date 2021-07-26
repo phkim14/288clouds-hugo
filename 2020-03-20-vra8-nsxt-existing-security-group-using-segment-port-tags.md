@@ -1,8 +1,14 @@
 # vRA 8 + NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)
 
 
-
 You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) by putting tags on the machine segment port(s).
+
+## Update: July 26, 2021
+Starting with vRA 8.2, using segment port tags to place machines in NSX-T security groups longer works. 
+Thanks to my colleague, [Mukesh Idnani][mukesh-twitter-link], for this finding!
+
+[mukesh-twitter-link]: https://twitter.com/mukeshIdnani 
+
 
 ## Demo Product Versions  
 * vSphere 6.5 U3

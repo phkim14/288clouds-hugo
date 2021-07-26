@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" />
 <meta property="og:image" content="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png"/>
 <meta property="article:published_time" content="2020-03-20T05:02:00-05:00" />
-<meta property="article:modified_time" content="2021-06-14T05:02:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2021-07-26T05:02:00-05:00" /><meta property="og:site_name" content="288clouds" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags/featured-image.png"/>
 <meta name="twitter:title" content="Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)"/>
@@ -33,8 +33,8 @@
                             "url": "https:\/\/288clouds.com\/es\/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags\/featured-image.png",
                             "width":  1974 ,
                             "height":  823 
-                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, grupo de seguridad, etiqueta de puerto de segmento, vNIC, automatización","wordcount":  724 ,
-        "url": "https:\/\/288clouds.com\/es\/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html","datePublished": "2020-03-20T05:02:00-05:00","dateModified": "2021-06-14T05:02:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, grupo de seguridad, etiqueta de puerto de segmento, vNIC, automatización","wordcount":  751 ,
+        "url": "https:\/\/288clouds.com\/es\/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html","datePublished": "2020-03-20T05:02:00-05:00","dateModified": "2021-07-26T05:02:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-20">2020-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;724 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-20">2020-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;751 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutos&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -130,6 +130,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#update-july-26-2021">Update: July 26, 2021</a></li>
     <li><a href="#versiones-de-productos-demostración-demo">Versiones de Productos Demostración (Demo)</a></li>
     <li><a href="#prerrequisitos">Prerrequisitos</a></li>
     <li><a href="#información-general-de-proceso">Información General de Proceso</a></li>
@@ -145,6 +146,9 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas de puerto de segmento de NSX-T.</p>
+<h2 id="update-july-26-2021">Update: July 26, 2021</h2>
+<p>No puede usar etiquetas de puerto de segmento de NSX-T empezando con vRA 8.2.
+Gracias a mi colega <a href="https://twitter.com/mukeshIdnani" target="_blank" rel="noopener noreffer">Mukesh Idnani</a> para este descubrimiento!</p>
 <h2 id="versiones-de-productos-demostración-demo">Versiones de Productos Demostración (Demo)</h2>
 <ul>
 <li>vSphere 6.5 U3</li>
@@ -360,7 +364,7 @@ resources:
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Actualizado el 2021-06-14</span>
+                <span>Actualizado el 2021-07-26</span>
             </div>
             <div class="post-info-license"></div>
         </div>

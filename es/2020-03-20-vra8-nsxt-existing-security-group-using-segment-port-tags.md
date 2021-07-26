@@ -3,6 +3,12 @@
 
 Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas de puerto de segmento de NSX-T. 
 
+## Update: July 26, 2021
+No puede usar etiquetas de puerto de segmento de NSX-T empezando con vRA 8.2. 
+Gracias a mi colega [Mukesh Idnani][mukesh-twitter-link] para este descubrimiento!
+
+[mukesh-twitter-link]: https://twitter.com/mukeshIdnani 
+
 ## Versiones de Productos Demostración (Demo)
 * vSphere 6.5 U3
 * vRA 8.0.1 (incluyendo vRSLCM y vIDM)
