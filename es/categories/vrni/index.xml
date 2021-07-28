@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vRNI - Categoría - 288clouds</title>
+        <link>https://288clouds.com/es/categories/vrni.html</link>
+        <description>vRNI - Categoría - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 28 Jul 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/categories/vrni.html" rel="self" type="application/rss+xml" /><item>
+    <title>Using vRNI with VMC on AWS: Getting Started</title>
+    <link>https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html</link>
+    <pubDate>Wed, 28 Jul 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Network Insight can be used to gain visibility into the workloads in a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Network Insight with VMware Cloud on AWS.
+Demo Product Versions  vRNI Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prerequisites VMC on AWS:
+ SDDC deployed Access to the SDDC  Process Overview  Deploy a vRNI Data Collector in the VMC on AWS SDDC.]]></description>
+</item></channel>
+</rss>

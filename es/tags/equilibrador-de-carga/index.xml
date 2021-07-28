@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>equilibrador de carga - Etiqueta - 288clouds</title>
+        <link>https://288clouds.com/es/tags/equilibrador-de-carga.html</link>
+        <description>equilibrador de carga - Etiqueta - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 20 Jul 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/equilibrador-de-carga.html" rel="self" type="application/rss+xml" /><item>
+    <title>Parte 7 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Existente de NSX-T</title>
+    <link>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
+    <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
+    <description><![CDATA[Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; existente de NSX-T. Este proceso no crea los enrutadors lógicos bajo demanda. El proceso usa un &ldquo;one-arm load balancer&rdquo; existente y simplemente agregar &ldquo;virtual server&rdquo; (servidor virtual), &ldquo;server pool&rdquo; (grupo de servidores), y &ldquo;application profile&rdquo; (perfil de aplicación). Puede crear un &ldquo;monitor&rdquo; (monitor de máquina virtual) también si quiere. Este proceso funciona con vRA 8.]]></description>
+</item></channel>
+</rss>
