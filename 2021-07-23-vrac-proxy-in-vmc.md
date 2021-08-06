@@ -24,7 +24,7 @@ VMC on AWS:
 ### Deploy a vRA Cloud Proxy
 1. In vRA Cloud Assembly, go to Infrastructure > Cloud Proxies. Click "NEW". 
 {{<image src="step1.png" linked="true">}}
-2. Click "DOWNLOAD OVA". You can use the OVA file link as well, but from my experiences, downloading it locally has been more successful instead of using the link.
+2. Click "DOWNLOAD OVA". You can use the OVA file link as well, but from my experiences, downloading it locally has been more successful instead of using the link. Remember to rename the OVF template to `vCenter1_vmc_va.ova` after it's done downloading.
 {{<image src="step2.png" linked="true">}}
 3. Go to the VMC on AWS SDDC vSphere Client and deploy OVF template.
 {{<image src="step3-1.png" linked="true">}}

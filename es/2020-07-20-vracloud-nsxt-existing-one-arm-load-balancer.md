@@ -6,7 +6,7 @@ Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás 
 Abajo es una diagrama simple de "one-arm load balancer" de NSX-T.
 {{<image src="diagram.png" linked="true">}}
 
-Nota que vRA 8.1 no son totalmente compatible el "policy API" de NSX-T. Entonces, si intenta a crear una plantilla usando un enrutador lógico tier-0 de "policy API", la implementación de la plantilla no sera exitosa. Va a recibir una mensaje de error: `[289] [Principal 'admin' with role '[enterprise_admin]' attempts to delete or modify an object of type LoadBalancerService it doesn't own. (createUser=nsx_policy, allowOverwrite=null)]`
+Nota que vRA 8.1 no es totalmente compatible con el "policy API" de NSX-T. Entonces, si intenta a crear una plantilla usando un enrutador lógico tier-0 de "policy API", la implementación de la plantilla no sera exitosa. Va a recibir una mensaje de error: `[289] [Principal 'admin' with role '[enterprise_admin]' attempts to delete or modify an object of type LoadBalancerService it doesn't own. (createUser=nsx_policy, allowOverwrite=null)]`
 {{<image src="error.png" linked="true">}}
 
 

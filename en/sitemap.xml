@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://288clouds.com/2021-07-28-vrni-data-collector-on-prem.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/2021-07-28-vrni-data-collector-on-prem.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html"
@@ -11,7 +11,7 @@
                     hreflang="en"
                     href="https://288clouds.com/2021-07-28-vrni-data-collector-on-prem.html"
                     /></url><url>
-            <loc>https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html</loc><lastmod>2021-07-22T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html"
@@ -227,7 +227,7 @@
                     hreflang="en"
                     href="https://288clouds.com/2020-04-17-using-l2-bridges-v2t-migration.html"
                     /></url><url>
-            <loc>https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html</loc><lastmod>2021-07-19T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            <loc>https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html</loc><lastmod>2021-07-19T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html"
@@ -236,7 +236,7 @@
                     hreflang="en"
                     href="https://288clouds.com/2020-03-23-vra8-nsxt-on-demand-security-group.html"
                     /></url><url>
-            <loc>https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html"
@@ -308,7 +308,7 @@
                     hreflang="en"
                     href="https://288clouds.com/2020-03-10-setting-up-static-website-github-pages-jekyll.html"
                     /></url><url>
-            <loc>https://288clouds.com/</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/"
@@ -317,7 +317,7 @@
                     hreflang="en"
                     href="https://288clouds.com/"
                     /></url><url>
-            <loc>https://288clouds.com/categories.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/categories.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/categories.html"
@@ -326,7 +326,7 @@
                     hreflang="en"
                     href="https://288clouds.com/categories.html"
                     /></url><url>
-            <loc>https://288clouds.com/posts.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/posts.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/posts.html"
@@ -335,7 +335,7 @@
                     hreflang="en"
                     href="https://288clouds.com/posts.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags.html"
@@ -344,7 +344,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vmc-on-aws.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vmc-on-aws.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vmc-on-aws.html"
@@ -353,7 +353,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vmc-on-aws.html"
                     /></url><url>
-            <loc>https://288clouds.com/categories/vmc-on-aws.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/categories/vmc-on-aws.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/categories/vmc-on-aws.html"
@@ -362,7 +362,7 @@
                     hreflang="en"
                     href="https://288clouds.com/categories/vmc-on-aws.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vrni.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vrni.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vrni.html"
@@ -371,7 +371,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vrni.html"
                     /></url><url>
-            <loc>https://288clouds.com/categories/vrni.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/categories/vrni.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/categories/vrni.html"
@@ -380,7 +380,7 @@
                     hreflang="en"
                     href="https://288clouds.com/categories/vrni.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vrni-cloud.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vrni-cloud.html</loc><lastmod>2021-07-28T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vrni-cloud.html"
@@ -389,7 +389,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vrni-cloud.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vmware-cloud-on-aws.html</loc><lastmod>2021-07-22T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vmware-cloud-on-aws.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vmware-cloud-on-aws.html"
@@ -398,7 +398,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vmware-cloud-on-aws.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vra.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vra.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vra.html"
@@ -407,7 +407,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vra.html"
                     /></url><url>
-            <loc>https://288clouds.com/categories/vra.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/categories/vra.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/categories/vra.html"
@@ -416,7 +416,7 @@
                     hreflang="en"
                     href="https://288clouds.com/categories/vra.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vra-cloud.html</loc><lastmod>2021-07-22T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vra-cloud.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vra-cloud.html"
@@ -425,7 +425,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vra-cloud.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vra-cloud-proxy.html</loc><lastmod>2021-07-22T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vra-cloud-proxy.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vra-cloud-proxy.html"
@@ -434,7 +434,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vra-cloud-proxy.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/vra8.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/vra8.html</loc><lastmod>2021-08-06T05:52:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vra8.html"
@@ -470,7 +470,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/network-tag.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/security-group.html</loc><lastmod>2021-07-19T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            <loc>https://288clouds.com/tags/security-group.html</loc><lastmod>2021-07-19T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/security-group.html"
@@ -497,7 +497,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/nsx.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/nsx-t.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/nsx-t.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/nsx-t.html"
@@ -551,7 +551,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/on-demand-security-group.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/existing-security-group.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/existing-security-group.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/existing-security-group.html"
@@ -821,7 +821,7 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vro.html"
                     /></url><url>
-            <loc>https://288clouds.com/about.html</loc><lastmod>2021-06-28T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
+            <loc>https://288clouds.com/about.html</loc><lastmod>2021-06-28T05:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/about.html"
@@ -1091,33 +1091,9 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/vcdx-nv.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="es"
-                        href="https://288clouds.com/es/tags/load-balancer.html"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://288clouds.com/tags/load-balancer.html"
-                    /></url><url>
-            <loc>https://288clouds.com/tags/on-demand-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="es"
-                        href="https://288clouds.com/es/tags/on-demand-load-balancer.html"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://288clouds.com/tags/on-demand-load-balancer.html"
-                    /></url><url>
-            <loc>https://288clouds.com/tags/one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="es"
-                        href="https://288clouds.com/es/tags/one-arm-load-balancer.html"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://288clouds.com/tags/one-arm-load-balancer.html"
-                    /></url><url>
+            <loc>https://288clouds.com/tags/load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://288clouds.com/tags/on-demand-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://288clouds.com/tags/one-arm-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/existing-load-balancer.html</loc><lastmod>2020-12-12T07:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://288clouds.com/tags/carbon-black-cloud.html</loc><lastmod>2020-06-21T17:53:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -1263,11 +1239,11 @@
                     hreflang="en"
                     href="https://288clouds.com/tags/nsx-v.html"
                     /></url><url>
-            <loc>https://288clouds.com/tags/automation.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/on-demand.html</loc><lastmod>2021-07-19T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://288clouds.com/tags/segment-port.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/segment-port-tag.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://288clouds.com/tags/vnic.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://288clouds.com/tags/automation.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/on-demand.html</loc><lastmod>2021-07-19T04:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://288clouds.com/tags/segment-port.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/segment-port-tag.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://288clouds.com/tags/vnic.html</loc><lastmod>2021-07-26T05:02:00-05:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
                         rel="alternate"
                         hreflang="es"
                         href="https://288clouds.com/es/tags/vnic.html"

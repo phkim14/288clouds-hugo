@@ -1,78 +1,76 @@
-# vRA 8 + NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer
+# Parte 8 de la Serie Blog vRA 8 + NSX-T: Plantilla con 'One-Arm Load Balaner' (equilibrador de carge) Bajo Demanda de NSX-T
 
-# ~ Este post será traducido al español próximamente ~
+Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un "one-arm load balancer" de NSX-T bajo demanda. Este proceso crea un enrutador lógico tier-1 bajo demanda y agrega los servicios de equilibrador de carga. Este proceso funciona con vRA 8.1, pero yo usé vRA Cloud para crear el ejemplo. 
 
-You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.
-
-Below is a simplified diagram of a NSX-T one-arm load balancer.
+Abajo es una diagrama simple de "one-arm load balancer" de NSX-T.
 {{<image src="diagram.png" linked="true">}}
 
-Note that vRA Cloud / vRA 8.1 does not fully support NSX-T policy API yet. Full support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I'm not a product manager).
+Nota que vRA 8.1 no es totalmente compatible con el "policy API" de NSX-T. Creo que empezando con vRA 8.2, vRA compatible con el "policy API" de NSX-T. 
 
-## Demo Product Versions  
+## Versiones de Productos (Demo)
 * VCF 3.9.1.0-15345960 (vSphere 6.7, NSX-V 6.4.6)
 * NSX-T 2.5.0
 * vRA Cloud
 
-## Prerequisites
+## Prerrequisitos
 vRA Cloud:
-* NSX-T account connected
-* Basic infrastructure configured in Cloud Assembly (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
+* Cuenta conectada de NSX-T
+* Infraestructura básica configurada (proyectos, zonas de nube, "image mappings" o asignaciones de imagen, "flavor mappings" o asignaciones de tipo)
 
 NSX-T:
-* tier-0 logical router configured (can be a policy API router)
-* edge cluster configured (edge nodes must be at least medium size)
+* enrutador lógico tier-0 configurado (puede ser un enrutador de "policy-API")
+* "edge cluster" (los nodos NSX edge de tamaño mediano mínimo)
 
 
-## Process Overview
-1. Create a network profile to use an on-demand load-balancer.
-2. Create a blueprint with Cloud Agnostic Machine, Cloud Network, and Cloud Load Balancer.
+## Información General de Proceso
+1. Cree un perfil de red que usa el "one-arm load balancer" de NSX-T bajo demanda.
+2. Cree una plantilla con los objectos: "Cloud Agnostic Machine" (máquina agnóstica de nube), Cloud Network" (red de nube), "Cloud Load Balancer" (equilibrador de carga de nube).
 
-optional step:
-* Create inputs in the blueprint to customize the machine name.
+Pasos opcionales:
+* Cree entradas en la plantilla para personalizar el nombre de la máquina.
 
 
-## Demo / Example
+## Ejemplo
 
-### Create Network Profile
-1. In vRA Cloud (or vRA 8) Cloud Assmebly, go to "Infrastructure" > "Network Profiles" (under Configure) and click "+ NEW NETWORK PROFILE". (or you can choose to edit an existing network profile).
-2. Choose an account/region and give the profile a name.
-3. Go to "Networks" tab and configure existing networks or on-demand networks. In this demo, I'll be using an existing NSX-T network. Refer to previous vRA 8 + NSX-T blog series for more details on how to configure existing or on-demand networks.
-4. Go to "Network Policies" tab and select tier-0 logical router and edge cluster. These are required to deploy an on-demand load balancer because the blueprint creates a tier-1 router in the process. 
+### Configure el Perfil de Red
+1. En vRA UI, vaya a "Infraestructura" > "Perfiles de Red" (en el menú "Configurar") y de clic en el botón "+ NUEVO PERFIL DE RED" (o puede revisar un perfil de red existente).
+2. Escoge la cuenta o región y nombre el perfil.
+3. Configure redes existentes o redes bajo demanda. En este ejemplo, voy a usar un red existente de NSX-T.
+4. Vaya a "Network Policies" y escoge un enrutador lógico tier-0 y un "edge cluster". Estos son obligatarios para desplegar un equilibrador de carga bajo demanda porque la plantilla crea un enrutador lógico tier-1 y conectalo al enrutador lógico tier-0 en el proceso. 
 {{<image src="step4.png" linked="true">}}
-5. Go to "Load Balancers" tab, and make sure there aren't any existing load balancers on the list. If there are load balancers here, the blueprint will not create an on-demand load balancer. It will just add load balancing services to an existing load balancer.
+5. Vaya a "Load Balancers" y asegurese que no hay equilibradores de carga en la lista. Si hay equilibradores de carga aquí, la plantilla no va a crear un equilibrador de carga ba jo demanda. La plantilla va a usar uno de los equilibradores de carga.
 
-### Create and Configure Blueprint
-6. Go to "Blueprints" and Click "+ NEW" to create a new blueprint.
-7. Give a name to the blueprint and choose a project.
-8. Drag on a Cloud Agnostic Machine, Cloud Agnostic Network, and Cloud Agnostic Load Balancer onto the canvas. You can use environment-specific resources as well if you'd like. 
-9. Connect the Machine and the Load Balancer to the Network on the canvas. Also connect the Machine to the Load Balancer. 
+### Cree y Configure la Plantilla
+6. Vaya a "Diseño", de clic en el botón "NOVEDADES DE" y de clic en el botón "Lienzo en blanco" para creer una nueva plantilla.
+7. Nombra la plantilla y escoge el proyecto.
+8. Pon la "Cloud Agnostic Machine" (máquina agnóstica de nube), "Cloud Network" (red de nube) y "Cloud Load Balancer" (equilibrador de carga de nube) en el lienzo en blanco. 
+9. Conecta la "Cloud Agnostic Machine" y "Cloud Load Balancer" a "Cloud" Network" en el lienzo en blanco. También conecta la "Cloud Agnostic Machine" a "Cloud Load Balancer".
 {{<image src="step9.png" linked="true">}}
-10. On the right side in the YAML file, choose an image and size for the machine. Add `count` property to indicate how many machines you want to deploy.
-11. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine.
-12. Since I'll be placing the machines on an existing NSX-T network, I want to make sure it says `networkType: existing` under `properties`. Below `networkType`, I also add the line `constraints:` then another line `- tag:` to choose the existing network I want to use.
-13. Configure the load balancer. `protocol` and `port` under `routes` property are required. `healthCheckConfiguration` is optional - if you provide details, custom monitor will be created. Otherwise, only the virtual server, server pool, and application profile will be created.
+10. A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. Agregue `count` para indicar cuantas máquina quiere desplegar.
+11. Debajo de `- network: `, agregue una línea `assignment: static` para dar una dirección IP estática a la máquina.
+12. Para la "Cloud network", asegúrese que dice `networkType: existing` debajo de `properties`. Debajo de `networkType`, agregue una línea `constraints:` y otra línea `- tag:` para escoger cual red existente quiere usar.
+13. Configure el "load balancer". `protocol` y `port` debajo de `routes` son requeridos. `healthCheckConfiguration` es opcional - si proporciona detalles, la plantilla va a crear un nuevo monitor. Sino, la plantilla solamente va a crear el servidor virtual, grupo de servidores, y perfil de aplicación.
 {{<image src="step13.png" linked="true">}}
-14. Click "TEST".
-15. Click "DEPLOY" to create a new deployment.
-16. Give it a deployment name, choose "Current Draft", the click "DEPLOY".
+14. De clic en el botón "PROBAR".
+15. De clic en el botón "IMPLEMENTAR" para crear una nueva implementación.
+16. Entra el nombre de la nueva implementación, escoge "Borrador actual" y de clic en el botón "IMPLEMENTAR".
 
-### Verify Deployment
-17. Go to "Deployments" tab in Cloud Assembly and check that the deployment is completed successfully.
+### Verifique la Implementación
+17. Supervise el progreso de la implementación. Cuando está completa, puede ver la implementación en la sección de vRA Cloud Assembly "Implementaciones".
 {{<image src="step17.png" linked="true">}}
-18. Now log into NSX-T UI and go to "Advanced Networking & Security" > "Networking" > "Routers" and you'll see that a tier-1 router has been created.
+18. Inicie sesión en el "NSX-T UI" (el cliente web de NSX-T) y vaya a "Advanced Networking & Security" > "Networking" > "Routers". Puede ver que el enrutador lógico creado.
 {{<image src="step18.png" linked="true">}}
-19. Go to "Advanced Networking & Security" > "Networking" > "Load Balancers" and you'll see that a load balancer has been created. 
+19. Vaya a "Advanced Networking & Security" > "Networking" > "Load Balancers" y puede ver el equilibrador de carga creado. 
 {{<image src="step19.png" linked="true">}}
-20. If you click on the virtual server, you can see the port and protocol as you've defined in the blueprint.
+20. Si puede de clic en el servidor virtual, puede ver los "port" y "protocol".
 {{<image src="step20.png" linked="true">}}
-21. If you click the server pool and look at the pool members, you will see the machines that have been created by the blueprint. 
+21. Puede ver las máquinas creadas de la plantilla si de clic en el grupo de servidores y ver los miembros.
 {{<image src="step21.png" linked="true">}}
-22. If you click the profiles, you can see application profile that has been created.
+22. De clic en los perfiles y puede ver el perfil de aplicación. 
 {{<image src="step22.png" linked="true">}}
 
 
-### Demo / Example Blueprint YAML File
+### Código YAML de la Plantilla de Ejemplo
 ```
 formatVersion: 1
 inputs: {}

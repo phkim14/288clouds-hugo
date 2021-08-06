@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer - 288clouds</title><meta name="Description" content="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer" />
-<meta property="og:description" content="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer." />
+        <title>Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T - 288clouds</title><meta name="Description" content="Aprende como crear una plantilla vRA 8 con &#39;one-arm load balancer&#39; (equilibrador de carga) bajo demanda de NSX-T."><meta property="og:title" content="Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T" />
+<meta property="og:description" content="Aprende como crear una plantilla vRA 8 con &#39;one-arm load balancer&#39; (equilibrador de carga) bajo demanda de NSX-T." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" />
 <meta property="og:image" content="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"/>
 <meta property="article:published_time" content="2020-07-22T07:53:00-05:00" />
-<meta property="article:modified_time" content="2020-12-12T07:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2021-08-06T07:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"/>
-<meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer"/>
-<meta name="twitter:description" content="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer."/>
+<meta name="twitter:title" content="Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T"/>
+<meta name="twitter:description" content="Aprende como crear una plantilla vRA 8 con &#39;one-arm load balancer&#39; (equilibrador de carga) bajo demanda de NSX-T."/>
 <meta name="application-name" content="288clouds">
 <meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -23,7 +23,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "vRA 8 + NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer",
+        "headline": "Parte 8 de la Serie Blog vRA 8 + NSX-T: Plantilla con 'One-Arm Load Balaner' (equilibrador de carge) Bajo Demanda de NSX-T",
         "inLanguage": "es",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -33,13 +33,13 @@
                             "url": "https:\/\/288clouds.com\/es\/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer\/featured-image.png",
                             "width":  2000 ,
                             "height":  863 
-                        }],"genre": "posts","keywords": "vRA, vRA Cloud, vRA8, NSX-T, on-demand load balancer, one-arm load balancer, load balancer","wordcount":  801 ,
-        "url": "https:\/\/288clouds.com\/es\/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html","datePublished": "2020-07-22T07:53:00-05:00","dateModified": "2020-12-12T07:53:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, NSX-T, equilibrador de carga, automatización","wordcount":  814 ,
+        "url": "https:\/\/288clouds.com\/es\/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html","datePublished": "2020-07-22T07:53:00-05:00","dateModified": "2021-08-06T07:53:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Phoebe Kim"
-            },"description": "Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer."
+            },"description": "Aprende como crear una plantilla vRA 8 con 'one-arm load balancer' (equilibrador de carga) bajo demanda de NSX-T."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -112,9 +112,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contenido</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-22">2020-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;801 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-22">2020-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;814 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutos&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -123,29 +123,28 @@
         data-srcset="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png, ../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png 1.5x, ../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png 2x"
         data-sizes="auto"
         alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"
-        title="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer." /></div><div class="details toc" id="toc-static"  kept="">
+        title="Aprende como crear una plantilla vRA 8 con &#39;one-arm load balancer&#39; (equilibrador de carga) bajo demanda de NSX-T." /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contenido</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#process-overview">Process Overview</a></li>
-    <li><a href="#demo--example">Demo / Example</a>
+    <li><a href="#versiones-de-productos-demo">Versiones de Productos (Demo)</a></li>
+    <li><a href="#prerrequisitos">Prerrequisitos</a></li>
+    <li><a href="#información-general-de-proceso">Información General de Proceso</a></li>
+    <li><a href="#ejemplo">Ejemplo</a>
       <ul>
-        <li><a href="#create-network-profile">Create Network Profile</a></li>
-        <li><a href="#create-and-configure-blueprint">Create and Configure Blueprint</a></li>
-        <li><a href="#verify-deployment">Verify Deployment</a></li>
-        <li><a href="#demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</a></li>
+        <li><a href="#configure-el-perfil-de-red">Configure el Perfil de Red</a></li>
+        <li><a href="#cree-y-configure-la-plantilla">Cree y Configure la Plantilla</a></li>
+        <li><a href="#verifique-la-implementación">Verifique la Implementación</a></li>
+        <li><a href="#código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="-este-post-será-traducido-al-español-próximamente-">~ Este post será traducido al español próximamente ~</h1>
-<p>You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.</p>
-<p>Below is a simplified diagram of a NSX-T one-arm load balancer.
+            </div><div class="content" id="content"><p>Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; de NSX-T bajo demanda. Este proceso crea un enrutador lógico tier-1 bajo demanda y agrega los servicios de equilibrador de carga. Este proceso funciona con vRA 8.1, pero yo usé vRA Cloud para crear el ejemplo.</p>
+<p>Abajo es una diagrama simple de &ldquo;one-arm load balancer&rdquo; de NSX-T.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/diagram.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/diagram.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/diagram.png">
         <img
             class="lazyload"
@@ -155,40 +154,40 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/diagram.png" />
     </a></p>
-<p>Note that vRA Cloud / vRA 8.1 does not fully support NSX-T policy API yet. Full support for NSX-T policy API is scheduled to be added in vRA 8.2 (but who knows, I&rsquo;m not a product manager).</p>
-<h2 id="demo-product-versions">Demo Product Versions</h2>
+<p>Nota que vRA 8.1 no es totalmente compatible con el &ldquo;policy API&rdquo; de NSX-T. Creo que empezando con vRA 8.2, vRA compatible con el &ldquo;policy API&rdquo; de NSX-T.</p>
+<h2 id="versiones-de-productos-demo">Versiones de Productos (Demo)</h2>
 <ul>
 <li>VCF 3.9.1.0-15345960 (vSphere 6.7, NSX-V 6.4.6)</li>
 <li>NSX-T 2.5.0</li>
 <li>vRA Cloud</li>
 </ul>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerrequisitos">Prerrequisitos</h2>
 <p>vRA Cloud:</p>
 <ul>
-<li>NSX-T account connected</li>
-<li>Basic infrastructure configured in Cloud Assembly (Projects, Cloud Zones, Flavor Mappings, Image Mappings)</li>
+<li>Cuenta conectada de NSX-T</li>
+<li>Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)</li>
 </ul>
 <p>NSX-T:</p>
 <ul>
-<li>tier-0 logical router configured (can be a policy API router)</li>
-<li>edge cluster configured (edge nodes must be at least medium size)</li>
+<li>enrutador lógico tier-0 configurado (puede ser un enrutador de &ldquo;policy-API&rdquo;)</li>
+<li>&ldquo;edge cluster&rdquo; (los nodos NSX edge de tamaño mediano mínimo)</li>
 </ul>
-<h2 id="process-overview">Process Overview</h2>
+<h2 id="información-general-de-proceso">Información General de Proceso</h2>
 <ol>
-<li>Create a network profile to use an on-demand load-balancer.</li>
-<li>Create a blueprint with Cloud Agnostic Machine, Cloud Network, and Cloud Load Balancer.</li>
+<li>Cree un perfil de red que usa el &ldquo;one-arm load balancer&rdquo; de NSX-T bajo demanda.</li>
+<li>Cree una plantilla con los objectos: &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube), Cloud Network&rdquo; (red de nube), &ldquo;Cloud Load Balancer&rdquo; (equilibrador de carga de nube).</li>
 </ol>
-<p>optional step:</p>
+<p>Pasos opcionales:</p>
 <ul>
-<li>Create inputs in the blueprint to customize the machine name.</li>
+<li>Cree entradas en la plantilla para personalizar el nombre de la máquina.</li>
 </ul>
-<h2 id="demo--example">Demo / Example</h2>
-<h3 id="create-network-profile">Create Network Profile</h3>
+<h2 id="ejemplo">Ejemplo</h2>
+<h3 id="configure-el-perfil-de-red">Configure el Perfil de Red</h3>
 <ol>
-<li>In vRA Cloud (or vRA 8) Cloud Assmebly, go to &ldquo;Infrastructure&rdquo; &gt; &ldquo;Network Profiles&rdquo; (under Configure) and click &ldquo;+ NEW NETWORK PROFILE&rdquo;. (or you can choose to edit an existing network profile).</li>
-<li>Choose an account/region and give the profile a name.</li>
-<li>Go to &ldquo;Networks&rdquo; tab and configure existing networks or on-demand networks. In this demo, I&rsquo;ll be using an existing NSX-T network. Refer to previous vRA 8 + NSX-T blog series for more details on how to configure existing or on-demand networks.</li>
-<li>Go to &ldquo;Network Policies&rdquo; tab and select tier-0 logical router and edge cluster. These are required to deploy an on-demand load balancer because the blueprint creates a tier-1 router in the process.
+<li>En vRA UI, vaya a &ldquo;Infraestructura&rdquo; &gt; &ldquo;Perfiles de Red&rdquo; (en el menú &ldquo;Configurar&rdquo;) y de clic en el botón &ldquo;+ NUEVO PERFIL DE RED&rdquo; (o puede revisar un perfil de red existente).</li>
+<li>Escoge la cuenta o región y nombre el perfil.</li>
+<li>Configure redes existentes o redes bajo demanda. En este ejemplo, voy a usar un red existente de NSX-T.</li>
+<li>Vaya a &ldquo;Network Policies&rdquo; y escoge un enrutador lógico tier-0 y un &ldquo;edge cluster&rdquo;. Estos son obligatarios para desplegar un equilibrador de carga bajo demanda porque la plantilla crea un enrutador lógico tier-1 y conectalo al enrutador lógico tier-0 en el proceso.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step4.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step4.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step4.png">
         <img
             class="lazyload"
@@ -198,14 +197,14 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step4.png" />
     </a></li>
-<li>Go to &ldquo;Load Balancers&rdquo; tab, and make sure there aren&rsquo;t any existing load balancers on the list. If there are load balancers here, the blueprint will not create an on-demand load balancer. It will just add load balancing services to an existing load balancer.</li>
+<li>Vaya a &ldquo;Load Balancers&rdquo; y asegurese que no hay equilibradores de carga en la lista. Si hay equilibradores de carga aquí, la plantilla no va a crear un equilibrador de carga ba jo demanda. La plantilla va a usar uno de los equilibradores de carga.</li>
 </ol>
-<h3 id="create-and-configure-blueprint">Create and Configure Blueprint</h3>
+<h3 id="cree-y-configure-la-plantilla">Cree y Configure la Plantilla</h3>
 <ol start="6">
-<li>Go to &ldquo;Blueprints&rdquo; and Click &ldquo;+ NEW&rdquo; to create a new blueprint.</li>
-<li>Give a name to the blueprint and choose a project.</li>
-<li>Drag on a Cloud Agnostic Machine, Cloud Agnostic Network, and Cloud Agnostic Load Balancer onto the canvas. You can use environment-specific resources as well if you&rsquo;d like.</li>
-<li>Connect the Machine and the Load Balancer to the Network on the canvas. Also connect the Machine to the Load Balancer.
+<li>Vaya a &ldquo;Diseño&rdquo;, de clic en el botón &ldquo;NOVEDADES DE&rdquo; y de clic en el botón &ldquo;Lienzo en blanco&rdquo; para creer una nueva plantilla.</li>
+<li>Nombra la plantilla y escoge el proyecto.</li>
+<li>Pon la &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube), &ldquo;Cloud Network&rdquo; (red de nube) y &ldquo;Cloud Load Balancer&rdquo; (equilibrador de carga de nube) en el lienzo en blanco.</li>
+<li>Conecta la &ldquo;Cloud Agnostic Machine&rdquo; y &ldquo;Cloud Load Balancer&rdquo; a &ldquo;Cloud&rdquo; Network&rdquo; en el lienzo en blanco. También conecta la &ldquo;Cloud Agnostic Machine&rdquo; a &ldquo;Cloud Load Balancer&rdquo;.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step9.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step9.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step9.png">
         <img
             class="lazyload"
@@ -215,10 +214,10 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step9.png" />
     </a></li>
-<li>On the right side in the YAML file, choose an image and size for the machine. Add <code>count</code> property to indicate how many machines you want to deploy.</li>
-<li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine.</li>
-<li>Since I&rsquo;ll be placing the machines on an existing NSX-T network, I want to make sure it says <code>networkType: existing</code> under <code>properties</code>. Below <code>networkType</code>, I also add the line <code>constraints:</code> then another line <code>- tag:</code> to choose the existing network I want to use.</li>
-<li>Configure the load balancer. <code>protocol</code> and <code>port</code> under <code>routes</code> property are required. <code>healthCheckConfiguration</code> is optional - if you provide details, custom monitor will be created. Otherwise, only the virtual server, server pool, and application profile will be created.
+<li>A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. Agregue <code>count</code> para indicar cuantas máquina quiere desplegar.</li>
+<li>Debajo de <code>- network: </code>, agregue una línea <code>assignment: static</code> para dar una dirección IP estática a la máquina.</li>
+<li>Para la &ldquo;Cloud network&rdquo;, asegúrese que dice <code>networkType: existing</code> debajo de <code>properties</code>. Debajo de <code>networkType</code>, agregue una línea <code>constraints:</code> y otra línea <code>- tag:</code> para escoger cual red existente quiere usar.</li>
+<li>Configure el &ldquo;load balancer&rdquo;. <code>protocol</code> y <code>port</code> debajo de <code>routes</code> son requeridos. <code>healthCheckConfiguration</code> es opcional - si proporciona detalles, la plantilla va a crear un nuevo monitor. Sino, la plantilla solamente va a crear el servidor virtual, grupo de servidores, y perfil de aplicación.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step13.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step13.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step13.png">
         <img
             class="lazyload"
@@ -228,13 +227,13 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step13.png" />
     </a></li>
-<li>Click &ldquo;TEST&rdquo;.</li>
-<li>Click &ldquo;DEPLOY&rdquo; to create a new deployment.</li>
-<li>Give it a deployment name, choose &ldquo;Current Draft&rdquo;, the click &ldquo;DEPLOY&rdquo;.</li>
+<li>De clic en el botón &ldquo;PROBAR&rdquo;.</li>
+<li>De clic en el botón &ldquo;IMPLEMENTAR&rdquo; para crear una nueva implementación.</li>
+<li>Entra el nombre de la nueva implementación, escoge &ldquo;Borrador actual&rdquo; y de clic en el botón &ldquo;IMPLEMENTAR&rdquo;.</li>
 </ol>
-<h3 id="verify-deployment">Verify Deployment</h3>
+<h3 id="verifique-la-implementación">Verifique la Implementación</h3>
 <ol start="17">
-<li>Go to &ldquo;Deployments&rdquo; tab in Cloud Assembly and check that the deployment is completed successfully.
+<li>Supervise el progreso de la implementación. Cuando está completa, puede ver la implementación en la sección de vRA Cloud Assembly &ldquo;Implementaciones&rdquo;.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step17.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step17.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step17.png">
         <img
             class="lazyload"
@@ -244,7 +243,7 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step17.png" />
     </a></li>
-<li>Now log into NSX-T UI and go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Routers&rdquo; and you&rsquo;ll see that a tier-1 router has been created.
+<li>Inicie sesión en el &ldquo;NSX-T UI&rdquo; (el cliente web de NSX-T) y vaya a &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Routers&rdquo;. Puede ver que el enrutador lógico creado.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step18.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step18.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step18.png">
         <img
             class="lazyload"
@@ -254,7 +253,7 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step18.png" />
     </a></li>
-<li>Go to &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Load Balancers&rdquo; and you&rsquo;ll see that a load balancer has been created.
+<li>Vaya a &ldquo;Advanced Networking &amp; Security&rdquo; &gt; &ldquo;Networking&rdquo; &gt; &ldquo;Load Balancers&rdquo; y puede ver el equilibrador de carga creado.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step19.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step19.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step19.png">
         <img
             class="lazyload"
@@ -264,7 +263,7 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step19.png" />
     </a></li>
-<li>If you click on the virtual server, you can see the port and protocol as you&rsquo;ve defined in the blueprint.
+<li>Si puede de clic en el servidor virtual, puede ver los &ldquo;port&rdquo; y &ldquo;protocol&rdquo;.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step20.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step20.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step20.png">
         <img
             class="lazyload"
@@ -274,7 +273,7 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step20.png" />
     </a></li>
-<li>If you click the server pool and look at the pool members, you will see the machines that have been created by the blueprint.
+<li>Puede ver las máquinas creadas de la plantilla si de clic en el grupo de servidores y ver los miembros.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step21.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step21.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step21.png">
         <img
             class="lazyload"
@@ -284,7 +283,7 @@
             data-sizes="auto"
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step21.png" />
     </a></li>
-<li>If you click the profiles, you can see application profile that has been created.
+<li>De clic en los perfiles y puede ver el perfil de aplicación.
 <br><a class="lightgallery" href="../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step22.png" target="_blank" rel="noopener noreferrer" title="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step22.png" data-thumbnail="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step22.png">
         <img
             class="lazyload"
@@ -295,7 +294,7 @@
             alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/step22.png" />
     </a></li>
 </ol>
-<h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
+<h3 id="código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -364,20 +363,20 @@ resources:
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Actualizado el 2020-12-12</span>
+                <span>Actualizado el 2021-08-06</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" data-title="vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer" data-via="phoebesykim" data-hashtags="vRA,vRA Cloud,vRA8,NSX-T,on-demand load balancer,one-arm load balancer,load balancer"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" data-title="Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,NSX-T,equilibrador de carga,automatización"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/on-demand-load-balancer.html">on-demand load balancer</a>,&nbsp;<a href="../es/tags/one-arm-load-balancer.html">one-arm load balancer</a>,&nbsp;<a href="../es/tags/load-balancer.html">load balancer</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/equilibrador-de-carga.html">equilibrador de carga</a>,&nbsp;<a href="../es/tags/automatizaci%C3%B3n.html">automatización</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="../es/">Inicio</a></span>
         </section>
