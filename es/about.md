@@ -12,7 +12,7 @@ Puedo ser contactada vía [correo electrónico](mailto:info.288clouds@gmail.com)
 ***
 ## Certificaciones
 
-[Aquí](https://www.youracclaim.com/users/phoebesykim/badges) puedes ver mis certificaciones.
+[Aquí](https://www.youracclaim.com/users/phoebesykim/badges) puede ver mis certificaciones.
 
 ##### Amazon Web Services (AWS)
 * AWS Certified Developer - Associate

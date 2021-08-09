@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://288clouds.com/es/" />
 <meta property="og:image" content="https://288clouds.com/logo.png"/>
-<meta property="og:updated_time" content="2021-08-06T07:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="og:updated_time" content="2021-08-09T05:52:00-05:00" /><meta property="og:site_name" content="288clouds" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/logo.png"/>
 
@@ -107,6 +107,22 @@
         alt="/images/logo.png"
         title="/images/logo.png" /></div><h1 class="home-title">Bienvenido a 288clouds</h1><h2 class="home-subtitle">288clouds es un blog personal concentrado en tecnologías de virtualización y cloud.</h2><div class="links"><a href="https://github.com/phkim14" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/phoebesykim" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/phoebesykim" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="mailto:info.288clouds@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="../../es/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div><h3 class="home-disclaimer">Los puntos de vista y opiniones expresados en este blog son míos y no reflejan los puntos de vista y opiniones de mi empleador (VMware)</h3></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html"><br><img
+        class="lazyload"
+        src="../../svg/loading.min.svg"
+        data-src="../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"
+        data-srcset="../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png, ../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png 1.5x, ../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"
+        title="Aprende como crear una plantilla vRA 8 con &#39;one-arm load balancer&#39; (equilibrador de carga) bajo demanda de NSX-T." /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html">Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="../../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-publish">publicado el <time datetime="2020-07-22">2020-07-22</time></span>&nbsp;<span class="post-category">incluido en <a href="../../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div><div class="content">Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; de NSX-T bajo demanda. Este proceso crea un enrutador lógico tier-1 bajo demanda y agrega los servicios de equilibrador de carga. Este proceso funciona con vRA 8.1, pero yo usé vRA Cloud para crear el ejemplo.
+Abajo es una diagrama simple de &ldquo;one-arm load balancer&rdquo; de NSX-T. 
+Nota que vRA 8.1 no es totalmente compatible con el &ldquo;policy API&rdquo; de NSX-T.</div><div class="post-footer">
+        <a href="../../es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html">Leer más</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../../es/tags/vra.html">vRA</a>,&nbsp;<a href="../../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../../es/tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="../../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../../es/tags/equilibrador-de-carga.html">equilibrador de carga</a>,&nbsp;<a href="../../es/tags/automatizaci%C3%B3n.html">automatización</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="../../es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html"><br><img
         class="lazyload"
         src="../../svg/loading.min.svg"
@@ -244,22 +260,6 @@ Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyend
 Nota que, con este proceso, todos los grupos de seguridad que selecciona en el perfil de red se aplicarán a las máquinas. Si tiene máquinas múltiples en una plantilla y quiere especificar grupo de seguridad diferente para cada máquina, tiene que usar etiqueta vRA o etiqueta de puerto de segmento (vea parte 4 y 5 de esta serie de blog por esos procesos).</div><div class="post-footer">
         <a href="../../es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html">Leer más</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../../es/tags/vra.html">vRA</a>,&nbsp;<a href="../../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../../es/tags/grupo-de-seguridad.html">grupo de seguridad</a>,&nbsp;<a href="../../es/tags/perfil-de-red.html">perfil de red</a>,&nbsp;<a href="../../es/tags/automatizaci%C3%B3n.html">automatización</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="../../es/2020-03-17-customize-machine-on-demand-network-names.html"><br><img
-        class="lazyload"
-        src="../../svg/loading.min.svg"
-        data-src="../../es/2020-03-17-customize-machine-on-demand-network-names/featured-image.png"
-        data-srcset="../../es/2020-03-17-customize-machine-on-demand-network-names/featured-image.png, ../../es/2020-03-17-customize-machine-on-demand-network-names/featured-image.png 1.5x, ../../es/2020-03-17-customize-machine-on-demand-network-names/featured-image.png 2x"
-        data-sizes="auto"
-        alt="/es/2020-03-17-customize-machine-on-demand-network-names/featured-image.png"
-        title="Aprende como personalizar nombres de máquinas y redes bajo demanda en una plantilla vRA 8." /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="../../es/2020-03-17-customize-machine-on-demand-network-names.html">Personalice Nombres de Máquinas y Redes Bajo Demanda</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="../../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-publish">publicado el <time datetime="2020-03-17">2020-03-17</time></span>&nbsp;<span class="post-category">incluido en <a href="../../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div><div class="content">La plantilla vRA 8 da nombres y números aleatorios a las máquinas y redes NSX-T bajo demanda en implementaciones si no especifica nomenclatura personalizada. Este blog va a demostrar cómo puede personalizar nombres de su máquinas y redes NSX-T cuando son creados de una plantilla vRA 8.
-Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T (si quiere personalizar el nombre del red bajo demanda):</div><div class="post-footer">
-        <a href="../../es/2020-03-17-customize-machine-on-demand-network-names.html">Leer más</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../../es/tags/vra.html">vRA</a>,&nbsp;<a href="../../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../../es/tags/automatizaci%C3%B3n.html">automatización</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="../../es/">1</a>
