@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SecOps - Etiqueta - 288clouds</title>
+        <link>https://288clouds.com/es/tags/secops.html</link>
+        <description>SecOps - Etiqueta - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 28 Jul 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/secops.html" rel="self" type="application/rss+xml" /><item>
+    <title>VMworld 2021 Sessions for Securing and Managing Multi-Cloud</title>
+    <link>https://288clouds.com/es/2021-08-09-vmworld-2021-sec-sessions.html</link>
+    <pubDate>Wed, 28 Jul 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-08-09-vmworld-2021-sec-sessions.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ VMworld 2021 is coming up. Multi-cloud and security are some of the most discussed topics this year so let&rsquo;s explore some of the sessions that you might be interested in attending to learn about how you can manage and secure multi-cloud environments using vRealize Automation!
+Register for VMworld 2021 VMworld 2021 is virtual again and the general pass is FREE! Register here!]]></description>
+</item></channel>
+</rss>
