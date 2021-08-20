@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>VMware HCX - Etiqueta - 288clouds</title>
+        <link>https://288clouds.com/es/tags/vmware-hcx.html</link>
+        <description>VMware HCX - Etiqueta - 288clouds</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 20 Aug 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vmware-hcx.html" rel="self" type="application/rss+xml" /><item>
+    <title>Getting Started Videos for VMware Cloud on AWS</title>
+    <link>https://288clouds.com/es/2021-08-20-getting-started-videos-vmc-on-aws.html</link>
+    <pubDate>Fri, 20 Aug 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-08-20-getting-started-videos-vmc-on-aws.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ I created several getting started videos for VMware Cloud on AWS, which has been featured on the VMware Cloud Community blog but I thought it&rsquo;d be nice to add these to my personal blog as well.
+VMware Cloud on AWS is a highly scalable, secure hybrid cloud service that allows organizations to transition rapidly and seamlessly to the cloud. Today, we are releasing a new set of videos to help customers get started with VMware Cloud on AWS.]]></description>
+</item></channel>
+</rss>

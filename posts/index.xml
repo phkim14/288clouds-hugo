@@ -3,7 +3,15 @@
         <title>All Posts - 288clouds</title>
         <link>https://288clouds.com/posts.html</link>
         <description>All Posts | 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 09 Aug 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 20 Aug 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>Getting Started Videos for VMware Cloud on AWS</title>
+    <link>https://288clouds.com/2021-08-20-getting-started-videos-vmc-on-aws.html</link>
+    <pubDate>Fri, 20 Aug 2021 05:52:00 -0500</pubDate>
+    <author>Author</author>
+    <guid>https://288clouds.com/2021-08-20-getting-started-videos-vmc-on-aws.html</guid>
+    <description><![CDATA[I created several getting started videos for VMware Cloud on AWS, which has been featured on the VMware Cloud Community blog but I thought it&rsquo;d be nice to add these to my personal blog as well.
+VMware Cloud on AWS is a highly scalable, secure hybrid cloud service that allows organizations to transition rapidly and seamlessly to the cloud. Today, we are releasing a new set of videos to help customers get started with VMware Cloud on AWS.]]></description>
+</item><item>
     <title>VMworld 2021 Sessions for Securing and Managing Multi-Cloud</title>
     <link>https://288clouds.com/2021-08-09-vmworld-2021-sec-sessions.html</link>
     <pubDate>Mon, 09 Aug 2021 05:52:00 -0500</pubDate>
@@ -84,14 +92,6 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <pubDate>Tue, 12 Jan 2021 05:52:00 -0500</pubDate>
     <author>Author</author>
     <guid>https://288clouds.com/2021-01-12-vcp-cma-2020-section-7-part-4.html</guid>
-    <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
-This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
-</item><item>
-    <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Section 7 (Objectives 7.15-7.16)</title>
-    <link>https://288clouds.com/2021-01-08-vcp-cma-2020-section-7-part-3.html</link>
-    <pubDate>Fri, 08 Jan 2021 05:52:00 -0500</pubDate>
-    <author>Author</author>
-    <guid>https://288clouds.com/2021-01-08-vcp-cma-2020-section-7-part-3.html</guid>
     <description><![CDATA[This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
 This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam. If you want official training to prepare for the exam, please refer to VMware Learning.]]></description>
 </item></channel>
