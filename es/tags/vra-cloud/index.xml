@@ -3,7 +3,16 @@
         <title>vRA Cloud - Etiqueta - 288clouds</title>
         <link>https://288clouds.com/es/tags/vra-cloud.html</link>
         <description>vRA Cloud - Etiqueta - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 22 Jul 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vra-cloud.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Tue, 14 Sep 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vra-cloud.html" rel="self" type="application/rss+xml" /><item>
+    <title>Creating a Cloud Agnostic vRA Template with Inputs</title>
+    <link>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</link>
+    <pubDate>Tue, 14 Sep 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation 8.x / Cloud allows you to create templates with cloud agnostic resources so that you can create a template that can be used across on-premises data centers and multiple clouds.
+So let&rsquo;s explore how you can create a vRA template that meets the following requirements:
+ The user should be able to select the deployment target environment (where the deployment should be created) The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP)  Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.]]></description>
+</item><item>
     <title>Using vRA with VMC on AWS: Getting Started</title>
     <link>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</link>
     <pubDate>Thu, 22 Jul 2021 05:52:00 -0500</pubDate>
@@ -84,15 +93,5 @@ Nota que vRA 8.1 no es totalmente compatible con el &ldquo;policy API&rdquo; de 
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
     <description><![CDATA[Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; existente de NSX-T. Este proceso no crea los enrutadors lógicos bajo demanda. El proceso usa un &ldquo;one-arm load balancer&rdquo; existente y simplemente agregar &ldquo;virtual server&rdquo; (servidor virtual), &ldquo;server pool&rdquo; (grupo de servidores), y &ldquo;application profile&rdquo; (perfil de aplicación). Puede crear un &ldquo;monitor&rdquo; (monitor de máquina virtual) también si quiere. Este proceso funciona con vRA 8.]]></description>
-</item><item>
-    <title>Introducción a la Serie: vRA 8 &#43; NSX-T</title>
-    <link>https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html</link>
-    <pubDate>Thu, 12 Mar 2020 09:44:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html</guid>
-    <description><![CDATA[Con la reciente introducción de vRA 8.0, he estado recibido muchas preguntas de clientes acerca como usar NSX-T con vRA 8.
-Esta serie de blog posts se va a enfocar en mostrar cómo crear plantillas vRA 8 que utilizan objectos NSX-T.
-Esta es la lista de blogs que crearé para esta serie (a partir de 15 de marzo del 2020):
- Parte 1: Plantilla vRA 8 con Redes NSX-T Existentes Parte 2: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda Parte 3: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red) Parte 4: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA) Parte 5: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento) Parte 6: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda Parte 7: Plantilla vRA 8 con &ldquo;One-Arm Load Balancer&rdquo; (equilibrador de carga) NSX-T Existente Parte 8: Plantilla vRA 8 con &ldquo;One-Arm Load Balancer&rdquo; (equilibrador de carga) NSX-T Bajo Demanda Parte 9: Plantilla vRA 8 con Redes NSX-T Bajo Demanda  Nota: la lista de blogs puede cambiar sin previo aviso.]]></description>
 </item></channel>
 </rss>

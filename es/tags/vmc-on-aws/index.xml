@@ -3,7 +3,16 @@
         <title>VMC on AWS - Etiqueta - 288clouds</title>
         <link>https://288clouds.com/es/tags/vmc-on-aws.html</link>
         <description>VMC on AWS - Etiqueta - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Fri, 20 Aug 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vmc-on-aws.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Tue, 14 Sep 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vmc-on-aws.html" rel="self" type="application/rss+xml" /><item>
+    <title>Creating a Cloud Agnostic vRA Template with Inputs</title>
+    <link>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</link>
+    <pubDate>Tue, 14 Sep 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation 8.x / Cloud allows you to create templates with cloud agnostic resources so that you can create a template that can be used across on-premises data centers and multiple clouds.
+So let&rsquo;s explore how you can create a vRA template that meets the following requirements:
+ The user should be able to select the deployment target environment (where the deployment should be created) The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP)  Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.]]></description>
+</item><item>
     <title>Getting Started Videos for VMware Cloud on AWS</title>
     <link>https://288clouds.com/es/2021-08-20-getting-started-videos-vmc-on-aws.html</link>
     <pubDate>Fri, 20 Aug 2021 05:52:00 -0500</pubDate>

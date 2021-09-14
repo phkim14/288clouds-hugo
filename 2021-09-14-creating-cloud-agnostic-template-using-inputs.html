@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Creating a Cloud Agnostic vRA Template with Inputs - 288clouds</title><meta name="Description" content="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input."><meta property="og:title" content="Creating a Cloud Agnostic vRA Template with Inputs" />
+<meta property="og:description" content="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" />
+<meta property="og:image" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"/>
+<meta property="article:published_time" content="2021-09-14T05:52:00-05:00" />
+<meta property="article:modified_time" content="2021-09-14T05:52:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"/>
+<meta name="twitter:title" content="Creating a Cloud Agnostic vRA Template with Inputs"/>
+<meta name="twitter:description" content="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input."/>
+<meta name="application-name" content="288clouds">
+<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" /><link rel="prev" href="https://288clouds.com/2021-08-20-getting-started-videos-vmc-on-aws.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Creating a Cloud Agnostic vRA Template with Inputs",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/288clouds.com\/2021-09-14-creating-cloud-agnostic-template-using-inputs.html"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/288clouds.com\/2021-09-14-creating-cloud-agnostic-template-using-inputs\/featured-image.png",
+                            "width":  2000 ,
+                            "height":  1111 
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, vRA template, VMC on AWS, VMware Cloud on AWS, public clouds, AWS, GCP, hybrid cloud, multi-cloud, vRealize Automation","wordcount":  970 ,
+        "url": "https:\/\/288clouds.com\/2021-09-14-creating-cloud-agnostic-template-using-inputs.html","datePublished": "2021-09-14T05:52:00-05:00","dateModified": "2021-09-14T05:52:00-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Phoebe Kim"
+            },"description": "Let's learn how you can create a cloud agnostic vRealize Automation template with an user input."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="288clouds">288clouds</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./about.html"> About </a><a class="menu-item" href="./posts.html"> Posts </a><a class="menu-item" href="./tags.html"> Tags </a><a class="menu-item" href="./categories.html"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" selected>English</option><option value="/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html">Español</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="288clouds">288clouds</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./about.html" title="">About</a><a class="menu-item" href="./posts.html" title="">Posts</a><a class="menu-item" href="./tags.html" title="">Tags</a><a class="menu-item" href="./categories.html" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" selected>English</option><option value="/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html">Español</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Creating a Cloud Agnostic vRA Template with Inputs</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="./about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">included in <a href="./categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-14">2021-09-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;970 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><br><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"
+        data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"
+        title="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#process-overview">Process Overview</a></li>
+    <li><a href="#demo--example">Demo / Example</a>
+      <ul>
+        <li><a href="#configure-image-and-flavor-mappings">Configure Image and Flavor Mappings</a></li>
+        <li><a href="#apply-tags">Apply Tags</a></li>
+        <li><a href="#create-cloud-template-input">Create Cloud Template Input</a></li>
+        <li><a href="#demo--example-yaml-file">Demo / Example YAML File</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>vRealize Automation 8.x / Cloud allows you to create templates with cloud agnostic resources so that you can create a template that can be used across on-premises data centers and multiple clouds.</p>
+<p>So let&rsquo;s explore how you can create a vRA template that meets the following requirements:</p>
+<ul>
+<li>The user should be able to select the deployment target environment (where the deployment should be created)</li>
+<li>The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP)</li>
+</ul>
+<p>Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.</p>
+<h2 id="demo-product-versions">Demo Product Versions</h2>
+<ul>
+<li>vRA Cloud</li>
+<li>VMC on AWS (SDDC version 1.14v5)</li>
+<li>on-premises data center - vSphere version 7.0.2</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Working Environments and Access:</p>
+<ul>
+<li>VMware Cloud on AWS SDDC</li>
+<li>AWS</li>
+<li>GCP</li>
+<li>On-premises data center / SDDC with vSphere</li>
+</ul>
+<p>vRA Cloud:</p>
+<ul>
+<li>Basic infrastructure configured for all the environments as necessary (i.e., Cloud Proxy, Cloud Account, Project, Cloud Zone, Network Profile, Storage Profile)</li>
+</ul>
+<h2 id="process-overview">Process Overview</h2>
+<ol>
+<li>Configure image and flavor mappings</li>
+<li>Apply tags to necessary resources (i.e., network profile, storage profile)</li>
+<li>Create a cloud template input</li>
+</ol>
+<h2 id="demo--example">Demo / Example</h2>
+<h3 id="configure-image-and-flavor-mappings">Configure Image and Flavor Mappings</h3>
+<p>You need to configure at least one image mapping and one flavor mapping to use in the cloud agnostic template. The mappings should include all the environments where you want the cloud agnostic template to be able to deploy.</p>
+<p>Below is a flavor mapping I&rsquo;ve created for this demo. As you can see, it includes AWS, GCP, VMC on AWS, and on-premises environment.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="flavor-mapping.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/flavor-mapping.png" />
+    </a></p>
+<p>Below is an image mapping I&rsquo;ve created for this demo. Same as the flavor mapping, this image mapping of an Ubuntu machine includes images from all the environments (AWS, GCP, VMC on AWS, on-prem).
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="image-mapping.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/image-mapping.png" />
+    </a></p>
+<h3 id="apply-tags">Apply Tags</h3>
+<p>Each target environment should have a tag that you apply to its resources.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="cloud-zones.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/cloud-zones.png" />
+    </a>
+As you can see in the screen capture above, I have various cloud zones already configured with a specific tag per environment.</p>
+<ul>
+<li>For GCP, gcp-us-west1</li>
+<li>For AWS, aws-us-west-2</li>
+<li>For on-premises vSphere, sjc-vcsa-01</li>
+<li>For VMC on AWS, vmconaws-sddc-02</li>
+</ul>
+<p>I have network profiles created for each environment as well. Each network profile has an appropriate tag that corresponds with its environment. Note that these tags are exactly the same ones as the ones I&rsquo;ve used for cloud zones.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="network-profiles.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/network-profiles.png" />
+    </a></p>
+<p>If you&rsquo;re using storage profiles, you need to apply the same tags there as well. Below is an example of a storage profile I&rsquo;ve created to use for VMware Cloud on AWS. It has the same tag, vmconaws-sddc-02, applied to the storage profile.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="storage-profile.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/storage-profile.png" />
+    </a></p>
+<p>In this demo, I&rsquo;m going to place the deployed machine in an existing security group. I have created an existing security group in each environment. As you can see, each security group has a tag applied, depending on the environment. Note that these tags are the same ones as the ones I&rsquo;ve used for cloud zones, network profiles, and other resources.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="security-groups.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/security-groups.png" />
+    </a></p>
+<h3 id="create-cloud-template-input">Create Cloud Template Input</h3>
+<p>Now, this is the fun part. I want the user to choose where they want to deploy the template. This is done by creating a cloud template input.</p>
+<p>To create a cloud template input, go to the &ldquo;Inputs&rdquo; tab and click &ldquo;+ NEW CLOUD TEMPLATLE INPUT&rdquo;.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="inputs-tab.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/inputs-tab.png" />
+    </a></p>
+<p>Let&rsquo;s review the input I&rsquo;ve created for the demo.</p>
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="targetEnv-input.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input.png" />
+    </a>
+<ul>
+<li>The name of this input is the variable name. I named it &ldquo;targetEnv&rdquo;.</li>
+<li>The display name of the input is what the user will see in the input form. So I wrote out: &ldquo;Target Environment&rdquo;.</li>
+<li>You can choose the type of this variable value. In this case, the input value will be a string.</li>
+</ul>
+<p>If you scroll down and expand the &ldquo;More Options&rdquo; section, you can see that I&rsquo;ve selected &ldquo;Key Values&rdquo; to create a dictionary for this input. Each key-value pair represents an environment where the user can choose to deploy.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="targetEnv-input-more-options.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-input-more-options.png" />
+    </a></p>
+<ul>
+<li>The key is the name of the environment that the user can choose</li>
+<li>The value is the name of the corresponding tag for that environment</li>
+</ul>
+<p>These key-value pairs can be more easily seen in the YAML file.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="targetEnv-YAML.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/targetEnv-YAML.png" />
+    </a></p>
+<p>Basically, the user will be able to pick from one of the available keys (or <code>title</code> as seen in the YAML code). The value of the input variable will equate to the corresponding <code>const</code> value.</p>
+<p>You then use <code>'${input.targetEnv}'</code> as a value wherever you need a constraint tag for a cloud agnostic resource.</p>
+<p>For example, I want the cloud agnostic template to use the appropriate existing security group per environment that I&rsquo;ve created. So for the cloud security group resource, I use <code>'${input.targetEnv}'</code> as the constraint tag.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="sg-constraint-tag.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/sg-constraint-tag.png" />
+    </a></p>
+<p>Same idea applies to the network. I want the cloud agnostic template to use an appropriate network profile that matches the environment that the user has chosen. So for the cloud network resource, I use <code>'${input.targetEnv}'</code> as the constraint tag.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="network-constraint-tag.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/network-constraint-tag.png" />
+    </a></p>
+<p>To see the input form that a user might see, you can click &ldquo;DEPLOY&rdquo;. After you give the deployment a name, you can see the input form.
+<br><a class="lightgallery" href="./2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png" target="_blank" rel="noopener noreferrer" title="/2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png" data-thumbnail="/2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png">
+        <img
+            class="lazyload"
+            src="./svg/loading.min.svg"
+            data-src="input-form.png"
+            data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png 2x"
+            data-sizes="auto"
+            alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/input-form.png" />
+    </a></p>
+<h3 id="demo--example-yaml-file">Demo / Example YAML File</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
+inputs:
+  targetEnv:
+    type: string
+    title: Target Environment
+    oneOf:
+      - title: VMC on AWS
+        const: vmconaws-sddc-02
+      - title: AWS
+        const: aws-us-west-1
+      - title: GCP
+        const: gcp-us-west1
+      - title: Azure
+        const: azure-west-us
+      - title: On-Premises
+        const: sjc-vcsa-01
+resources:
+  Cloud_SecurityGroup_1:
+    type: Cloud.SecurityGroup
+    properties:
+      securityGroupType: existing
+      constraints:
+        - tag: &#39;${input.targetEnv}&#39;
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: Ubuntu-20.04
+      flavor: size-small
+      networks:
+        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+      securityGroups:
+        - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: private
+      constraints:
+        - tag: &#39;${input.targetEnv}&#39;
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-09-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" data-title="Creating a Cloud Agnostic vRA Template with Inputs" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,vRA template,VMC on AWS,VMware Cloud on AWS,public clouds,AWS,GCP,hybrid cloud,multi-cloud,vRealize Automation"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="./tags/vra-template.html">vRA template</a>,&nbsp;<a href="./tags/vmc-on-aws.html">VMC on AWS</a>,&nbsp;<a href="./tags/vmware-cloud-on-aws.html">VMware Cloud on AWS</a>,&nbsp;<a href="./tags/public-clouds.html">public clouds</a>,&nbsp;<a href="./tags/aws.html">AWS</a>,&nbsp;<a href="./tags/gcp.html">GCP</a>,&nbsp;<a href="./tags/hybrid-cloud.html">hybrid cloud</a>,&nbsp;<a href="./tags/multi-cloud.html">multi-cloud</a>,&nbsp;<a href="./tags/vrealize-automation.html">vRealize Automation</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./2021-08-20-getting-started-videos-vmc-on-aws.html" class="prev" rel="prev" title="Getting Started Videos for VMware Cloud on AWS"><i class="fas fa-angle-left fa-fw"></i>Getting Started Videos for VMware Cloud on AWS</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+			
+			
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="./lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/sharer/sharer.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-160611051-1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-160611051-1" async></script></body>
+</html>
