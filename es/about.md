@@ -23,8 +23,10 @@ Puedo ser contactada vía [correo electrónico](mailto:info.288clouds@gmail.com)
 * Certified Enterprise Blockchain Architect by 101 Blockchains
 
 ##### Cisco
-* Cisco Certified Network Associate - Routing & Switching (CCNA R&S)
+* Cisco Certified Networking Professional - Enterprise (CCNP Enterprise)
+* Cisco Certified Specialist - Enterprise Design
 * Cisco Certified Specialist - Enterprise Core
+* Cisco Certified Network Associate - Routing & Switching (CCNA R&S)
 
 ##### Project Management Institute (PMI)
 * Project Management Professional (PMP), #2792653
