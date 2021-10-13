@@ -3,7 +3,15 @@
         <title>VMware Cloud on AWS - Etiqueta - 288clouds</title>
         <link>https://288clouds.com/es/tags/vmware-cloud-on-aws.html</link>
         <description>VMware Cloud on AWS - Etiqueta - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Tue, 14 Sep 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vmware-cloud-on-aws.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 13 Oct 2021 05:52:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/vmware-cloud-on-aws.html" rel="self" type="application/rss+xml" /><item>
+    <title>Introducing VMware Cloud on AWS Logical Design Poster for Workload Mobility</title>
+    <link>https://288clouds.com/es/2021-10-13-vmc-on-aws-connectivity-logical-design-poster.html</link>
+    <pubDate>Wed, 13 Oct 2021 05:52:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2021-10-13-vmc-on-aws-connectivity-logical-design-poster.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ Note: This is a copy of my blogpost on the VMware Cloud Community blog.
+VMware Cloud on AWS is an integrated hybrid cloud service that enables organizations to migrate or extend their on-premises vSphere environments rapidly. VMware Cloud on AWS includes VMware HCX, a solution that streamlines workload migration across data centers and clouds. There is a variety of connectivity options and migrations methods available with VMware HCX.]]></description>
+</item><item>
     <title>Creating a Cloud Agnostic vRA Template with Inputs</title>
     <link>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</link>
     <pubDate>Tue, 14 Sep 2021 05:52:00 -0500</pubDate>
