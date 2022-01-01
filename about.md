@@ -1,13 +1,11 @@
 # About Me
 
 
-{{<image src="headshot.jpeg" width="200" display="inline-block">}}
+{{<image src="headshot.jpg" width="200" display="inline-block">}}
 
-## Hi, my name is Phoebe Kim, and I am a Senior Cloud Solutions Architect at VMware based in Dallas/Fort Worth metroplex.
+## Hi, my name is Phoebe Kim, and I am a Senior Manager for the Multi-Cloud Solutions Architecture (MCA) team at VMware based in Dallas/Fort Worth metroplex.
 
-As a Senior Cloud Solutions Architect in the Multi-Cloud Center of Excellence at VMware, I help customers achieve workload mobility across multiple clouds by providing multi-cloud reference architectures and migration guidance. Previously, I worked in technology consulting, where I was responsible for managing projects and leading teams of engineers. I have three VCDX certifications (network virtualization, data center virtualization, and cloud management and automation) in addition to various technical certifications from AWS and Cisco. 
-
-When I'm not keeping busy with work or learning new technologies, I enjoy creating models for 3D printing and playing violin and piano at various events around the Dallas/Fort Worth area. 
+The Multi-Cloud Solutions Architecture team helps VMware Cloud Provider partners and direct customers achieve their multi-cloud vision by providing technical guidance on multi-cloud architectures and migrations. 
 
 Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim](https://twitter.com/phoebesykim).
 

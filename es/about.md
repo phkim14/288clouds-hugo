@@ -3,9 +3,9 @@
 
 {{<image src="headshot.jpeg" width="200" display="inline-block">}}
 
-## Hola, mi nombre es Phoebe Kim, y soy una "Senior Cloud Solutions Architect" para VMware en Dallas/Fort Worth, EE.UU.
+## Hola, mi nombre es Phoebe Kim, y soy una "Senior Manager" para el "Multi-Cloud Solutions Architecture team" de VMware en Dallas/Fort Worth, EE.UU.
 
-Como rol principal en mi empleo, me enfoco en ayudar a clientes a realizar movilidad de "workloads" (las cargas de trabajo) en "clouds" múltiples. Cuando no estoy aprendiendo nuevas tecnologías, me gusta tocar el violín y el piano como mi pasatiempo favorito. 
+Nuestro grupo nos enfocamos en ayudar a clientes y "VMware Cloud Provider partners" a realizar su visión de "clouds" múltiples. 
 
 Puedo ser contactada vía [correo electrónico](mailto:info.288clouds@gmail.com) o Twitter [@phoebesykim](https://twitter.com/phoebesykim).
 
