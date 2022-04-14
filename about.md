@@ -15,6 +15,7 @@ Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim]
 View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 
 ##### Amazon Web Services (AWS)
+* AWS Certified Advanced Networking - Specialty
 * AWS Certified Developer - Associate
 * AWS Certified Solutions Architect - Associate
 
