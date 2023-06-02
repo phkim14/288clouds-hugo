@@ -3,14 +3,14 @@
 
 {{<image src="headshot.jpg" width="200" display="inline-block">}}
 
-## Hi, my name is Phoebe Kim, and I am a Senior Manager for the Multi-Cloud Solutions Architecture (MCA) team at VMware based in Dallas/Fort Worth metroplex.
+## Hi, my name is Phoebe Kim, and I am a Senior Manager for the Multi-Cloud Solutions Architecture (MCA) team at VMware. I am based in Dallas/Fort Worth metroplex.
 
-The Multi-Cloud Solutions Architecture team helps VMware Cloud Provider partners and direct customers achieve their multi-cloud vision by providing technical guidance on multi-cloud architectures and migrations. 
+As a Senior Manager for the Multi-Cloud Solutions Architecture team at VMware, I bring extensive expertise in cloud computing and a commitment to empowering customers with innovative solutions. Based in Dallas/Fort Worth, I lead a dynamic team that provides technical guidance on multi-cloud strategies and helps partners and direct customers achieve their objectives. Passionate about staying ahead of the curve, I am dedicated to driving technological advancements and enabling organizations to succeed in the rapidly changing tech industry.
 
 Reach out via [email](mailto:info.288clouds@gmail.com) or Twitter [@phoebesykim](https://twitter.com/phoebesykim).
 
 ***
-## Certifications
+## Technical Certifications
 
 View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 
@@ -31,6 +31,9 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 
 ##### Project Management Institute (PMI)
 * Project Management Professional (PMP), #2792653
+
+##### The Linux Foundation
+* Certified Kubernetes Administrator (CKA)
 
 ##### VMware
 <b>Cloud Management and Automation</b>
@@ -55,6 +58,13 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 
 <b>VMware Cloud</b>
 * VMware Cloud on AWS - Software Defined Data Center 2020
+
+## Leadership / Management Certificates
+##### Cornell University
+* Leadership Essentials Certificate - Issued March 2022
+
+##### Harvard Business School Online
+* Credential of Readiness (CORe) - Issued May 2023
 
 ***
 ## Education
