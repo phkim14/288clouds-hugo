@@ -59,6 +59,7 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 <b>VMware Cloud</b>
 * VMware Cloud on AWS - Software Defined Data Center 2020
 
+***
 ## Leadership / Management Certificates
 ##### Cornell University
 * Leadership Essentials Certificate - Issued March 2022
@@ -77,3 +78,4 @@ View my badges [here](https://www.youracclaim.com/users/phoebesykim/badges).
 * English (fluent)
 * Korean (native)
 * Spanish (intermediate)
+

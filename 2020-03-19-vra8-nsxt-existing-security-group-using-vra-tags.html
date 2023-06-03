@@ -8,18 +8,17 @@
         <title>vRA 8 &#43; NSX-T Blog Series Part 4: vRA 8 Blueprint with Existing Security Group (vRA tag) - 288clouds</title><meta name="Description" content="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using vRA tags."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 4: vRA 8 Blueprint with Existing Security Group (vRA tag)" />
 <meta property="og:description" content="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using vRA tags." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" />
-<meta property="og:image" content="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/featured-image.png"/>
+<meta property="og:url" content="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><meta property="og:image" content="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/featured-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-03-19T07:53:00-05:00" />
-<meta property="article:modified_time" content="2021-04-14T07:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2021-04-14T07:53:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/featured-image.png"/>
 <meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 4: vRA 8 Blueprint with Existing Security Group (vRA tag)"/>
 <meta name="twitter:description" content="Learn how to create a vRA 8 blueprint to deploy machines with existing NSX-T security groups using vRA tags."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><link rel="prev" href="https://288clouds.com/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html" /><link rel="next" href="https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><link rel="prev" href="https://288clouds.com/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html" /><link rel="next" href="https://288clouds.com/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -265,7 +264,7 @@
 <h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -298,38 +297,38 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
-inputs:
-  vm-name:
-    type: string
-    title: name
-    default: existing-sg-vm
-resources:
-  Cloud_SecurityGroup_1:
-    type: Cloud.SecurityGroup
-    properties:
-      securityGroupType: existing
-      constraints:
-        - tag: vra-test-sg
-  Cloud_Machine_1:
-    type: Cloud.Machine
-    properties:
-      image: centos-temp
-      flavor: small
-      customizationSpec: linux
-      name: &#39;${input.vm-name}&#39;
-      networks:
-        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
-          assignment: static
-          securityGroups:
-            - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
-  Cloud_NSX_Network_1:
-    type: Cloud.NSX.Network
-    properties:
-      networkType: existing
-      constraints:
-        - tag: &#39;subnet-cidr:192.168.35.0/24&#39;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">formatVersion: 1
+</span></span><span class="line"><span class="cl">inputs:
+</span></span><span class="line"><span class="cl">  vm-name:
+</span></span><span class="line"><span class="cl">    type: string
+</span></span><span class="line"><span class="cl">    title: name
+</span></span><span class="line"><span class="cl">    default: existing-sg-vm
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl">  Cloud_SecurityGroup_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.SecurityGroup
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      securityGroupType: existing
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: vra-test-sg
+</span></span><span class="line"><span class="cl">  Cloud_Machine_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Machine
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      image: centos-temp
+</span></span><span class="line"><span class="cl">      flavor: small
+</span></span><span class="line"><span class="cl">      customizationSpec: linux
+</span></span><span class="line"><span class="cl">      name: &#39;${input.vm-name}&#39;
+</span></span><span class="line"><span class="cl">      networks:
+</span></span><span class="line"><span class="cl">        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">          assignment: static
+</span></span><span class="line"><span class="cl">          securityGroups:
+</span></span><span class="line"><span class="cl">            - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
+</span></span><span class="line"><span class="cl">  Cloud_NSX_Network_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.NSX.Network
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      networkType: existing
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: &#39;subnet-cidr:192.168.35.0/24&#39;
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -359,7 +358,7 @@ resources:
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

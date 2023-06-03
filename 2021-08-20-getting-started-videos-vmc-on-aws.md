@@ -35,3 +35,4 @@ VMware HCX can seamlessly migrate vSphere workloads from an on-premises environm
 
 [vmware-cloud-blog-link]: https://cloud.vmware.com/community/2021/07/29/getting-started-videos-vmware-cloud-aws/?src=so_5d42086649d4a&cid=70134000001CUn1
 [vmware-tech-zone-link]: https://vmc.techzone.vmware.com/
+

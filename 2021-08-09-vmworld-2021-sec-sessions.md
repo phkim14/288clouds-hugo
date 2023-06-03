@@ -28,3 +28,4 @@ It takes a lot to manage a multi-cloud infrastructure. To be successful in manag
 
 
 [vmworld-registration-link]: https://www.vmware.com/vmworld/en/index.html
+

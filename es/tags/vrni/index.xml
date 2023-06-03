@@ -10,7 +10,7 @@
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Network Insight can be used to gain visibility into the workloads in a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Network Insight with VMware Cloud on AWS.
-Demo Product Versions  vRNI Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prerequisites VMC on AWS:
- SDDC deployed Access to the SDDC  Process Overview  Deploy a vRNI Data Collector in the VMC on AWS SDDC.]]></description>
+Demo Product Versions vRNI Cloud VMware Cloud on AWS (SDDC version 1.14v4) Prerequisites VMC on AWS:
+SDDC deployed Access to the SDDC Process Overview Deploy a vRNI Data Collector in the VMC on AWS SDDC.]]></description>
 </item></channel>
 </rss>

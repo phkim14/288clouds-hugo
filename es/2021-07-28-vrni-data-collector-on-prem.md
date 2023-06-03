@@ -1,8 +1,6 @@
 # Using vRNI with VMC on AWS: Getting Started
 
-
 # ~ Este post será traducido al español próximamente ~
-
 
 vRealize Network Insight can be used to gain visibility into the workloads in a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let's learn how you can get started with using vRealize Network Insight with VMware Cloud on AWS. 
 
@@ -113,4 +111,4 @@ vRNI can now collect and display information about workloads in the VMC on AWS S
 Credit: Thanks to my colleague, [Asaf Blubshtein][ab-blog-link], for working with me on this.
 
 [ab-blog-link]: https://softwaredefinedcoffee.com/ 
-[vRA-cloud-proxy-link]: https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html
+[vRA-cloud-proxy-link]: https://288clouds.com/2021-07-23-vrac-proxy-in-vmc.html

@@ -5,25 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes - 288clouds</title><meta name="Description" content="Aprende como crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes."><meta property="og:title" content="Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes" />
-<meta property="og:description" content="Aprende como crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes." />
+        <title>vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks - 288clouds</title><meta name="Description" content="Learn how to create a vRA 8 blueprint to deploy machines on existing NSX-T networks."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks" />
+<meta property="og:description" content="Learn how to create a vRA 8 blueprint to deploy machines on existing NSX-T networks." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" />
-<meta property="og:image" content="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png"/>
+<meta property="og:url" content="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" /><meta property="og:image" content="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-03-13T07:48:00-05:00" />
-<meta property="article:modified_time" content="2021-05-04T07:48:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2020-06-21T07:48:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png"/>
-<meta name="twitter:title" content="Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes"/>
-<meta name="twitter:description" content="Aprende como crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes."/>
+<meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks"/>
+<meta name="twitter:description" content="Learn how to create a vRA 8 blueprint to deploy machines on existing NSX-T networks."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" /><link rel="prev" href="https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html" /><link rel="next" href="https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" /><link rel="prev" href="https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html" /><link rel="next" href="https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Parte 1 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes",
+        "headline": "vRA 8 + NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks",
         "inLanguage": "es",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -33,13 +32,13 @@
                             "url": "https:\/\/288clouds.com\/es\/2020-03-13-vra8-blueprint-nsxt-existing-network\/featured-image.png",
                             "width":  1840 ,
                             "height":  1125 
-                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, red existente, segmento lógico, automatización","wordcount":  626 ,
-        "url": "https:\/\/288clouds.com\/es\/2020-03-13-vra8-blueprint-nsxt-existing-network.html","datePublished": "2020-03-13T07:48:00-05:00","dateModified": "2021-05-04T07:48:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, existing network, logical segment, automation","wordcount":  538 ,
+        "url": "https:\/\/288clouds.com\/es\/2020-03-13-vra8-blueprint-nsxt-existing-network.html","datePublished": "2020-03-13T07:48:00-05:00","dateModified": "2020-06-21T07:48:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Phoebe Kim"
-            },"description": "Aprende como crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes."
+            },"description": "Learn how to create a vRA 8 blueprint to deploy machines on existing NSX-T networks."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -112,9 +111,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contenido</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-13">2020-03-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;626 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-13">2020-03-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;538 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -123,66 +122,67 @@
         data-srcset="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png, ../es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png 1.5x, ../es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png 2x"
         data-sizes="auto"
         alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/featured-image.png"
-        title="Aprende como crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes." /></div><div class="details toc" id="toc-static"  kept="">
+        title="Learn how to create a vRA 8 blueprint to deploy machines on existing NSX-T networks." /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contenido</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#versiones-de-productos-demo">Versiones de Productos (Demo)</a></li>
-    <li><a href="#prerrequisitos">Prerrequisitos</a></li>
-    <li><a href="#información-general-de-proceso">Información General de Proceso</a></li>
-    <li><a href="#ejemplo">Ejemplo</a>
+    <li><a href="#demo-product-versions">Demo Product Versions</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#process-overview">Process Overview</a></li>
+    <li><a href="#demo--example">Demo / Example</a>
       <ul>
-        <li><a href="#configure-el-rango-de-ip-para-red-existente">Configure el Rango de IP para Red Existente</a></li>
-        <li><a href="#configure-el-perfil-de-red">Configure el Perfil de Red</a></li>
-        <li><a href="#cree-la-plantilla">Cree la Plantilla</a></li>
-        <li><a href="#configure-la-plantilla">Configure la Plantilla</a></li>
-        <li><a href="#verifique-la-implementación">Verifique la Implementación</a></li>
-        <li><a href="#código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</a></li>
+        <li><a href="#configure-existing-network-ip-range">Configure Existing Network IP Range</a></li>
+        <li><a href="#configure-network-profile">Configure Network Profile</a></li>
+        <li><a href="#create-blueprint">Create Blueprint</a></li>
+        <li><a href="#configure-blueprint">Configure Blueprint</a></li>
+        <li><a href="#verify-deployment">Verify Deployment</a></li>
+        <li><a href="#demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>Puede crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes.</p>
-<h2 id="versiones-de-productos-demo">Versiones de Productos (Demo)</h2>
+            </div><div class="content" id="content"><h1 id="-este-post-será-traducido-al-español-próximamente-">~ Este post será traducido al español próximamente ~</h1>
+<p>You can create a vRA 8 blueprint to deploy machines on existing NSX-T networks.</p>
+<h2 id="demo-product-versions">Demo Product Versions</h2>
 <ul>
 <li>vSphere 6.5 U3</li>
-<li>vRA 8.0.1 (incluyendo vRSLCM y vIDM)</li>
+<li>vRA 8.0.1 (including vRSLCM and vIDM)</li>
 <li>NSX-T 2.5.1</li>
 <li>vSAN 6.6.1</li>
 </ul>
-<h2 id="prerrequisitos">Prerrequisitos</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <p>vRA 8:</p>
 <ul>
-<li>Cuenta conectada de NSX-T</li>
-<li>Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)</li>
+<li>NSX-T account connected</li>
+<li>Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)</li>
 </ul>
 <p>NSX-T:</p>
 <ul>
-<li>enrutador lógico (tier-0 o tier-1) configurado</li>
-<li>red lógico conectado a un enrutador lógico</li>
+<li>logical router (tier-0 or tier-1) configured</li>
+<li>logical segment(s) attached to a logical router</li>
 </ul>
-<h2 id="información-general-de-proceso">Información General de Proceso</h2>
+<h2 id="process-overview">Process Overview</h2>
 <ol>
-<li>Configure las redes existentes con rangos de IP que desea utilizar para las VMs (máquinas virtuales).</li>
-<li>Cree un perfil de red.</li>
-<li>Agregue las redes existentes que desea utilizar en el perfil de red.</li>
-<li>Cree una plantilla con los objectos: &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube) y &ldquo;NSX Network&rdquo; (red NSX).</li>
-<li>Especifique cual red que desea utilizar agregando una etiqueta de restricción en el objeto &ldquo;NSX Network&rdquo; (red NSX).</li>
+<li>Set up the existing networks with IP ranges you want to use for the machines.</li>
+<li>Create a network profile.</li>
+<li>Add existing networks you want to use in the network profile.</li>
+<li>Create a blueprint with Cloud Agnostic Machine and NSX Network objects.</li>
+<li>Specify which network you want to use by adding a constraint tag to the network object.</li>
 </ol>
-<p>Pasos opcionales:</p>
+<p>optional steps:</p>
 <ul>
-<li>Cree etiquetas para las redes existentes con los nombres del deseo.</li>
-<li>Cree entrada en la plantilla para personalizar el nombre de la máquina.</li>
+<li>Create tags on the existing networks with names of your choice.</li>
+<li>Create an input in the blueprint to customize the machine name.</li>
 </ul>
-<h2 id="ejemplo">Ejemplo</h2>
-<h3 id="configure-el-rango-de-ip-para-red-existente">Configure el Rango de IP para Red Existente</h3>
+<h2 id="demo--example">Demo / Example</h2>
+<h3 id="configure-existing-network-ip-range">Configure Existing Network IP Range</h3>
 <ol>
-<li>Inicie sesión en el UI (interfaz de usario) de vRA Cloud Assembly.</li>
-<li>Vaya a “Infraestructura” &gt; “Redes” (en el menú “Recursos”).</li>
-<li>De clic en la red existente que desea utilizar y asegúrese que toda la información está completa.
+<li>Log into vRA Cloud Assembly.</li>
+<li>Go to &ldquo;Infrastructure&rdquo; &gt; &ldquo;Networks&rdquo; (under Resources).</li>
+<li>Click on the existing network you want to use and make sure the information is filled out.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step3.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step3.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step3.png">
         <img
             class="lazyload"
@@ -192,7 +192,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step3.png" />
     </a></li>
-<li>De clic en la &ldquo;checkbox&rdquo; (la casilla de verificación) al lado de la red existente que desea utilizar y de clic en el botón “ADMINISTRAR RANGOS DE IP”.
+<li>Click the checkbox next to the existing network you want to use and click &ldquo;MANAGE IP RANGES&rdquo;.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step4.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step4.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step4.png">
         <img
             class="lazyload"
@@ -202,8 +202,8 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step4.png" />
     </a></li>
-<li>De clic en el botón “+ NUEVO RANGO DE IP”.</li>
-<li>Cree rango de IP que desea utilizar para dar las direcciones IP a las máquinas implementadas de la plantilla.
+<li>Click &ldquo;+ NEW IP RANGE&rdquo;.</li>
+<li>Create an IP range that you&rsquo;d like to use to give IP addresses to the machines deployed from this blueprint.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step6.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step6.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step6.png">
         <img
             class="lazyload"
@@ -213,7 +213,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step6.png" />
     </a></li>
-<li>Revise otra vez la primera y última direccion IP en el rango creado para asegurar que están correctas.
+<li>Double-check the start and end IP addresses on the range created to make sure it&rsquo;s correct.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step7.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step7.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step7.png">
         <img
             class="lazyload"
@@ -224,9 +224,9 @@
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step7.png" />
     </a></li>
 </ol>
-<h3 id="configure-el-perfil-de-red">Configure el Perfil de Red</h3>
+<h3 id="configure-network-profile">Configure Network Profile</h3>
 <ol start="8">
-<li>Vaya a “Infraestructura” &gt; “Perfiles de Red” (en el menú “Configurar”) y de clic en el botón “+ NUEVO PERFIL DE RED”.
+<li>Go to &ldquo;Infrastructure&rdquo; &gt; &ldquo;Network Profiles&rdquo; (under Configure) and click &ldquo;+ NEW NETWORK PROFILE&rdquo;.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step8.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step8.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step8.png">
         <img
             class="lazyload"
@@ -236,7 +236,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step8.png" />
     </a></li>
-<li>Escoge la cuenta o región y nombre el perfil.
+<li>Choose an account/region and give the profile a name.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step9.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step9.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step9.png">
         <img
             class="lazyload"
@@ -246,7 +246,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step9.png" />
     </a></li>
-<li>Seleccione “Redes” y de clic en el botón “+ AGREGAR RED”.
+<li>Go to &ldquo;Networks&rdquo; tab and click &ldquo;+ ADD NETWORK&rdquo;.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step10.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step10.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step10.png">
         <img
             class="lazyload"
@@ -256,12 +256,12 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step10.png" />
     </a></li>
-<li>Escoge la red existente que desea utilizar en la plantilla y agréguela.</li>
+<li>Choose the existing network(s) you would like to use in the blueprint then save.</li>
 </ol>
-<h3 id="cree-la-plantilla">Cree la Plantilla</h3>
+<h3 id="create-blueprint">Create Blueprint</h3>
 <ol start="12">
-<li>Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.</li>
-<li>Nombra la plantilla y escoge el proyecto.
+<li>Go to &ldquo;Blueprints&rdquo; and Click &ldquo;+ NEW&rdquo; to create a new blueprint.</li>
+<li>Give a name to the blueprint and choose a project.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step13.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step13.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step13.png">
         <img
             class="lazyload"
@@ -271,7 +271,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step13.png" />
     </a></li>
-<li>Pon la &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube) y &ldquo;NSX Network&rdquo; (red NSX) en el lienzo en blanco.<br>
+<li>Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step14.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step14.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step14.png">
         <img
             class="lazyload"
@@ -281,7 +281,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step14.png" />
     </a></li>
-<li>Conecta &ldquo;Cloud Agnostic Machine&rdquo; a &ldquo;NSX Network&rdquo; en el lienzo en blanco.
+<li>Connect the Cloud Agnostic Machine to the NSX Network on the canvas.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step15.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step15.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step15.png">
         <img
             class="lazyload"
@@ -292,9 +292,9 @@
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step15.png" />
     </a></li>
 </ol>
-<h3 id="configure-la-plantilla">Configure la Plantilla</h3>
+<h3 id="configure-blueprint">Configure Blueprint</h3>
 <ol start="16">
-<li>A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. Un menú de las opciones disponibles aparecerá cuando de clic en el espacio entre las comillas.
+<li>On the right side in the YAML file, choose an image and size for the machine. When you click between the quotes, a dropdown menu of available options should show up.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step16.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step16.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step16.png">
         <img
             class="lazyload"
@@ -304,9 +304,9 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step16.png" />
     </a></li>
-<li>Debajo de <code>-network:</code>, agregue una línea <code>assignment: static</code> para dar una dirección IP estática a la máquina desde el rango de IP.</li>
-<li>Para la &ldquo;NSX network&rdquo;, asegúrese que dice <code>networkType: existing</code> debajo de <code>properties</code>.</li>
-<li>Debajo de <code>networkType</code>, agregue una línea <code>constraints</code> y otra línea <code>-tag:</code> para escoger la red existente que desea utilizar.
+<li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine from the IP range we&rsquo;ve created.</li>
+<li>For the NSX network, make sure it says <code>networkType: existing</code> under <code>properties</code>.</li>
+<li>Below <code>networkType</code> add the line <code>constraints:</code> then another line <code>- tag:</code> to choose the existing network you want to use.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step19.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step19.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step19.png">
         <img
             class="lazyload"
@@ -316,7 +316,7 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step19.png" />
     </a></li>
-<li>De clic en el botón “PROBAR”.
+<li>Click &ldquo;TEST&rdquo;.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step20.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step20.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step20.png">
         <img
             class="lazyload"
@@ -326,8 +326,8 @@
             data-sizes="auto"
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step20.png" />
     </a></li>
-<li>De clic en el botón “IMPLEMENTAR” para crear una nueva implementación.</li>
-<li>Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.
+<li>Click &ldquo;DEPLOY&rdquo; to create a new deployment.</li>
+<li>Give it a deployment name, choose &ldquo;Current Draft&rdquo;, the cick &ldquo;DEPLOY&rdquo;.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step22.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step22.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step22.png">
         <img
             class="lazyload"
@@ -338,9 +338,9 @@
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step22.png" />
     </a></li>
 </ol>
-<h3 id="verifique-la-implementación">Verifique la Implementación</h3>
+<h3 id="verify-deployment">Verify Deployment</h3>
 <ol start="23">
-<li>Supervise el progreso de la implementación. Cuando está completa, puede ver la implementación en la sección de vRA Cloud Assembly “Implementaciones” y la nueva máquina creada en el cliente web de vSphere.
+<li>Monitor the progress. Once completed, you should be able to see the deployment under &ldquo;Deployments&rdquo; in vRA UI as well as the new machine created in the vSphere UI.
 <br><a class="lightgallery" href="../es/2020-03-13-vra8-blueprint-nsxt-existing-network/step23.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step23.png" data-thumbnail="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step23.png">
         <img
             class="lazyload"
@@ -369,10 +369,10 @@
             alt="/es/2020-03-13-vra8-blueprint-nsxt-existing-network/step23-2.png" />
     </a></li>
 </ol>
-<h3 id="código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</h3>
+<h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -391,54 +391,54 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
-inputs: {}
-resources:
-  Cloud_Machine_1:
-    type: Cloud.Machine
-    properties:
-      image: &#39;centos-temp&#39;
-      flavor: &#39;small&#39;
-      networks:
-        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
-          assignment: static
-  Cloud_NSX_Network_1:
-    type: Cloud.NSX.Network
-    properties:
-      networkType: existing
-      constraints: 
-        - tag: subnet-cidr: 192.168.34.0/24
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">formatVersion: 1
+</span></span><span class="line"><span class="cl">inputs: {}
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl">  Cloud_Machine_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Machine
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      image: &#39;centos-temp&#39;
+</span></span><span class="line"><span class="cl">      flavor: &#39;small&#39;
+</span></span><span class="line"><span class="cl">      networks:
+</span></span><span class="line"><span class="cl">        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">          assignment: static
+</span></span><span class="line"><span class="cl">  Cloud_NSX_Network_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.NSX.Network
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      networkType: existing
+</span></span><span class="line"><span class="cl">      constraints: 
+</span></span><span class="line"><span class="cl">        - tag: subnet-cidr: 192.168.34.0/24
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Actualizado el 2021-05-04</span>
+                <span>Actualizado el 2020-06-21</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" data-title="Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes" data-via="phoebesykim" data-hashtags="vRA,vRA8,NSX-T,red existente,segmento lógico,automatización"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" data-title="vRA 8 &#43; NSX-T Blog Series Part 1: vRA 8 Blueprint with Existing NSX-T Networks" data-via="phoebesykim" data-hashtags="vRA,vRA8,NSX-T,existing network,logical segment,automation"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/red-existente.html">red existente</a>,&nbsp;<a href="../es/tags/segmento-l%C3%B3gico.html">segmento lógico</a>,&nbsp;<a href="../es/tags/automatizaci%C3%B3n.html">automatización</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/nsx-t.html">NSX-T</a>,&nbsp;<a href="../es/tags/existing-network.html">existing network</a>,&nbsp;<a href="../es/tags/logical-segment.html">logical segment</a>,&nbsp;<a href="../es/tags/automation.html">automation</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="../es/">Inicio</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="../es/2020-03-12-vra8-nsxt-blog-series-overview.html" class="prev" rel="prev" title="Introducción a la Serie: vRA 8 &#43; NSX-T"><i class="fas fa-angle-left fa-fw"></i>Introducción a la Serie: vRA 8 &#43; NSX-T</a>
-            <a href="../es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html" class="next" rel="next" title="Parte 2 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda">Parte 2 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="../es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html" class="next" rel="next" title="vRA 8 &#43; NSX-T Blog Series Part 2: vRA 8 Blueprint with On-demand Routed NSX-T Networks">vRA 8 &#43; NSX-T Blog Series Part 2: vRA 8 Blueprint with On-demand Routed NSX-T Networks<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

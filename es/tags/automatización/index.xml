@@ -3,86 +3,15 @@
         <title>automatización - Etiqueta - 288clouds</title>
         <link>https://288clouds.com/es/tags/automatizaci%C3%B3n.html</link>
         <description>automatización - Etiqueta - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Wed, 22 Jul 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/automatizaci%C3%B3n.html" rel="self" type="application/rss+xml" /><item>
-    <title>Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T</title>
-    <link>https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</link>
-    <pubDate>Wed, 22 Jul 2020 07:53:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; de NSX-T bajo demanda. Este proceso crea un enrutador lógico tier-1 bajo demanda y agrega los servicios de equilibrador de carga. Este proceso funciona con vRA 8.1, pero yo usé vRA Cloud para crear el ejemplo.
-Abajo es una diagrama simple de &ldquo;one-arm load balancer&rdquo; de NSX-T. 
-Nota que vRA 8.1 no es totalmente compatible con el &ldquo;policy API&rdquo; de NSX-T.]]></description>
-</item><item>
-    <title>Parte 7 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Existente de NSX-T</title>
-    <link>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
-    <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; existente de NSX-T. Este proceso no crea los enrutadors lógicos bajo demanda. El proceso usa un &ldquo;one-arm load balancer&rdquo; existente y simplemente agregar &ldquo;virtual server&rdquo; (servidor virtual), &ldquo;server pool&rdquo; (grupo de servidores), y &ldquo;application profile&rdquo; (perfil de aplicación). Puede crear un &ldquo;monitor&rdquo; (monitor de máquina virtual) también si quiere. Este proceso funciona con vRA 8.]]></description>
-</item><item>
-    <title>Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda</title>
-    <link>https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html</link>
-    <pubDate>Mon, 23 Mar 2020 04:02:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad bajo demanda.
-Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T:
- red configurado  Información General de Proceso  Cree o revise un perfil de red.]]></description>
-</item><item>
-    <title>Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)</title>
-    <link>https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</link>
-    <pubDate>Fri, 20 Mar 2020 05:02:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas de puerto de segmento de NSX-T.
-Update: July 26, 2021 No puede usar etiquetas de puerto de segmento de NSX-T empezando con vRA 8.2. Gracias a mi colega Mukesh Idnani para este descubrimiento!
-Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 19 Mar 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/automatizaci%C3%B3n.html" rel="self" type="application/rss+xml" /><item>
     <title>Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)</title>
     <link>https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</link>
     <pubDate>Thu, 19 Mar 2020 07:53:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.
-Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)  NSX-T:
- Grupos de seguridad configurados  Información General de Proceso  Cree una etiqueta en el grupo de seguridad existente.]]></description>
-</item><item>
-    <title>Parte 3 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red)</title>
-    <link>https://288clouds.com/es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</link>
-    <pubDate>Wed, 18 Mar 2020 06:13:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando perfil de red.
-Nota que, con este proceso, todos los grupos de seguridad que selecciona en el perfil de red se aplicarán a las máquinas. Si tiene máquinas múltiples en una plantilla y quiere especificar grupo de seguridad diferente para cada máquina, tiene que usar etiqueta vRA o etiqueta de puerto de segmento (vea parte 4 y 5 de esta serie de blog por esos procesos).]]></description>
-</item><item>
-    <title>Personalice Nombres de Máquinas y Redes Bajo Demanda</title>
-    <link>https://288clouds.com/es/2020-03-17-customize-machine-on-demand-network-names.html</link>
-    <pubDate>Tue, 17 Mar 2020 06:00:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-17-customize-machine-on-demand-network-names.html</guid>
-    <description><![CDATA[La plantilla vRA 8 da nombres y números aleatorios a las máquinas y redes NSX-T bajo demanda en implementaciones si no especifica nomenclatura personalizada. Este blog va a demostrar cómo puede personalizar nombres de su máquinas y redes NSX-T cuando son creados de una plantilla vRA 8.
-Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T (si quiere personalizar el nombre del red bajo demanda):]]></description>
-</item><item>
-    <title>Parte 2 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda</title>
-    <link>https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</link>
-    <pubDate>Mon, 16 Mar 2020 07:48:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-16-vra8-blueprint-nsxt-on-demand-routed-network.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 que crear las redes NSX-T enrutables bajo demanda y desplegar máquinas conectadas a las nuevas redes creadas. Cuando está usando la plantilla para crear red NSX enrutable bajo demanda, en realidad, vRA 8 crea un enrutador lógico tier-1 y lo conecta a un enrutador lógico tier-0 existente. Después, vRA 8 crea una red NSX-T bajo demanda y la conecta al enrutador lógico tier-1.
-Versiones de Productos (Demo)  vSphere 6.]]></description>
-</item><item>
-    <title>Parte 1 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Redes NSX-T Existentes</title>
-    <link>https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html</link>
-    <pubDate>Fri, 13 Mar 2020 07:48:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas conectadas a redes NSX-T existentes.
-Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T:
- enrutador lógico (tier-0 o tier-1) configurado red lógico conectado a un enrutador lógico  Información General de Proceso  Configure las redes existentes con rangos de IP que desea utilizar para las VMs (máquinas virtuales).]]></description>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ Puedes crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.
+Versiones de Productos Demostración (Demo) vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1 Prerrequisitos vRA 8:
+Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo) NSX-T:]]></description>
 </item><item>
     <title>Introducción a la Serie: vRA 8 &#43; NSX-T</title>
     <link>https://288clouds.com/es/2020-03-12-vra8-nsxt-blog-series-overview.html</link>
@@ -92,6 +21,6 @@ Versiones de Productos (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vID
     <description><![CDATA[Con la reciente introducción de vRA 8.0, he estado recibido muchas preguntas de clientes acerca como usar NSX-T con vRA 8.
 Esta serie de blog posts se va a enfocar en mostrar cómo crear plantillas vRA 8 que utilizan objectos NSX-T.
 Esta es la lista de blogs que crearé para esta serie (a partir de 15 de marzo del 2020):
- Parte 1: Plantilla vRA 8 con Redes NSX-T Existentes Parte 2: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda Parte 3: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red) Parte 4: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA) Parte 5: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento) Parte 6: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda Parte 7: Plantilla vRA 8 con &ldquo;One-Arm Load Balancer&rdquo; (equilibrador de carga) NSX-T Existente Parte 8: Plantilla vRA 8 con &ldquo;One-Arm Load Balancer&rdquo; (equilibrador de carga) NSX-T Bajo Demanda Parte 9: Plantilla vRA 8 con Redes NSX-T Bajo Demanda  Nota: la lista de blogs puede cambiar sin previo aviso.]]></description>
+Parte 1: Plantilla vRA 8 con Redes NSX-T Existentes Parte 2: Plantilla vRA 8 con Redes NSX-T Enrutables Bajo Demanda Parte 3: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red) Parte 4: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA) Parte 5: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento) Parte 6: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda Parte 7: Plantilla vRA 8 con “One-Arm Load Balancer” NSX-T Existente Parte 8: Plantilla vRA 8 con “One-Arm Load Balancer” NSX-T Bajo Demanda Parte 9: Plantilla vRA 8 con Redes NSX-T Bajo Demanda Nota: la lista de blogs puede cambiar sin previo aviso.]]></description>
 </item></channel>
 </rss>

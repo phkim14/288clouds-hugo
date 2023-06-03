@@ -5,21 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Creating a Cloud Agnostic vRA Template with Inputs - 288clouds</title><meta name="Description" content="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input."><meta property="og:title" content="Creating a Cloud Agnostic vRA Template with Inputs" />
-<meta property="og:description" content="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input." />
+        <title>Creating a Cloud Agnostic vRA Template with Inputs - 288clouds</title><meta name="Description" content="Learn how to create a template that can be used across on-premises data centers and multiple clouds."><meta property="og:title" content="Creating a Cloud Agnostic vRA Template with Inputs" />
+<meta property="og:description" content="Learn how to create a template that can be used across on-premises data centers and multiple clouds." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" />
-<meta property="og:image" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"/>
+<meta property="og:url" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" /><meta property="og:image" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-14T05:52:00-05:00" />
-<meta property="article:modified_time" content="2021-09-14T05:52:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2021-09-14T05:52:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"/>
 <meta name="twitter:title" content="Creating a Cloud Agnostic vRA Template with Inputs"/>
-<meta name="twitter:description" content="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input."/>
+<meta name="twitter:description" content="Learn how to create a template that can be used across on-premises data centers and multiple clouds."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" /><link rel="prev" href="https://288clouds.com/2021-08-20-getting-started-videos-vmc-on-aws.html" /><link rel="next" href="https://288clouds.com/2021-10-13-vmc-on-aws-connectivity-logical-design-poster.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" /><link rel="prev" href="https://288clouds.com/2021-08-20-getting-started-videos-vmc-on-aws.html" /><link rel="next" href="https://288clouds.com/2021-10-13-vmc-on-aws-connectivity-logical-design-poster.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -33,13 +32,13 @@
                             "url": "https:\/\/288clouds.com\/2021-09-14-creating-cloud-agnostic-template-using-inputs\/featured-image.png",
                             "width":  2000 ,
                             "height":  1111 
-                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, vRA template, VMC on AWS, VMware Cloud on AWS, public clouds, AWS, GCP, hybrid cloud, multi-cloud, vRealize Automation","wordcount":  970 ,
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, vRA template, Google Cloud Platform, GCP, AWS, VMC on AWS","wordcount":  970 ,
         "url": "https:\/\/288clouds.com\/2021-09-14-creating-cloud-agnostic-template-using-inputs.html","datePublished": "2021-09-14T05:52:00-05:00","dateModified": "2021-09-14T05:52:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Phoebe Kim"
-            },"description": "Let's learn how you can create a cloud agnostic vRealize Automation template with an user input."
+            },"description": "Learn how to create a template that can be used across on-premises data centers and multiple clouds."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -123,7 +122,7 @@
         data-srcset="./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png 1.5x, ./2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png 2x"
         data-sizes="auto"
         alt="/2021-09-14-creating-cloud-agnostic-template-using-inputs/featured-image.png"
-        title="Let&#39;s learn how you can create a cloud agnostic vRealize Automation template with an user input." /></div><div class="details toc" id="toc-static"  kept="">
+        title="Learn how to create a template that can be used across on-premises data centers and multiple clouds." /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -331,7 +330,7 @@ As you can see in the screen capture above, I have various cloud zones already c
 <h3 id="demo--example-yaml-file">Demo / Example YAML File</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -371,45 +370,45 @@ As you can see in the screen capture above, I have various cloud zones already c
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
-inputs:
-  targetEnv:
-    type: string
-    title: Target Environment
-    oneOf:
-      - title: VMC on AWS
-        const: vmconaws-sddc-02
-      - title: AWS
-        const: aws-us-west-1
-      - title: GCP
-        const: gcp-us-west1
-      - title: Azure
-        const: azure-west-us
-      - title: On-Premises
-        const: sjc-vcsa-01
-resources:
-  Cloud_SecurityGroup_1:
-    type: Cloud.SecurityGroup
-    properties:
-      securityGroupType: existing
-      constraints:
-        - tag: &#39;${input.targetEnv}&#39;
-  Cloud_Machine_1:
-    type: Cloud.Machine
-    properties:
-      image: Ubuntu-20.04
-      flavor: size-small
-      networks:
-        - network: &#39;${resource.Cloud_Network_1.id}&#39;
-      securityGroups:
-        - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
-  Cloud_Network_1:
-    type: Cloud.Network
-    properties:
-      networkType: private
-      constraints:
-        - tag: &#39;${input.targetEnv}&#39;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">formatVersion: 1
+</span></span><span class="line"><span class="cl">inputs:
+</span></span><span class="line"><span class="cl">  targetEnv:
+</span></span><span class="line"><span class="cl">    type: string
+</span></span><span class="line"><span class="cl">    title: Target Environment
+</span></span><span class="line"><span class="cl">    oneOf:
+</span></span><span class="line"><span class="cl">      - title: VMC on AWS
+</span></span><span class="line"><span class="cl">        const: vmconaws-sddc-02
+</span></span><span class="line"><span class="cl">      - title: AWS
+</span></span><span class="line"><span class="cl">        const: aws-us-west-1
+</span></span><span class="line"><span class="cl">      - title: GCP
+</span></span><span class="line"><span class="cl">        const: gcp-us-west1
+</span></span><span class="line"><span class="cl">      - title: Azure
+</span></span><span class="line"><span class="cl">        const: azure-west-us
+</span></span><span class="line"><span class="cl">      - title: On-Premises
+</span></span><span class="line"><span class="cl">        const: sjc-vcsa-01
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl">  Cloud_SecurityGroup_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.SecurityGroup
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      securityGroupType: existing
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: &#39;${input.targetEnv}&#39;
+</span></span><span class="line"><span class="cl">  Cloud_Machine_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Machine
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      image: Ubuntu-20.04
+</span></span><span class="line"><span class="cl">      flavor: size-small
+</span></span><span class="line"><span class="cl">      networks:
+</span></span><span class="line"><span class="cl">        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">      securityGroups:
+</span></span><span class="line"><span class="cl">        - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
+</span></span><span class="line"><span class="cl">  Cloud_Network_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Network
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      networkType: private
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: &#39;${input.targetEnv}&#39;
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -422,13 +421,13 @@ resources:
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" data-title="Creating a Cloud Agnostic vRA Template with Inputs" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,vRA template,VMC on AWS,VMware Cloud on AWS,public clouds,AWS,GCP,hybrid cloud,multi-cloud,vRealize Automation"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" data-title="Creating a Cloud Agnostic vRA Template with Inputs" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,vRA template,Google Cloud Platform,GCP,AWS,VMC on AWS"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/2021-09-14-creating-cloud-agnostic-template-using-inputs.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="./tags/vra-template.html">vRA template</a>,&nbsp;<a href="./tags/vmc-on-aws.html">VMC on AWS</a>,&nbsp;<a href="./tags/vmware-cloud-on-aws.html">VMware Cloud on AWS</a>,&nbsp;<a href="./tags/public-clouds.html">public clouds</a>,&nbsp;<a href="./tags/aws.html">AWS</a>,&nbsp;<a href="./tags/gcp.html">GCP</a>,&nbsp;<a href="./tags/hybrid-cloud.html">hybrid cloud</a>,&nbsp;<a href="./tags/multi-cloud.html">multi-cloud</a>,&nbsp;<a href="./tags/vrealize-automation.html">vRealize Automation</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="./tags/vra.html">vRA</a>,&nbsp;<a href="./tags/vra8.html">vRA8</a>,&nbsp;<a href="./tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="./tags/vra-template.html">vRA template</a>,&nbsp;<a href="./tags/google-cloud-platform.html">Google Cloud Platform</a>,&nbsp;<a href="./tags/gcp.html">GCP</a>,&nbsp;<a href="./tags/aws.html">AWS</a>,&nbsp;<a href="./tags/vmc-on-aws.html">VMC on AWS</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
         </section>
@@ -439,7 +438,7 @@ resources:
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

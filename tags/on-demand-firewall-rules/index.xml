@@ -10,8 +10,8 @@
     <author>Author</author>
     <guid>https://288clouds.com/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</guid>
     <description><![CDATA[Let&rsquo;s explore how you can create on-demand distributed firewall rules in a VMC on AWS environment with a vRA Cloud template.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Process Overview  Create a template that adds a new security group to the deployment.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Process Overview Create a template that adds a new security group to the deployment.]]></description>
 </item></channel>
 </rss>

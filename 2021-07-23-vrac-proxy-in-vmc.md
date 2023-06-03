@@ -1,6 +1,7 @@
 # Using vRA with VMC on AWS: Getting Started
 
 
+
 vRealize Automation can be used to automate the deployment of workloads to a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let's learn how you can get started with using vRealize Automation with VMware Cloud on AWS. 
 
 

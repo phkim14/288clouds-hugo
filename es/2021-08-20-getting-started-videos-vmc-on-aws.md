@@ -1,6 +1,5 @@
 # Getting Started Videos for VMware Cloud on AWS
 
-
 # ~ Este post será traducido al español próximamente ~
 
 I created several getting started videos for VMware Cloud on AWS, which has been featured on the [VMware Cloud Community blog][vmware-cloud-blog-link] but I thought it'd be nice to add these to my personal blog as well. 
@@ -8,7 +7,6 @@ I created several getting started videos for VMware Cloud on AWS, which has been
 VMware Cloud on AWS is a highly scalable, secure hybrid cloud service that allows organizations to transition rapidly and seamlessly to the cloud. Today, we are releasing a new set of videos to help customers get started with VMware Cloud on AWS. We will highlight some of the key capabilities of VMware Cloud on AWS that allow organizations to achieve better flexibility and resiliency in their VMware Cloud on AWS SDDCs. We will also demonstrate the simplicity and speed of migrating vSphere workloads from on-premises to VMware Cloud on AWS using VMware HCX.
 
 I hope these videos help you get started with VMware Cloud on AWS. For additional information you can also visit [VMware Cloud Tech Zone][vmware-tech-zone-link]. 
-
 
 ## Adding a Host to a VMware Cloud on AWS SDDC
 In this video, we demonstrate how to easily and quickly scale a VMware Cloud on AWS SDDC by adding additional hosts.
@@ -38,6 +36,4 @@ VMware HCX can seamlessly migrate vSphere workloads from an on-premises environm
 
 [vmware-cloud-blog-link]: https://cloud.vmware.com/community/2021/07/29/getting-started-videos-vmware-cloud-aws/?src=so_5d42086649d4a&cid=70134000001CUn1
 [vmware-tech-zone-link]: https://vmc.techzone.vmware.com/
-
-
 

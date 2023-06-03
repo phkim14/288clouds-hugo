@@ -3,42 +3,14 @@
         <title>grupo de seguridad - Etiqueta - 288clouds</title>
         <link>https://288clouds.com/es/tags/grupo-de-seguridad.html</link>
         <description>grupo de seguridad - Etiqueta - 288clouds</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 23 Mar 2020 04:02:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/grupo-de-seguridad.html" rel="self" type="application/rss+xml" /><item>
-    <title>Parte 6 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda</title>
-    <link>https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html</link>
-    <pubDate>Mon, 23 Mar 2020 04:02:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-23-vra8-nsxt-on-demand-security-group.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad bajo demanda.
-Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (proyectos, zonas de nube, &ldquo;image mappings&rdquo; o asignaciones de imagen, &ldquo;flavor mappings&rdquo; o asignaciones de tipo)  NSX-T:
- red configurado  Información General de Proceso  Cree o revise un perfil de red.]]></description>
-</item><item>
-    <title>Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)</title>
-    <link>https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</link>
-    <pubDate>Fri, 20 Mar 2020 05:02:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas de puerto de segmento de NSX-T.
-Update: July 26, 2021 No puede usar etiquetas de puerto de segmento de NSX-T empezando con vRA 8.2. Gracias a mi colega Mukesh Idnani para este descubrimiento!
-Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 19 Mar 2020 07:53:00 -0500</lastBuildDate><atom:link href="https://288clouds.com/es/tags/grupo-de-seguridad.html" rel="self" type="application/rss+xml" /><item>
     <title>Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)</title>
     <link>https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</link>
     <pubDate>Thu, 19 Mar 2020 07:53:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.
-Versiones de Productos Demostración (Demo)  vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1  Prerrequisitos vRA 8:
- Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo)  NSX-T:
- Grupos de seguridad configurados  Información General de Proceso  Cree una etiqueta en el grupo de seguridad existente.]]></description>
-</item><item>
-    <title>Parte 3 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red)</title>
-    <link>https://288clouds.com/es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</link>
-    <pubDate>Wed, 18 Mar 2020 06:13:00 -0500</pubDate>
-    <author>Autor</author>
-    <guid>https://288clouds.com/es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando perfil de red.
-Nota que, con este proceso, todos los grupos de seguridad que selecciona en el perfil de red se aplicarán a las máquinas. Si tiene máquinas múltiples en una plantilla y quiere especificar grupo de seguridad diferente para cada máquina, tiene que usar etiqueta vRA o etiqueta de puerto de segmento (vea parte 4 y 5 de esta serie de blog por esos procesos).]]></description>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ Puedes crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.
+Versiones de Productos Demostración (Demo) vSphere 6.5 U3 vRA 8.0.1 (incluyendo vRSLCM y vIDM) NSX-T 2.5.1 vSAN 6.6.1 Prerrequisitos vRA 8:
+Cuenta conectada de NSX-T Infraestructura básica configurada (Proyectos, Zonas de nube, Asignaciones de imagen, Asignaciones de tipo) NSX-T:]]></description>
 </item></channel>
 </rss>

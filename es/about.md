@@ -1,7 +1,7 @@
 # Acerca de Mí
 
 
-{{<image src="headshot.jpeg" width="200" display="inline-block">}}
+{{<image src="headshot.jpg" width="200" display="inline-block">}}
 
 ## Hola, mi nombre es Phoebe Kim, y soy una "Senior Manager" para el "Multi-Cloud Solutions Architecture team" de VMware en Dallas/Fort Worth, EE.UU.
 
@@ -31,6 +31,9 @@ Puedo ser contactada vía [correo electrónico](mailto:info.288clouds@gmail.com)
 
 ##### Project Management Institute (PMI)
 * Project Management Professional (PMP), #2792653
+
+##### The Linux Foundation
+* Certified Kubernetes Administrator (CKA)
 
 ##### VMware
 <b>Cloud Management and Automation</b>
@@ -62,8 +65,15 @@ Puedo ser contactada vía [correo electrónico](mailto:info.288clouds@gmail.com)
 * Bachelor of Science (B.S.) in Industrial Engineering
 * Bachelor of Music (B.M.) in Violin Studies
 
+##### Cornell University
+* Leadership Essentials Certificate - Issued March 2022
+
+##### Harvard Business School Online
+* Credential of Readiness (CORe) - Issued May 2023
+
 ***
 ## Idiomas
 * English (avanzado)
 * Korean (nativo)
 * Spanish (intermedio)
+

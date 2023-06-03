@@ -12,8 +12,8 @@ Esta es la lista de blogs que crearé para esta serie (a partir de 15 de marzo d
 * [Parte 4: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)][part4-link]
 * [Parte 5: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)][part5-link]
 * [Parte 6: Plantilla vRA 8 con Grupos de Seguridad Bajo Demanda][part6-link]
-* [Parte 7: Plantilla vRA 8 con "One-Arm Load Balancer" (equilibrador de carga) NSX-T Existente][part7-link]
-* [Parte 8: Plantilla vRA 8 con "One-Arm Load Balancer" (equilibrador de carga) NSX-T Bajo Demanda][part8-link]
+* [Parte 7: Plantilla vRA 8 con “One-Arm Load Balancer” NSX-T Existente][part7-link]
+* [Parte 8: Plantilla vRA 8 con “One-Arm Load Balancer” NSX-T Bajo Demanda][part8-link]
 * ~~Parte 9: Plantilla vRA 8 con Redes NSX-T Bajo Demanda~~
 
 Nota: la lista de blogs puede cambiar sin previo aviso. Última actualización el 12 de diciembre del 2020. 
@@ -30,17 +30,17 @@ He creado un laboratorio anidado para crear los ejemplos incluidos en esta serie
 
 ## Información General acerca de la Infraestructura vSphere
 2 clústers vSAN, habilitados con DRS y HA: 
-* "Management cluster" (clúster de gestionamiento) – 4 hosts ESXi
-* "Compute/edge cluster" (clúster de cómputo/edge) – 3 hosts ESXi
+* Clúster de administración – 4 hosts ESXi
+* Clúster de “Compute/Edge” – 3 hosts ESXi
 
-El "management cluster" tiene las siguientes máquinas:
-* vCenter Server Appliance (vCSA) 
-* vRA appliance
-* vRSLCM appliance
-* vIDM appliance
-* NSX-T manager
+El clúster de administración tiene las siguientes máquinas:
+  * vCenter (vCSA) 
+  * Máquina virtual para vRA
+  * Máquina virtual para vRSLCM
+  * Máquina virtual para vIDM
+  * NSX-T manager
 
-El "compute/edge cluster" contiene todas las cargas de trabajo y los nodos NSX edge.
+El clúster “compute/edge” contiene todas las cargas de trabajo y las machinas virtuales “NSX-T Edge”.
 
 
 [part1-link]: https://288clouds.com/es/2020-03-13-vra8-blueprint-nsxt-existing-network.html

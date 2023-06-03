@@ -19,7 +19,7 @@ VMware Cloud on AWS is an integrated hybrid cloud service that enables organizat
     <guid>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation 8.x / Cloud allows you to create templates with cloud agnostic resources so that you can create a template that can be used across on-premises data centers and multiple clouds.
 So let&rsquo;s explore how you can create a vRA template that meets the following requirements:
- The user should be able to select the deployment target environment (where the deployment should be created) The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP)  Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.]]></description>
+The user should be able to select the deployment target environment (where the deployment should be created) The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP) Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.]]></description>
 </item><item>
     <title>Getting Started Videos for VMware Cloud on AWS</title>
     <link>https://288clouds.com/es/2021-08-20-getting-started-videos-vmc-on-aws.html</link>
@@ -43,17 +43,17 @@ Register for VMworld 2021 VMworld 2021 is virtual again and the general pass is 
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Network Insight can be used to gain visibility into the workloads in a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Network Insight with VMware Cloud on AWS.
-Demo Product Versions  vRNI Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prerequisites VMC on AWS:
- SDDC deployed Access to the SDDC  Process Overview  Deploy a vRNI Data Collector in the VMC on AWS SDDC.]]></description>
+Demo Product Versions vRNI Cloud VMware Cloud on AWS (SDDC version 1.14v4) Prerequisites VMC on AWS:
+SDDC deployed Access to the SDDC Process Overview Deploy a vRNI Data Collector in the VMC on AWS SDDC.]]></description>
 </item><item>
     <title>Using vRA with VMC on AWS: Getting Started</title>
     <link>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</link>
-    <pubDate>Thu, 22 Jul 2021 05:52:00 -0500</pubDate>
+    <pubDate>Fri, 23 Jul 2021 05:52:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation can be used to automate the deployment of workloads to a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Automation with VMware Cloud on AWS.
-Demo Product Versions  vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prerequisites VMC on AWS:
- SDDC deployed Access to the SDDC  Process Overview  Deploy a vRA Cloud Proxy in the VMC on AWS SDDC.]]></description>
+Demo Product Versions vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4) Prerequisites VMC on AWS:
+SDDC deployed Access to the SDDC Process Overview Deploy a vRA Cloud Proxy in the VMC on AWS SDDC.]]></description>
 </item><item>
     <title>vRA Cloud &#43; GCP: Using Security Groups</title>
     <link>https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html</link>
@@ -61,9 +61,9 @@ Demo Product Versions  vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prer
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can apply existing Google Cloud Platform (GCP) network tags when deploying machines to a GCP environment with a vRA cloud template.
-Demo Product Versions  vRA Cloud GCP Environment  Prerequisites GCP:
- Active GCP project Service account with appropriate roles for connectivity with vRA cloud  vRA Cloud:
- Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
+Demo Product Versions vRA Cloud GCP Environment Prerequisites GCP:
+Active GCP project Service account with appropriate roles for connectivity with vRA cloud vRA Cloud:
+Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
 </item><item>
     <title>On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere</title>
     <link>https://288clouds.com/es/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</link>
@@ -79,9 +79,9 @@ On-demand Network Types vRA Cloud Assembly has several on-demand network types a
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can create on-demand distributed firewall rules in a VMC on AWS environment with a vRA Cloud template.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Process Overview  Create a template that adds a new security group to the deployment.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Process Overview Create a template that adds a new security group to the deployment.]]></description>
 </item><item>
     <title>Using On-demand NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
     <link>https://288clouds.com/es/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</link>
@@ -89,8 +89,8 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ There are different ways you can create on-demand NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Methods Using vRA template Using vRA network profile Demos / Examples Method 1: Using vRA Template In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
 </item></channel>
 </rss>

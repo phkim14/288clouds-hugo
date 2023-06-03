@@ -8,18 +8,17 @@
         <title>vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer - 288clouds</title><meta name="Description" content="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer."><meta property="og:title" content="vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer" />
 <meta property="og:description" content="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" />
-<meta property="og:image" content="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"/>
+<meta property="og:url" content="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" /><meta property="og:image" content="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-07-22T07:53:00-05:00" />
-<meta property="article:modified_time" content="2020-12-12T07:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2020-12-12T07:53:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer/featured-image.png"/>
 <meta name="twitter:title" content="vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer"/>
 <meta name="twitter:description" content="Learn how to create a vRA cloud blueprint to deploy machines with an on-demand NSX-T one-arm load balancer."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" /><link rel="prev" href="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" /><link rel="next" href="https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://288clouds.com/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html" /><link rel="prev" href="https://288clouds.com/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" /><link rel="next" href="https://288clouds.com/2020-09-23-vcdx-nv-common-questions.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -297,7 +296,7 @@
 <h3 id="demo--example-blueprint-yaml-file">Demo / Example Blueprint YAML File</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -328,36 +327,36 @@
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
-inputs: {}
-resources:
-  Cloud_LoadBalancer_1:
-    type: Cloud.LoadBalancer
-    properties:
-      routes:
-        - protocol: HTTP
-          port: 80
-          instancePort: 80
-          instanceProtocol: HTTP
-      network: &#39;${resource.Cloud_Network_1.id}&#39;
-      instances: &#39;${resource.Cloud_Machine_1[*].id}&#39;
-      internetFacing: false
-  Cloud_Machine_1:
-    type: Cloud.Machine
-    properties:
-      image: im-CentOS7
-      flavor: fl-small
-      count: 2
-      networks:
-        - network: &#39;${resource.Cloud_Network_1.id}&#39;
-          assignment: static
-  Cloud_Network_1:
-    type: Cloud.Network
-    properties:
-      networkType: existing
-      constraints:
-        - tag: &#39;subnet-cidr:192.168.92.0/24&#39;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">formatVersion: 1
+</span></span><span class="line"><span class="cl">inputs: {}
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl">  Cloud_LoadBalancer_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.LoadBalancer
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      routes:
+</span></span><span class="line"><span class="cl">        - protocol: HTTP
+</span></span><span class="line"><span class="cl">          port: 80
+</span></span><span class="line"><span class="cl">          instancePort: 80
+</span></span><span class="line"><span class="cl">          instanceProtocol: HTTP
+</span></span><span class="line"><span class="cl">      network: &#39;${resource.Cloud_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">      instances: &#39;${resource.Cloud_Machine_1[*].id}&#39;
+</span></span><span class="line"><span class="cl">      internetFacing: false
+</span></span><span class="line"><span class="cl">  Cloud_Machine_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Machine
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      image: im-CentOS7
+</span></span><span class="line"><span class="cl">      flavor: fl-small
+</span></span><span class="line"><span class="cl">      count: 2
+</span></span><span class="line"><span class="cl">      networks:
+</span></span><span class="line"><span class="cl">        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">          assignment: static
+</span></span><span class="line"><span class="cl">  Cloud_Network_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Network
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      networkType: existing
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: &#39;subnet-cidr:192.168.92.0/24&#39;
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -387,7 +386,7 @@ resources:
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

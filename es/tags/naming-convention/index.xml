@@ -10,6 +10,6 @@
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-03-17-customize-machine-on-demand-network-names.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRA 8 blueprint gives random names and numbers to the VMs and on-demand NSX-T networks deployed if you do not specify a naming convention. This blog will cover how you can customize the names of your VMs and on-demand NSX-T networks when they are deployed from a vRA 8 blueprint.
-Demo Product Versions  vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.]]></description>
+Demo Product Versions vSphere 6.5 U3 vRA 8.0.1 (including vRSLCM and vIDM) NSX-T 2.]]></description>
 </item></channel>
 </rss>

@@ -1,64 +1,65 @@
-# Parte 3 de la Serie Blog vRA 8 + NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red)
+# vRA 8 + NSX-T Blog Series Part 3: vRA 8 Blueprint with Existing Security Group (network profile)
 
+# ~ Este post será traducido al español próximamente ~
 
-Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando perfil de red. 
+You can create a vRA 8 blueprint to deploy machines and place them in existing NSX-T security group(s) using a network profile. 
 
-Nota que, con este proceso, todos los grupos de seguridad que selecciona en el perfil de red se aplicarán a las máquinas. Si tiene máquinas múltiples en una plantilla y quiere especificar grupo de seguridad diferente para cada máquina, tiene que usar etiqueta vRA o etiqueta de puerto de segmento (vea parte 4 y 5 de esta serie de blog por esos procesos).
+Note that with this method, however, any and all security groups that you select in the network profile will be applied to the machines. If you have multiple machines in a blueprint and want to specify which security group each machine should use then use vRA tag or segment port tag (refer to series part 4 & 5 for those methods).
 
-## Versiones de Productos (Demo)
+## Demo Product Versions  
 * vSphere 6.5 U3
-* vRA 8.0.1 (incluyendo vRSLCM y vIDM)
+* vRA 8.0.1 (including vRSLCM and vIDM)
 * NSX-T 2.5.1
 * vSAN 6.6.1
 
-## Prerrequisitos
+## Prerequisites
 vRA 8:
-* Cuenta conectada de NSX-T
-* Infraestructura básica configurada (proyectos, zonas de nube, "image mappings" o asignaciones de imagen, "flavor mappings" o asignaciones de tipo)
+* NSX-T account connected
+* Basic infrastructure configured (Projects, Cloud Zones, Flavor Mappings, Image Mappings)
 
 NSX-T:
-* Grupos de seguridad configurados
+* security group(s) configured
 
 
-## Información General de Proceso 
-1. Cree o modifique un perfil de red.  
-2. Seleccione grupo(s) de seguridad existente(s) que va a hacer usando. 
-3. Cree una plantilla con los objectos: "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX).
+## Process Overview
+1. Create or edit a network profile.
+2. Select which existing security groups you'd like to use.
+3. Create a blueprint with Cloud Agnostic Machine and NSX Network objects.
 
-Paso opcional:
-* Cree entrada en la plantilla para personalizar el nombre de la máquina.
+optional steps:
+* Create inputs in the blueprint to customize the machine name.
 
 
-## Ejemplo
+## Demo / Example
 
-### Configure el Perfil de Red
-1. Vaya a “Infraestructura” > “Perfiles de Red” (en el menú “Configurar”) y de clic en el botón “+ NUEVO PERFIL DE RED” (o puede revisar un perfil de red existente). 
-2. Escoge la cuenta o región y nombre el perfil.
-3. Configure redes existentes o redes bajo demanda.
-4. Vaya a “Grupos de seguridad” y de clic en el botón “+ AGREGAR GRUPO DE SEGURIDAD”.
+### Configure Network Profile
+1. Go to "Infrastructure" > "Network Profiles" (under Configure) and click "+ NEW NETWORK PROFILE". (or you can choose to edit an existing network profile).
+2. Choose an account/region and give the profile a name.
+3. Configure existing networks or on-demand networks. 
+4. Go to "Security Groups" tab and select "+ ADD SECURITY GROUP". 
 {{<image src="step4.png" linked="true">}}
-5. Seleccione grupo(s) de seguridad que va a hacer aplicar.
+5. Select security group(s) that you'd like to apply. 
 {{<image src="step5.png" linked="true">}}
-6. De clic en el botón “CREAR” para guardar el perfil.
+6. Save the network profile. 
 
-### Cree y Configure la Plantilla
-7. Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.
-8. Nombre la plantilla y escoge el proyecto.
-9. Pon la "Cloud Agnostic Machine" (máquina agnóstica de nube) y "NSX Network" (red NSX) en el lienzo en blanco. <b>Nota que no necesita un objeto “Security Group" (grupo de seguridad) en la plantilla. </b>
-10. Conecta "Cloud Agnostic Machine" a "NSX Network" en el lienzo en blanco.
-11. A la derecha en el código YAML, escoge una imagen y un tipo para la máquina. 
-12. Debajo de `-network:`, agregue una línea `assignment: static` para dar una dirección IP estática a la máquina.
-13. Para la “red NSX”, cambie `networkType` de `properties` dependiendo de si está usando una red existente o una red bajo demanda. En este ejemplo, estoy usando una red bajo demanda.  
+### Create and Configure Blueprint
+7. Go to "Blueprints" and Click "+ NEW" to create a new blueprint.
+8. Give a name to the blueprint and choose a project.
+9. Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas. <b>Note that you do not need to add the Security Group object to the blueprint.</b>
+10. Connect the Cloud Agnostic Machine to the NSX Network on the canvas. 
+11. On the right side in the YAML file, choose an image and size for the machine. 
+12. Under `- network: `, add the line `assignment: static` to give a static IP address to the machine from the IP range we've created.
+13. For the NSX network, change the `networkType` under `properties` accordingly depending on whether you have configured existing or on-demand networks in the network profile. In this demo, I'll be using an on-demand network. 
 {{<image src="step13.png" linked="true">}}
-14. De clic en el botón “PROBAR”.
-15. De clic en el botón “IMPLEMENTAR” a crear una nueva implementación.
-16. Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.
+14. Click "TEST".
+15. Click "DEPLOY" to create a new deployment.
+16. Give it a deployment name, choose "Current Draft", the cick "DEPLOY".
 
-### Verifique la Implementación 
-17. Cuando la implementación está completa, vaya a “Implementaciones” en vRA y nota la dirección IP de la nueva implementación.
+### Verify Deployment
+17. Once deployed, go to "Deployments" tab in vRA and note the IP address of the deployment.
 {{<image src="step17.png" linked="true">}}
-18. Inicie una sesión en el "NSX-T UI" (el cliente web de NSX-T) y vaya a "Inventory" > "Groups".
+18. Now log into NSX-T UI and go to "Inventory" > "Groups".
 {{<image src="step18.png" linked="true">}}
-19. De clic en el botón “Ver miembros” del “grupo de seguridad” que usó en el lienzo en blanco.
-20. De clic en el botón “Direcciones IP” y puede ver la dirección IP de la implementación. 
+19. Click "View Members" of the security group you have selected in the network profile.
+20. Click "IP Addresses" and you'll see the IP address of the deployment. 
 {{<image src="step20.png" linked="true">}}

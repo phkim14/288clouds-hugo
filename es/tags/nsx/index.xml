@@ -18,9 +18,9 @@ On-demand Network Types vRA Cloud Assembly has several on-demand network types a
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can create on-demand distributed firewall rules in a VMC on AWS environment with a vRA Cloud template.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Process Overview  Create a template that adds a new security group to the deployment.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Process Overview Create a template that adds a new security group to the deployment.]]></description>
 </item><item>
     <title>Using On-demand NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
     <link>https://288clouds.com/es/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</link>
@@ -28,9 +28,9 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ There are different ways you can create on-demand NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Methods Using vRA template Using vRA network profile Demos / Examples Method 1: Using vRA Template In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
 </item><item>
     <title>Using Existing NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
     <link>https://288clouds.com/es/2021-03-22-vrac-vmc-nsxt-existing-security-groups.html</link>
@@ -38,9 +38,9 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-22-vrac-vmc-nsxt-existing-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ There are different ways you can consume existing NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  Under &ldquo;Compute Groups&rdquo; in the VMC on AWS UI, create a security group.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Methods Using vRA template Using vRA network profile Demos / Examples Method 1: Using vRA Template Under &ldquo;Compute Groups&rdquo; in the VMC on AWS UI, create a security group.]]></description>
 </item><item>
     <title>Common Questions around VCDX-NV</title>
     <link>https://288clouds.com/es/2020-09-23-vcdx-nv-common-questions.html</link>

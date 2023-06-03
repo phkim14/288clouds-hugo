@@ -10,8 +10,8 @@
     <author>Author</author>
     <guid>https://288clouds.com/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</guid>
     <description><![CDATA[There are different ways you can create on-demand NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Methods Using vRA template Using vRA network profile Demos / Examples Method 1: Using vRA Template In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
 </item></channel>
 </rss>

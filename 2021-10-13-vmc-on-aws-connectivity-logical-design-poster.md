@@ -31,3 +31,4 @@ This section provides an ordered list of steps required when migrating workloads
 [vmware-cloud-blog-link]: https://blogs.vmware.com/cloud/2021/10/13/introducing-vmware-cloud-on-aws-logical-design-poster-for-workload-mobility/
 [poster-download-link]: https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/docs/vmw-vmcloud-on-aws-logical-design.pdf
 [poster-download-link-2]: https://288clouds.com/images/VMware_Cloud_on_AWS_Poster-101321.pdf
+

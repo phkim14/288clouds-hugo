@@ -11,5 +11,12 @@
     <guid>https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.
 Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
+</item><item>
+    <title>vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer</title>
+    <link>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
+    <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
+    <author>Autor</author>
+    <guid>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.]]></description>
 </item></channel>
 </rss>

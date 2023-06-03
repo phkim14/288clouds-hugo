@@ -5,21 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Using vRA with VMC on AWS: Getting Started - 288clouds</title><meta name="Description" content="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS."><meta property="og:title" content="Using vRA with VMC on AWS: Getting Started" />
-<meta property="og:description" content="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS." />
+        <title>Using vRA with VMC on AWS: Getting Started - 288clouds</title><meta name="Description" content="Learn how you can get started with using vRealize Automation with VMware Cloud on AWS."><meta property="og:title" content="Using vRA with VMC on AWS: Getting Started" />
+<meta property="og:description" content="Learn how you can get started with using vRealize Automation with VMware Cloud on AWS." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" />
-<meta property="og:image" content="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc/featured-image.png"/>
-<meta property="article:published_time" content="2021-07-22T05:52:00-05:00" />
-<meta property="article:modified_time" content="2021-07-22T05:52:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="og:url" content="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" /><meta property="og:image" content="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc/featured-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-23T05:52:00-05:00" />
+<meta property="article:modified_time" content="2021-07-23T05:52:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc/featured-image.png"/>
 <meta name="twitter:title" content="Using vRA with VMC on AWS: Getting Started"/>
-<meta name="twitter:description" content="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS."/>
+<meta name="twitter:description" content="Learn how you can get started with using vRealize Automation with VMware Cloud on AWS."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" /><link rel="prev" href="https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html" /><link rel="next" href="https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" /><link rel="prev" href="https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html" /><link rel="next" href="https://288clouds.com/es/2021-07-28-vrni-data-collector-on-prem.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -33,13 +32,13 @@
                             "url": "https:\/\/288clouds.com\/es\/2021-07-23-vrac-proxy-in-vmc\/featured-image.png",
                             "width":  2000 ,
                             "height":  1091 
-                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, vRA Cloud Proxy, VMware Cloud on AWS","wordcount":  704 ,
-        "url": "https:\/\/288clouds.com\/es\/2021-07-23-vrac-proxy-in-vmc.html","datePublished": "2021-07-22T05:52:00-05:00","dateModified": "2021-07-22T05:52:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, vRA Cloud, VMC on AWS","wordcount":  716 ,
+        "url": "https:\/\/288clouds.com\/es\/2021-07-23-vrac-proxy-in-vmc.html","datePublished": "2021-07-23T05:52:00-05:00","dateModified": "2021-07-23T05:52:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Phoebe Kim"
-            },"description": "Let's learn how to get started with using vRealize Automation with VMware Cloud on AWS."
+            },"description": "Learn how you can get started with using vRealize Automation with VMware Cloud on AWS."
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -114,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Using vRA with VMC on AWS: Getting Started</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a>&nbsp;<a href="../es/categories/vmc-on-aws.html"><i class="far fa-folder fa-fw"></i>VMC on AWS</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-22">2021-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;704 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-07-23">2021-07-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;716 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutos&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -123,7 +122,7 @@
         data-srcset="../es/2021-07-23-vrac-proxy-in-vmc/featured-image.png, ../es/2021-07-23-vrac-proxy-in-vmc/featured-image.png 1.5x, ../es/2021-07-23-vrac-proxy-in-vmc/featured-image.png 2x"
         data-sizes="auto"
         alt="/es/2021-07-23-vrac-proxy-in-vmc/featured-image.png"
-        title="Let&#39;s learn how to get started with using vRealize Automation with VMware Cloud on AWS." /></div><div class="details toc" id="toc-static"  kept="">
+        title="Learn how you can get started with using vRealize Automation with VMware Cloud on AWS." /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contenido</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -178,7 +177,7 @@
             data-sizes="auto"
             alt="/es/2021-07-23-vrac-proxy-in-vmc/step1.png" />
     </a></li>
-<li>Click &ldquo;DOWNLOAD OVA&rdquo;. You can use the OVA file link as well, but from my experiences, downloading it locally has been more successful instead of using the link.
+<li>Click &ldquo;DOWNLOAD OVA&rdquo;. You can use the OVA file link as well, but from my experiences, downloading it locally has been more successful instead of using the link. Remember to rename the OVF template to <code>vCenter1_vmc_va.ova</code> after it&rsquo;s done downloading.
 <br><a class="lightgallery" href="../es/2021-07-23-vrac-proxy-in-vmc/step2.png" target="_blank" rel="noopener noreferrer" title="/es/2021-07-23-vrac-proxy-in-vmc/step2.png" data-thumbnail="/es/2021-07-23-vrac-proxy-in-vmc/step2.png">
         <img
             class="lazyload"
@@ -453,7 +452,7 @@ Give access to VMware Cloud on AWS. Remember to save the token in a safe place i
 <h4 id="demo--example-template-yaml">Demo / Example Template YAML</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -471,23 +470,23 @@ Give access to VMware Cloud on AWS. Remember to save the token in a safe place i
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
-inputs: {}
-resources:
-  Cloud_Machine_1:
-    type: Cloud.Machine
-    properties:
-      image: &#39;Ubuntu-20.04&#39;
-      flavor: &#39;size-small&#39;
-      networks:
-        - network: &#39;${resource.Cloud_Network_1.id}&#39;
-  Cloud_Network_1:
-    type: Cloud.Network
-    properties:
-      networkType: existing
-      constraints: 
-        - tag: vmconaws-sddc-02
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">formatVersion: 1
+</span></span><span class="line"><span class="cl">inputs: {}
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl">  Cloud_Machine_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Machine
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      image: &#39;Ubuntu-20.04&#39;
+</span></span><span class="line"><span class="cl">      flavor: &#39;size-small&#39;
+</span></span><span class="line"><span class="cl">      networks:
+</span></span><span class="line"><span class="cl">        - network: &#39;${resource.Cloud_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">  Cloud_Network_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Network
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      networkType: existing
+</span></span><span class="line"><span class="cl">      constraints: 
+</span></span><span class="line"><span class="cl">        - tag: vmconaws-sddc-02
+</span></span></code></pre></td></tr></table>
 </div>
 </div><br>
 <p>Credit: Thanks to my colleague, <a href="https://www.linkedin.com/in/pattonmichael/" target="_blank" rel="noopener noreffer">Michael Patton</a>, for working with me on this.</p>
@@ -495,20 +494,20 @@ resources:
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Actualizado el 2021-07-22</span>
+                <span>Actualizado el 2021-07-23</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" data-title="Using vRA with VMC on AWS: Getting Started" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,vRA Cloud Proxy,VMware Cloud on AWS"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" data-title="Using vRA with VMC on AWS: Getting Started" data-via="phoebesykim" data-hashtags="vRA,vRA8,vRA Cloud,VMC on AWS"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html" data-hashtag="vRA"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html"><i class="fab fa-linkedin fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="../es/tags/vra-cloud-proxy.html">vRA Cloud Proxy</a>,&nbsp;<a href="../es/tags/vmware-cloud-on-aws.html">VMware Cloud on AWS</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="../es/tags/vra.html">vRA</a>,&nbsp;<a href="../es/tags/vra8.html">vRA8</a>,&nbsp;<a href="../es/tags/vra-cloud.html">vRA Cloud</a>,&nbsp;<a href="../es/tags/vmc-on-aws.html">VMC on AWS</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="../es/">Inicio</a></span>
         </section>
@@ -519,7 +518,7 @@ resources:
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

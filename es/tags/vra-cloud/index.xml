@@ -11,16 +11,16 @@
     <guid>https://288clouds.com/es/2021-09-14-creating-cloud-agnostic-template-using-inputs.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation 8.x / Cloud allows you to create templates with cloud agnostic resources so that you can create a template that can be used across on-premises data centers and multiple clouds.
 So let&rsquo;s explore how you can create a vRA template that meets the following requirements:
- The user should be able to select the deployment target environment (where the deployment should be created) The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP)  Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.]]></description>
+The user should be able to select the deployment target environment (where the deployment should be created) The template should be able to deploy to multiple environments; for this specific demo, the template can deploy to the following environments: on-premises vSphere environment, VMware Cloud on AWS, AWS, and Google Cloud Platform (GCP) Note that Azure, which is available for use with vRA, is not included in my demo, but the concept remains the same if you want to add Azure to the mix.]]></description>
 </item><item>
     <title>Using vRA with VMC on AWS: Getting Started</title>
     <link>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</link>
-    <pubDate>Thu, 22 Jul 2021 05:52:00 -0500</pubDate>
+    <pubDate>Fri, 23 Jul 2021 05:52:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-07-23-vrac-proxy-in-vmc.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ vRealize Automation can be used to automate the deployment of workloads to a VMware Cloud on AWS Software-Defined Data Center (SDDC). Let&rsquo;s learn how you can get started with using vRealize Automation with VMware Cloud on AWS.
-Demo Product Versions  vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prerequisites VMC on AWS:
- SDDC deployed Access to the SDDC  Process Overview  Deploy a vRA Cloud Proxy in the VMC on AWS SDDC.]]></description>
+Demo Product Versions vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4) Prerequisites VMC on AWS:
+SDDC deployed Access to the SDDC Process Overview Deploy a vRA Cloud Proxy in the VMC on AWS SDDC.]]></description>
 </item><item>
     <title>vRA Cloud &#43; GCP: Using Security Groups</title>
     <link>https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html</link>
@@ -28,9 +28,9 @@ Demo Product Versions  vRA Cloud VMware Cloud on AWS (SDDC version 1.14v4)  Prer
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can apply existing Google Cloud Platform (GCP) network tags when deploying machines to a GCP environment with a vRA cloud template.
-Demo Product Versions  vRA Cloud GCP Environment  Prerequisites GCP:
- Active GCP project Service account with appropriate roles for connectivity with vRA cloud  vRA Cloud:
- Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
+Demo Product Versions vRA Cloud GCP Environment Prerequisites GCP:
+Active GCP project Service account with appropriate roles for connectivity with vRA cloud vRA Cloud:
+Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
 </item><item>
     <title>On-demand NSX-T Networks with vRA Cloud in VMC on AWS VS. On-Prem vSphere</title>
     <link>https://288clouds.com/es/2021-03-30-vrac-nsxt-on-demand-networks-vmc-on-prem-differences.html</link>
@@ -46,9 +46,9 @@ On-demand Network Types vRA Cloud Assembly has several on-demand network types a
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-29-vrac-vmc-nsxt-on-demand-dfw.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can create on-demand distributed firewall rules in a VMC on AWS environment with a vRA Cloud template.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Process Overview  Create a template that adds a new security group to the deployment.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Process Overview Create a template that adds a new security group to the deployment.]]></description>
 </item><item>
     <title>Using On-demand NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
     <link>https://288clouds.com/es/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</link>
@@ -56,9 +56,9 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-23-vrac-vmc-nsxt-on-demand-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ There are different ways you can create on-demand NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Methods Using vRA template Using vRA network profile Demos / Examples Method 1: Using vRA Template In a vRA Cloud template in vRA Cloud Assembly, drag a Cloud Agnostic Security Group resource on the canvas and connect it to the machine you&rsquo;d like to place in the security group.]]></description>
 </item><item>
     <title>Using Existing NSX-T Security Groups in VMC on AWS with vRA Cloud</title>
     <link>https://288clouds.com/es/2021-03-22-vrac-vmc-nsxt-existing-security-groups.html</link>
@@ -66,9 +66,9 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-03-22-vrac-vmc-nsxt-existing-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ There are different ways you can consume existing NSX-T security groups in a VMC on AWS environment with vRA Cloud templates: through a vRA template or through a network profile.
-Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites VMC on AWS:
- Active SDDC  vRA Cloud:
- Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Methods  Using vRA template Using vRA network profile  Demos / Examples Method 1: Using vRA Template  Under &ldquo;Compute Groups&rdquo; in the VMC on AWS UI, create a security group.]]></description>
+Demo Product Versions vRA Cloud VMC on AWS (SDDC version 1.13) Prerequisites VMC on AWS:
+Active SDDC vRA Cloud:
+Basic infrastructure configured for the VMC on AWS environment (Cloud Proxy, Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Methods Using vRA template Using vRA network profile Demos / Examples Method 1: Using vRA Template Under &ldquo;Compute Groups&rdquo; in the VMC on AWS UI, create a security group.]]></description>
 </item><item>
     <title>VCP-CMA 2020 (2V0-31.20) Exam Study Guide - Sections 1-3</title>
     <link>https://288clouds.com/es/2020-12-13-vcp-cma-2020-section-1.html</link>
@@ -78,20 +78,19 @@ Demo Product Versions  vRA Cloud VMC on AWS (SDDC version 1.13)  Prerequisites V
     <description><![CDATA[~ Este post será traducido al español próximamente ~ This study guide aligns with the exam blueprint for the Professional VMware vRealize Automation 8.1 exam (2V0-31.20), which leads to the VMware Certified Professional - Cloud Management and Automation 2020 certification. The exam is 135 minutes with 70 questions.
 This study guide has been created to help myself study for the exam, but I hope you find this helpful in your own preparation for the exam.]]></description>
 </item><item>
-    <title>Parte 8 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Bajo Demanda de NSX-T</title>
+    <title>vRA 8 &#43; NSX-T Blog Series Part 8: Create a vRA 8 (Cloud) Blueprint with On-demand NSX-T One-Arm Load Balancer</title>
     <link>https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</link>
     <pubDate>Wed, 22 Jul 2020 07:53:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-07-22-vracloud-nsxt-on-demand-one-arm-load-balancer.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; de NSX-T bajo demanda. Este proceso crea un enrutador lógico tier-1 bajo demanda y agrega los servicios de equilibrador de carga. Este proceso funciona con vRA 8.1, pero yo usé vRA Cloud para crear el ejemplo.
-Abajo es una diagrama simple de &ldquo;one-arm load balancer&rdquo; de NSX-T. 
-Nota que vRA 8.1 no es totalmente compatible con el &ldquo;policy API&rdquo; de NSX-T.]]></description>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ You can create a vRA Cloud blueprint to deploy machines and place them behind an on-demand NSX-T one-arm load balancer. This method creates a tier-1 router then configures load balancing services, adding virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1, but I used vRA Cloud to create the demo.
+Below is a simplified diagram of a NSX-T one-arm load balancer.]]></description>
 </item><item>
-    <title>Parte 7 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Existente de NSX-T</title>
+    <title>vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer</title>
     <link>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</link>
     <pubDate>Mon, 20 Jul 2020 07:53:00 -0500</pubDate>
     <author>Autor</author>
     <guid>https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html</guid>
-    <description><![CDATA[Puede crear una plantilla vRA Cloud para desplegar máquinas y ponerlas detrás de en un &ldquo;one-arm load balancer&rdquo; existente de NSX-T. Este proceso no crea los enrutadors lógicos bajo demanda. El proceso usa un &ldquo;one-arm load balancer&rdquo; existente y simplemente agregar &ldquo;virtual server&rdquo; (servidor virtual), &ldquo;server pool&rdquo; (grupo de servidores), y &ldquo;application profile&rdquo; (perfil de aplicación). Puede crear un &ldquo;monitor&rdquo; (monitor de máquina virtual) también si quiere. Este proceso funciona con vRA 8.]]></description>
+    <description><![CDATA[~ Este post será traducido al español próximamente ~ You can create a vRA Cloud blueprint to deploy machines and place them behind an existing NSX-T one-arm load balancer. This method does not create any on-demand tier-1 routers. It uses the existing load balancer and simply adds virtual server, server pool, and application profile (monitor too if you want). This method should work in vRA 8.1 as well, but I used vRA Cloud to create the demo.]]></description>
 </item></channel>
 </rss>

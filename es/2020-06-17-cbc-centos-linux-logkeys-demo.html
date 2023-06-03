@@ -8,18 +8,17 @@
         <title>CBC Endpoint Detection Demo with Logkeys - 288clouds</title><meta name="Description" content="A quick and simple demo on how Carbon Black Cloud can detect an application on the company blacklist running on a linux machine, send an alert and deny/terminate the process."><meta property="og:title" content="CBC Endpoint Detection Demo with Logkeys" />
 <meta property="og:description" content="A quick and simple demo on how Carbon Black Cloud can detect an application on the company blacklist running on a linux machine, send an alert and deny/terminate the process." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo.html" />
-<meta property="og:image" content="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo/featured-image.PNG"/>
+<meta property="og:url" content="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo.html" /><meta property="og:image" content="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo/featured-image.PNG"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-17T11:42:00-05:00" />
-<meta property="article:modified_time" content="2020-06-21T11:42:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2020-06-21T11:42:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo/featured-image.PNG"/>
 <meta name="twitter:title" content="CBC Endpoint Detection Demo with Logkeys"/>
 <meta name="twitter:description" content="A quick and simple demo on how Carbon Black Cloud can detect an application on the company blacklist running on a linux machine, send an alert and deny/terminate the process."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo.html" /><link rel="prev" href="https://288clouds.com/es/2020-06-04-cbc-sensor-install-centos-linux.html" /><link rel="next" href="https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-06-17-cbc-centos-linux-logkeys-demo.html" /><link rel="prev" href="https://288clouds.com/es/2020-06-04-cbc-sensor-install-centos-linux.html" /><link rel="next" href="https://288clouds.com/es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -165,7 +164,7 @@
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -178,18 +177,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">yum install gcc make gcc-c++
-yum install git
-git clone https://github.com/kernc/logkeys.git
-yum install automake
-
-cd logkeys
-./autogen.sh
-cd build
-../configure
-make
-sudo make install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yum install gcc make gcc-c++
+</span></span><span class="line"><span class="cl">yum install git
+</span></span><span class="line"><span class="cl">git clone https://github.com/kernc/logkeys.git
+</span></span><span class="line"><span class="cl">yum install automake
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd logkeys
+</span></span><span class="line"><span class="cl">./autogen.sh
+</span></span><span class="line"><span class="cl">cd build
+</span></span><span class="line"><span class="cl">../configure
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li>(Optional) Setup keymap: <code>locale-gen</code> for Ubuntu or <code>localedef</code> for CentOS. To check system locale and keymap, use <code>localectl status</code>.</li>
@@ -344,11 +343,11 @@ sudo make install
     </div>
 
     <div class="post-nav"><a href="../es/2020-06-04-cbc-sensor-install-centos-linux.html" class="prev" rel="prev" title="Carbon Black Cloud Sensor Install on a Linux Machine"><i class="fas fa-angle-left fa-fw"></i>Carbon Black Cloud Sensor Install on a Linux Machine</a>
-            <a href="../es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" class="next" rel="next" title="Parte 7 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Existente de NSX-T">Parte 7 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla con &#39;One-Arm Load Balaner&#39; (equilibrador de carge) Existente de NSX-T<i class="fas fa-angle-right fa-fw"></i></a></div>
+            <a href="../es/2020-07-20-vracloud-nsxt-existing-one-arm-load-balancer.html" class="next" rel="next" title="vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer">vRA 8 &#43; NSX-T Blog Series Part 7: Create a vRA 8 (Cloud) Blueprint with Existing NSX-T One-Arm Load Balancer<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

@@ -8,18 +8,17 @@
         <title>Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA) - 288clouds</title><meta name="Description" content="Aprende cómo crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA."><meta property="og:title" content="Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)" />
 <meta property="og:description" content="Aprende cómo crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" />
-<meta property="og:image" content="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/featured-image.png"/>
+<meta property="og:url" content="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><meta property="og:image" content="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/featured-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-03-19T07:53:00-05:00" />
-<meta property="article:modified_time" content="2021-06-14T07:53:00-05:00" /><meta property="og:site_name" content="288clouds" />
+<meta property="article:modified_time" content="2021-04-14T07:53:00-05:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/featured-image.png"/>
 <meta name="twitter:title" content="Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)"/>
 <meta name="twitter:description" content="Aprende cómo crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA."/>
 <meta name="application-name" content="288clouds">
-<meta name="apple-mobile-web-app-title" content="288clouds"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="288clouds"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><link rel="prev" href="https://288clouds.com/es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html" /><link rel="next" href="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="../site.webmanifest"><link rel="canonical" href="https://288clouds.com/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html" /><link rel="prev" href="https://288clouds.com/es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html" /><link rel="next" href="https://288clouds.com/es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" /><link rel="stylesheet" href="../lib/normalize/normalize.min.css"><link rel="stylesheet" href="../css/style.min.css"><link rel="stylesheet" href="../lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="../lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -33,8 +32,8 @@
                             "url": "https:\/\/288clouds.com\/es\/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags\/featured-image.png",
                             "width":  1983 ,
                             "height":  823 
-                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, grupo de seguridad, etiqueta vRA, automatización","wordcount":  602 ,
-        "url": "https:\/\/288clouds.com\/es\/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html","datePublished": "2020-03-19T07:53:00-05:00","dateModified": "2021-06-14T07:53:00-05:00","publisher": {
+                        }],"genre": "posts","keywords": "vRA, vRA8, NSX-T, grupo de seguridad, etiqueta vRA, automatización","wordcount":  556 ,
+        "url": "https:\/\/288clouds.com\/es\/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags.html","datePublished": "2020-03-19T07:53:00-05:00","dateModified": "2021-04-14T07:53:00-05:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -114,7 +113,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Parte 4 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta vRA)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../es/about.html" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phoebe Kim</a></span>&nbsp;<span class="post-category">incluido en <a href="../es/categories/vra.html"><i class="far fa-folder fa-fw"></i>vRA</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-19">2020-03-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;602 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-19">2020-03-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;556 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="featured-image"><br><img
         class="lazyload"
@@ -137,14 +136,15 @@
       <ul>
         <li><a href="#configure-la-etiqueta-grupo-de-seguridad">Configure la Etiqueta “Grupo de Seguridad”</a></li>
         <li><a href="#cree-y-configure-la-plantilla">Cree y Configure la Plantilla</a></li>
-        <li><a href="#configure-el-grupo-de-seguridad">Configure el Grupo de Seguridad</a></li>
-        <li><a href="#verifique-la-implementación">Verifique la Implementación</a></li>
+        <li><a href="#configure-blueprint-security-group">Configure Blueprint Security Group</a></li>
+        <li><a href="#verify-deployment">Verify Deployment</a></li>
         <li><a href="#código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>Puede crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.</p>
+            </div><div class="content" id="content"><h1 id="-este-post-será-traducido-al-español-próximamente-">~ Este post será traducido al español próximamente ~</h1>
+<p>Puedes crear una plantilla vRA 8 para desplegar máquinas y ponerlas en un grupo de seguridad existente de NSX-T usando etiquetas vRA.</p>
 <h2 id="versiones-de-productos-demostración-demo">Versiones de Productos Demostración (Demo)</h2>
 <ul>
 <li>vSphere 6.5 U3</li>
@@ -165,7 +165,7 @@
 <h2 id="información-general-de-proceso">Información General de Proceso</h2>
 <ol>
 <li>Cree una etiqueta en el grupo de seguridad existente.</li>
-<li>Cree una plantilla con los objectos: &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube), &ldquo;NSX Network&rdquo; (red NSX), &ldquo;Security Group&rdquo; (grupo de seguridad).</li>
+<li>Cree una plantilla con los objetos: “máquina agnóstica de nube”, “red NSX” y “grupo de seguridad”.</li>
 <li>Especifique cual grupo de seguridad va a hacer usado añadiendo una etiqueta de restricción en el objecto “grupo de seguridad”.</li>
 </ol>
 <p>Paso opcional:</p>
@@ -176,8 +176,8 @@
 <h3 id="configure-la-etiqueta-grupo-de-seguridad">Configure la Etiqueta “Grupo de Seguridad”</h3>
 <ol>
 <li>Vaya a “Infraestructura” &gt; “Seguridad” (en el menú “Recursos”).</li>
-<li>Seleccione el grupo de seguridad al que le quiere agregar la etiqueta.</li>
-<li>De clic en el botón “Etiquetas”.
+<li>Seleccione el grupo de seguridad al que le quiere añadir la etiqueta.</li>
+<li>Clic “Etiquetas”.
 <br><a class="lightgallery" href="../es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step3.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step3.png" data-thumbnail="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step3.png">
         <img
             class="lazyload"
@@ -187,7 +187,7 @@
             data-sizes="auto"
             alt="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step3.png" />
     </a></li>
-<li>Entre el nombre de la etiqueta en “Agregar etiquetas”, de clic en el botón “Enter” y guarde.
+<li>Entre el nombre de la etiqueta en “Agregar etiquetas”, presione “Enter” y guarde.
 <br><a class="lightgallery" href="../es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step4.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step4.png" data-thumbnail="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step4.png">
         <img
             class="lazyload"
@@ -210,17 +210,17 @@
 </ol>
 <h3 id="cree-y-configure-la-plantilla">Cree y Configure la Plantilla</h3>
 <ol start="6">
-<li>Vaya a “Diseño”, de clic en el botón “NOVEDADES DE” y de clic en el botón “Lienzo en blanco” para creer una nueva plantilla.</li>
-<li>Nombre la plantilla y escoge el proyecto.</li>
-<li>Pon la &ldquo;Cloud Agnostic Machine&rdquo; (máquina agnóstica de nube) y &ldquo;NSX Network&rdquo; (red NSX) en el lienzo en blanco.</li>
-<li>Conecta &ldquo;Cloud Agnostic Machine&rdquo; a &ldquo;NSX Network&rdquo; en el lienzo en blanco.</li>
-<li>A la derecha en el código YAML, escoge una imagen y un tipo para la máquina.</li>
-<li>Debajo de <code>-network:</code>, agregue una línea <code>assignment: static</code> para dar una dirección IP estática a la máquina.</li>
-<li>Para la “red NSX”, cambie <code>networkType</code> de <code>properties</code> dependiendo de si está usando una red existente o una red bajo demanda. En este ejemplo, estoy usando una red existente.</li>
+<li>Go to &ldquo;Blueprints&rdquo; and Click &ldquo;+ NEW&rdquo; to create a new blueprint. (or you can choose to use an existing blueprint and skip this section).</li>
+<li>Give a name to the blueprint and choose a project.</li>
+<li>Drag on a Cloud Agnostic Machine and a NSX Network onto the canvas.</li>
+<li>Connect the Cloud Agnostic Machine to the NSX Network on the canvas.</li>
+<li>On the right side in the YAML file, choose an image and size for the machine.</li>
+<li>Under <code>- network: </code>, add the line <code>assignment: static</code> to give a static IP address to the machine from the IP range we&rsquo;ve created.</li>
+<li>For the NSX network, change the <code>networkType</code> under <code>properties</code> accordingly depending on whether you are using existing or on-demand network. In this demo, I&rsquo;ll be using an existing network.</li>
 </ol>
-<h3 id="configure-el-grupo-de-seguridad">Configure el Grupo de Seguridad</h3>
+<h3 id="configure-blueprint-security-group">Configure Blueprint Security Group</h3>
 <ol start="13">
-<li>Pon el &ldquo;Security Group&rdquo; (grupo de seguridad) en el lienzo en blanco.
+<li>Drag a Security Group onto the canvas.
 <br><a class="lightgallery" href="../es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step13.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step13.png" data-thumbnail="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step13.png">
         <img
             class="lazyload"
@@ -230,7 +230,7 @@
             data-sizes="auto"
             alt="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step13.png" />
     </a></li>
-<li>Para el &ldquo;Security Group&rdquo;, agregue una línea <code>constraints:</code> debajo de <code>securityGroupType</code>. Debajo de la línea <code>constraints:</code>, agregue otra línea <code>-tag:</code> y entra el nombre de la etiqueta del grupo de seguridad que quiere usar.
+<li>For the security group, below <code>securityGroupType</code>, add the line <code>constraints:</code> then another line <code>- tag:</code> and type the tag of the existing security group you want to use.
 <br><a class="lightgallery" href="../es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step14.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step14.png" data-thumbnail="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step14.png">
         <img
             class="lazyload"
@@ -240,8 +240,8 @@
             data-sizes="auto"
             alt="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step14.png" />
     </a></li>
-<li>Para la &ldquo;Cloud Agnostic Machine&rdquo;, debajo de <code>networks</code>, agregue una línea <code>securityGroups:</code>.</li>
-<li>Agregue una línea <code>- '${resource.&lt;insert security group object name&gt;.id}'</code> para conectar el &ldquo;Security Group&rdquo; á la &ldquo;Cloud Agnostic Machine&rdquo;.
+<li>For the machine, under <code>networks</code>, add a line under <code>assignment</code> called <code>securityGroups:</code>.</li>
+<li>Add the line <code>- '${resource.&lt;insert security group object name&gt;.id}'</code> below to connect the security group to the machine.
 <br><a class="lightgallery" href="../es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step16.png" target="_blank" rel="noopener noreferrer" title="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step16.png" data-thumbnail="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step16.png">
         <img
             class="lazyload"
@@ -251,21 +251,21 @@
             data-sizes="auto"
             alt="/es/2020-03-19-vra8-nsxt-existing-security-group-using-vra-tags/step16.png" />
     </a></li>
-<li>De clic en el botón “PROBAR”.</li>
-<li>De clic en el botón “IMPLEMENTAR” a crear una nueva implementación.</li>
-<li>Entra el nombre de la nueva implementación, escoge “Borrador actual” y de clic en el botón “IMPLEMENTAR”.</li>
+<li>Click &ldquo;TEST&rdquo;.</li>
+<li>Click &ldquo;DEPLOY&rdquo; to create a new deployment.</li>
+<li>Give it a deployment name, choose &ldquo;Current Draft&rdquo;, the cick &ldquo;DEPLOY&rdquo;.</li>
 </ol>
-<h3 id="verifique-la-implementación">Verifique la Implementación</h3>
+<h3 id="verify-deployment">Verify Deployment</h3>
 <ol start="20">
-<li>Cuando la implementación está completa, vaya a “Implementaciones” en vRA y nota la dirección IP de la nueva implementación.</li>
-<li>Inicie una sesión en el &ldquo;NSX-T UI&rdquo; (el cliente web de NSX-T) y vaya a &ldquo;Inventory&rdquo; &gt; &ldquo;Groups&rdquo;.</li>
-<li>De clic en el botón “Ver miembros” del “grupo de seguridad” que usó en el lienzo en blanco.</li>
-<li>De clic en el botón “Direcciones IP” y puede ver la dirección IP de la implementación.</li>
+<li>Once deployed, go to &ldquo;Deployments&rdquo; tab in vRA and note the IP address of the deployment.</li>
+<li>Now log into NSX-T UI and go to &ldquo;Inventory&rdquo; &gt; &ldquo;Groups&rdquo;.</li>
+<li>Click &ldquo;View Members&rdquo; of the security group you have selected in the network profile.</li>
+<li>Click &ldquo;IP Addresses&rdquo; and you&rsquo;ll see the IP address of the deployment.</li>
 </ol>
 <h3 id="código-yaml-de-la-plantilla-de-ejemplo">Código YAML de la Plantilla de Ejemplo</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -298,44 +298,44 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">formatVersion: 1
-inputs:
-  vm-name:
-    type: string
-    title: name
-    default: existing-sg-vm
-resources:
-  Cloud_SecurityGroup_1:
-    type: Cloud.SecurityGroup
-    properties:
-      securityGroupType: existing
-      constraints:
-        - tag: vra-test-sg
-  Cloud_Machine_1:
-    type: Cloud.Machine
-    properties:
-      image: centos-temp
-      flavor: small
-      customizationSpec: linux
-      name: &#39;${input.vm-name}&#39;
-      networks:
-        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
-          assignment: static
-          securityGroups:
-            - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
-  Cloud_NSX_Network_1:
-    type: Cloud.NSX.Network
-    properties:
-      networkType: existing
-      constraints:
-        - tag: &#39;subnet-cidr:192.168.35.0/24&#39;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">formatVersion: 1
+</span></span><span class="line"><span class="cl">inputs:
+</span></span><span class="line"><span class="cl">  vm-name:
+</span></span><span class="line"><span class="cl">    type: string
+</span></span><span class="line"><span class="cl">    title: name
+</span></span><span class="line"><span class="cl">    default: existing-sg-vm
+</span></span><span class="line"><span class="cl">resources:
+</span></span><span class="line"><span class="cl">  Cloud_SecurityGroup_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.SecurityGroup
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      securityGroupType: existing
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: vra-test-sg
+</span></span><span class="line"><span class="cl">  Cloud_Machine_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.Machine
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      image: centos-temp
+</span></span><span class="line"><span class="cl">      flavor: small
+</span></span><span class="line"><span class="cl">      customizationSpec: linux
+</span></span><span class="line"><span class="cl">      name: &#39;${input.vm-name}&#39;
+</span></span><span class="line"><span class="cl">      networks:
+</span></span><span class="line"><span class="cl">        - network: &#39;${resource.Cloud_NSX_Network_1.id}&#39;
+</span></span><span class="line"><span class="cl">          assignment: static
+</span></span><span class="line"><span class="cl">          securityGroups:
+</span></span><span class="line"><span class="cl">            - &#39;${resource.Cloud_SecurityGroup_1.id}&#39;
+</span></span><span class="line"><span class="cl">  Cloud_NSX_Network_1:
+</span></span><span class="line"><span class="cl">    type: Cloud.NSX.Network
+</span></span><span class="line"><span class="cl">    properties:
+</span></span><span class="line"><span class="cl">      networkType: existing
+</span></span><span class="line"><span class="cl">      constraints:
+</span></span><span class="line"><span class="cl">        - tag: &#39;subnet-cidr:192.168.35.0/24&#39;
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Actualizado el 2021-06-14</span>
+                <span>Actualizado el 2021-04-14</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -354,12 +354,12 @@ resources:
         </section>
     </div>
 
-    <div class="post-nav"><a href="../es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html" class="prev" rel="prev" title="Parte 3 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red)"><i class="fas fa-angle-left fa-fw"></i>Parte 3 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (perfil de red)</a>
-            <a href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" class="next" rel="next" title="Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)">Parte 5 de la Serie Blog vRA 8 &#43; NSX-T: Plantilla vRA 8 con Grupos de Seguridad Existentes (etiqueta de puerto de segmento)<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="../es/2020-03-18-vra8-nsxt-existing-security-group-using-network-profile.html" class="prev" rel="prev" title="vRA 8 &#43; NSX-T Blog Series Part 3: vRA 8 Blueprint with Existing Security Group (network profile)"><i class="fas fa-angle-left fa-fw"></i>vRA 8 &#43; NSX-T Blog Series Part 3: vRA 8 Blueprint with Existing Security Group (network profile)</a>
+            <a href="../es/2020-03-20-vra8-nsxt-existing-security-group-using-segment-port-tags.html" class="next" rel="next" title="vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)">vRA 8 &#43; NSX-T Blog Series Part 5: vRA 8 Blueprint with Existing Security Group (segment port tag)<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2023</span>&nbsp;|&nbsp;<span class="license"><a href="https://288clouds.com" target="_blank">288clouds.com</a></span></div>
 			
 			
         </div>

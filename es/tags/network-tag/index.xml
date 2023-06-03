@@ -10,8 +10,8 @@
     <author>Autor</author>
     <guid>https://288clouds.com/es/2021-04-09-vrac-gcp-security-groups.html</guid>
     <description><![CDATA[~ Este post será traducido al español próximamente ~ Let&rsquo;s explore how you can apply existing Google Cloud Platform (GCP) network tags when deploying machines to a GCP environment with a vRA cloud template.
-Demo Product Versions  vRA Cloud GCP Environment  Prerequisites GCP:
- Active GCP project Service account with appropriate roles for connectivity with vRA cloud  vRA Cloud:
- Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping)  Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
+Demo Product Versions vRA Cloud GCP Environment Prerequisites GCP:
+Active GCP project Service account with appropriate roles for connectivity with vRA cloud vRA Cloud:
+Basic infrastructure configured for the GCP environment (Cloud Account, Project, Cloud Zone, Flavor Mapping, Image Mapping) Note: If you need help setting up a GCP cloud account, you can use Gary Flynn&rsquo;s blog as a resource.]]></description>
 </item></channel>
 </rss>

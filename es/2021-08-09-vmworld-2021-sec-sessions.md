@@ -1,13 +1,12 @@
 # VMworld 2021 Sessions for Securing and Managing Multi-Cloud
 
-
 # ~ Este post será traducido al español próximamente ~
+
 
 VMworld 2021 is coming up. Multi-cloud and security are some of the most discussed topics this year so let's explore some of the sessions that you might be interested in attending to learn about how you can manage and secure multi-cloud environments using vRealize Automation!  
 
 ## Register for VMworld 2021
 VMworld 2021 is virtual again and the general pass is FREE! Register [here][vmworld-registration-link]!
-
 
 ## Tech+ Pass Only Sessions
 Tech+ Pass costs $299 but it includes all the general sessions plus enhanced technical deep-dive sessions. There is a new type of VMworld session called Tech+ Tutorial. Tech+ Tutorial is a live, interactive 60-minute sessions hosted on Zoom and are probably the most technical sessions that VMworld offers. If you are into the technical details and want to have in-depth conversations about specific technology, I'd higly encourage attending these Tech+ Tutorial sessions! 
@@ -31,3 +30,4 @@ It takes a lot to manage a multi-cloud infrastructure. To be successful in manag
 
 
 [vmworld-registration-link]: https://www.vmware.com/vmworld/en/index.html
+

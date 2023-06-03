@@ -34,11 +34,11 @@ I set up a nested lab to create the examples included in this blog series.
 * Compute/edge cluster - 3 ESXi hosts
 
 The management cluster hosts the following appliances:
-* vCSA 
-* vRA appliance
-* vRSLCM appliance 
-* vIDM appliance 
-* NSX-T manager
+  * vCSA 
+  * vRA appliance
+  * vRSLCM appliance 
+  * vIDM appliance 
+  * NSX-T manager
 
 The compute/edge cluster hosts all the workloads and the NSX-T edge VMs.
 
